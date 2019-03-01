@@ -9,6 +9,7 @@ https://www.gitbook.com/book/mobile100/android/details
 http://www.tutorialspoint.com/index.htm
 
 ## Android开发工具下载网址
+https://developer.android.google.cn  
 http://www.androiddevtools.cn/ 
 
 ## Android Studio汉化（某同学亲测成功）
