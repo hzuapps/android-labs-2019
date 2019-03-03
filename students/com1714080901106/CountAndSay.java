@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 /*
- * ±¨ÊıĞòÁĞÊÇÒ»¸öÕûÊıĞòÁĞ£¬°´ÕÕÆäÖĞµÄÕûÊıµÄË³Ğò½øĞĞ±¨Êı£¬µÃµ½ÏÂÒ»¸öÊı¡£
- * Ç°ÁùÏî£º
+ * æŠ¥æ•°åºåˆ—æ˜¯ä¸€ä¸ªæ•´æ•°åºåˆ—ï¼ŒæŒ‰ç…§å…¶ä¸­çš„æ•´æ•°çš„é¡ºåºè¿›è¡ŒæŠ¥æ•°ï¼Œå¾—åˆ°ä¸‹ä¸€ä¸ªæ•°ã€‚
+ * å‰å…­é¡¹ï¼š
  * 1
  * 11
  * 21
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 312211
  */
 
-public class ±¨Êı {
+public class CountAndSay {
 	static String countAndSay(int n) {
 		String s = "1";
 		for (int i = 1; i < n; i++) {
