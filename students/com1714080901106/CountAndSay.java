@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 312211
  */
 
-public class ±¨Êý {
+public class CountAndSay {
 	static String countAndSay(int n) {
 		String s = "1";
 		for (int i = 1; i < n; i++) {
