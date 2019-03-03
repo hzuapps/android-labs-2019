@@ -24,7 +24,7 @@ https://github.com/你的帐号名/android-labs-2019
 
 - 用 cd 命令切换到保存代码的路径上，如切换到D盘：   
 ```   
-$ cd D:\ 
+$ cd d: 
 ```   
 - 用 clone 命令将个人库的代码克隆到本地磁盘：  
 ```   
