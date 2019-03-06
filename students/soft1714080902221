@@ -1,3 +1,4 @@
+package students/soft1714080902221/Soft1714080902221Activity.java
 public class Student { 
  
     private String name; 
