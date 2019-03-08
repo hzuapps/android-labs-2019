@@ -1,4 +1,4 @@
-class Student{
+﻿class Student{
 	
 	private String name ;
 
@@ -71,15 +71,15 @@ class Student{
 	}
 	public String getInfo(){
 
-		return "ѧ����Ϣ����:" + "\n" +
+		return "学生信息如下:" + "\n" +
 	
-			        "����:" + this.getName() + "\n" +
+			        "姓名:" + this.getName() + "\n" +
 
-				"����:" + this.getAge() + "\n" +
+				"年龄:" + this.getAge() + "\n" +
 
-				"ѧУ:" + this.getCollege() + "\n" +
+				"学校:" + this.getCollege() + "\n" +
 
-				"ѧԺ:" + this.getDepart();
+				"学院:" + this.getDepart();
  
 	}
 
@@ -90,7 +90,7 @@ public class  test1{
 
 	public static void main (String args[]){
 
-		Student stu1 = new Student("����" , 22 , "shu" , "computer science and techololege") ;
+		Student stu1 = new Student("张三" , 22 , "shu" , "computer science and techololege") ;
 
 		System.out.println(stu1.getInfo());
 	
