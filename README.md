@@ -17,7 +17,9 @@ http://jingyan.baidu.com/article/ff42efa93177c0c19e2202c3.html
 
 ## 配置代理的新方法
 
-https://blog.vvzero.com/2018/04/08/set-proxy-for-newest-android-studio/
+https://blog.vvzero.com/2018/04/08/set-proxy-for-newest-android-studio/  
+https://blog.csdn.net/weixin_40849588/article/details/86559842  
+http://www.voidcn.com/article/p-alndgxtc-bpx.html   
 
 ## Android版本6.0安装提示
 在Android SDK Manager中，参考下面的截图配置和下载6.0版本的库。
