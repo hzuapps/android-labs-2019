@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.hzuapps.androidlabs.MainActivity">
+
+    <Button
+        android:id="@+id/button_activitybasic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity 基本用法"/>
+
+    <Button
+        android:id="@+id/button_viewbasic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View 基本用法"/>
+
+    <Button
+        android:id="@+id/button_fragmentdemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment 功能演示"/>
+
+    <Button
+        android:id="@+id/button_servicedemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service 功能演示"/>
+
+    <Button
+        android:id="@+id/button_broadcastdemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Broadcast 功能演示"/>
+
+    <Button
+        android:id="@+id/button_contentprovidedemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ContentProvider 功能演示"/>
+
+    <Button
+        android:id="@+id/button_viewdemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="各种布局及界面演示"/>
+
+    <Button
+        android:id="@+id/button_random"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="随机看一位同学的作业"/>
+
+</LinearLayout>
