@@ -1,5 +1,7 @@
-package com.myspringboot.entity;
+package edu.hzuapps.androidlabs.soft1714080902120;
 
-public class soft1714080902120Activity {
-    
+
+  public class Soft1714080902120Activity
+{
+//
 }
