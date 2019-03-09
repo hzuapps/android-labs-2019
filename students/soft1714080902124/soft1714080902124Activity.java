@@ -1,9 +1,11 @@
+package soft1714080902124;
 
-public class soft1714080902124Activity {
+public class Soft1714080902124Activity {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
-		System.out.println("HelloWorld-android!");
+		System.out.println("hello wold-android");
 	}
 
 }
