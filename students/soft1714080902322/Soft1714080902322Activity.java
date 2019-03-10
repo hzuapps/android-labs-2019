@@ -4,6 +4,6 @@ public class Soft1714080902322Activity {
 
 	public static void main(String[] args) {
 
-		System.out.println("Hello,android studio!");
+		System.out.println("Hi,android studio!");
 
 }
