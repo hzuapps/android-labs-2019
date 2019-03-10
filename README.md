@@ -1,5 +1,5 @@
 # 移动应用开发实验库（2019）   
-实验要求：https://github.com/hzuapps/android-labs-2018/blob/master/labs.md
+实验要求：https://github.com/hzuapps/android-labs-2019/blob/master/labs.md
 
 ## Android中文教材
 http://hukai.me/android-training-course-in-chinese/index.html  
