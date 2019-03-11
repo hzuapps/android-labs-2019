@@ -2,7 +2,7 @@
 
 ## 1.实验目的
 
-（1）在Issues中创建自己的选题：https://github.com/hzuapps/android-labs-2018/issues ；
+（1）在Issues中创建自己的选题：https://github.com/hzuapps/android-labs-2019/issues ；
 
 （2）根据自选题目，编写一个或多个Activity（所有均带上学号前缀，放到自己的Java包下）； 
 
@@ -12,11 +12,11 @@
 
 ## 2.实验步骤
 
-（1）阅读实验要求：https://github.com/hzuapps/android-labs-2018/labels/Lab 
+（1）阅读实验要求：https://github.com/hzuapps/android-labs-2019/labels/Lab 
 
 （2）在电脑上Android Studio编写代码，提取四个文件
 
-（3）通过Git将文件提交到自己的库中：https://github.com/chbaju/android-labs-2018 
+（3）通过Git将文件提交到自己的库中：https://github.com/chbaju/android-labs-2019
 
 （4）在自己的库中编写实验报告
 
