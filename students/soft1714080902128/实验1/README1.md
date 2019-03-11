@@ -25,6 +25,6 @@
 （9）git push
 
 ## 3.实验结果
-
+![image](https://github.com/zxc9711/android-labs-2019/blob/master/students/soft1714080902128/%E5%AE%9E%E9%AA%8C1/%E5%AE%9E%E9%AA%8C1.png)
 ## 4.实验体会
 正在适应
