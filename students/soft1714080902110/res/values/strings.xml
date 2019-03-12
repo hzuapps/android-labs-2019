@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">猜数字小游戏</string>
-    <string name="start_game">开始游戏</string>
-    <string name="rank_list">排行榜</string>
-    <string name="title">猜数字小游戏</string>
-</resources>
