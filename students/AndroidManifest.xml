@@ -9,10 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+       <activity android:name=".edu.hzuapps.androidlabs.com1714080901110.Com1714080901110">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
