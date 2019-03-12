@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lam_AndroidExp</string>
+    <string name="title_activity_soft1714080902209">Soft1714080902209</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="Main_Reg">注册</string>
+    <string name="Main_Text_PW">密码</string>
+    <string name="Main_Text_UM">用户名</string>
+    <string name="Main_Text_HR">HR管理系统</string>
+    <string name="Main_Login">登陆</string>
+</resources>
