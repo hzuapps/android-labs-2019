@@ -72,4 +72,9 @@ Title：#1 提交实验一代码
 Leave a comment：选填
 ```  
 
-## 8. 实验完成，等待老师审批
+## 8. 最后一步
+
+Pull request发送之后，一定要自己查看自己修改过的文件，看看有没有改错文件（Files changed）。
+
+![image](https://user-images.githubusercontent.com/627946/54257709-37355400-459b-11e9-8547-f03935f07a61.png)
+
