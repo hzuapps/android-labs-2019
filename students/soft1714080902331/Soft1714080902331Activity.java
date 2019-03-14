@@ -1,10 +1,22 @@
-package edu.hzuapps.myapplication;
+package edu.hzuapps.androidlabs.Soft1714080902331;
 
-public class Soft1714080902331Activity
-{
-    public static void main()
-    {
-        System.out.println("HELLO WORLD!");
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+
+public class Soft1714080902331Activity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.soft_1714080902331_activity);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
     }
 
 }
