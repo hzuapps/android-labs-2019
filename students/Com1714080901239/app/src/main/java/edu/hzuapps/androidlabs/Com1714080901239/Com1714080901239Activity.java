@@ -11,7 +11,7 @@ import com.example.activity2019.R;
 
 public class com1714080901239Activity extends AppCompatActivity {
 
-    @Override
+    @Override  
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_com2);
