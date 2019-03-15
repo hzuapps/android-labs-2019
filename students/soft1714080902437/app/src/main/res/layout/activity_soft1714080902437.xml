@@ -10,6 +10,6 @@
     android:layout_centerVertical="true"
     android:textSize="25dp"
     android:textColor="#005522"
-    android:text="我是新创建的Activity"/>
+    android:text="课堂即将开始！"/>
 
 </RelativeLayout>
