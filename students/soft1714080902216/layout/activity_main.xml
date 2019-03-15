@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/b2"
+    tools:context=".Soft1714080902216MainActivity">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="304dp"
+        android:onClick="Record"
+        android:text="记录"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:onClick="Data"
+        android:text="管理"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="128dp"
+        android:layout_height="125dp"
+        android:background="@drawable/b4"
+        android:onClick="User"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="72dp"
+        tools:srcCompat="@tools:sample/avatars[1]" />
+
+</android.support.constraint.ConstraintLayout>
