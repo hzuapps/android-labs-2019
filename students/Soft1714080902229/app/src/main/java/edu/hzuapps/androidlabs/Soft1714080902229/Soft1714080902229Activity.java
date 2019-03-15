@@ -1,4 +1,4 @@
-package soft1714080902229.androidlabs.hzuapps.edu.myapplication.Soft1714080902229Activity;
+package edu.hzuapps.androidlabs.Soft1714080902229;
 
 /**
  * Created by k00 on 2019/3/14.
