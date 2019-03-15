@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Wdnmd订票系统</string>
-    <string name="title_home">订单·退改签·促销</string>
-    <string name="title_dashboard">航班信息</string>
-    <string name="title_notifications">我的</string>
-</resources>
