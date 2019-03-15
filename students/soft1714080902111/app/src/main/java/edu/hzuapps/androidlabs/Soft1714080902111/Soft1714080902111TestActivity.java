@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.Soft1714080902111;
+package edu.hzuapps.androidlabs.soft1714080902111;
 
 import android.graphics.Paint;
 import android.os.Bundle;
