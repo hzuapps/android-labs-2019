@@ -3,7 +3,7 @@ package com.example.soft1714080902427application;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class soft1714080902427Activity extends AppCompatActivity {
+public class Soft1714080902427Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
