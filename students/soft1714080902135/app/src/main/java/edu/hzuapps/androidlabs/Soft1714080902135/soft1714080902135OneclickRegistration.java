@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.Soft1714080902135;
+package edu.hzuapps.androidlabs.soft1714080902135;
 
-public class soft1714080902135OneclickRegistration {
+public class Soft1714080902135OneclickRegistration {
 }
