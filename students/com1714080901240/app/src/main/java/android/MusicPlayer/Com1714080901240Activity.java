@@ -1,6 +1,8 @@
 package android.MusicPlayer;
 
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,5 +24,4 @@ public class Com1714080901240Activity extends AppCompatActivity {
         Intent intent2 = new Intent(this,Com1714080901240Activity_02.class);
         startActivity(intent2);
     }
-
 }
