@@ -1,4 +1,4 @@
-package com.example.Soft1714080902421;
+package edu.hzuapps.androidlabs.soft1714080902421;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.Toast;
+
+import com.example.Soft1714080902421.R;
 
 @SuppressLint("Registered")
 public class Soft1714080902421MainActivity extends AppCompatActivity {
