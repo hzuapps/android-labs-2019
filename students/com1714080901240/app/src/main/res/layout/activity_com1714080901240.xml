@@ -8,32 +8,55 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="416dp"
+        android:drawableTop="@drawable/player"
         android:text="音乐播放页面"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494" />
 
     <TableRow
-        android:layout_width="208dp"
-        android:layout_height="152dp"
-        tools:layout_editor_absoluteX="88dp"
+        android:layout_width="382dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="33dp">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="click01"
             android:text="歌曲列表" />
 
         <Button
+            android:id="@+id/button2"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:text="上一首" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:text="暂停" />
+
+        <Button
             android:id="@+id/button4"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:text="下一首" />
+
+        <Button
+            android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="click02"
-            android:text="创建歌单" />
+            android:text="设置" />
     </TableRow>
 
 </android.support.constraint.ConstraintLayout>
