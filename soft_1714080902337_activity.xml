@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".soft1714080902337"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:text="苏轼的词"
+        android:textSize="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="
+        徐门石潭谢雨，道上作五首。
+    潭在城东二十里，常与泗水增减清浊相应。
+
+    簌簌衣巾落枣花，村南村北响缲车，牛衣古柳卖黄瓜。
+
+    酒困路长惟欲睡，日高人渴漫思茶。敲门试问野人家。"
+    android:textSize="120dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse"
+    />
+</LinearLayout>

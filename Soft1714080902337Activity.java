@@ -6,7 +6,6 @@ import android.os.Bundle;
 import com.example.myapplication.R;
 
 
-
 public class Soft1714080902337Activity extends AppCompatActivity {
 
     @Override
