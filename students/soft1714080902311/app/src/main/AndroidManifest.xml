@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SecondActivity"
+            android:label="@string/title_activity_secord"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Soft1714080902311Activity"
             android:label="@string/title_activity_soft1714080902311"
             android:theme="@style/AppTheme.NoActionBar">
