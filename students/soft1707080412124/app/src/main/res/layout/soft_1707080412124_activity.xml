@@ -8,26 +8,47 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="29dp"
+            android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_soft1707080412124" />
+    <include
+        android:id="@+id/include2"
+        layout="@layout/content_soft1707080412124" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="78dp"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="购物车"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textview_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/restaurant"
+        android:text="欢迎使用本程序"
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="center_horizontal|center" /> /
+
 
 </android.support.design.widget.CoordinatorLayout>
