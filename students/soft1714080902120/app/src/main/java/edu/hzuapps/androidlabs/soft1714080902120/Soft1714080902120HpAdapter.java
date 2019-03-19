@@ -26,12 +26,12 @@ public class Soft1714080902120HpAdapter extends ArrayAdapter<Soft1714080902120Hi
          View oneHpView = LayoutInflater.from(getContext()).inflate(R.layout.hp_item,parent,false);
 
          //获取视图
-
+         ImageView imageView = (ImageView) oneHpView.findViewById(R.id.HistoryPeople_small_imageView);
          TextView textView=(TextView) oneHpView.findViewById(R.id.HistoryPeople_name_textView);
 
          //设置数据展现
          textView.setText(soft1714080902120HistoryPeople.getName());
-
+         imageView.setImageResource(soft1714080902120HistoryPeople.getIgid());
          oneHpView.setOnClickListener(new View.OnClickListener()
          {
              @Override
@@ -40,6 +40,7 @@ public class Soft1714080902120HpAdapter extends ArrayAdapter<Soft1714080902120Hi
                  Intent intent= new Intent(getContext(),Soft1714080902120DetailActivity.class);
 
                  //传递数据
+                 intent.putExtra("soft1714080902120_igid",soft1714080902120HistoryPeople.getIgid());
                  intent.putExtra("soft1714080902120_lvde",soft1714080902120HistoryPeople.getLvde());
                  intent.putExtra("soft1714080902120_repu",soft1714080902120HistoryPeople.getRepu());
                  //start跳转
