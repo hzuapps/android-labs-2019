@@ -1,4 +1,4 @@
-Ö±½ÓÔÚÔ­À´µÄ´úÂëÉÏÐÂÔöÒ»¸öbuttonÌø×ªµ½Ò»¸öÐÂµÄactivity Õâ¸öÐÂµÄactivityÓÖÓÐÒ»¸ö·ÃÎÊÍøÒ³µÄactivity
-ÓÉÓÚÖ®Ç°ÔÚmainmanifest¿ª¹ýÍøÂçÈ¨ÏÞ£¬ËùÒÔ¾Í¿ÉÒÔÖ±½ÓË£ÁË
-»¹ÓÐÐéÄâ»úÒ²×°ÁËhaxmÒÀÈ»¿¨±¬ ÎïÀíÄÚ´æ¸øÁË4g ÎïÀíºËÐÄ¸øÁË2¸ö vmheapÉèÁË512 äÖÈ¾²ÉÓÃ±¾µØgpu gtx980 
-ÒÀÈ»¿¨±¬
+ç›´æŽ¥åœ¨åŽŸæ¥çš„ä»£ç ä¸Šæ–°å¢žä¸€ä¸ªbuttonè·³è½¬åˆ°ä¸€ä¸ªæ–°çš„activity è¿™ä¸ªæ–°çš„activityåˆæœ‰ä¸€ä¸ªè®¿é—®ç½‘é¡µçš„activity
+ç”±äºŽä¹‹å‰åœ¨mainmanifestå¼€è¿‡ç½‘ç»œæƒé™ï¼Œæ‰€ä»¥å°±å¯ä»¥ç›´æŽ¥è€äº†
+è¿˜æœ‰è™šæ‹Ÿæœºä¹Ÿè£…äº†haxmä¾ç„¶å¡çˆ† ç‰©ç†å†…å­˜ç»™äº†4g ç‰©ç†æ ¸å¿ƒç»™äº†2ä¸ª vmheapè®¾äº†512 æ¸²æŸ“é‡‡ç”¨æœ¬åœ°gpu gtx980 
+ä¾ç„¶å¡çˆ† è¿™çªå°±æžä¸æ‡‚äº†
