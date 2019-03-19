@@ -3,7 +3,7 @@ package edu.hzuapps.androidlabs.soft1714080902202;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class soft1714080902202timer extends AppCompatActivity {
+public class Soft1714080902202timer extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
