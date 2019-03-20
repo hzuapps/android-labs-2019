@@ -9,6 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Soft1714080902201_Activity_3"></activity>
+        <activity
+            android:name=".Soft1714080902201_Activity_2"
+            android:parentActivityName=".Soft1714080902201_Activity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Soft1714080902201_Activity" />
+        </activity>
+        <activity
+            android:name=".Soft1714080902201_Activity_3"
+            android:parentActivityName=".Soft1714080902201_Activity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Soft1714080902201_Activity" />
+        </activity>
         <activity android:name=".Soft1714080902201_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
