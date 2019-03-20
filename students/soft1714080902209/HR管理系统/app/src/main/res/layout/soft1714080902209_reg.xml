@@ -7,14 +7,14 @@
     tools:context=".MainActivity2">
 
     <Button
-        android:id="@+id/Main_Reg"
+        android:id="@+id/Reg_RegButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="176dp"
         android:layout_marginEnd="94dp"
         android:layout_marginRight="94dp"
         android:layout_marginBottom="176dp"
-        android:text="Register"
+        android:text="@string/Main_Reg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Main_Text_PW" />
@@ -25,8 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Password"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
+        android:text="@string/Main_Text_PW"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Passcode_TextEdit"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -40,11 +40,11 @@
         android:text="注册"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/Main_Text_PW"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/UserName_TextEdit"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/UserName_TextEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -52,11 +52,11 @@
         android:layout_marginBottom="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/Passcode_TextEdit"
         app:layout_constraintStart_toEndOf="@+id/Main_Text_PW" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/Passcode_TextEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="UserName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        android:text="@string/Main_Text_UM"
+        app:layout_constraintBaseline_toBaselineOf="@+id/UserName_TextEdit"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
