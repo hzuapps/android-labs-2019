@@ -12,7 +12,14 @@
         <activity
             android:name=".Soft1509081602625Activity"
             android:label="@string/title_activity_soft1509081602625"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".CarInfo"
             android:label="@string/title_activity_soft1509081602625"
