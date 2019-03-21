@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SecondActivity"
+            android:label="@string/title_activity_second"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Com1714080901108Activity"
             android:label="@string/title_activity_com1714080901108"
             android:theme="@style/AppTheme.NoActionBar">
