@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.test3;
+package edu.hzuapps.androidlabs.com1714080901124;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
