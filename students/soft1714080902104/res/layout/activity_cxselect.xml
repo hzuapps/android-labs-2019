@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hzuapps.androidlabs.soft1714080902104.Soft1714080902104Activity">
+    tools:context=".CXSelect">
 
 </android.support.constraint.ConstraintLayout>
