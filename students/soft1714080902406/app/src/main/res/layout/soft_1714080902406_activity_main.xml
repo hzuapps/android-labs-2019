@@ -8,19 +8,36 @@
 
     <EditText
         android:id="@+id/editText7"
-        android:layout_width="251dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="23dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="搜索框"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="245dp" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Button
-        android:id="@+id/button2"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="搜索"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="245dp" />
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/seach" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/sou" />
+
 </android.support.constraint.ConstraintLayout>
