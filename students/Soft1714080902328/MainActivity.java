@@ -1,13 +1,15 @@
 package com.example.soft1714080902328;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
-public class Soft1714080902328 extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
@@ -31,10 +33,25 @@ public class Soft1714080902328 extends AppCompatActivity {
         }
     };
 
+    private TextView textView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_soft1714080902328);
+        setContentView(R.layout.activity_main);
+
+        textView1=(TextView)findViewById(R.id.tiaozhuan);
+
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,UserActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
