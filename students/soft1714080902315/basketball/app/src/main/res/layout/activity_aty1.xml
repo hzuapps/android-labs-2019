@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:text="Aty1"
+    android:background="@drawable/ai"
+    tools:context="com.example.administrator.basketball.Aty1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to BasketballWorld!"
+        android:textColor="@color/lightyellow"
+        android:id="@+id/textView"
+        android:layout_marginTop="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭"
+        android:id="@+id/btnClose"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/lightyellow"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:background="@android:color/transparent"
+        android:textColor="@color/lightyellow"
+        android:id="@+id/button"
+        android:layout_marginBottom="81dp"
+        android:layout_above="@+id/btnClose"
+        android:layout_toLeftOf="@+id/btnClose"
+        android:layout_toStartOf="@+id/btnClose" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textColor="@color/lightyellow"
+        android:background="@android:color/transparent"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/btnClose"
+        android:layout_toEndOf="@+id/btnClose" />
+</RelativeLayout>
