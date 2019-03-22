@@ -12,7 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902223.Soft1714080902223Activity">
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/home_string"></activity>
+        <activity
+            android:name=".Soft1714080902223Activity"
+            android:label="@string/page_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
