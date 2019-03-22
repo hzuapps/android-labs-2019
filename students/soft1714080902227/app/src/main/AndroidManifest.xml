@@ -4,12 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902227.soft1714080902227Activity2"></activity>
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902227.soft1714080902227Activity4"></activity>
+        <activity android:name=".BankActivity" />
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902227.BaseActivity" />
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902227.soft1714080902227Activity2" />
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902227.soft1714080902227Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

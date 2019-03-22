@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_basetitle_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0dc0f8"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:id="@+id/ll_basetitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff0dc0f8"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_basetitle_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11dp"
+                android:src="@drawable/fenmian" />
+            <TextView
+                android:id="@+id/tv_basetitle_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="返回"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8">
+            <TextView
+                android:id="@+id/tv_basetitle_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="标题"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/tv_basetitle_ok"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="OK"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
