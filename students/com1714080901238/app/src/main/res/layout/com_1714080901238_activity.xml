@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.hzuapps.com1714080901238.Com1714080901238Activity">
+    tools:context=".Com1714080901238Activity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -29,5 +29,13 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <TextView
+        android:id="@+id/textview_01"
+        android:layout_width="395dp"
+        android:layout_height="477dp"
+        android:drawableTop="@drawable/ic_1714080901238"
+        android:drawablePadding="50dp"
+        android:text="我的记账本" />
 
 </android.support.design.widget.CoordinatorLayout>
