@@ -26,14 +26,7 @@ http://www.voidcn.com/article/p-alndgxtc-bpx.html
 Error：Could not Get 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/3.1.3/gradle-3.1.3.pom'. Received status code 400 from server: Bad Request
 Enable Gradle 'offline mode' and sync project  
 
-方法1：在 gradle.properties 里面添加代理
-```  
-systemProp.https.proxyPort=80
-systemProp.http.proxyHost=mirrors.opencas.org
-```  
-https://blog.csdn.net/u010134683/article/details/82740268
-
-方法1：file  ->> setting  ->> build，excution，->>gradle   ->>  android studio ->>  勾选Enable。。。  
+步骤1：file  ->> setting  ->> build，excution，->>gradle   ->>  android studio ->>  勾选Enable。。。  
 
 https://blog.csdn.net/qq_41550842/article/details/81939479  
 
