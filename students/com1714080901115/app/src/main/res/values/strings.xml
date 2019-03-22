@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="name">QQ登录</string>
+    <string name="name2">欢迎来到qq</string>
 </resources>
