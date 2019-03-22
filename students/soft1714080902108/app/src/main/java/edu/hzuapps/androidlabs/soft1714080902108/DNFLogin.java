@@ -3,6 +3,7 @@ package edu.hzuapps.androidlabs.soft1714080902108;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -28,6 +29,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication2.R;
 
@@ -69,20 +71,6 @@ public class DNFLogin extends AppCompatActivity implements LoaderCallbacks<Curso
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft1714080902108activity_dnflogin);
         // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-        populateAutoComplete();
-
-        mPasswordView = (EditText) findViewById(R.id.password);
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
-            }
-        });
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
@@ -91,10 +79,19 @@ public class DNFLogin extends AppCompatActivity implements LoaderCallbacks<Curso
                 attemptLogin();
             }
         });
-
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
+        Button email_sign_in_button=(Button)findViewById(R.id.email_sign_in_button) ;
+        mEmailSignInButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(DNFLogin.this,"正在寻找变强方法...",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(DNFLogin.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
@@ -348,5 +345,6 @@ public class DNFLogin extends AppCompatActivity implements LoaderCallbacks<Curso
             showProgress(false);
         }
     }
+
 }
 
