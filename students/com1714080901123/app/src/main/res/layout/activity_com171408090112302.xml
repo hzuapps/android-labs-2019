@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Com1714080901123Activity01">
+    tools:context=".Com1714080901123Activity02">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -17,9 +17,17 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#007BFF"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="@string/button_home_page" />
+            app:title="@string/button_map_search" />
 
     </android.support.design.widget.AppBarLayout>
+
+    <WebView
+        android:id="@+id/webview1"
+        android:layout_width="match_parent"
+        android:layout_height="615dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_alignTop="@id/tablerow1"/>
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
@@ -28,19 +36,21 @@
         android:stretchColumns="4"
         android:shrinkColumns="0,1,2,3,4">
 
-        <TableRow android:background="#007BFF">
+        <TableRow
+            android:id="@+id/tablerow1"
+            android:background="#007BFF">
 
             <Button
-            android:id="@+id/button1"
-            style="@style/MenuButton"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/squid_while_2"
-            android:text="@string/button_home_page" />
+                android:id="@+id/button1"
+                style="@style/MenuButton"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/squid_black_2"
+                android:text="@string/button_home_page" />
 
             <Button
                 android:id="@+id/button2"
                 style="@style/MenuButton"
-                android:drawableTop="@drawable/map_black"
+                android:drawableTop="@drawable/map_white"
                 android:text="@string/button_map_search" />
 
             <Button
