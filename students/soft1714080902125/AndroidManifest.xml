@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902125.Soft1714080902125Activity"></activity>
-        <activity android:name="com.example.soft1714080902125.HelloWorldActivity">
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902125.shawshank"></activity>
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902125.greenbook" />
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902125.Soft1714080902125Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
