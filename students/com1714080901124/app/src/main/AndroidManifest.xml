@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.com1714080901124">
+    package="edu.hzuapps.androidlabs.test3">
 
     <application
         android:allowBackup="true"
@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+		<activity android:name=".Com1714080901124Activity2">
+		</activity>
         <activity android:name=".Com1714080901124Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
