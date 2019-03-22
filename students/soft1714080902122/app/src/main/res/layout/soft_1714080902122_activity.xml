@@ -1,9 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.hzuapps.androidlabs.soft1714080902122.Soft1714080902122Activity">
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/aaa">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/tx">
+
+    </Button>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="点击头像查看学号"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
+
