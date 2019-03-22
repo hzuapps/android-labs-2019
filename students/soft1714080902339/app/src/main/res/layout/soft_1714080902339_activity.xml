@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Soft1714080902339Activity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/content_soft1714080902339"
+        android:layout_width="5dp"
+        android:layout_height="6dp" />
+
+    <Button
+        android:id="@+id/button_1"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="220dip"
+        android:layout_height="55dip"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="联系我们，获取最新资料。" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:text="如果你想准备四六级，请点击页面底端按钮获取资讯。"
+        android:textColor="#00ff00"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/imageview_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center"
+        android:drawableBottom="@drawable/cet46" />
+
+</android.support.design.widget.CoordinatorLayout>

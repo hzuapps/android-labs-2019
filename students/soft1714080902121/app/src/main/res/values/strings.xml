@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">汇率换算</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_text"></string>
+</resources>
