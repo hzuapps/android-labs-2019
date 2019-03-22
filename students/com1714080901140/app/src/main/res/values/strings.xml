@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Com1714080901140</string>
-    <string name="title_activity_com1714080901140">Com1714080901140Activity</string>
+    <string name="app_name">用户信息</string>
+    <string name="name">姓名:lisa</string>
+    <string name="sex">性別：女</string>
+    <string name="time">註冊時間：2019.3.21</string>
+    <string name="user">USER</string>
 </resources>
