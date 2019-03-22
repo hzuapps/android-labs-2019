@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/i1"
+    tools:context=".Soft1714080902225_1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/use"
+        android:textColor="#FFFFFF"
+        android:textSize="54dp"
+        android:textStyle="bold|italic" />
+    <button
+        android:id="@+id/mai"
+        android:layout_gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="54dp"
+        android:text="@string/detail"
+  />
+
+</android.support.constraint.ConstraintLayout>
