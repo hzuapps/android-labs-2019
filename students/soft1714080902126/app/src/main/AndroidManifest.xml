@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fandian">
+    package="edu.hzuapps.androidlabs.soft171408902126">
 
     <application
         android:allowBackup="true"
@@ -9,15 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902126.Soft1714080902126Activity"></activity>
-        <activity android:name=".edu.hzuapps.androidlabs.soft123456.Soft1714080902126Activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="edu.hzuapps.androidlabs.soft171408902126.tzactivity"></activity>
+        <activity android:name="edu.hzuapps.androidlabs.soft171408902126.Soft1714080902126Activity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+    </activity>
     </application>
 
 </manifest>
