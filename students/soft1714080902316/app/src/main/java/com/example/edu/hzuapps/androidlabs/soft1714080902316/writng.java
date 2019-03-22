@@ -8,19 +8,18 @@ import android.content.Intent;
 import android.view.View.OnClickListener;
 import com.example.edu.hzuapps.androidlabs.R;
 
-public class Soft1714080902316 extends AppCompatActivity {
-
+public class writng extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_soft1714080902316);
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_writng);
+        Button button1 = findViewById(R.id.button2) ;
+        button1.setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902316.this, writng.class) ;
-                startActivity(intent);
+            public void onClick(View arg0) {
+                Intent intent = new Intent(writng.this,Soft1714080902316.class) ;
+                startActivity(intent) ;
             }
         });
-        }
     }
+}
