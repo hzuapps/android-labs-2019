@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="edu.hzuapps.androidlabs.Soft1714080902129.electricitypaymentsystem">
+    package="edu.hzuapps.androidlabs.soft1714080902129.electricitypaymentsystem">
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Soft1714080902129Activity2"></activity>
+        <activity android:name=".Soft1714080902129Activity2" />
         <activity android:name=".Soft1714080902129Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

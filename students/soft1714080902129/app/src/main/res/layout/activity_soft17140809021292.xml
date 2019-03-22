@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.hzuapps.androidlabs.soft1714080902129.electricitypaymentsystem.Soft1714080902129Activity2">
+    android:background="@drawable/background"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902129.electricitypaymentsystem.Soft1714080902129Activity2">>
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is example"
-        android:textColor="@android:color/primary_text_light"
-        />
-</android.support.constraint.ConstraintLayout>
+        android:id="@+id/b2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/previous_step"
+        android:text="" />
+</RelativeLayout>
