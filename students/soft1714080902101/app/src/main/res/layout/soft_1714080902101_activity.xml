@@ -10,7 +10,19 @@
     tools:context="edu.hzuapps.androidlabs.soft17140080902101.Soft1714080902101Activity">
 
     <TextView
+        android:id="@+id/textview_01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:drawableTop="@drawable/picture1"
+        android:text="欢迎使用QQ" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:text="继续"
+        />
+
 </RelativeLayout>
