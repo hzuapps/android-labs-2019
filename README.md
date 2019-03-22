@@ -33,9 +33,20 @@ systemProp.http.proxyHost=mirrors.opencas.org
 ```  
 https://blog.csdn.net/u010134683/article/details/82740268
 
-方法2：file  ->> setting  ->> build，excution，->>gradle   ->>  android studio ->>  勾选Enable。。。  
+方法1：file  ->> setting  ->> build，excution，->>gradle   ->>  android studio ->>  勾选Enable。。。  
 
-https://blog.csdn.net/qq_41550842/article/details/81939479
+https://blog.csdn.net/qq_41550842/article/details/81939479  
+
+步骤2：编辑配置文件，注释掉所配置的代理（意思是下载插件要用代理，但是用了代理这里会报错，因此这里不有用代理）
+
+```  
+#systemProp.https.proxyPort=80
+#systemProp.http.proxyHost=mirrors.neusoft.edu.cn
+#systemProp.https.proxyHost=mirrors.neusoft.edu.cn
+#systemProp.http.proxyPort=80
+```  
+
+https://blog.csdn.net/lqx_sunhan/article/details/82633275  
 
 ## Android版本6.0安装提示
 在Android SDK Manager中，参考下面的截图配置和下载6.0版本的库。
