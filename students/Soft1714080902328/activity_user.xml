@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="128dp"
+        android:layout_height="113dp"
+        app:srcCompat="@drawable/kenan1"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="122dp"
+        tools:text="用户名" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="喜欢"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="226dp"
+        tools:text="喜欢" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="采集"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="226dp"
+        tools:text="采集" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="画板"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="226dp"
+        tools:text="画板" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关注"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="226dp"
+        tools:text="关注" />
+
+</android.support.constraint.ConstraintLayout>
