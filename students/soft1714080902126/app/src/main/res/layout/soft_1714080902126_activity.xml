@@ -2,30 +2,28 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/饭店点餐"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".edu.hzuapps.androidlabs.soft123456.Soft1714080902126Activity">
+    android:background="@drawable/p1"
+    tools:context=".Soft1714080902126Activity">
 
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        tools:layout_editor_absoluteX="411dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="391dp" />
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="点击"
+        tools:ignore="MissingConstraints" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="饭店点餐系统!"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
 </android.support.constraint.ConstraintLayout>
