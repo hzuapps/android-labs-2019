@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="tiaozhuan">Welcome!</string>
+    <string name="xhr">小黄人</string>
+    <string name="anniu">进入</string>
+    <string name="button">Button</string>
 </resources>
