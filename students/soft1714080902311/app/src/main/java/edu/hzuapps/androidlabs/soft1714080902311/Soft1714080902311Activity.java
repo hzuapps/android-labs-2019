@@ -26,12 +26,6 @@ public class Soft1714080902311Activity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
     }
 
 
