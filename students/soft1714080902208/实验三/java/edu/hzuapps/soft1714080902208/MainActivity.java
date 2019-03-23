@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs;
+package edu.hzuapps.soft1714080902208;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,25 +17,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //初始化一个Adapter
-        ArrayAdapter<String> teacherAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Teacher.getAllTeachers());
 
-        //通过ID获取listView
+        TeacherAdapter teacherAdapter = new TeacherAdapter(this, R.layout.teacher_item, Teacher.getAllTeachers());
+
         ListView listView = (ListView) findViewById(R.id.teacher_listView);
 
-        //设置listView的Adapter
         listView.setAdapter(teacherAdapter);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
+    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
