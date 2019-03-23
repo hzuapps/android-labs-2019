@@ -1,5 +1,6 @@
 package edu.hzuapps.androidlabs.soft1714080902121.exratecalculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,9 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import static edu.hzuapps.androidlabs.soft1714080902121.exratecalculator.R.id.fab;
-
-public class Soft1714080902121MainActivity extends AppCompatActivity {
+public class Soft1714080902121MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +19,14 @@ public class Soft1714080902121MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+       /*FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
     }
 
     @Override
@@ -48,7 +47,13 @@ public class Soft1714080902121MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        return false;
+    }
 
-        return super.onOptionsItemSelected(item);
+    @Override
+    public void onClick(View view)
+    {
+        Intent intent = new Intent(Soft1714080902121MainActivity.this, Soft1714080902121RateListActivity.class);
+        startActivity(intent);
     }
 }
