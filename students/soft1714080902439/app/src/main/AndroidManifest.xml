@@ -5,11 +5,18 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="1714080902439-点名app"
+        android:label="1714080902439-生日管家"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.Soft1714080902439.Soft1714080902439Activity">
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439ImageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
