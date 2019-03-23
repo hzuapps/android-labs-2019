@@ -19,6 +19,10 @@ public class Soft1714080902339Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Button button_1 = (Button) findViewById(R.id.button_1 );
+        /**
+         * CXY笔记
+         * 定义匿名类，不用大动干戈去创建一个类，只定义一个小方法来使用就好了
+         */
         button_1 .setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
