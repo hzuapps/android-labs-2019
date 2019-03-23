@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
+
 
     private TextView textView;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView =(TextView)findViewById(R.id.text);
+
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,5 +39,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
