@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Soft1714080902333Activity">
+    tools:context=".Soft1714080902333Activity1">
 
     <TextView
         android:id="@+id/message"
@@ -17,6 +17,12 @@
         android:text="@string/title_home"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/pic1" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
