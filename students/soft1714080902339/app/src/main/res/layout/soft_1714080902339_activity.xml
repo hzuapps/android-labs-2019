@@ -28,19 +28,23 @@
     <Button
         android:id="@+id/button_1"
         style="@style/Widget.AppCompat.Button.Small"
-        android:layout_width="220dip"
-        android:layout_height="55dip"
-        android:layout_gravity="center_horizontal|bottom"
-        android:text="联系我们，获取最新资料。" />
+        android:layout_marginTop="125dp"
+        android:background="#808080"
+        android:textColor="#daa520"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+
+        android:text="获取最新过级资料" />
 
     <TextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:gravity="center"
-        android:text="如果你想准备四六级，请点击页面底端按钮获取资讯。"
-        android:textColor="#00ff00"
-        android:textSize="24sp" />
+        android:text="准备过级？点击下面按钮一起加入学习吧！"
+        android:textColor="#808080"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/imageview_01"
