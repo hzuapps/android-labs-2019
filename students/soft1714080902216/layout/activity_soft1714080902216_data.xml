@@ -1,9 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/b5"
     tools:context=".Soft1714080902216DataActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/Tellname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="96dp"
+        android:text="请输入姓名："
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/Inputname_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_x="0dp"
+        android:layout_y="124dp"
+        android:hint="Name"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/Telldata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="274dp"
+        android:text="生日为："
+        android:textColor="#000000"
+        android:textSize="20sp" />
+    />
+
+    <EditText
+        android:id="@+id/inputdata"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_x="0dp"
+        android:layout_y="303dp"
+        android:hint="birthday"
+        android:maxLines="1" />
+
+    <Button
+        android:id="@+id/inputLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_x="118dp"
+        android:layout_y="201dp"
+        android:text="查询"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Comeback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_x="122dp"
+        android:layout_y="382dp"
+        android:text="返回"
+        android:textSize="30sp"
+        android:onClick="back"/>
+
+</AbsoluteLayout>
