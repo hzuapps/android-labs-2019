@@ -48,8 +48,8 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/linearLayout02"
-        android:layout_width="0dp"
-        android:layout_height="297dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="27dp"
@@ -57,15 +57,18 @@
 
         <TextView
             android:id="@+id/textview_01"
-            android:layout_width="wrap_content"
-            android:layout_height="500dp"
-            android:drawableTop="@drawable/start01"
-            android:lines="3"
-            android:text="\n ❤Welcome to❤ \n  Novel Create Studio!"
-            android:textColor="#E67C73"
-            android:textSize="36sp"
-            android:textStyle="bold" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/title"
+            android:drawablePadding="20dp"
+            android:textScaleX="1.5"
+            android:textSize="15dp"
+            android:lineSpacingExtra="30dp"
+            android:textStyle="italic"
+            android:text="               心中世界千千万~\n                         打造属于你的世界~"
+            />
 
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
