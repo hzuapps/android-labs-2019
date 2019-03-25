@@ -7,10 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-import com.example.tuku.BankActivity;
-import com.example.tuku.MainActivity;
 import com.example.tuku.R;
 public class soft1714080902227Activity extends AppCompatActivity {
     @Override
@@ -36,8 +33,6 @@ public class soft1714080902227Activity extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu); //这个函数使不使用好像没有影响
-
         return true;
     }
 
