@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.soft1714080902221">
+    package="edu.hzuapps.androidlabs.shiyan4">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1714080902221Activity">
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902221.Soft1714080902221shiyan4Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,10 +17,13 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".SecondActivity"
-            android:label="@string/title_activity_secord"
-            />
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902221.chakanyue"
+            android:label="查看余额">
+        </activity>
+
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902221.jiaofei"
+            android:label="缴费">
+        </activity>
     </application>
 
 </manifest>
