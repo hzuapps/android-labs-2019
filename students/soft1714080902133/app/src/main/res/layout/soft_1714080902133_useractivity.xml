@@ -25,7 +25,7 @@
 
     <TextView
         android:layout_marginTop="32dp"
-        android:background="@color/white"
+        android:background="@color/titleBlue"
         android:textColor="@color/red"
         android:layout_width="match_parent"
         android:layout_height="48dp"

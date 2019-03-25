@@ -1,4 +1,4 @@
-﻿package edu.hzuapps.androidlabs.soft1714080902133;
+package edu.hzuapps.androidlabs.soft1714080902133;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,13 +16,40 @@ public class Soft1714080902133HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1714080902133_homeactivity);
-        Button b1 = findViewById(R.id.home_button4);
+        Button b4 = findViewById(R.id.home_button4);//个人中心
         //点击事件
-        b1.setOnClickListener(new View.OnClickListener() {
+        b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //意图实现跳转Activity
                 Intent intent = new Intent(Soft1714080902133HomeActivity.this, Soft1714080902133UserActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button b1 = findViewById(R.id.home_button1);//充值
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902133HomeActivity.this, Soft1714080902133RechargeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        /*Button b2 = findViewById(R.id.home_button2);//查询
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902133HomeActivity.this, Soft1714080902133RechargeActivity);
+                startActivity(intent);
+            }
+        });*/
+
+        Button b3 = findViewById(R.id.home_button3);//缴费
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902133HomeActivity.this,Soft1714080902133PaymentActivity.class);
                 startActivity(intent);
             }
         });

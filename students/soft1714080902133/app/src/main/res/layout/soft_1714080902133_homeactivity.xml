@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Soft1714080902133HomeActivity">
+    tools:context=".Soft1714080902133HomeActivity"
+    android:background="@drawable/backgound">
 
 
     <android.support.v7.widget.Toolbar
@@ -59,13 +60,7 @@
             android:background="@color/titleBlue"
             android:text="个人中心" />
 
-        <!--背景图片-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/text1"
-            android:drawableTop="@drawable/backgound"
-            />
+
 
     </RelativeLayout>
 
