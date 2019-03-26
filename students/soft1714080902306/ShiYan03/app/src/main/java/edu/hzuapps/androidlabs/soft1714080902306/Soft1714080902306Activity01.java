@@ -16,7 +16,7 @@ public class Soft1714080902306Activity01 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1714080902306_activity01);
 
-        TextView btnOpen = (TextView) findViewById(R.id.textview_01);
+        TextView btnOpen =  findViewById(R.id.Button_1);
         btnOpen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
