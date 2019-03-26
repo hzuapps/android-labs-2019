@@ -7,33 +7,85 @@
     android:layout_height="match_parent"
     android:minHeight="151dp"
     tools:context=".Com1714080901115Activity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="556dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  首页  "
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" 个人中心"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="     好友"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
-        android:layout_height="387dp"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="58dp"
-        android:layout_marginLeft="58dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginRight="58dp"
-        android:layout_marginBottom="144dp"
-        android:drawablePadding="1dp"
-        android:src="@drawable/a"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="0dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginRight="142dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/music" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="147dp"
-        android:layout_height="73dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginRight="34dp"
-        android:text="我的收藏"
-        android:textSize="30sp"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/self" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:srcCompat="@drawable/friend" />
 
 
 </android.support.constraint.ConstraintLayout>

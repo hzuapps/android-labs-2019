@@ -11,6 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Com1714080901115Activity2">
        </activity>
+        <activity android:name=".Com1714080901115Activity3">
+        </activity>
         <activity
             android:name=".Com1714080901115Activity">
             <intent-filter>
