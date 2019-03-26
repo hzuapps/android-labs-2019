@@ -1,22 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".soft1714080902306.Soft1714080902306Activity01"
-    >
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textview_01"
+
+    <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="match_parent"
-        android:layout_height="385dp"
-        android:clickable="true"
-        android:drawableTop="@drawable/huochepiao"
-        android:gravity="center"
-        android:text="火车票"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="59dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="218dp"
+        app:srcCompat="@drawable/tubiao" />
+    <Button
+        android:id="@+id/Button_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="购买火车票"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="退票"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="查看已购票信息"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="投诉"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="帮助"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+
+
+
+
+
+</LinearLayout>
