@@ -7,33 +7,47 @@
     tools:context=".Soft1714080902407Activity"
     tools:layout_editor_absoluteY="25dp">
 
-
-    <TextView
-        android:id="@+id/textView1"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="460dp"
-        android:background="#00BFFF"
-        android:drawableLeft="@mipmap/ic_launcher"
-        android:drawablePadding="10dp"
-        android:onClick="gotoSecondActivity"
-        android:text="测试对象"
-        android:textColor="	#272727"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_height="74dp"
+        android:layout_marginBottom="448dp"
+        android:background="#3d9bff"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/zjq"
+            android:drawablePadding="10dp"
+            android:onClick="onClick"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Pinky"
+            android:textColor="	#111111"
+            android:textSize="25dp" />
+
+
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
         <EditText
             android:id="@+id/input_text"
