@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Soft1714080902232Activity_Before">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game menu"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="65dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher_photo02"
+        android:layout_below="@+id/textView"
+        />
+     
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:id="@+id/button1"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Help"
+        android:id="@+id/button2"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Setting"
+        android:id="@+id/button3"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        />
+
+
+</RelativeLayout>
