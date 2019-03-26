@@ -3,14 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/zhanguo1"
-    tools:context="edu.hzuapps.androidlabs.soft1714080902120.Soft1714080902120NameListActivity">
+    android:background="@drawable/kawayi3"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902120.Soft1714080902120InitialPageActivity">
 
 
-    <ListView
-        android:id="@+id/HistoryPeople_listView"
+    <TextView
+        android:id="@+id/InitialPage_View"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="初始页面"
+        android:textSize="70px"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginStart="0dp"
