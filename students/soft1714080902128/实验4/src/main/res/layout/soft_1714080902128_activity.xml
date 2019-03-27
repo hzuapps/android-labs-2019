@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mText"
+        android:layout_width="411dp"
+        android:layout_height="339dp"
+        android:layout_x="20px"
+        android:layout_y="32px"
+        android:background="@drawable/img2"
+        android:textSize="18sp"></TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="392dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/wendu"
+            android:layout_width="208dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/wendu" />
+
+        <ImageButton
+            android:id="@+id/shidu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shidu" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
