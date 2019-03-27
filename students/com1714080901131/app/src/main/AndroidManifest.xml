@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Com1714080901131Activity2">
-            android:label
+        <activity android:name=".Com1714080901131Activity2" android:label="@string/edit_title_text">
         </activity>
         <activity android:name=".Com1714080901131Activity">
             <intent-filter>
