@@ -7,52 +7,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SecondActivity">
+    tools:context="edu.hzuapps.androidlabs.soft17140080902101.ChattingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1500px">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="200px"
-                android:padding="10dp">
-
-            </LinearLayout>
-        </LinearLayout>
-
+            android:layout_height="1500px"
+            android:orientation="vertical"></LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150px"
             android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="350px"
-                android:layout_height="150px">
-                <Button
-                    android:id="@+id/button_chat"
+                android:layout_width="500px"
+                android:layout_height="match_parent"
+                android:background="#E6E6FA">
+                <EditText
+                    android:id="@+id/chattext1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#87CEFA"
-                    android:textSize="15pt"
-                    android:text="聊天"/>
+                    android:hint="请输入" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150px">
+                android:layout_height="match_parent">
                 <Button
-                    android:id="@+id/button_read"
+                    android:id="@+id/button_sent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#87CEFA"
-                    android:textSize="15pt"
-                    android:text="阅读"/>
+                    android:text="发送"/>
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
 </RelativeLayout>

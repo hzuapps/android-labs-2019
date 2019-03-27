@@ -13,16 +13,23 @@
         android:id="@+id/textview_01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/picture1"
-        android:text="欢迎使用QQ" />
+        android:drawableTop="@drawable/picture1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="欢迎使用QQ"
+        android:layout_alignBottom="@+id/textview_01"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_centerHorizontal="true"
         android:text="继续"
-        />
+        android:layout_alignBottom="@+id/textview_01"
+        android:layout_alignRight="@+id/textview_01"
+        android:layout_alignEnd="@+id/textview_01" />
 
 </RelativeLayout>

@@ -15,7 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecordActivity"></activity>
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".ReadActivity" />
+        <activity android:name=".ChattingActivity"></activity>
     </application>
 
 </manifest>
