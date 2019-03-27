@@ -13,6 +13,6 @@
         android:layout_height="235dp"
         android:layout_marginTop="10dp"
         android:background="#f99999"
-        android:scaleType="fitXY"
+        android:scaleType="fitCenter"
         android:src="@drawable/click_tree" />
     </RelativeLayout>
