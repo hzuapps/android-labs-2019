@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mycolor"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Welcome to AiShop"
+       android:gravity="center"
+       android:textSize="40dp"
+    />
+
+    <LinearLayout
+        android:id="@+id/regist_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Please enter"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:hint="请输入你要搜索的商品名"
+            android:textSize="20dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="搜索"
+        />
+
+    <TextView
+        android:id="@+id/shop"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_alignTop="@+id/btn_send"
+        android:layout_marginTop="34dp"
+        android:drawableTop="@drawable/shop" />
+</RelativeLayout>
