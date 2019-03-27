@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Aishop</string>
+    <string name="title_activity_show">ShowActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+</resources>
