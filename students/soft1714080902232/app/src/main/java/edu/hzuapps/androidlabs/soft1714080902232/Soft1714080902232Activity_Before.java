@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.Soft1714080902232;
+package edu.hzuapps.androidlabs.soft1714080902232;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +12,7 @@ public class Soft1714080902232Activity_Before extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.soft_1714080902232__activity_before);
+        setContentView(R.layout.soft_1714080902232_activity_before);
         b1 =(Button)findViewById(R.id.button1);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
