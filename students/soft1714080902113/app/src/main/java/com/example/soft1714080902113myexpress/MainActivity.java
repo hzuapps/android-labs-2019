@@ -1,31 +1,31 @@
 package com.example.soft1714080902113myexpress;
 
+
 import android.content.Intent;
-import android.media.Image;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 
-import java.nio.InvalidMarkException;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    private ImageView imageView;
+public class MainActivity extends AppCompatActivity  {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button=(Button) findViewById(R.id.start_button);
-        imageView=(ImageView) findViewById(R.id.head_view);
-        button.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View view) {
-        Intent intent=new Intent(MainActivity.this,MyInfo.class);
-        startActivity(intent);
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.hide();
+        }
+        Button InfoBtn=(Button) findViewById(R.id.infoBtn);
+        InfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentInfo=new Intent(MainActivity.this,MyInfo.class);
+                startActivity(intentInfo);
+            }
+        });
     }
 }
+
