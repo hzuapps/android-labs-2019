@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Com1714080901139">
+
+    <TextView
+        android:id="@+id/textview_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="物品属性
++70攻击力
+
+唯一的被动:翻倍你的暴击几率。
+
+唯一的被动:对英雄造成的10%暴击伤害转化为真实伤害。
+
+折叠编辑本段合成信息
+折叠合成所需
+暴风之剑(1300金币)+十字镐(875金币)+1225金币→无尽之刃(3400金币)
+
+折叠可合成物品
+无尽之刃+友方队伍里有等级在14后的奥恩→熔火之刃(4400金币)
+
+折叠编辑本段使用技巧
+无尽之刃适合依赖于普通攻击的物理输出英雄，该装备配合增加攻速暴击的装备(幻影之舞、斯塔缇克电刃、疾射火炮等)效果更佳。" />
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="2"
+    tools:context=".Com1714080901240Activity_02">
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:text="加载本地歌曲" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="删除歌曲" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:text="退出应用" />
+
+    </TableRow>
+</TableLayout>

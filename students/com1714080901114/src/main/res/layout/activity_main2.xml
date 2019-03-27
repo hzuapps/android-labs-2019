@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5591C0"
+    tools:context=".Main2Activity">
+
+    <ImageView
+        android:id="@+id/view1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/timg" />
+
+    <ImageView
+        android:id="@+id/view2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/timgg"
+        android:layout_toRightOf="@+id/view1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择板块"
+        android:textSize="56dp"
+        android:textColor="#BD1212"
+        android:layout_below="@+id/view1"
+        />
+
+
+</RelativeLayout>

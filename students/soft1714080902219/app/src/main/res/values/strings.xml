@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">新闻</string>
+    <string name="menu_bottom_navigation3">我</string>
+    <string name="menu_bottom_navigation2">视频</string>
+    <string name="menu_bottom_navigation1">新闻</string>
+    <string name="menu_text1">收藏</string>
+    <string name="menu_text2">关注</string>
+    <string name="menu_text3">历史</string>
+    <string name="menu_text4">签到</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

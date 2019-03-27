@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_launch_history"
+            android:title="历史记录"/>
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_launch_message"
+            android:title="我的消息"/>
+        <item
+            android:id="@+id/nav_collection"
+            android:icon="@drawable/ic_launch_collection"
+            android:title="我的收藏"/>
+        <item
+            android:id="@+id/nav_download"
+            android:icon="@drawable/ic_launch_download"
+            android:title="我的缓存"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_launch_setting"
+            android:title="设置"/>
+
+    </group>
+
+</menu>

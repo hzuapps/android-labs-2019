@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/qianse"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902120.Soft1714080902120DetailActivity">
+
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/HistoryPeople_large_imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="70px"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/HistoryPeople_lvde_textView"
+        android:layout_below="@+id/HistoryPeople_large_imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="60px"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/HistoryPeople_repu_textView"
+        android:layout_below="@+id/HistoryPeople_lvde_textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

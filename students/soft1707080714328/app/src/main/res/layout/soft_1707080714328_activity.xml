@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="androidlabs.hzuapps.ezu.soft1707080714328.Soft1707080714328Activity">
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:text="                                        WENLIAO\n"
+            android:textColor="#ff3333"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/text1"
+            android:gravity="bottom"
+            android:text="                                        问聊让生活有温度"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/wenliao"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/wenliao"
+            android:layout_width="180dp"
+            android:layout_height="80dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="30dp"
+            android:layout_above="@+id/zhuce"
+            android:background="@drawable/bg_redt"
+            android:text="注册"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textColor="#ff3333"
+            android:id="@id/zhuce"
+            android:background="@drawable/bg_transparent"
+            android:layout_alignParentBottom="true"
+            android:text="登录"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

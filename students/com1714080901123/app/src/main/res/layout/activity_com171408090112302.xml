@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Com1714080901123Activity02">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#007BFF"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/button_map_search" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <WebView
+        android:id="@+id/webview1"
+        android:layout_width="match_parent"
+        android:layout_height="615dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_alignTop="@id/tablerow1"/>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:stretchColumns="4"
+        android:shrinkColumns="0,1,2,3,4">
+
+        <TableRow
+            android:id="@+id/tablerow1"
+            android:background="#007BFF">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/MenuButton"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/squid_black_2"
+                android:text="@string/button_home_page" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/MenuButton"
+                android:drawableTop="@drawable/map_white"
+                android:text="@string/button_map_search" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/MenuButton"
+                android:drawableTop="@drawable/clothing_black"
+                android:text="@string/button_clothing" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/MenuButton"
+                android:drawableTop="@drawable/count_black"
+                android:text="@string/button_skill" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/MenuButton"
+                android:drawableTop="@drawable/logo_amiibo"
+                android:text="@string/button_amiibo"
+                android:textAllCaps="false" />  <!-- textAllCaps="false"：关闭默认大写 -->
+        </TableRow>
+    </TableLayout>
+
+</android.support.design.widget.CoordinatorLayout>

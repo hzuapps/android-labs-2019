@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:id="@+id/re_view01"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="账户充值"/>
+
+    <RelativeLayout
+        android:layout_below="@id/re_view01"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    >
+
+    <CheckBox
+        android:layout_margin="10dp"
+        android:id="@+id/checkBox10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10元" />
+
+    <CheckBox
+        android:layout_margin="10dp"
+        android:id="@+id/checkBox100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100元" />
+
+    <CheckBox
+        android:layout_margin="10dp"
+        android:id="@+id/checkBox500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500元" />
+
+    <CheckBox
+        android:layout_margin="10dp"
+        android:id="@+id/checkBox1000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000元" />
+
+</LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
