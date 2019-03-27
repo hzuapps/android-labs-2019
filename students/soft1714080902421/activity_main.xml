@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Soft1714080902421MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/btn_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击进行种树"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_mytree"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="查看我的森林"
+            android:textAllCaps="false"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/btn_treeplant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看可种树种"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_totaltime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看已学习时间"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看个人设置"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
