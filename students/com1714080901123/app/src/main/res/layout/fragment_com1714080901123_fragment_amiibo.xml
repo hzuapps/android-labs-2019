@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Com1714080901123FragmentAmiibo">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeeee">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="3"
+            >
+
+            <ImageView
+                android:id="@+id/imgView_amiibo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#ffffff"
+                android:src="@drawable/logo_amiibo_big" />
+
+            <TextView
+                android:text="@string/amiibo_normal"
+                style="@style/amiibo_textview_type_style"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/imageButton01"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_girl" />
+                <ImageButton
+                    android:id="@+id/imageButton02"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_boy" />
+                <ImageButton
+                    android:id="@+id/imageButton03"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_squid" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/name_inkling_girl"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#FF4800"/>
+                <TextView
+                    android:text="@string/name_inkling_boy"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#1100FA"/>
+                <TextView
+                    android:text="@string/name_inkling_squid"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#10ED0C"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/imageButton04"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_callie" />
+                <ImageButton
+                    android:id="@+id/imageButton05"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_marie" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/name_callie"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#FF7AB2"/>
+                <TextView
+                    android:text="@string/name_marie"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#20E340"/>
+                <TextView
+                    style="@style/amiibo_textview_style"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/imageButton06"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_girl2" />
+                <ImageButton
+                    android:id="@+id/imageButton07"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_boy2" />
+                <ImageButton
+                    android:id="@+id/imageButton08"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_squid2" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/name_inkling_girl2"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#F20558"/>
+                <TextView
+                    android:text="@string/name_inkling_boy2"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#00C907"/>
+                <TextView
+                    android:text="@string/name_inkling_squid2"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#9E00FA"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/imageButton09"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_pearl" />
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_marina" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/name_pearl"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#F7BAE3"/>
+                <TextView
+                    android:text="@string/name_marina"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#167D4F"/>
+                <TextView
+                    style="@style/amiibo_textview_style"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/imageButton11"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_octoling_girl" />
+                <ImageButton
+                    android:id="@+id/imageButton12"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_octoling_boy" />
+                <ImageButton
+                    android:id="@+id/imageButton13"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_octoling_octopus" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/name_octoling_girl"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#BA0636"/>
+                <TextView
+                    android:text="@string/name_octoling_boy"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#BA0636"/>
+                <TextView
+                    android:text="@string/name_octoling_octopus"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#BA0636"/>
+            </TableRow>
+
+            <TextView
+                android:text="@string/amiibo_recolor"
+                style="@style/amiibo_textview_type_style"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/imageButton14"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_girl_recolor" />
+                <ImageButton
+                    android:id="@+id/imageButton15"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_boy_recolor" />
+                <ImageButton
+                    android:id="@+id/imageButton16"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_squid_recolor" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/name_inkling_girl_recolor"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#10ED0C"/>
+                <TextView
+                    android:text="@string/name_inkling_boy_recolor"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#9613ED"/>
+                <TextView
+                    android:text="@string/name_inkling_squid_recolor"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#FF4800"/>
+            </TableRow>
+
+            <TextView
+                android:text="@string/amiibo_special"
+                style="@style/amiibo_textview_type_style"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/imageButton17"
+                    style="@style/amiibo_imgbutton_style"
+                    android:src="@drawable/amiibo_inkling_girl_ssbu" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/name_inkling_girl_ssbu"
+                    style="@style/amiibo_textview_style"
+                    android:textColor="#FF4800"/>
+                <TextView
+                    style="@style/amiibo_textview_style"/>
+                <TextView
+                    style="@style/amiibo_textview_style"/>
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                /><!-- 放一个空白view，用来防止scrollview最底部被菜单挡住 -->
+        </TableLayout>
+    </ScrollView>
+
+</FrameLayout>

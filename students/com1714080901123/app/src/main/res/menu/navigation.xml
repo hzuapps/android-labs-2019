@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/squid_black_2"
+        android:title="@string/button_home_page" />
+
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/map_black"
+        android:title="@string/button_map_search" />
+
+    <item
+        android:id="@+id/navigation_clothing"
+        android:icon="@drawable/clothing_black"
+        android:title="@string/button_clothing" />
+
+    <item
+        android:id="@+id/navigation_counter"
+        android:icon="@drawable/count_black"
+        android:title="@string/button_counter" />
+
+    <item
+        android:id="@+id/navigation_amiibo"
+        android:icon="@drawable/logo_amiibo_2"
+        android:title="@string/button_amiibo" />
+
+</menu>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Com1714080901123FragmentHome">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/homebutton01"
+                style="@style/home_button_style"
+                android:text="@string/home_gameupdate_4_5_0" />
+
+            <Button
+                android:id="@+id/homebutton02"
+                style="@style/home_button_style"
+                android:text="@string/home_splatfest_wizard_vs_knigh" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
