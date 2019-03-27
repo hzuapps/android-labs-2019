@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">LibraryManagement</string>
-    <string name="edit_message">请输入书名</string>
-    <string name="button_send">查询</string>
-    <string name="button_send_2">推荐</string>
-    <string name="button_send_3">我的</string>
-</resources>

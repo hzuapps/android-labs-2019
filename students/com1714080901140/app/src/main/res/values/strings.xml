@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">用户信息</string>
-    <string name="name">姓名:lisa</string>
-    <string name="sex">性別：女</string>
-    <string name="time">註冊時間：2019.3.21</string>
-    <string name="user">USER</string>
-</resources>

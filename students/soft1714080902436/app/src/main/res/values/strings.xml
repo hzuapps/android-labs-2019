@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Habit</string>
-    <string name="hint1">习惯的养成，从现在开始</string>
-    <string name="hint2">美好生活从现在开始</string>
-    <string name="hint3">每天早起早睡</string>
-    <string name="hint4">一天刷一套cet六级试卷</string>
-    <string name="hint5">按时完成android实验</string>
-    <string name="hint6">人生自在常如此，何事能妨笑口开？</string>
-</resources>

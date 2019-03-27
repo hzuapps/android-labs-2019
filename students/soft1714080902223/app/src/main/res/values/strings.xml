@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Soft1714080902223Activity</string>
-    <string name="home_string">我的清单</string>
-    <string name="page_edit">编辑标签页</string>
-    <string name="edit_body_hint">请输入正文内容</string>
-    <string name="edit_title_hint">标题</string>
-    <string name="btn_text_confirm">确认</string>
-    <string name="page_detail">任务详情</string>
-</resources>
