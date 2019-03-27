@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/zzpic15650_s"
+    android:orientation="vertical"
     tools:context=".Soft1714080902219Activity2">
 
     <TextView
