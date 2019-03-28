@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">生日管家</string>
-    <string name="title_activity_com1712070504104">今天生日的有：</string>
-    <string name="title_activity_com17120705041042">送上生日祝福！</string>
+    <string name="birthday_coming">即将过生日</string>
+    <string name="birthday_lable">标为星标</string>
+    <string name="birthday_lableperson">你的星标</string>
+    <string name="birthday_wishes">送上生日祝福！</string>
+    <string name="wishes">Happy Birthday！</string>
 </resources>

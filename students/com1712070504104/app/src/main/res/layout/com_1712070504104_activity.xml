@@ -1,43 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Com1712070504104Activity">
+    android:orientation="vertical">
+
     <TextView
-        android:id="@+id/birthday_text"
-        android:layout_width="0dp"
+        android:id="@+id/app_name"
+        android:layout_width="115dp"
+        android:layout_height="88dp"
+        android:layout_gravity="center"
+        android:text="生日管家"
+        android:textSize="@dimen/fab_margin" />
+
+    <TextView
+        android:id="@+id/birthday_coming"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:gravity="center_horizontal"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="left"
+        android:text="即将过生日："
+        android:textSize="@dimen/fab_margin" />
+
     <TextView
-        android:id="@+id/date_text"
-        android:layout_width="0dp"
+        android:id="@+id/birthday_lable"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/title_activity_com17120705041042"
-        android:textColor="@android:color/red"
-        android:textSize="67dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="left"
+        android:text="标为星标："
+        android:textSize="@dimen/fab_margin" />
+
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="348dp"
-        android:layout_height="336dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginRight="67dp"
-        android:layout_marginBottom="60dp"
-        android:text="@string/title_activity_com1712070504104"
-        app:layout_constraintBottom_toTopOf="@+id/birthday_text"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/birthday" />
 
-
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

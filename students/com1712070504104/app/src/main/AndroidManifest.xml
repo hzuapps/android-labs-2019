@@ -8,20 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/HappyBirthday">
         <activity
             android:name="edu.hzuapps.androidlabs.com1712070504104.Com1712070504104Activity2"
-            android:label="@string/title_activity_com17120705041042"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/birthday_wishes"
+            android:theme="@style/TextStyle2"></activity>
         <activity
             android:name="edu.hzuapps.androidlabs.com1712070504104.Com1712070504104Activity"
-            android:label="@string/title_activity_com1712070504104"
-            android:theme="@style/AppTheme.NoActionBar" />
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:label="@string/birthday_coming"
+            android:theme="@style/TextStyle" />
 
     </application>
 
