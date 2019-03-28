@@ -1,13 +1,36 @@
 <resources>
-    <string name="app_name">Splatoon2Helper</string>
-    <string name="title_activity_com171408090112301">Splatoon2游戏助手</string>
+    <string name="app_name">Splatoon2游戏助手</string>
     <string name="button_home_page">首页</string>
     <string name="button_map_search">地图查询</string>
     <string name="button_clothing">服装数据</string>
-    <string name="button_skill">技能计算</string>
+    <string name="button_counter">技能计算</string>
     <string name="button_amiibo">amiibo</string>
-    <string name="title_activity_com171408090112302">Com1714080901123Activity02</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
+    <string name="name_inkling_girl">Inkling Girl</string>
+    <string name="name_inkling_boy">Inkling Boy</string>
+    <string name="name_inkling_squid">Inkling Squid</string>
+    <string name="name_callie">Callie</string>
+    <string name="name_marie">Marie</string>
+    <string name="name_inkling_girl2">Inkling Girl 2</string>
+    <string name="name_inkling_boy2">Inkling Boy 2</string>
+    <string name="name_inkling_squid2">Inkling Squid 2</string>
+    <string name="name_pearl">Pearl</string>
+    <string name="name_marina">Marina</string>
+    <string name="name_octoling_girl">Octoling Girl</string>
+    <string name="name_octoling_boy">Octoling Boy</string>
+    <string name="name_octoling_octopus">Octoling Octopus</string>
+    <string name="name_inkling_girl_recolor">Inkling Girl(Recolor)</string>
+    <string name="name_inkling_boy_recolor">Inkling Boy(Recolor)</string>
+    <string name="name_inkling_squid_recolor">Inkling Squid(Recolor)</string>
+    <string name="name_inkling_girl_ssbu">Inkling Girl(SSBU)</string>
+
+    <string name="amiibo_normal">Normal</string>
+    <string name="amiibo_recolor">Recolor</string>
+    <string name="amiibo_special">Special</string>
+
+    <string name="home_gameupdate_4_5_0">[NGA] 4.5.0补丁更新 武器调整相关 [中文翻译]</string>
+    <string name="home_splatfest_wizard_vs_knigh">[Splatfest] Wizard VS Knight !</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

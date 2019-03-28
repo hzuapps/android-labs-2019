@@ -1,52 +1,126 @@
 package edu.hzuapps.androidlabs.com1714080901123;
 
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-import android.widget.ImageView;
+import android.view.MenuItem;
 
 public class Com1714080901123Activity01 extends AppCompatActivity {
 
-    //static int buttonState = 1;   //记录现在按的是哪个菜单按键
+    private BottomNavigationView bottomNavigationView;
+    private Com1714080901123FragmentHome fragmentHome;
+    private Com1714080901123FragmentMap fragmentMap;
+    private Com1714080901123FragmentClothing fragmentClothing;
+    private Com1714080901123FragmentCounter fragmentCounter;
+    private Com1714080901123FragmentAmiibo fragmentAmiibo;
+    private Fragment[] fragments;
+    private int lastFragment;  //用于记录上个选择的 Fragment
+    /*这个方法控制的话，底部菜单栏不会跟着改变
+    private BottomNavigationView.OnNavigationItemSelectedListener changeFrament = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            switch (menuItem.getItemId()){
+                case R.id.navigation_home:{
+                    if (lastFragment!=0){
+                        switchFragment(lastFragment, 0);
+                        lastFragment = 0;
+                    }
+                    return true;
+                }
+                case R.id.navigation_map:{
+                    if(lastFragment!=1){
+                        switchFragment(lastFragment, 1);
+                        lastFragment = 1;
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+    };
+    //*/
+    private void switchFragment(int lastFragment, int index){
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.hide(fragments[lastFragment]);  //隐藏上个Fragment
+        if(fragments[index].isAdded()==false){
+            transaction.add(R.id.tablehome, fragments[index]);
+        }
+        transaction.show(fragments[index]).commitAllowingStateLoss();
+    }
+
+    private void initFragment(){
+        fragmentHome = new Com1714080901123FragmentHome();
+        fragmentMap = new Com1714080901123FragmentMap();
+        fragmentClothing = new Com1714080901123FragmentClothing();
+        fragmentCounter = new Com1714080901123FragmentCounter();
+        fragmentAmiibo = new Com1714080901123FragmentAmiibo();
+        fragments = new Fragment[]{fragmentHome, fragmentMap, fragmentClothing, fragmentCounter, fragmentAmiibo};
+        lastFragment = 0;
+        getSupportFragmentManager().beginTransaction().replace(R.id.tablehome, fragmentHome).show(fragmentHome).commit();   //默认为Home
+        bottomNavigationView = (BottomNavigationView)findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                mOnNavigationItemSelectedListener
+        );
+    }
+
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {   //底部菜单监听
+            switch (item.getItemId()){
+                case R.id.navigation_home:{
+                    if (lastFragment!=0){
+                        switchFragment(lastFragment, 0);
+                        lastFragment = 0;
+                    }
+                    return true;
+                }
+                case R.id.navigation_map:{
+                    if(lastFragment!=1){
+                        switchFragment(lastFragment, 1);
+                        lastFragment = 1;
+                    }
+                    return true;
+                }
+                case R.id.navigation_clothing:{
+                    if(lastFragment!=2){
+                        switchFragment(lastFragment, 2);
+                        lastFragment = 2;
+                    }
+                    return true;
+                }
+                case R.id.navigation_counter:{
+                    if(lastFragment!=1){
+                        switchFragment(lastFragment, 3);
+                        lastFragment = 3;
+                    }
+                    return true;
+                }
+                case R.id.navigation_amiibo:{
+                    if(lastFragment!=1){
+                        switchFragment(lastFragment, 4);
+                        lastFragment = 4;
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_com171408090112301);  //调用布局文件
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_main);
+        initFragment(); //调用初始化
 
-        //final Button button1 = (Button)findViewById(R.id.button1);
-        final Button button2 = (Button)findViewById(R.id.button2);
-
-        /*
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(buttonState != 1) {
-                    //Drawable drawableTop = getResources().getDrawable(R.drawable.squid_while_2);
-                    //button1.setCompoundDrawablesWithIntrinsicBounds(null, drawableTop, null, null);
-                    buttonState = 1;
-                }
-            }
-        });
-        //*/
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Drawable drawableTop = getResources().getDrawable(R.drawable.map_white);
-                //button2.setCompoundDrawablesWithIntrinsicBounds(null, drawableTop, null, null);
-                //buttonState = 2;
-                Intent intent = new Intent(Com1714080901123Activity01.this, Com1714080901123Activity02.class);
-                startActivity(intent);
-
-            }
-        });
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
 }
