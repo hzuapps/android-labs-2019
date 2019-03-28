@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">App</string>
+    <string name="app_name">A首页</string>
     <string name="title_soft_1714080902139_activity">soft1714080902139GameBox</string>
+    <string name="title_soft_1714080902139_activity2">我的</string>
 </resources>

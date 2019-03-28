@@ -8,26 +8,43 @@
     tools:context=".Soft1714080902139Activity">
 
     <TextView
+        android:id="@+id/textview_01"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="点击跳转!"
+        android:layout_height="80dp"
+        android:drawableTop="@drawable/me01"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:layout_width="126dp"
-        android:layout_height="52dp"
-        android:onClick="skip"
-        android:text="6666"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textview_02"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:drawableTop="@drawable/first02"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn01"
+        android:layout_width="125dp"
+        android:layout_height="80dp"
+        android:onClick="ski"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints,OnClick" />
 
 
