@@ -2,17 +2,71 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="415dp"
-        android:layout_height="250dp"
-        android:src="@drawable/greenbook" />
+        <ImageView
+            android:layout_width="415dp"
+            android:layout_height="250dp"
+            android:src="@drawable/greenbook" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_shape"
+            android:text="豆瓣评分：8.9"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="30dp"/>
 
-    <TextView
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="简介:《绿皮书》是由彼得·法拉利执导，维果·莫特森、马赫沙拉·阿里主演的剧情片，于2018年9月11日在多伦多国际电影节首映；2019年3月1日在中国内地上映。该片改编自真人真事，讲述了意裔美国人保镖托尼，他被聘用为世界上优秀的爵士钢琴家唐开车。钢琴家将从纽约开始举办巡回演奏，俩人之间一段跨越种族、阶级的友谊的故事。" />
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="简介:《绿皮书》是由彼得·法拉利执导，维果·莫特森、马赫沙拉·阿里主演的剧情片，于2018年9月11日在多伦多国际电影节首映；2019年3月1日在中国内地上映。该片改编自真人真事，讲述了意裔美国人保镖托尼，他被聘用为世界上优秀的爵士钢琴家唐开车。钢琴家将从纽约开始举办巡回演奏，俩人之间一段跨越种族、阶级的友谊的故事。" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="更多资讯如下:"
+            android:textColor="#551A8B"
+            android:gravity="center"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:autoLink="web"
+            android:text="https://neets.cc/detail/TrbqtKCxjkUETpiHKSN3xQ"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:autoLink="web"
+            android:text="https://movie.douban.com/subject/27060077/"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:autoLink="web"
+            android:text="http://www.1905.com/mdb/film/2245743/"/>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

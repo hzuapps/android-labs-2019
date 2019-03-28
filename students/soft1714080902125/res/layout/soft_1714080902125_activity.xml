@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
 
     <LinearLayout
@@ -22,7 +23,8 @@
             android:layout_height="70dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:text="点此进入" />
+            android:text="点此进入"
+            android:background="@drawable/btn_shape"/>
 
     </LinearLayout>
 
@@ -43,7 +45,8 @@
             android:layout_height="70dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:text="点此进入" />
+            android:text="点此进入"
+            android:background="@drawable/btn_shape"/>
 
     </LinearLayout>
 
