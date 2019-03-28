@@ -8,26 +8,26 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="wrap_content"
+        android:layout_width="421dp"
         android:layout_height="61dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:src="@mipmap/star"
         android:drawablePadding="10dp"
         android:gravity="center"
-        android:text="有趣的课程要开始啦！"
+        android:src="@mipmap/star"
+        android:text="有趣的课程就要开始了！"
         tools:context=".MainActivity"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="152dp" />
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="142dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="416dp"
+        android:layout_height="455dp"
         app:srcCompat="@mipmap/star"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="245dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="241dp" />
 
 </android.support.constraint.ConstraintLayout>
