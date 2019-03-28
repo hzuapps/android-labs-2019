@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902421.TotalTimeActivity">
+
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="match_parent"
+        android:layout_height="347dp"
+        android:layout_marginTop="10dp"
+        android:background="#f99999"
+        android:scaleType="fitXY"
+        android:src="@drawable/totaltime2" />
+
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="match_parent"
+        android:layout_height="364dp"
+        android:layout_below="@+id/iv_1"
+        android:layout_marginTop="10dp"
+        android:background="#f99999"
+        android:scaleType="fitXY"
+        android:src="@drawable/totaltime" />
+
+</RelativeLayout>

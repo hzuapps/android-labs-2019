@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
-    tools:context="edu.hzuapps.androidlabs.soft1714080902421.ImageViewActivity">
+    tools:context="edu.hzuapps.androidlabs.soft1714080902421.MyTreeActivity">
 
     <ImageView
         android:id="@+id/iv_1"
-        android:layout_width="368dp"
-        android:layout_height="235dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="732dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
         android:background="#f99999"
-        android:scaleType="fitCenter"
-        android:src="@drawable/click_tree" />
-    </RelativeLayout>
+        android:scaleType="fitXY"
+        android:src="@drawable/mytree" />
+
+</RelativeLayout>

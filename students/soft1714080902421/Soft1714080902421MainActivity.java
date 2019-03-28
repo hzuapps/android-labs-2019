@@ -15,19 +15,32 @@ import android.widget.Toast;
 public class Soft1714080902421MainActivity extends AppCompatActivity {
     private ImageView imageView = null;
     private Button mBtnImageView=null;
+    private Button mBtnmytree=null;
+    private Button mBtntreeplant=null;
+    private Button mBtntotaltime=null;
+    private Button mBtnsetting=null;
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.soft_1714080902421_activity);
+        setContentView(R.layout.activity_main);
         mBtnImageView = findViewById(R.id.btn_imageview);
+        mBtnmytree = findViewById(R.id.btn_mytree);
+        mBtntreeplant = findViewById(R.id.btn_treeplant);
+        mBtntotaltime = findViewById(R.id.btn_totaltime);
+        mBtnsetting = findViewById(R.id.btn_setting);
         setOnClickListener();
+        //根据id找到按钮
     }
 
     private void setOnClickListener(){
         OnClick onClick = new OnClick();
         mBtnImageView.setOnClickListener(onClick);
+        mBtnmytree.setOnClickListener(onClick);
+        mBtntreeplant.setOnClickListener(onClick);
+        mBtntotaltime.setOnClickListener(onClick);
+        mBtnsetting.setOnClickListener(onClick);
         //设置点击事件
     }
 
@@ -38,6 +51,18 @@ public class Soft1714080902421MainActivity extends AppCompatActivity {
             switch (v.getId()){
             case R.id.btn_imageview:
                 intent = new Intent(Soft1714080902421MainActivity.this, ImageViewActivity.class);
+            break;
+            case R.id.btn_mytree:
+                intent = new Intent(Soft1714080902421MainActivity.this, MyTreeActivity.class);
+            break;
+            case R.id.btn_treeplant:
+                intent = new Intent(Soft1714080902421MainActivity.this, TreePlantActivity.class);
+            break;
+            case R.id.btn_totaltime:
+                 intent = new Intent(Soft1714080902421MainActivity.this, TotalTimeActivity.class);
+            break;
+            case R.id.btn_setting:
+                  intent = new Intent(Soft1714080902421MainActivity.this, SettingActivity.class);
             break;
             }
             startActivity(intent);
