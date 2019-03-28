@@ -12,11 +12,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
-        Button btn = (Button) findViewById(R.id.button1);
+        Button btn = findViewById(R.id.music);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MyCollection.class));
+                startActivity(new Intent(MainActivity.this,MusicSearch.class));
             }
         });
     }

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="0dp"
+    android:paddingLeft="0dp">
+
+
+    <LinearLayout
+    android:id="@+id/main_top_linlayout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#32CD99">
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/main_menu_imgv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_menu" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/main_online_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="在线音乐"
+                android:textColor="@color/white_60P"
+                android:textSize="25dp" />
+            <ImageView
+                android:id="@+id/main_search_imgv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_menu_search" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+    <ImageView
+        android:id="@+id/spring_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:src="@mipmap/spring_img" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:text="音乐" />
+        <Button
+            android:id="@+id/find"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="1"
+            android:text="发现" />
+
+        <Button
+            android:id="@+id/mv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:text="视频" />
+
+        <Button
+            android:id="@+id/mine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="3"
+            android:text="我的" />
+        <Button
+            android:id="@+id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="4"
+            android:text="播放记录" />
+    </LinearLayout>
+
+
+</RelativeLayout>
