@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="学生信息表"
+        android:textColor="#005522"
+        android:textSize="40dp" />
+    <TableLayout
+        android:id="@+id/table1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:padding="6.5dip" >
+
+        <TableRow
+            android:orientation="horizontal"
+            android:paddingLeft="0.5dip"
+            android:paddingRight="0.5dip"
+            android:paddingTop="1dip" >
+
+            <Button
+                android:id="@+id/w11"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                android:text="学号"
+                />
+
+            <Button
+                android:id="@+id/w12"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:text="姓名"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+            <Button
+                android:id="@+id/w13"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:text="性别"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+            <Button
+                android:id="@+id/w14"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:text="班级"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+        </TableRow>
+
+        <TableRow
+            android:orientation="horizontal"
+            android:paddingLeft="0.5dip"
+            android:paddingRight="0.5dip"
+            android:paddingTop="0dip" >
+
+            <Button
+                android:id="@+id/w21"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:text="1714080902323"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+
+            <Button
+                android:id="@+id/w22"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:text="陈鑫磊"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+
+            <Button
+                android:id="@+id/w23"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:text="女"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+            <Button
+                android:id="@+id/w24"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:text="17软件3班"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+        </TableRow>
+        <TableRow
+            android:orientation="horizontal"
+            android:paddingLeft="0.5dip"
+            android:paddingRight="0.5dip"
+            android:paddingTop="0dip" >
+
+            <Button
+                android:id="@+id/w31"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+
+            <Button
+                android:id="@+id/w32"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+
+            <Button
+                android:id="@+id/w33"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+            <Button
+                android:id="@+id/w34"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0.5dip"
+                android:layout_marginLeft="0.5dip"
+                android:textSize="18dp"
+                android:textColor="#005522"
+                />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
