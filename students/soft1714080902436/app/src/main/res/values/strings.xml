@@ -2,8 +2,17 @@
     <string name="app_name">Habit</string>
     <string name="hint1">习惯的养成，从现在开始</string>
     <string name="hint2">美好生活从现在开始</string>
-    <string name="hint3">每天早起早睡</string>
-    <string name="hint4">一天刷一套cet六级试卷</string>
-    <string name="hint5">按时完成android实验</string>
-    <string name="hint6">人生自在常如此，何事能妨笑口开？</string>
+    <string name="hint3">余华：在我三十六岁的那个夜晚，鲁迅在我这里，终于从一个词汇回到了一个作家。回顾小学到中学的岁月里，我被迫阅读鲁迅作品的情景时，我感慨万端，我觉得鲁迅是不属于孩子们的，他属于成熟并且敏感的读者。同时我还觉得，一个读者与一个作家的真正相遇，有时候需要时机。
+　　文革结束以后，我阅读过很多其他作家的作品，有伟大的作品，也有平庸的作品，当我阅读某一位作家的作品时，一旦感到无聊，我就会立刻放下这位作家的作品，让我没有机会去讨厌这位作家。可是文革期间我无法放下鲁迅的作品，我被迫一遍又一遍地去阅读，因此鲁迅是我这辈子唯一讨厌过的作家。
+　　我告诉挪威的听众：当一个作家成为了一个词汇以后，其实是对这个作家的伤害。
+　　我的演讲结束后，奥斯陆大学历史系的Harald Bøckman教授走过来说：「你小时候对鲁迅的讨厌，和我小时候对易卜生的讨厌一模一样。」</string>
+    <string name="hint4">我所有的自负皆来自我的自卑，所有的英雄气概都来自于我的软弱。嘴里振振有词是因为心里满是怀疑，深情是因为痛恨自己无情。这世界没有一件事情是虚空而生的，站在光里，背后就会有阴影，这深夜里一片寂静，是因为你还没有听见声音。《坦白书》－－－马良</string>
+    <string name="hint5">巴尔扎克《高老头》:
+人生就是这样，跟厨房一样腥臭。要想捞油水就不能怕弄脏手，只要事后洗干净就行。今日所谓道德，不过是这一点</string>
+    <string name="hint6">有志不在年高，无志空活百岁</string>
+    <string name="title_activity_soft1714080902436_scrolling">Soft1714080902436ScrollingActivity
+    </string>
+    <string name="large_text">
+    </string>
+    <string name="action_settings">Settings</string>
 </resources>

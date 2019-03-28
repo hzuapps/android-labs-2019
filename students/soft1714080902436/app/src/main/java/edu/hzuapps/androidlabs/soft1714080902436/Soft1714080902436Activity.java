@@ -21,22 +21,19 @@ public class Soft1714080902436Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText edit_message1;
-                edit_message1= (EditText) findViewById(R.id.edit_message1);
-                String edit_message2=edit_message1.getText().toString();
+                edit_message1 = (EditText) findViewById(R.id.edit_message1);
+                String edit_message2 = edit_message1.getText().toString();
                 Intent intent1 = new Intent(Soft1714080902436Activity.this, Soft1714080902436ConfirmActivity.class);
-                intent1.putExtra("transmit",edit_message2);
+                intent1.putExtra("transmit", edit_message2);
                 startActivity(intent1);
             }
         });
-        Button gobutton2= (Button) findViewById(R.id.gobutton2);
+        Button gobutton2 = (Button) findViewById(R.id.gobutton2);
         gobutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(Soft1714080902436Activity.this, Soft1714080902436RecordActivity.class);
-                startActivity(intent2);
+               finish();
             }
         });
-        }
-
     }
-
+}
