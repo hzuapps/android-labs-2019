@@ -20,7 +20,9 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_com1714080901238" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_com1714080901238" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -33,9 +35,12 @@
     <TextView
         android:id="@+id/textview_01"
         android:layout_width="395dp"
-        android:layout_height="477dp"
+        android:layout_height="420dp"
         android:drawableTop="@drawable/ic_1714080901238"
         android:drawablePadding="50dp"
-        android:text="我的记账本" />
+        android:text="我的记账本"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="top|center" />
+
 
 </android.support.design.widget.CoordinatorLayout>
