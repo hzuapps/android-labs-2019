@@ -5,30 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/p1"
+    tools:context=".HelpActivity"
+    android:background="@drawable/p4"
     android:orientation="vertical">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
+        android:text="back"/>
 
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="0.6">
+        android:layout_weight="0.7">
 
         <TextView
             android:id="@+id/begin"
@@ -36,9 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:gravity="center"
-            android:text="点我玩"
-            android:textColor="#CC3399"
-            android:textSize="70dp"
+            android:text="左键单击展开"
+            android:textColor="#3399CC	"
+            android:textSize="60dp"
             android:textStyle="bold" />
 
 
@@ -55,9 +47,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:gravity="center"
-            android:text="玩前须知"
-            android:textColor="#CC3399"
-            android:textSize="70dp"
+            android:text="右键标记地雷"
+            android:textColor="#3399CC	"
+            android:textSize="60dp"
             android:textStyle="bold" />
     </LinearLayout>
 
