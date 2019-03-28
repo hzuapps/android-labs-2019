@@ -6,22 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Soft1714080902101Activity extends AppCompatActivity {
+public class ChatActivity extends AppCompatActivity {
 
-    private Button myButton;
+    private Button myButton_chatting1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.soft_1714080902101_activity);
+        setContentView(R.layout.activity_chat);
 
-        myButton = (Button)findViewById(R.id.button1);
-        myButton.setOnClickListener(new View.OnClickListener() {
-
+        myButton_chatting1 = (Button)findViewById(R.id.button_chatting1);
+        myButton_chatting1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Intent intent = new Intent(Soft1714080902101Activity.this,SecondActivity.class);
-                    startActivity(intent);
+                Intent intent = new Intent(ChatActivity.this,ChattingActivity.class);
+                startActivity(intent);
 
             }
         });

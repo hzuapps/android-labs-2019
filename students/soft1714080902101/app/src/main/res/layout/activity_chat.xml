@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SecondActivity">
+    tools:context="edu.hzuapps.androidlabs.soft17140080902101.ChatActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,6 +22,14 @@
                 android:layout_height="200px"
                 android:padding="10dp">
 
+                <Button
+                    android:id="@+id/button_chatting1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E6EAFA"
+                    android:textSize="10pt"
+                    android:gravity="center_vertical"
+                    android:text="  我的电脑"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -37,7 +45,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#87CEFA"
-                    android:textSize="15pt"
                     android:text="聊天"/>
             </LinearLayout>
             <LinearLayout
@@ -48,11 +55,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#87CEFA"
-                    android:textSize="15pt"
                     android:text="阅读"/>
             </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
-
 </RelativeLayout>
