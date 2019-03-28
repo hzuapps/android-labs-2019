@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zzpic15650_s"
+    tools:context=".Soft1714080902219Activity2">
+
+    <TextView
+        android:id="@+id/registe_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="用户注册"/>
+    <LinearLayout
+        android:id="@+id/registe_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/registe_title"
+        android:layout_marginTop="20dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="手机号"
+            />
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/registe_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/registe_phone"
+        android:layout_marginTop="20dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:textSize="20dp"
+            android:text="密码"
+            />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/registe_password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/registe_password"
+        android:layout_marginTop="20dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="重复密码"
+            />
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="26dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/registe_password2">
+        <Button
+            android:layout_width="150dp"
+            android:layout_marginLeft="45dp"
+            android:layout_height="wrap_content"
+            android:textColor="#fffdfd"
+            android:textSize="20dp"
+            android:text="获取验证码"
+            android:background="#cec66955"
+            />
+        <EditText
+            android:layout_width="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test"
+        android:layout_centerHorizontal="true"
+        android:background="#cec66955"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="#ce4d4442"
+        android:text="提  交"
+        android:width="257dp"/>
+</RelativeLayout>

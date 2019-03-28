@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">锁屏背单词</string>
+    <string name="date">3月21日  星期四</string>
+    <string name="WrongTxt">错题集界面</string>
+</resources>

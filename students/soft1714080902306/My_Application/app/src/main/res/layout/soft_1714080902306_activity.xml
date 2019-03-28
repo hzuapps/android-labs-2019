@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="火车订票系统"
+        android:textColor="#005522"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="购买火车票"
+        android:textColor="#005522"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="查看已购火车票信息"
+        android:textColor="#005522"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:text="查询剩余火车票信息"
+        android:textColor="#005522"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:text="退出"
+        android:textColor="#005522"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="614dp" />
+
+</android.support.constraint.ConstraintLayout>

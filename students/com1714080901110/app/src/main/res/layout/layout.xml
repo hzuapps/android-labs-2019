@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <EditText
+           android:id="@+id/music"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:hint="搜索音乐"/>
+
+   </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="202dp"
+                android:layout_height="180dp"
+                android:layout_column="0"
+                android:layout_marginTop="36dp"
+                android:onClick="onClick"
+                android:text="本地音乐" />
+
+
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="202dp"
+                android:layout_height="180dp"
+                android:layout_column="1"
+                android:layout_marginTop="36dp"
+                android:text="我的收藏" />
+
+        </TableRow>
+
+        <SeekBar
+            android:id="@+id/jindu"
+            android:layout_marginTop="280dp" />
+
+
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/music_loop_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginTop="495dp"
+
+        app:srcCompat="@mipmap/ic_play_btn_loop" />
+
+    <ImageView
+        android:id="@+id/pre_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="500dp"
+        android:layout_toRightOf="@id/music_loop_img"
+        app:srcCompat="@mipmap/ic_play_bar_pre" />
+    <ImageView
+        android:id="@+id/play_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_toRightOf="@id/pre_music"
+        android:layout_marginLeft="15dp"
+        app:srcCompat="@mipmap/ic_play_bar_btn_play" />
+    <ImageView
+        android:id="@+id/next_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_toRightOf="@+id/play_music"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/ic_play_bar_btn_next"/>
+
+</RelativeLayout>

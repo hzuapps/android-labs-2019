@@ -18,5 +18,8 @@
         </activity>
         <activity android:name=".CarinfoActivity"></activity>
     </application>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8c229279cd473102680009ca80425cde3d7130f2
 </manifest>
