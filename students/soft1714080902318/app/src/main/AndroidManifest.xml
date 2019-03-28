@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SecondActivity"
+            android:label="@string/title_activity_second"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Soft1714080902318MainActivity"
-            android:label="@string/title_activity_soft1714080902318_main"></activity>
+            android:label="@string/title_activity_soft1714080902318_main" />
     </application>
 
 </manifest>
