@@ -12,6 +12,11 @@
         android:name=".Soft1714080902323Activity1"
         android:label="Soft1714080902323Activity1"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Soft1714080902323Activity2"
+            android:label="Soft1714080902323Activity2">
+        </activity>
+        <activity android:name=".Soft1714080902323Activity3"
+            android:label="Soft1714080902323Activity3"></activity>
         <activity
             android:name=".Soft1714080902323Activity"
             android:label="Soft1714080902323Activity">
