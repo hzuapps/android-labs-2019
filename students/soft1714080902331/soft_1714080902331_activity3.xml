@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing"
+    tools:context=".Soft1714080902331Activity3">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="我的心事"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+
+</LinearLayout>
+=======
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -43,3 +63,4 @@
         android:layout_marginEnd="50dp" />
 
 </android.support.design.widget.CoordinatorLayout>
+>>>>>>> 04de59006bcef14253116cac674bc33ccca7169d

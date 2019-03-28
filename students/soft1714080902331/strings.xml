@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<resources>
+    <string name="app_name">Soft1714080902331</string>
+    <string name="title_activity_soft1714080902331">Soft1714080902331Activity</string>
+    <string name="title_activity_soft171408029023312">Soft17140802902331Activity2</string>
+    <string name="title_activity_soft17140809023313">Soft1714080902331Activity3</string>
+    <string name="Welcome">欢迎来到小小日记本！</string>
+    <string name="Record">记录</string>
+    <string name="My">我的</string>
+    <string name="Write">写下你的心事吧！</string>
+    <string name="Things">我的心事</string>
+    <string name="title_activity_soft17140809023312">Soft1714080902331Activity2</string>
+</resources>
+=======
 <resources>
     <string name="app_name">Soft1714080902331</string>
     <string name="title_activity_soft1714080902331">Soft1714080902331Activity</string>
@@ -9,3 +23,4 @@
     <string name="My">我的</string>
     <string name="Record">记录</string>
 </resources>
+>>>>>>> 04de59006bcef14253116cac674bc33ccca7169d

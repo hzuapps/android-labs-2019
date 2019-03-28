@@ -1,3 +1,54 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing"
+    android:orientation="vertical"
+    tools:context=".Soft1714080902331Activity">
+
+    <TextView
+        android:id="@+id/textview_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:gravity="center"
+        android:text="@string/Welcome"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageview1"
+        android:layout_width="240dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/rijiben"
+        android:contentDescription="TODO"
+        android:layout_marginStart="65dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="120dp"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@android:drawable/ic_menu_month" />
+
+
+</LinearLayout>
+=======
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -70,3 +121,4 @@
         android:focusable="true" />
 
 </android.support.design.widget.CoordinatorLayout>
+>>>>>>> 04de59006bcef14253116cac674bc33ccca7169d
