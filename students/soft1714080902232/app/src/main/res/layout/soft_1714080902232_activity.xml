@@ -41,6 +41,12 @@
             android:paddingLeft="20dp"
             android:text="NEW Game"
             />
-
 </LinearLayout>
+<edu.hzuapps.androidlabs.soft1714080902232.Soft1714080902232Activity_GameView
+  android:id="@+id/gv_show"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_weight="1"
+ >
+</edu.hzuapps.androidlabs.soft1714080902232.Soft1714080902232Activity_GameView>
 </LinearLayout>

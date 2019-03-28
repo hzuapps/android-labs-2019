@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.Soft1714080902232;
+package edu.hzuapps.androidlabs.soft1714080902232;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +16,7 @@ public class Soft1714080902232Activity_Start extends AppCompatActivity {
         imgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(Soft1714080902232Activity_Start.this, Soft1714080902232Activity.class);
+                Intent intent = new Intent(Soft1714080902232Activity_Start.this, Soft1714080902232Activity_Before.class);
                 startActivity(intent);
             }
         });
