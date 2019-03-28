@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzu.soft1509081602625">
+    package="soft1509081602625.androidlabs.hzuapps.edu.soft1509081602625activity">
 
     <application
         android:allowBackup="true"
@@ -8,23 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".Soft1509081602625Activity"
-            android:label="@string/title_activity_soft1509081602625"
-            android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Soft1509081602625Activity">
             <intent-filter>
-                <action
-                    android:name="android.intent.action.MAIN" />
-                <category
-                    android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CarInfo"
-            android:label="@string/title_activity_soft1509081602625"
-            />
+        <activity android:name=".CarinfoActivity"></activity>
     </application>
-
 
 </manifest>
