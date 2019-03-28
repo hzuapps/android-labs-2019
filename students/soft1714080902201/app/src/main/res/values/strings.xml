@@ -1,7 +1,14 @@
 <resources>
-    <string name="app_name">LibraryManagement</string>
+    <string name="app_name">MyLibrary</string>
     <string name="edit_message">请输入书名</string>
     <string name="button_send">查询</string>
     <string name="button_send_2">推荐</string>
     <string name="button_send_3">我的</string>
+    <string name="title_activity_new_main">NewMainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>
