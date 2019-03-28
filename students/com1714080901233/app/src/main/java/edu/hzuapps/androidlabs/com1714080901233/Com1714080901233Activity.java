@@ -34,6 +34,24 @@ public class Com1714080901233Activity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem item = menu.findItem(R.id.action_settings);
+        MenuItem item1=menu.findItem(R.id.action_settings2);
+        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent intent=new Intent(Com1714080901233Activity.this,Com1714080901233Activity03.class);
+                startActivity(intent);
+                return false;
+            }
+        });
+        item1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent intent=new Intent(Com1714080901233Activity.this,Com1714080901233Activity04.class);
+                startActivity(intent);
+                return false;
+            }
+        });
         return true;
     }
 

@@ -3,17 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Com1714080901233Activity02">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="第二个Activity"
+    <LinearLayout
+        android:layout_width="358dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="56dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:text="音乐" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="56dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:text="图片" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="56dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:text="视频" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="56dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:text="背景" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="56dp"
+        android:layout_height="39dp"
+        android:text="返回"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="56dp"
+        android:layout_height="39dp"
+        android:text="完成"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="358dp"
+        android:layout_height="274dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="请输入文本"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        tools:layout_editor_absoluteX="4dp" />
+
 </android.support.constraint.ConstraintLayout>

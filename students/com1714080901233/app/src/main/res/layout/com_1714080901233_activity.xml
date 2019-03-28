@@ -31,10 +31,5 @@
         app:backgroundTint="@android:color/holo_orange_light"
         app:srcCompat="@android:drawable/ic_input_add" />
 
-    <TextView
-        android:id="@+id/textview_01"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:drawableTop="@drawable/ic_launcher" />
 
 </android.support.design.widget.CoordinatorLayout>

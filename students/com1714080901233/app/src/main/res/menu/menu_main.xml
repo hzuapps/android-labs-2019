@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.hzuapps.androidlabs.com1714080901233.Com1714080901233Activity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="回收站"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings2"
+        android:orderInCategory="100"
+        android:title="设置"
+        app:showAsAction="never" />
+</menu>
