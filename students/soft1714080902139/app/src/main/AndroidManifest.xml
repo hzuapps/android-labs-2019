@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name="edu.hzu.android.soft1714080902139.Soft1714080902139Activity2"
-            android:label="Soft1714080902139Activity2">
+            android:label="我的">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -25,7 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity03"
+            android:label="修改信息">
 
+        </activity>
     </application>
 
 </manifest>
