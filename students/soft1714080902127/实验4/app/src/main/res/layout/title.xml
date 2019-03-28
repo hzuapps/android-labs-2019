@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/jiahao"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/add" />
+
+    <EditText
+        android:id="@+id/input_message"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="菜谱、用户等" />
+
+
+    <ImageView
+        android:id="@+id/liebiao"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/liebiao" />
+
+    <ImageView
+        android:id="@+id/shoucang"
+        android:layout_width="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/shoucang" />
+
+
+</LinearLayout>
