@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
     tools:context=".soft1714080902316.Soft1714080902316">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="80dp"
-        android:background="@color/none"
-        android:text="@string/add"
-        android:textColor="#FF8000"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <TextView
         android:id="@+id/textview_01"
-        android:layout_width="153dp"
-        android:layout_height="224dp"
-        android:layout_marginTop="201dp"
-        android:drawableTop="@drawable/ic_launcher_background"
-        android:text="hello_user"
-        android:gravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/first_background"
+        android:text="@string/time"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/textcolor"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/textview_02"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/first_background"
+        android:text="此处显示已写日记的概述。\n 2019/3/28 \n ... \n 2019/3/27 \n ..."
+        />
+    <TextView
+        android:id="@+id/textview_03"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/first_background"
+        android:text="0 篇"
+        android:textSize="15sp"
+        android:textColor="@color/textcolor"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="right"
+        android:text="@string/add"
+        android:textSize="30sp"
+        android:textColor="#ffcc00"
+        android:background="@drawable/first_background"
+        />
+</LinearLayout>
