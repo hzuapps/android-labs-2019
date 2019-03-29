@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends ActionBarActivity {
     private Button btnStartAty1;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,39 +26,6 @@ public class MainActivity extends ActionBarActivity {
         System.out.println("onCreate");
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        System.out.println("onStart");
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        System.out.println("onResume");
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        System.out.println("onPause");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        System.out.println("onStop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        System.out.println("onDestroy");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        System.out.println("onRestart");
-    }
 }
