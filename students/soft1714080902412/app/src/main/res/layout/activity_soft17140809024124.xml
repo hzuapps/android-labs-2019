@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cc"
+    android:orientation="vertical"
+    tools:context=".Soft1714080902412Activity4">
+
+    <Chronometer
+        android:layout_width="128dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="150dp"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="300dp"
+        app:srcCompat="@drawable/ttt" />
+
+    <Button
+        android:id="@+id/button41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="160dp"
+        android:text="返回" />
+</LinearLayout>
