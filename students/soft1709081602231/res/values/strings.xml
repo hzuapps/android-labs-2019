@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">My Application</string>
-    <string name="tiaozhuan">Welcome!</string>
-    <string name="xhr">猜拳游戏</string>
-    <string name="anniu">开始游戏</string>
-    <string name="button">Button</string>
-    <string name="again">再玩一次</string>
-</resources>
