@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/jieguo"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:background="@drawable/a1"
+        android:text="结果" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="415dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="-30dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/again" />
+</LinearLayout>
