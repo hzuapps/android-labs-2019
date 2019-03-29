@@ -30,4 +30,54 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="58dp"
+        android:background="#D0D0D0"
+       >
+
+        <LinearLayout
+            android:id="@+id/l11"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#D0D0D0"
+            android:orientation="horizontal"
+            >
+        <Button
+            android:id="@+id/b11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="@color/colorPrimary"
+            android:onClick="fanhui"
+            android:text="返回" />
+            <Button
+                android:id="@+id/b12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:layout_marginLeft="230dp"
+                android:textColor="@color/colorPrimary"
+                android:onClick="tianjia"
+                android:text="添加" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/l12"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/l11"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableTop="@drawable/three"
+            android:orientation="horizontal"
+            android:background="#D0D0D0"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
 </android.support.design.widget.CoordinatorLayout>

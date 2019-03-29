@@ -31,7 +31,7 @@ public class Com1714080901136Activity extends AppCompatActivity {
         });
     }
 
-    public void click(View v) {
+    public void jinru(View v) {
 
             Intent intent = new Intent(Com1714080901136Activity.this,Com136Activity.class);
 

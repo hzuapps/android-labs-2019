@@ -1,5 +1,6 @@
 package edu.hzuapps.androidlabs.com1714080901136;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,6 +25,18 @@ public class Com136Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    } public void tianjia(View v) {
+
+        Intent intent = new Intent(Com136Activity.this,Com136Activity2.class);
+
+        startActivity(intent);
+    }
+    public void fanhui(View v) {
+
+        Intent intent = new Intent(Com136Activity.this, Com1714080901136Activity.class);
+
+        startActivity(intent);
+
     }
 
 }
