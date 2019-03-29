@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">查查</string>
     <string name="title_home">主页</string>
-    <string name="title_dashboard">分享</string>
+    <string name="title_dashboard">分类</string>
     <string name="title_notifications">我的</string>
     <string name="title_activity_main2">按钮测试</string>
     <string name="title_activity_draw01">充值</string>
+    <string name="title_activity_food">食品</string>
+    <string name="title_activity_numericalCode">数码</string>
+    <string name="action_settings">Settings</string>
 </resources>
