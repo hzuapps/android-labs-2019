@@ -6,18 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/coke"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:drawablePadding="10dp"
-        android:gravity="center"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="152dp"
-        android:drawableTop="@drawable/jaychou"
-        android:text="这张图片是谁" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="193dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coke"
+            android:layout_marginTop="500dp"
+            android:text="这是谁"
+            android:onClick="click"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@+id/coke"
+            android:layout_width="440dp"
+            android:layout_height="602dp"
+            android:drawableTop="@drawable/jaychou"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="88dp" />
+
+
+    </RelativeLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>
