@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_main">
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1.0">
+        <TextView
+                android:id="@+id/tv_break"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+    
+        <LinearLayout
+                android:visibility="invisible"
+                android:id="@+id/linear_game"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/btn_simple"
+                    style="@style/start_button"
+                    android:text="@string/break_simple"/>
+        
+            <Button
+                    android:id="@+id/btn_midd"
+                    style="@style/start_button"
+                    android:text="@string/break_middle"/>
+            <Button
+                    android:id="@+id/btn_d"
+                    style="@style/start_button"
+                    android:text="@string/break_difficulty"/>
+        
+            <Button
+                    android:visibility="gone"
+                    android:id="@+id/btn_share"
+                    style="@style/start_button"
+                    android:text="@string/break_share"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2">
+
+        <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="设置"
+                android:layout_alignParentBottom="true"
+                android:textColor="#fff"/>
+    
+        <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="分享"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="#fff"/>
+    </RelativeLayout>
+    
+
+</LinearLayout>
