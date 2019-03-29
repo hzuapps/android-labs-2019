@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">hello!</string>
+    <string name="text">  点击进入</string>
+    <string name="title">标题：</string>
+    <string name="title2">请输入标题</string>
+    <string name="title3">请输入内容</string>
+    <string name="text2">新建</string>
+    <string name="button1">返回首页</string>
+    <string name="button2">保存</string>
+</resources>
