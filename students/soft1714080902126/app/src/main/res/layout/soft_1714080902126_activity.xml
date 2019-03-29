@@ -7,23 +7,47 @@
     android:background="@drawable/p1"
     tools:context=".Soft1714080902126Activity">
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:text="点击"
-        tools:ignore="MissingConstraints" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="饭店点餐系统!"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="800px"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欢迎来到饭店点餐系统!"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:background="@android:color/transparent"
+                android:shadowColor="#FFEC7600"
+                android:text="点击进入"
+                android:textSize="80px"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="155dp"
+                tools:layout_editor_absoluteY="520dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>
