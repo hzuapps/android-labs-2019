@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">soft1714080902336</string>
+    <string name="title_activity_second">题库页面</string>
+    <string name="title_activity_friend">好友对战页面</string>
+    <string name="title_activity_science">理科库页面</string>
+    <string name="title_activity_art">文科库页面</string>
+    <string name="title_activity_life">生活库页面</string>
+    <string name="title_activity_tv">影视库页面</string>
+    <string name="title_activity_music">音乐库页面</string>
+    <string name="title_activity_cartoon">动漫库页面</string>
+</resources>
