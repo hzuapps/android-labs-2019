@@ -7,6 +7,7 @@
     tools:context=".SecondActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/my"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -32,15 +33,35 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="148dp"
-        android:layout_height="117dp"
-        android:bufferType="normal"
-        android:text="登录"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.IconMenu.Item"
-        android:visibility="visible"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="center" />
+    <LinearLayout
+        android:id="@+id/My"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="118dp"
+            android:layout_height="90dp"
+            android:bufferType="normal"
+            android:text="进入"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.IconMenu.Item"
+            android:visibility="visible"
+            app:layout_anchor="@+id/include"
+            app:layout_anchorGravity="center" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="118dp"
+            android:layout_height="90dp"
+            android:bufferType="normal"
+            android:text="退出"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.IconMenu.Item"
+            android:visibility="visible"
+            app:layout_anchor="@+id/include"
+            app:layout_anchorGravity="center" />
+
+
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

@@ -16,12 +16,17 @@ public class Com1714080901108Activity extends AppCompatActivity implements View.
         setContentView(R.layout.activity_com1714080901108);
         Button button=(Button) findViewById(R.id.button);
         imageView=(ImageView) findViewById(R.id.img_list);
-        button.setOnClickListener(this);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Com1714080901108Activity.this,SecondActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
         @Override
     public void onClick(View view) {
-        Intent intent=new Intent(Com1714080901108Activity.this,SecondActivity.class);
-        startActivity(intent);
+
 }
 }
