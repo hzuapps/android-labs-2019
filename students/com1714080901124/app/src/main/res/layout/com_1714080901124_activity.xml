@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +7,13 @@
     tools:context=".Com1714080901124Activity">
 
 
+    <ImageView
+        android:layout_width="304dp"
+        android:layout_height="390dp"
+
+        android:layout_centerVertical="true"
+        android:drawablePadding="1dp"
+        android:src="@drawable/minguo" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
