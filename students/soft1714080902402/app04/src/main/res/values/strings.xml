@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ForthApplication</string>
+    <string name="file_menu">文件</string>
+    <string name="new_file">新建文件</string>
+    <string name="open_file">打开文件</string>
+    <string name="save_file">保存文件</string>
+    <string name="exit">退出程序</string>
+
+</resources>

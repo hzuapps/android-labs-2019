@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".soft1714080902402Activity">
+
+
+    <!--
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginBottom="99dp"
+        android:background="@drawable/border"
+        android:editable="false"
+        android:gravity="right|center_vertical"
+        android:padding="10dp"
+        android:text="0123456789"
+        android:textColor="#0000ff"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+-->
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="79dp"
+        android:columnCount="5"
+        android:orientation="horizontal"
+        android:rowCount="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/button1"
+            android:text="MC" />
+
+        <Button
+            android:id="@+id/button2"
+            android:text="MR" />
+
+        <Button
+            android:id="@+id/button3"
+            android:text="MS" />
+
+        <Button
+            android:id="@+id/button4"
+            android:text="M+" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_gravity="fill"
+            android:text="M-" />
+
+        <Button
+            android:id="@+id/button6"
+            android:text="←" />
+
+        <Button
+            android:id="@+id/button7"
+            android:text="CE" />
+
+        <Button
+            android:id="@+id/button8"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/button9"
+            android:text="±" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_gravity="fill"
+            android:text="√" />
+
+        <Button
+            android:id="@+id/button11"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button12"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/button13"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/button14"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_gravity="fill"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/button16"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button17"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="wrap_content"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/button19"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_gravity="fill"
+            android:text="1/x" />
+
+        <Button
+            android:id="@+id/button21"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button22"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button23"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/button24"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_rowSpan="2"
+            android:layout_gravity="fill"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/button26"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/button27"
+            android:text="." />
+
+        <Button
+            android:id="@+id/button28"
+            android:text="+" />
+
+    </GridLayout>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
