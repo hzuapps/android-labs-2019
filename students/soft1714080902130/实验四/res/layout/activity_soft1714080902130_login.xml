@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Soft1714080902130LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/timg" />
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="392dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg">
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="67dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10px"
+            android:src="@drawable/second" />
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/img2"
+            android:text="组织成员"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img2"
+            android:layout_marginLeft="25dp"
+            android:text=" 说明：  查询部门相关成员信息。" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="392dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg">
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="67dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15px"
+            android:src="@drawable/third" />
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/img3"
+            android:text="部门活动"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img3"
+            android:layout_marginLeft="25dp"
+            android:text=" 说明：  部门举办的所有活动。" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="392dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg">
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="67dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10px"
+            android:src="@drawable/fourth" />
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/img4"
+            android:text="归属部门"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img4"
+            android:layout_marginLeft="25dp"
+            android:text=" 说明：  成员分组到对应的部门。" />
+    </RelativeLayout>
+
+
+</LinearLayout>
