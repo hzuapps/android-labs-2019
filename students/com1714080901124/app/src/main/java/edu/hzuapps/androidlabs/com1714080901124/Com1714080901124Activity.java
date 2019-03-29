@@ -21,5 +21,4 @@ public class Com1714080901124Activity extends AppCompatActivity {
             }
         });
     }
-    }
-
+}
