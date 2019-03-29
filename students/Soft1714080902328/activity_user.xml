@@ -6,58 +6,143 @@
     android:layout_height="match_parent"
     tools:context=".UserActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="164dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="45dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="画板"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="208dp"
+                tools:layout_editor_absoluteY="202dp"
+                tools:text="画板" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="307dp"
+                tools:layout_editor_absoluteY="202dp"
+                tools:text="关注" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="喜欢"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="108dp"
+                tools:layout_editor_absoluteY="202dp"
+                tools:text="喜欢" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="采集"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="2dp"
+                tools:layout_editor_absoluteY="202dp"
+                tools:text="采集" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="500dp"
+            android:layout_height="300dp">
+
+            <TableRow
+                android:layout_width="200dp"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[2]" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView10"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[17]" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="200dp"
+                android:layout_height="162dp">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[16]" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[18]" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="128dp"
-        android:layout_height="113dp"
-        app:srcCompat="@drawable/kenan1"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="90dp" />
+        android:layout_width="122dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kenan1" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="96dp"
+        android:text="用户名"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="122dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
         tools:text="用户名" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="喜欢"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="226dp"
-        tools:text="喜欢" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="采集"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="226dp"
-        tools:text="采集" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="画板"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="226dp"
-        tools:text="画板" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="关注"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="226dp"
-        tools:text="关注" />
 
 </android.support.constraint.ConstraintLayout>

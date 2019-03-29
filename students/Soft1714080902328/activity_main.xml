@@ -34,10 +34,13 @@
         android:id="@+id/tiaozhuan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="260dp"
         android:text="跳转"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="278dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="跳转" />
 
 </android.support.constraint.ConstraintLayout>
