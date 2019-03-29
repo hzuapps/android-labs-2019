@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="title_activity_com1714080901125">Com1714080901125Activity</string>
+    <string name="title_activity_ps4">PS4</string>
+    <string name="title_activity_ns">NS</string>
+    <string name="title_activity_pc">PC</string>
+    <string name="title_activity_xboxone">XBOXone</string>
 </resources>
