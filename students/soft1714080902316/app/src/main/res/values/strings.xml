@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Diary</string>
+    <string name="app_name">壹日記</string>
     <string name="add">+</string>
     <string name="reture">返回</string>
     <string name="finish">完成</string>
+    <string name="time">2019年 3月 29日</string>
 </resources>

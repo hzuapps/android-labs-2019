@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
-import android.view.View.OnClickListener;
 import com.example.edu.hzuapps.androidlabs.R;
 
 public class Soft1714080902316 extends AppCompatActivity {

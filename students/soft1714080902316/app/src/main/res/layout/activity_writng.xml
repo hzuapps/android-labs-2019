@@ -1,49 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
     tools:context=".soft1714080902316.writng">
-
     <Button
         android:id="@+id/button2"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="50dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/first_background"
         android:text="@string/reture"
+        android:textStyle="bold"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/edit_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/first_background"
+        android:text="@string/time"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/textcolor"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:height="220dp"
+        android:width="250dp"
+        android:maxLines="10"
+        android:gravity="start"
+        android:inputType="textNoSuggestions"
+        android:textCursorDrawable="@null"
+        android:background="@drawable/edit_background"
+        />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="174dp"
+        android:layout_gravity="center"
+        android:background="@drawable/first_background"
         android:text="@string/finish"
+        android:textStyle="bold"
         android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text" />
+        />
 
-    <EditText
-        android:id="@+id/edit_text"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="51dp"
-        android:inputType="textNoSuggestions"
-        android:maxLines="20"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
