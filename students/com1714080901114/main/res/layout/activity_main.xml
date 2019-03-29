@@ -11,21 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:background="#E45A87"
-        android:padding="20dp"
-        >
+        android:padding="20dp">
+
         <ImageView
             android:id="@+id/miku"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/ic_launcher"
-
+            android:onClick="ShowToast"
             />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#6275DF">
+        android:background="#6275DF"
+        android:paddingLeft="30dp"
+        android:paddingTop="20dp">
 
         <Button
             android:id="@+id/kaka"
@@ -33,7 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="进入"
+            android:background="#8059C5"
+            android:text="进入板块"
             android:textColor="#D85B85"
             android:textSize="50sp"
 
@@ -41,8 +44,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>
