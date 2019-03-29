@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DrawIntent">
+    tools:context=".activity.Activity_food">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView3"
         android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="181dp"
-        android:text=" 充个五万，你会更强"
-        android:textSize="40dp"
-        android:textColor="#FF0000"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="60dp"
 
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text="这里是食品"
+        android:textSize="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <!--android:layout_margin="@android:dimen/app_icon_size"-->
+
+    />
 </android.support.constraint.ConstraintLayout>
