@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs;
+package edu.hzuapps.soft1714080902437test3;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,7 +8,6 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -25,7 +24,7 @@ public class Soft1714080902437Activity extends AppCompatActivity implements View
     }
         @Override
         public void onClick(View v) {
-            Intent intent=new Intent(Soft1714080902437Activity.this,MainActivity.class);
+            Intent intent=new Intent(Soft1714080902437Activity.this,No2Activity.class);
             startActivity(intent);
         }
 
