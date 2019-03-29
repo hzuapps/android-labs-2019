@@ -32,9 +32,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
+
     <Button
         android:id="@+id/button1"
-
         android:drawablePadding="1dp"
         android:text="点击获取验证码"
         android:layout_width="wrap_content"
