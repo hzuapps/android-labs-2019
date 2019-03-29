@@ -23,20 +23,82 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-
+    
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="top|start"
-        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:layout_margin="-20dp"
         android:background="@drawable/icon_playlist_1"/>
     <Button
         android:id="@+id/RateList"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_margin="16dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
         android:onClick="onClick"
         android:text="人民币兑换列表" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        >
+        <EditText
+            android:id="@+id/Input"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#FFFFFF"
+            android:textAlignment="textEnd"
+            android:inputType="numberDecimal"
+            android:textSize="20dp"
+            android:hint="1" />
+        <Spinner
+            android:id="@+id/SourceCurrency"
+            android:spinnerMode="dropdown"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:textAlignment="center"
+            android:layout_margin="15dp"
+            android:background="#FFFFFF"
+            android:entries="@array/Currencies"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Exchange"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/icon_update_1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        >
+        <TextView
+            android:id="@+id/Output"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#FFFFFF"
+            android:gravity="right"
+            android:textSize="20dp"
+            tools:text="1" />
+        <Spinner
+            android:id="@+id/TargetCurrency"
+            android:spinnerMode="dropdown"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:textAlignment="center"
+            android:layout_margin="15dp"
+            android:background="#FFFFFF"
+            android:entries="@array/Currencies"/>
+    </LinearLayout>
 
 </LinearLayout>
