@@ -1,0 +1,12 @@
+<LinearLayout xmlns:androi="http://schemas.android.com/apk/res/android"
+    androi:layout_height="match_parent"
+    androi:layout_width="match_parent"
+    androi:orientation="vertical">
+
+    <ImageView
+        androi:layout_width="wrap_content"
+        androi:layout_height="wrap_content"
+        androi:background="@drawable/cp"
+        androi:layout_gravity="center"/>
+
+</LinearLayout>
