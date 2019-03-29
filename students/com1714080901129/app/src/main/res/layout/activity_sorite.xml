@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SortieActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="410dp">
+
+        <TextView
+            android:id="@+id/faction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape"
+            android:gravity="center"
+            android:text="__" />
+
+        <TextView
+            android:id="@+id/boss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/faction"
+            android:layout_centerHorizontal="true"
+            android:text="__" />
+
+
+        <TextView
+            android:id="@+id/missionType1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/boss"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="50dp"
+            android:text="__"
+            android:textColor="@color/blue"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/modifier1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/missionType1"
+            android:layout_below="@+id/missionType1"
+            android:layout_marginTop="20dp"
+            android:text="__" />
+
+        <TextView
+            android:id="@+id/node1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="135dp"
+            android:text="__" />
+
+        <TextView
+            android:id="@+id/missionType2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/missionType1"
+            android:layout_below="@+id/modifier1"
+            android:layout_marginTop="35dp"
+            android:text="__"
+            android:textColor="@color/blue"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/modifier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/missionType1"
+            android:layout_below="@+id/missionType2"
+            android:layout_marginTop="20dp"
+            android:text="__" />
+
+        <TextView
+            android:id="@+id/node2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/node1"
+            android:layout_below="@+id/node1"
+            android:layout_marginTop="90dp"
+            android:text="__" />
+
+        <TextView
+            android:id="@+id/missionType3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modifier2"
+            android:layout_alignLeft="@+id/missionType1"
+            android:layout_marginTop="30dp"
+            android:text="__"
+            android:textColor="@color/blue"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/modifier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/missionType3"
+            android:layout_alignLeft="@+id/missionType2"
+            android:layout_marginTop="20dp"
+            android:text="__" />
+
+        <TextView
+            android:id="@+id/node3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/node1"
+            android:layout_below="@+id/node2"
+            android:layout_marginTop="90dp"
+            android:text="__" />
+
+        <TextView
+            android:id="@+id/eta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/node1"
+            android:layout_above="@+id/node1"
+            android:layout_marginBottom="-100dp"
+            android:text="__" />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modifier3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:text="back"/>
+    </RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
