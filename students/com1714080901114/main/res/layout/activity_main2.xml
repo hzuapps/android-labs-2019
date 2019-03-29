@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4B5D6D"
+    tools:context=".Main2Activity">
+
+    <RelativeLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+
+    <RelativeLayout
+        android:id="@+id/dmc"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/timg"
+        android:onClick="ShowToast"/>
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+            android:layout_toRightOf="@+id/dmc"
+            android:padding="5dp">
+            <ImageView
+                android:id="@+id/view2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/timgg"
+                android:onClick="ShowToast"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/dmc">
+            <ImageView
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sekiro"
+                android:onClick="ShowToast"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/first">
+
+        <RelativeLayout
+            android:id="@+id/one"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="ShowToast"
+                android:src="@drawable/zd" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="134dp"
+            android:layout_below="@+id/one"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="ShowToast"
+                android:src="@drawable/hun" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/one"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="ShowToast"
+                android:src="@drawable/creed" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
