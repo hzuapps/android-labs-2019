@@ -26,7 +26,7 @@ public class Soft1714080902104Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_soft1714080902104);
+        setContentView(R.layout.soft_1714080902104_activity);
         view_cpselect=(RelativeLayout)findViewById(R.id.view_cpselect);
         ChangeColor();
         ChinaMenu();
