@@ -3,4 +3,22 @@
     <string name="action_settings">Settings</string>
     <string name="appbar_scrolling_view_behavior" />
     <string name="title_activity_soft1714080902121_rate_list"></string>
+    <string name="rate_list01">
+        \t1 人民币(CNY) = 0.1490 美元(USD)\n
+        \t1 人民币(CNY) = 16.5695 日元(JPY)\n
+        \t1 人民币(CNY) = 0.1312 欧元(EUR)\n
+        \t1 人民币(CNY) = 0.1123 英镑(GBP)\n
+        \t1 人民币(CNY) = 168.4069 韩元(KRW)\n
+        \t1 人民币(CNY) = 1.1692 港币(HKD)\n
+        \t1 人民币(CNY) = 1.2039 澳币(AUD)\n
+    </string>
+    <string name="rate_list02">
+        \t1 美元(USD) = 6.7131 人民币(CNY)\n
+        \t1 日元(JPY) = 0.0604 人民币(CNY)\n
+        \t1 欧元(EUR) = 7.6206 人民币(CNY)\n
+        \t1 英镑(GBP) = 8.9033 人民币(CNY)\n
+        \t1 韩元(KRW) = 0.0059 人民币(CNY)\n
+        \t1 港币(HKD) = 0.8553 人民币(CNY)\n
+        \t1 澳币(AUD) = 4.7417 人民币(CNY)\n
+    </string>
 </resources>

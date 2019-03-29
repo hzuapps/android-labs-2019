@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Currencies">
+        <item>人民币(CNY)</item>
+        <item>美元(USD)</item>
+        <item>日元(JPY)</item>
+        <item>欧元(EUR)</item>
+        <item>英镑(GBP)</item>
+        <item>韩元(KRW)</item>
+        <item>港币(HKD)</item>
+        <item>澳币(AUD)</item>
+    </string-array>
+</resources>
