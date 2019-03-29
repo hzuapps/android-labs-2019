@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.soft1714080902207;
+﻿package edu.hzuapps.androidlabs.soft1714080902207;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -45,9 +45,9 @@ public class consumer_Housekeeper1_1714080902207 extends AppCompatActivity imple
 
     private void getDate() {
         cal = Calendar.getInstance();
-        year = cal.get(Calendar.YEAR);       //获取年月日时分秒
+        year = cal.get(Calendar.YEAR);      
         Log.i("wxy", "year" + year);
-        month = cal.get(Calendar.MONTH);   //获取到的月份是从0开始计数
+        month = cal.get(Calendar.MONTH);   
         day = cal.get(Calendar.DAY_OF_MONTH);
 
     }
@@ -67,10 +67,10 @@ public class consumer_Housekeeper1_1714080902207 extends AppCompatActivity imple
 
                             @Override
                             public void onDateSet(DatePicker arg0, int year, int month, int day) {
-                                tvShowDialog.setText(year + "-" + (++month) + "-" + day);      //将选择的日期显示到TextView中,因为之前获取month直接使用，所以不需要+1，这个地方需要显示，所以+1
+                                tvShowDialog.setText(year + "-" + (++month) + "-" + day);     
                             }
                         };
-                        DatePickerDialog dialog = new DatePickerDialog(consumer_Housekeeper1_1714080902207.this, DatePickerDialog.THEME_HOLO_LIGHT, listener, year, month, day);//主题在这里！后边三个参数为显示dialog时默认的日期，月份从0开始，0-11对应1-12个月
+                        DatePickerDialog dialog = new DatePickerDialog(consumer_Housekeeper1_1714080902207.this, DatePickerDialog.THEME_HOLO_LIGHT, listener, year, month, day);
                         dialog.show();
                         break;
 
