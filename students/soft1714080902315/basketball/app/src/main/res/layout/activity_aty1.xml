@@ -33,23 +33,23 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="登录"
-        android:background="@android:color/transparent"
+        android:text="篮球视频大全"
         android:textColor="@color/lightyellow"
-        android:id="@+id/button"
-        android:layout_marginBottom="81dp"
-        android:layout_above="@+id/btnClose"
-        android:layout_toLeftOf="@+id/btnClose"
-        android:layout_toStartOf="@+id/btnClose" />
+        android:background="@android:color/transparent"
+        android:id="@+id/video"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="注册"
+        android:text="篮球进阶训练营"
         android:textColor="@color/lightyellow"
         android:background="@android:color/transparent"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/button"
-        android:layout_toRightOf="@+id/btnClose"
-        android:layout_toEndOf="@+id/btnClose" />
+        android:id="@+id/train"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/video"
+        android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>
