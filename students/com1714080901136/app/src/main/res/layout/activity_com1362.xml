@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Com136Activity2">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_com136" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="标题:"
+                android:textSize="20dp"/>
+
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="请输入倒数日标题"
+              android:gravity="center"
+              android:textSize="18dp"
+              />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/l1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="日期:"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入倒数日日期"
+                android:gravity="center"
+                android:textSize="18dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/l2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="备注:"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入备注"
+                android:gravity="center"
+                android:textSize="18dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/l4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/l3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="类型:"
+                android:textSize="20dp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l3"
+                android:layout_marginLeft="30dp"
+                android:contentDescription="类型"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="生活"
+                    android:textSize="18dp">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="生日"
+                    android:textSize="18dp">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="纪念日"
+                    android:textSize="18dp"/>
+
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/l5"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/l4"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/b21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginLeft="80dp"
+                android:textSize="18dp"
+
+                android:text="重置"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/b2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_a="vertical"
+
+                android:textSize="18dp"
+
+                android:text="保存"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

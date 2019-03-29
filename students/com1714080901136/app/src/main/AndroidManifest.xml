@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Com136Activity2"
+            android:label="@string/title_activity_com1362"></activity>
+        <activity
             android:name=".Com136Activity"
             android:label="@string/title_activity_com136"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Com1714080901136Activity"
             android:label="@string/app_name"
