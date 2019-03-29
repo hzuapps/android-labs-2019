@@ -11,8 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.yzk.ordis.bean.Sortie;
+
 public class Com1714080901129Activity extends AppCompatActivity {
-    private Button bt;
+    private Button bt,Bt_Sortie;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +35,19 @@ public class Com1714080901129Activity extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Com1714080901129Activity.this,Alert.class);
+                Intent intent=new Intent(Com1714080901129Activity.this,CetusActivity.class);
                 startActivity(intent);
             }
         });
+        Bt_Sortie=(Button)findViewById(R.id.bt_sortie);
+        Bt_Sortie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Com1714080901129Activity.this, SortieActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
