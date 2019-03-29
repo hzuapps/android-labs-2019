@@ -1,30 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Soft1714080902412Activity">
+    android:orientation="vertical"
+    tools:context=".Soft1714080902412Activity"
+    android:background="@drawable/kk">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <Button android:id="@+id/miaobiao"
+        android:text="秒表"
+      android:textColor="#000"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="80dp"
+   />
 
-
-    <Button
+    <Button android:id="@+id/beiwanglu"
+        android:layout_width="70dp"
+        android:text="备忘录"
+        android:textColor="#000"
+        android:layout_height="50dp"
+        android:layout_marginLeft="130dp"
+  />
+</LinearLayout>
+    <Button style="@style/three"
         android:id="@+id/button1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/ic_launcher_foreground"
-        android:text="点击跳转"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:backgroundTint="#50ffffff"/>
 
-    <TextView
-        android:id="@+id/ic_launcher_foreground"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:background="@mipmap/ic_launcher_foreground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout style="@style/one">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView style="@style/four"
+            android:id="@+id/textview1" />
+
+        <Switch style="@style/five"
+            android:id="@+id/switch1" />
+    </LinearLayout>
+
+    <LinearLayout  style="@style/one">
+
+        <TextView style="@style/four"
+            android:id="@+id/textview2" />
+        <Switch style="@style/five"
+            android:id="@+id/switch2" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:orientation="horizontal">
+
+    <Button style="@style/six"
+        android:id="@+id/button4"
+        android:text="添加"
+        android:layout_width="50dp"
+        android:layout_marginLeft="125dp"
+        android:background="@color/design_default_color_primary"
+        />
+
+        <Button style="@style/six"
+        android:id="@+id/button5"
+        android:text="设置"
+            android:layout_width="50dp"
+            android:layout_marginLeft="100dp"
+        android:background="@color/colorAccent"
+        />
+    </LinearLayout>
+</LinearLayout>

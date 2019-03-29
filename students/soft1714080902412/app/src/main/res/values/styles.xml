@@ -7,5 +7,47 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+<style name="one">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">50dp</item>
+    <item name="android:layout_marginTop" >20dp</item>
+    <item name="android:orientation">horizontal</item>
+</style>
+    <style name="two">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textSize">30dp</item>
 
+    </style>
+    <style name="three">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">35dp</item>
+        <item name="android:gravity">center_horizontal</item>
+           <item name="android:text">您设置的闹钟如下：</item>
+    </style>
+    <style name="four">
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+<style name="five">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:text">选择</item>
+</style>
+    <style name="six">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">20dp</item>
+    </style>
 </resources>
