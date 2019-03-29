@@ -1,12 +1,10 @@
 package com.example.shiyan2;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-
-import edu.hzuapps.androidlabs.soft1714080901113.com1714080901113Activity;
 
 public class MainActivity extends AppCompatActivity {
 

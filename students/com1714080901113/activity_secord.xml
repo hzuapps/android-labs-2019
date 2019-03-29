@@ -9,7 +9,8 @@
     <TextView
         android:layout_width="132dp"
         android:layout_height="132dp"
-        android:text="宿舍缴费"
+        android:text="明细：
+水费：110元"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
