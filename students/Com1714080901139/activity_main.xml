@@ -8,11 +8,42 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textview_01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ik"
-        android:text="iK" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn1"
+            android:text="无尽之刃"
+            android:textSize="50dp"
+            android:layout_x="100dp"
+            android:layout_y="50dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="岚切"
+            android:textSize="50dp"
+            android:enabled="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日炎斗篷"
+            android:textSize="50dp"
+            android:textColor="#991111"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兰顿之兆"
+            android:textSize="60dp"
+            android:textColor="#119911"/>
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
