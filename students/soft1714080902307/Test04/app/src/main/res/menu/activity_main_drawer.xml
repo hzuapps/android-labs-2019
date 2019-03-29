@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_main"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_home"
+            android:title="主页" />
+
+        <item
+            android:id="@+id/nav_wallpaper"
+            android:icon="@drawable/ic_menu_wallpaper"
+            android:title="壁纸美图" />
+        <item
+            android:id="@+id/nav_media"
+            android:icon="@drawable/ic_menu_media"
+            android:title="影音视听" />
+        <item
+            android:id="@+id/nav_tool"
+            android:icon="@drawable/ic_menu_tool"
+            android:title="实用工具" />
+        <item
+            android:id="@+id/nav_emoji"
+            android:icon="@drawable/ic_menu_emoji"
+            android:title="表情包" />
+    </group>
+
+    <item android:title="分享交流">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="分享" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="联系作者" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="设置" />
+        </menu>
+    </item>
+
+</menu>
