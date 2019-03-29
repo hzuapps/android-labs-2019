@@ -20,11 +20,7 @@ public class Soft1714080902430Activities extends AppCompatActivity {
         setContentView(R.layout.activity_soft1714080902430_activities);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
         textView =(TextView)findViewById(R.id.textView);
-
         //获取资源图片
         Drawable leftDrawable = getResources().getDrawable(R.drawable.love);
         //设置图片的尺寸，奇数位置后减前得到宽度，偶数位置后减前得到高度。
@@ -38,8 +34,6 @@ public class Soft1714080902430Activities extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
