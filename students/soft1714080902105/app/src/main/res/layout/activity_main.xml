@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Soft1714080902105Activity">
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="512dp"
-        android:layout_height="754dp"
-        android:background="#0000"
-        android:src="@mipmap/personal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:orientation="vertical"
+    tools:context="com.example.myproject2.Soft1714080902105Activity">
 
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/id_playNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下一张"
+        android:textSize="28sp"/>
+
+    <ImageView
+        android:id="@+id/id_imageBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/im_055"/>
+</LinearLayout>
