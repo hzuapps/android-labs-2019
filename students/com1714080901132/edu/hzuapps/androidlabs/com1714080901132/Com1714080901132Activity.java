@@ -34,7 +34,7 @@ public class Com1714080901132Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(edu.hzuapps.androidlabs.com1714080901132.Com1714080901132Activity.this, second.class);//this前面为当前activty名称，class前面为要跳转到得activity名称
+                intent.setClass(edu.hzuapps.androidlabs.com1714080901132.Com1714080901132Activity.this,Main3Activity.class);//this前面为当前activty名称，class前面为要跳转到得activity名称
                 startActivity(intent);
             }
         });
