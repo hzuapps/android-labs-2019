@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ThirdActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/ic01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:src="@mipmap/i_c01" />
+        <TextView
+            android:id="@+id/name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="二零四八"
+            android:textColor="#576B98"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/ic01"/>
+        <TextView
+            android:id="@+id/content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toRightOf="@id/ic01"
+            android:layout_below="@id/name1"
+            android:minLines="3"
+            android:text="我爱学习，学习使我快乐！" />
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昨天"
+            android:textColor="#9A9A9A"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/content1"
+            android:layout_toRightOf="@id/ic01"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/comment2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/ic02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:src="@mipmap/i_c02" />
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="放弃"
+            android:textColor="#576B98"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/ic02"/>
+
+        <TextView
+            android:id="@+id/contetn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toRightOf="@id/ic02"
+            android:layout_below="@id/name2"
+            android:minLines="3"
+            android:text="Java学习从入门到入土" />
+        <TextView
+            android:id="@+id/time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="两天前"
+            android:textColor="#9A9A9A"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/contetn2"
+            android:layout_toRightOf="@id/ic02"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contetn2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-27dp"
+            android:src="@mipmap/comment2" />
+    </RelativeLayout>
+
+</LinearLayout>
