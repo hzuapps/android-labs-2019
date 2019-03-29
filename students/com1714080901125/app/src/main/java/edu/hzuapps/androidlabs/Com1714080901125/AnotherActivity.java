@@ -6,23 +6,27 @@ import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
 
-
 import com.example.myapplication.R;
 
-public class Com1714080901125Activity extends AppCompatActivity {
-    private TextView textView;
+public class AnotherActivity extends AppCompatActivity {
+    private TextView textView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_com1714080901125);
+        setContentView(R.layout.content_com1714080901125);
 
-        textView=(TextView)findViewById(R.id.touxiang);
-        textView.setOnClickListener(new View.OnClickListener() {
+        textView1=(TextView)findViewById(R.id.button1);
+        textView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Com1714080901125Activity.this,AnotherActivity.class);
+                Intent intent = new Intent(AnotherActivity.this,NS.class);
                 startActivity(intent);
             }
+
         });
     }
 }
+
+
+
+

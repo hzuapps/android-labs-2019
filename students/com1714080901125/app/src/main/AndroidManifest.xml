@@ -10,6 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name="edu.hzuapps.androidlabs.com1714080901125.XBOXone"
+            android:label="@string/title_activity_xboxone"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="edu.hzuapps.androidlabs.com1714080901125.PC"
+            android:label="@string/title_activity_pc"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.hzuapps.androidlabs.com1714080901125.NS"
+            android:label="@string/title_activity_ns"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.hzuapps.androidlabs.com1714080901125.PS4"
+            android:label="@string/title_activity_ps4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.hzuapps.androidlabs.com1714080901125.AnotherActivity"
+            android:label="AnotherActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="edu.hzuapps.androidlabs.com1714080901125.Com1714080901125Activity"
             android:label="@string/title_activity_com1714080901125"
             android:theme="@style/AppTheme.NoActionBar">
