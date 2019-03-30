@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/life"
+    tools:context=".LifeActivity">
+
+    <TextView
+        android:id="@+id/dt04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=" 欢迎来到生活题库！\n\n\n"
+        android:textColor="#EA5246"
+        android:textStyle="bold|italic"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/tk03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity ="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold|italic"
+        android:text="进入题库"/>
+
+    <Button
+        android:id="@+id/ksdt03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity ="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold|italic"
+        android:text="直接开始答题"/>
+
+</LinearLayout>
