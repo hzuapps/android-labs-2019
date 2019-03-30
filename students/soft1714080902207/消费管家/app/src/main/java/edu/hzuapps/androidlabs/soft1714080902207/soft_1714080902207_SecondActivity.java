@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class soft_1714080902207_SecondActivity extends AppCompatActivity {
+public class Soft_1714080902207_SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class soft_1714080902207_SecondActivity extends AppCompatActivity {
     }
     public void onClick(View v)
     {
-        Intent inten=new Intent(soft_1714080902207_SecondActivity.this, soft_1714080902207_MainActivity.class);
+        Intent inten=new Intent(Soft_1714080902207_SecondActivity.this, Soft_1714080902207_MainActivity.class);
         startActivity(inten);
     }
 }
