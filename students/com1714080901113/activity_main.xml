@@ -15,46 +15,34 @@
         <TableRow>
 
             <Button
-                android:id="@+id/btn1"
+                android:id="@+id/button_save_internal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_x="100dp"
                 android:layout_y="50dp"
-
                 android:text="交电费"
                 android:textSize="30dp" />
 
-            <Button
-                android:id="@+id/btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_x="100dp"
-                android:layout_y="150dp"
-                android:text="交水费"
-                android:textColor="#ff1111"
-                android:textSize="20dp" />
 
         </TableRow>
 
         <TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/text_content"
+                android:hint="请输入缴纳的电费"
+                android:textColor="#000000"
+                android:textSize="50sp"
+                android:paddingTop="0dp"
+                android:digits="0123456789"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="第一行第0列" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="第一行第1列" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="第一行第2列" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="20dp"/>
 
         </TableRow>
-
 
     </TableLayout>
 
