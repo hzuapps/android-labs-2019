@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TimeNote</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_soft1714080902311">Soft1714080902311ActivityTimeNote</string>
+    <string name="title_activity_secord">SecordActivity</string>
+    <string name="large_text">
+
+    </string>
+    <string-array name="times">
+        <item>30 Seconds</item>
+        <item>1 Minute</item>
+        <item>5 Minutes</item>
+        <item>10 Minutes</item>
+        <item>15 Minutes</item>
+        <item>30 Minutes</item>
+        <item>60 Minutes</item>
+    </string-array>
+</resources>
