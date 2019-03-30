@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Soft1714080902226Activity2">
+    tools:context="edu.hzuapps.androidlabs.soft1714080902226activity.Soft1714080902226Activity2">
 
     <ImageView
         android:id="@+id/diyiye"
@@ -13,4 +12,13 @@
         android:scaleType="fitCenter"
         android:background="@drawable/tu2"/>
 
-</android.support.constraint.ConstraintLayout>
+    <edu.hzuapps.androidlabs.soft1714080902226activity.view.SlideMenu
+        android:id="@+id/slideMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--菜单界面的布局-->
+        <include layout="@layout/layout_menu"/>
+        <!--主界面的布局-->
+        <include layout="@layout/layout_main"/>
+    </edu.hzuapps.androidlabs.soft1714080902226activity.view.SlideMenu>
+</RelativeLayout>
