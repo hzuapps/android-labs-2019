@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity"
-    android:background="@drawable/yanyuan">
+    tools:context=".MainActivity" android:background="@drawable/xuezhiquan">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="演员" />
 
 </android.support.constraint.ConstraintLayout>
