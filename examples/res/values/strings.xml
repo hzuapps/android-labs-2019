@@ -1,4 +1,38 @@
 <resources>
-    <string name="app_name">AndroidLabs2019</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Android开发</string>
+    <string name="action_settings">设置</string>
+
+    <string name="title_activity_back">活动模板（返回）</string>
+
+    <string name="title_activity_activity_basic">活动: 基本用法（打开）</string>
+    <string name="title_activity_activity_basic2">活动: 基本用法（关闭）</string>
+
+    <string name="title_activity_view_basic">视图: 基本用法</string>
+    <string name="text_demo">这里显示一些文字.由Java填入.</string>
+
+    <string name="title_activity_fragment">碎片: 功能演示</string>
+    <string name="title_activity_fragment_content">内容</string>
+    <string name="demo_content">演示内容</string>
+    <string name="title_activity_net123456">Net123456Activity</string>
+    <string name="title_activity_com123456">Com123456Activity</string>
+    <string name="title_activity_service_demo">服务: 功能演示</string>
+    <string name="title_activity_broadcast_receiver">广播: 功能演示</string>
+    <string name="title_activity_content_provider">内容提供者: 功能演示</string>
+    <string name="content_provider_name">edu.hzuapps.androidworks.BOOKS</string>
+    <string name="title_activity_linear_layout">LinearLayoutActivity</string>
+    <string name="title_activity_relative_layout">RelativeLayoutActivity</string>
+    <string name="title_activity_frame_layout">FrameLayoutActivity</string>
+    <string name="title_activity_table_layout">TableLayoutActivity</string>
+    <string name="title_activity_absolute_layout">AbsoluteLayoutActivity</string>
+    <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="title_activity_view_demo">ViewDemoActivity</string>
+    <string name="title_activity_grid_view">GridViewActivity</string>
+    <string name="title_activity_grid_view_one">GridViewOneActivity</string>
+    <string name="title_activity_shared_preferences">SharedPreferencesActivity</string>
+    <string name="title_activity_file_storage">FileStorageActivity</string>
+    <string name="title_activity_file_select">FileSelectActivity</string>
+    <string name="title_activity_file_share">FileShareActivity</string>
+    <string name="title_activity_network">NetworkActivity</string>
+    <string name="title_activity_net12345678">Net12345678Activity</string>
+    <string name="title_activity_my123456">MyActivity123456</string>
 </resources>

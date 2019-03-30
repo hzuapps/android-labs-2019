@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.hzuapps.androidlabs.examples.RelativeLayoutActivity">
+
+    <TextView
+        android:id="@+id/text_1st"
+        android:background="#DD6B5B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="1st text view"/>
+
+    <TextView
+        android:id="@+id/text_2nd"
+        android:background="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="2nd text view"
+        android:layout_below="@+id/text_1st"
+        android:paddingTop="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/text_3rd"
+        android:background="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="3rd text view"
+        android:layout_below="@+id/text_1st"
+        android:layout_toRightOf="@+id/text_2nd"
+        android:paddingTop="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/text_4th"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="4th text view"
+        android:layout_below="@+id/text_2nd"/>
+
+</RelativeLayout>
