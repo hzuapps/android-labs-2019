@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".festival"/>
+        <activity
+            android:name=".Festival"
+            android:label="@string/title_activity_festival"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Festival" />
         <activity
             android:name=".Soft1714080902211festival"
             android:label="@string/title_activity_soft1714080902211festival"
