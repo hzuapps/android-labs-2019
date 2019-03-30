@@ -6,14 +6,44 @@
     android:layout_height="match_parent"
     tools:context="edu.hzuapps.androidlabs.soft1714080902421.SettingActivity">
 
-    <ImageView
-        android:id="@+id/iv_1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
-        android:background="#f99999"
-        android:scaleType="fitXY"
-        android:src="@drawable/setting" />
+        android:textSize="20dp"
+        android:text="请输入种树成功回复："/>
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setting"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="16dp"
+        android:ems="10" />
+    <requestFocus/>
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_info"
+        android:layout_alignParentRight="@id/et_info"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="18dp"
+        android:text="读取设定" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_info"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="191dp"
+        android:layout_marginTop="18dp"
+        android:text="保存设定" />
 
 </RelativeLayout>
