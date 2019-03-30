@@ -2,16 +2,14 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background1">
+    android:background="@drawable/bg1">
 
-    <TextView
-        android:id="@+id/text_view1"
-        android:text="首页!"
-        android:layout_gravity="center"
-        android:textSize="24sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ffffff"/>
+    <edu.hzuapps.androidlabs.soft1714080902124.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<include layout="@layout/title" />-->
+
 
     <Button
         android:id="@+id/button"
@@ -19,11 +17,6 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="编辑页面" />
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 
 
