@@ -9,9 +9,10 @@
     <TextView
         android:id="@+id/textview_01"
         android:layout_width="wrap_content"
-        android:layout_height="274dp"
-        android:drawableTop="@drawable/a1"
+        android:layout_height="500dp"
+        android:drawableTop="@drawable/a2"
         android:text="@string/xhr"
+        android:layout_marginTop="-20dp"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -22,7 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginStart="-10dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="480dp"
         android:text="@string/anniu" />
 
 </RelativeLayout>
