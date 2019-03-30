@@ -7,26 +7,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.plane.Activity01">
+    tools:context="com.example.plane.Activity03">
 
-
-    <TextView
-        android:id="@+id/textview_01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/timh"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="51dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="欢迎使用航空订票"
-        android:id="@+id/btnStartAty1"
-        android:layout_alignBottom="@+id/textview_01"
-        android:layout_centerHorizontal="true" />
-
-
+        android:text="预定机票"
+        android:id="@+id/purChase"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退订机票"
+        android:id="@+id/canSue"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="217dp" />
 </RelativeLayout>
