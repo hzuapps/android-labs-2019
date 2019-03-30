@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
-    tools:context=".Soft1714080902413Activity2">
+    tools:context=".Soft1714080902413Activity3">
 
     <TextView
         android:id="@+id/textView3"
@@ -14,29 +14,20 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="50dp"
-        android:text="游戏记录" />
+        android:text="游戏说明" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
-    <Button
-        android:id="@+id/btn_first"
+    <TextView
+        android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:textSize="30dp"
-        android:layout_marginTop="560dp"
-        android:text=" 首页" />
+        android:text="规则要求：每人一次下一子，黑棋先下（为先手），白棋后下，黑棋第一步必须走天元（游戏棋盘中央黑点），黑白双方轮流交替下子，直到黑白中任意一方获胜。" />
 
-    <Button
-        android:id="@+id/btn_refresh"
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:textSize="30dp"
-        android:layout_marginTop="560dp"
-        android:text="刷新" />
-</LinearLayout>
+        android:text="获胜的判定：只要黑白方中任意一方的棋子有五子连在一起（即五子连珠），可以为横连、纵连、斜连，则该方获胜，游戏结束。" />
 
 </LinearLayout>
