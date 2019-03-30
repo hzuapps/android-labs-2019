@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--标题-->
+    <LinearLayout
+        android:id="@+id/addbirth_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/radiuborder"
+            android:text="新的生日"
+            android:textAlignment="center"
+            android:textColor="@color/dimgray"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+<!--添加名字-->
+    <LinearLayout
+        android:id="@+id/add_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/addbirth_title">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="5dp"
+            android:text="名字："
+            android:textSize="18dp" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:hint="输入寿星的姓名或者昵称"
+            android:lines="1"
+            android:paddingRight="10dp"
+            android:textSize="18dp" />
+    </LinearLayout>
+<!--阴阳历-->
+    <RadioGroup
+        android:id="@+id/add_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:contentDescription="阴阳历"
+        android:layout_below="@+id/add_name">
+        <RadioButton
+            android:id="@+id/solar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="阳历"
+            android:textSize="18dp"/>
+        <RadioButton
+            android:id="@+id/lunar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="阴历"
+            android:textSize="18dp"/>
+
+    </RadioGroup>
+<!--日期-->
+    <LinearLayout
+        android:id="@+id/add_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/add_type"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="生日日期："
+            android:gravity="right"
+            android:textSize="18dp" />
+        <!--年-->
+        <Spinner
+            android:id="@+id/birth_year"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:spinnerMode="dialog"
+            android:background="@drawable/rectborder">
+        </Spinner>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="年 "
+            android:textSize="18dp"
+            android:textAlignment="center"/>
+        <!--月-->
+        <Spinner
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:spinnerMode="dialog"
+        android:background="@drawable/rectborder">
+        </Spinner>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="月 "
+            android:textSize="18dp"
+            android:textAlignment="center"/>
+        <!--日-->
+        <Spinner
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:spinnerMode="dialog"
+            android:background="@drawable/rectborder">
+        </Spinner>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="日 "
+            android:textSize="18dp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+<!--退出按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_date"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="220dp">
+        <Button
+            android:id="@+id/set_birth"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgray"
+            android:text="确认"/>
+        <Button
+            android:id="@+id/recall_add"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgray"
+            android:text="取消"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+</RelativeLayout>

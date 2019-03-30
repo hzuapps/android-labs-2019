@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439AddBirthdayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439ImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
