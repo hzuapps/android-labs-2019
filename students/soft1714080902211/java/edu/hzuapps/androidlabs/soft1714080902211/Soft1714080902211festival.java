@@ -12,7 +12,7 @@ public class Soft1714080902211festival extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Activity_soft1714080902211festival);
+        setContentView(R.layout.activity_soft1714080902211festival);
     }
 
 }

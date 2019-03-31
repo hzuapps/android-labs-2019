@@ -12,7 +12,8 @@ public class Festival extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContenView(R.layout.activity_festival2);
+        setContentView(R.layout.activity_festival2);
     }
 
 }
+
