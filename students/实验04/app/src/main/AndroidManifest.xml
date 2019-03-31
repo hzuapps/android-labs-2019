@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.helloworld">
+    package="com.example.myapplication">
 
     <application
         android:allowBackup="true"
@@ -12,13 +12,7 @@
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902313.soft_1714080902313_activity3"></activity>
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902313.soft_1714080902313_activity2" />
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902313.soft_1714080902313_activity1" />
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902313.Soft1714080902313" />
-        <activity android:name="com.example.Soft1714080902313Activity" />
-        <activity android:name="com.example.soft1714080902313.Soft1714080902313Activity" />
-        <activity
-            android:name="com.example.Soft1714080902313Activity$MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
