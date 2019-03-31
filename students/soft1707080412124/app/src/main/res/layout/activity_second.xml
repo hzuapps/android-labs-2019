@@ -11,84 +11,219 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="0dp">
-
+        android:layout_marginHorizontal="10dp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="112dp"
-            android:orientation="horizontal">
+            android:layout_height="194dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="108dp"
-                android:layout_height="110dp"
-                app:srcCompat="@drawable/pizza1"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="242dp"
-                android:layout_height="56dp"
-                android:layout_weight="1"
-                android:text="虾仁披萨"
-                android:textColor="#000000"
-                android:textSize="30dp" />
+                <SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="167dp"
+                    app:srcCompat="@drawable/advertisement" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="112dp"
+            android:layout_height="205dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="108dp"
-                android:layout_height="110dp"
-                app:srcCompat="@drawable/pizza1"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp" />
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="205dp"
+                android:background="@drawable/frame"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="177dp"
-                android:layout_height="56dp"
-                android:layout_weight="1"
-                android:text="培根披萨"
-                android:textColor="#000000"
-                android:textSize="30dp" />
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="137dp"
+                    app:srcCompat="@drawable/pizza5" />
 
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="韩式烤肉披萨"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="86元/10英寸"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="205dp"
+                android:background="@drawable/frame"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="137dp"
+                    app:srcCompat="@drawable/pizza2" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="海鲜至尊披萨"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="44元/6英寸   招牌"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="205dp"
+                android:background="@drawable/frame"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="137dp"
+                    app:srcCompat="@drawable/pizza3" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="北京潮鸭披萨"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="108元/12英寸"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="112dp"
+            android:layout_height="257dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="108dp"
-                android:layout_height="110dp"
-                app:srcCompat="@drawable/pizza1"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp" />
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="205dp"
+                android:background="@drawable/frame"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="177dp"
-                android:layout_height="56dp"
-                android:layout_weight="1"
-                android:text="夏威夷披萨"
-                android:textColor="#000000"
-                android:textSize="30dp" />
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="137dp"
+                    app:srcCompat="@drawable/pizza4" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="榴莲多多披萨"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="86元/9英寸"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="205dp"
+                android:background="@drawable/frame"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="137dp"
+                    app:srcCompat="@drawable/pizza5" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="超级至尊披萨"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="94元/10英寸  招牌"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="205dp"
+                android:background="@drawable/frame"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="137dp"
+                    app:srcCompat="@drawable/pizza6" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="夏威夷披萨"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="35元/6英寸"
+                    android:textColor="#000000" />
+            </LinearLayout>
         </LinearLayout>
-
-
     </LinearLayout>
-
-
-
 </android.support.constraint.ConstraintLayout>
