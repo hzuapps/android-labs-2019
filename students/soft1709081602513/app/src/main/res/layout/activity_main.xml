@@ -32,7 +32,8 @@
         android:drawableTop="@drawable/show"
         android:text="点击图片实现跳转！"
         android:textColor="@color/design_default_color_primary"
-        android:textSize="23dp" />
+        android:textSize="23dp"
+        />
 
     <ImageButton
         android:id="@+id/btn_start"

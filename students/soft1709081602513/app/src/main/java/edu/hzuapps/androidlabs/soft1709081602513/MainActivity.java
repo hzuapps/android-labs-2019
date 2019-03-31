@@ -19,15 +19,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mBtnStart = findViewById(R.id.btn_start);
         mBtnStart.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void  onClick(View v){
                 //跳转到开始界面StartActivity
                 Intent intent = new Intent(MainActivity.this,StartActivity.class);
                 startActivity(intent);
+
             }
         });
 
         mBtnSetting = findViewById(R.id.btn_setting);
+        //设置触摸监听器
         mBtnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void  onClick(View view){
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         xiaView = findViewById(R.id.textview_01);
+        //设置触摸监听器
         xiaView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void  onClick(View v){

@@ -3,7 +3,7 @@
     package="edu.hzuapps.androidlabs.soft1709081602513"
     android:versionCode="1"
     android:versionName="1.0">
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />//请求获取获取External存储的权限。
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
