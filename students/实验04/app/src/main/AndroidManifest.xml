@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="edu.hzuapps.androidlabs.soft1714080902313">
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902313.soft_1714080902313_activity3"></activity>
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902313.soft_1714080902313_activity2" />
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902313.soft_1714080902313_activity1" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Soft1714080902313Activity3"></activity>
+        <activity android:name=".Soft1714080902313Activity2" />
+        <activity android:name=".Soft1714080902313Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
