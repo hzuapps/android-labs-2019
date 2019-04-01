@@ -10,10 +10,9 @@
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="0dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="448dp"
+        android:layout_height="75dp"
         android:background="#3d9bff"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/Listview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -40,14 +39,23 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/Listview"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"></ListView>
+
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+        app:layout_constraintTop_toBottomOf="@+id/Listview">
 
         <EditText
             android:id="@+id/input_text"
@@ -59,8 +67,11 @@
         <Button
             android:id="@+id/send"
             android:layout_width="74dp"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
+            android:onClick="add"
             android:text="发送" />
     </LinearLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>
