@@ -9,9 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".soft1714080902325"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name="edu.hzuapps.androidlabs.soft1714080902325.Soft1714080902325Activity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
