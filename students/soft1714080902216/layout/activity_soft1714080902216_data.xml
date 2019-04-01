@@ -66,7 +66,6 @@
         android:layout_x="122dp"
         android:layout_y="382dp"
         android:text="返回"
-        android:textSize="30sp"
-        android:onClick="back"/>
+        android:textSize="30sp"/>
 
 </AbsoluteLayout>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/b5"
-    tools:context=".Soft1714080902216RecordActivity">
+    tools:context=".Soft1714080902216RegisterActivity"
+    android:background="@drawable/b6">
 
     <TextView
         android:id="@+id/Tellname"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="108dp"
-        android:text="请输入姓名："
+        android:text="请输入用户名："
         android:textColor="#000000"
         android:textSize="20sp" />
 
@@ -23,7 +23,7 @@
         android:layout_height="50dp"
         android:layout_x="0dp"
         android:layout_y="139dp"
-        android:hint="Name"
+        android:hint="UserName"
         android:maxLines="1" />
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="188dp"
-        android:text="请输入生日(如19900101)："
+        android:text="请输入密码："
         android:textColor="#000000"
         android:textSize="20sp" />
     />
@@ -43,30 +43,52 @@
         android:layout_height="50dp"
         android:layout_x="0dp"
         android:layout_y="217dp"
-        android:hint="birthday"
+        android:hint="password"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/Telldata1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="267dp"
+        android:text="请再次输入密码："
+        android:textColor="#000000"
+        android:textSize="20sp" />
+    />
+
+    <EditText
+        android:id="@+id/inputdata1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_x="0dp"
+        android:layout_y="292dp"
+        android:hint="password"
         android:maxLines="1" />
 
     <Button
-        android:id="@+id/inputLogin"
+        android:id="@+id/zhuce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_x="79dp"
-        android:layout_y="334dp"
-        android:text="提交"
+        android:layout_x="84dp"
+        android:layout_y="378dp"
+        android:text="注册"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/Comeback"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_x="189dp"
-        android:layout_y="334dp"
+        android:layout_x="193dp"
+        android:layout_y="378dp"
         android:text="返回"
-        android:textSize="30sp"
-        android:onClick="back"/>
+        android:textSize="30sp" />
 
-</AbsoluteLayout >
+
+
+
+</AbsoluteLayout>

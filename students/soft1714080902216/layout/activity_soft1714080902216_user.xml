@@ -43,7 +43,7 @@
         android:layout_height="50dp"
         android:layout_x="0dp"
         android:layout_y="217dp"
-        android:hint="birthday"
+        android:hint="password"
         android:maxLines="1" />
 
     <Button
@@ -76,7 +76,6 @@
         android:layout_centerVertical="true"
         android:layout_x="217dp"
         android:layout_y="334dp"
-        android:onClick="back"
         android:text="返回"
         android:textSize="30sp" />
 
