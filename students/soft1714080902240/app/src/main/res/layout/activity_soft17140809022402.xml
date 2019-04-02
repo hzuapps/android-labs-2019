@@ -6,4 +6,26 @@
     android:layout_height="match_parent"
     tools:context="edu.hzuapps.androidlabs.soft1714080902240.Soft1714080902240Activity2">
 
-    </android.support.constraint.ConstraintLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/firstread"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击输入今天练习的单词"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="590dp"
+            android:layout_marginTop="550dp"
+            />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
