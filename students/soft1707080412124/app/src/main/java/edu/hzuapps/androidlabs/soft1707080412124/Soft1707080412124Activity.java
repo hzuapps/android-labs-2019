@@ -5,7 +5,6 @@ package edu.hzuapps.androidlabs.soft1707080412124;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -24,10 +23,12 @@ public class Soft1707080412124Activity extends AppCompatActivity {
 
         final FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        @Override
+        public void onClick(View view) {
+                Intent intent = new Intent(Soft1707080412124Activity.this, ThirdActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Button btn1 = (Button)findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener(){
@@ -35,9 +36,6 @@ public class Soft1707080412124Activity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(Soft1707080412124Activity.this, SecondActivity.class);
                 startActivity(intent);
-            }
-        });
-
             }
         });
 

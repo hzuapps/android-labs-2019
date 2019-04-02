@@ -2,6 +2,7 @@ package edu.hzuapps.androidlabs.soft1707080412124;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -10,4 +11,5 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
     }
+
 }
