@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class consumer_Housekeeper1_1714080902207 extends AppCompatActivity implements View.OnClickListener{
+public class Soft_1714080902207_MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-Button button2;
+    Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consumer__housekeeper1_1714080902207);
+        setContentView(R.layout.soft_1714080902207_activity_main);
         button3 = (Button) findViewById(R.id.button3);
         button2=findViewById(R.id.button2);
         button2.setOnClickListener(this);
@@ -21,7 +21,7 @@ Button button2;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(consumer_Housekeeper1_1714080902207.this, consumer_Housekeeper_1714080902207.class);
+                intent.setClass(Soft_1714080902207_MainActivity.this, Soft_1714080902207_SecondActivity.class);
                 startActivity(intent);
             }
 
@@ -37,10 +37,7 @@ Button button2;
         switch (v.getId())
         {
             case R.id.button2:
-                Toast.makeText(consumer_Housekeeper1_1714080902207.this,"本次消费记录成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Soft_1714080902207_MainActivity.this,"本次消费记录成功",Toast.LENGTH_SHORT).show();
         }
     }
 }
-
-
-

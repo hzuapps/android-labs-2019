@@ -5,11 +5,11 @@
         consumer_Housekeeper_1714080902207
     </string>
     <string-array name="set">
-        <item>我的总余额：</item>
-        <item>支付宝余额：</item>
-        <item>微信余额：</item>
-        <item>今日消费金额：</item>
-        <item>本月消费金额：</item>
+        <item>我的总余额：999</item>
+        <item>支付宝余额：999</item>
+        <item>微信余额：999</item>
+        <item>今日消费金额：999</item>
+        <item>本月消费金额：999</item>
 
 
     </string-array>

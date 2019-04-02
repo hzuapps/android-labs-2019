@@ -8,12 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class consumer_Housekeeper_1714080902207 extends AppCompatActivity {
+public class Soft_1714080902207_SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consumer__housekeeper_1714080902207);
+        setContentView(R.layout.soft_1714080902207_activity_second);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -28,7 +28,7 @@ public class consumer_Housekeeper_1714080902207 extends AppCompatActivity {
     }
     public void onClick(View v)
     {
-        Intent inten=new Intent(consumer_Housekeeper_1714080902207.this,consumer_Housekeeper1_1714080902207.class);
+        Intent inten=new Intent(Soft_1714080902207_SecondActivity.this, Soft_1714080902207_MainActivity.class);
         startActivity(inten);
     }
 }

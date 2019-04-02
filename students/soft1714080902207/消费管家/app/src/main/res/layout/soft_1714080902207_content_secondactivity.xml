@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".consumer_Housekeeper_1714080902207"
-    tools:showIn="@layout/activity_consumer__housekeeper_1714080902207">
+    tools:context=".soft_1714080902207_SecondActivity"
+    tools:showIn="@layout/soft_1714080902207_activity_second">
 
     <ListView
         android:entries="@array/set"

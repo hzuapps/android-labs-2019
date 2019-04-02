@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".consumer_Housekeeper_1714080902207">
+    tools:context=".soft_1714080902207_SecondActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_consumer__housekeeper_1714080902207" />
+    <include layout="@layout/soft_1714080902207_content_secondactivity" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
