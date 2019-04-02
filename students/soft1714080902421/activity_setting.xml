@@ -1,40 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/setting_background"
+    android:orientation="vertical"
     tools:context="edu.hzuapps.androidlabs.soft1714080902421.SettingActivity">
 
     <TextView
         android:id="@+id/setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/setting1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:textSize="20dp"
-        android:text="请输入种树成功回复："/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="70dp"
+        android:text="请输入种树成功回复："
+        android:textSize="22dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/et_info"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/setting"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="79dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
         android:ems="10" />
-    <requestFocus/>
+
+    <TextView
+        android:id="@+id/setting1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="120dp"
+        android:text="请输入种树所需签到时间(min:21天)："
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et1_info"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setting1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/setting2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="请设置最少学习时间（/h）："
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et2_info"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setting2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:ems="10" />
 
     <Button
         android:id="@+id/btn_read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/et_info"
-        android:layout_alignParentRight="@id/et_info"
-        android:layout_marginLeft="79dp"
-        android:layout_marginTop="18dp"
-        android:text="读取设定" />
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="200dp"
+        android:alpha="0.3"
+        android:textStyle="bold"
+        android:text="读取设置" />
 
     <Button
         android:id="@+id/btn_save"
@@ -42,8 +92,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/et_info"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="191dp"
-        android:layout_marginTop="18dp"
-        android:text="保存设定" />
-
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="200dp"
+        android:alpha="0.3"
+        android:textStyle="bold"
+        android:text="保存设置" />
 </RelativeLayout>
