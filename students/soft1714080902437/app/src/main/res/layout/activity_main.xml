@@ -1,33 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/addLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="421dp"
-        android:layout_height="61dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:drawablePadding="10dp"
-        android:gravity="center"
-        android:src="@mipmap/star"
-        android:text="有趣的课程就要开始了！"
-        tools:context=".MainActivity"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="142dp" />
+        <EditText
+            android:id="@+id/cnameET"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="课程名字"
+            android:inputType="textPersonName" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="416dp"
-        android:layout_height="455dp"
-        app:srcCompat="@mipmap/star"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="241dp" />
+        <EditText
+            android:id="@+id/tnameET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="老师名字"
+            android:inputType="textPersonName" />
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/addIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="add"
+            android:src="@android:drawable/ic_input_add" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/accountLV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addLL" >
+
+    </ListView>
+</LinearLayout>
