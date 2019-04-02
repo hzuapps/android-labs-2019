@@ -13,6 +13,8 @@ import java.io.FileOutputStream;
 
 public class SettingActivity extends AppCompatActivity {
     private EditText et_info;
+    private EditText et1_info;
+    private EditText et2_info;
     private Button mBtnread=null;
     private Button mBtnsave=null;
 
@@ -24,6 +26,8 @@ public class SettingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setting);
         //获取布局文件中的控件
         et_info = findViewById(R.id.et_info);
+        et1_info = findViewById(R.id.et1_info);
+        et2_info = findViewById(R.id.et2_info);
         mBtnread = findViewById(R.id.btn_read);
         mBtnsave = findViewById(R.id.btn_save);
         setOnClickListener();
@@ -42,12 +46,20 @@ public class SettingActivity extends AppCompatActivity {
         public void onClick(View v){
             switch (v.getId()) {
                 case R.id.btn_save:
+                    String huan="\n";
                     String saveinfo=et_info.getText().toString().trim();
+                    String saveinfo1=et1_info.getText().toString().trim();
+                    String saveinfo2=et2_info.getText().toString().trim();
                     FileOutputStream fos;
                     try {
                         //保存设定
                         fos = openFileOutput("data.txt", MODE_APPEND);
                         fos.write(saveinfo.getBytes());
+                        fos.write(huan.getBytes());
+                        fos.write(saveinfo1.getBytes());
+                        fos.write(huan.getBytes());
+                        fos.write(saveinfo2.getBytes());
+                        fos.write(huan.getBytes());
                         fos.close();
                     } catch (Exception e) {
                         e.printStackTrace();
