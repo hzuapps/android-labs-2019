@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Soft1714080902223Activity extends AppCompatActivity {
+import edu.hzuapps.androidlabs.presenter.TaskService;
+
+public class EditActivity extends AppCompatActivity {
 
     private Button mBtn;
     private EditText title;
@@ -29,7 +31,7 @@ public class Soft1714080902223Activity extends AppCompatActivity {
             public void onClick(View v) {
                 //标题栏为空时，提示并焦聚（暂未处理空白字符）
                 if(title.getText().length() == 0){
-                    Toast toast = Toast.makeText(Soft1714080902223Activity.this, "请输入标题", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(EditActivity.this, "请输入标题", Toast.LENGTH_SHORT);
                     int[] location = new int[2];
                     title.getLocationInWindow(location);
                     //toast.setView(title);
@@ -39,7 +41,7 @@ public class Soft1714080902223Activity extends AppCompatActivity {
                 }
                 //正文为空时，提示并焦聚（暂未处理空白字符）
                 else if(content.getText().length() == 0) {
-                    Toast toast = Toast.makeText(Soft1714080902223Activity.this, "请输入正文内容", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(EditActivity.this, "请输入正文内容", Toast.LENGTH_SHORT);
                     int[] location = new int[2];
                     content.getLocationInWindow(location);
                     toast.setGravity(Gravity.TOP, location[0], location[1]);
@@ -47,11 +49,18 @@ public class Soft1714080902223Activity extends AppCompatActivity {
                     content.requestFocus();
                 }
                 else{
+                    TaskService taskService = new TaskService(EditActivity.this);
+                    String titleStr = title.getText().toString();
+                    String contentStr = content.getText().toString();
+                    long id = taskService.saveTask(titleStr, contentStr);
+                    Toast.makeText(EditActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
                     //跳转到详情页
-                    Intent intent = new Intent(Soft1714080902223Activity.this,
+                    Intent intent = new Intent(EditActivity.this,
                             DetailActivity.class);
+                    //把id传递给DetailActivity
+                    intent.putExtra("id", id);
                     startActivity(intent);
-                    Toast.makeText(Soft1714080902223Activity.this, "提交成功", Toast.LENGTH_LONG).show();
+
                 }
             }
         });
