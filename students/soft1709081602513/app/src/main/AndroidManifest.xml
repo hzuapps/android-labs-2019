@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.soft1709081602513">
-
+    package="edu.hzuapps.androidlabs.soft1709081602513"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />//请求获取获取External存储的权限。
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1709081602513" android:exported="true"></activity>
+        <activity android:name=".Soft1709081602513Activity"></activity>
+        <activity android:name=".StartActivity" />
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
