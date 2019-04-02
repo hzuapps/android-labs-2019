@@ -36,14 +36,14 @@ public class Soft1714080902133HomeActivity extends AppCompatActivity {
             }
         });
 
-        /*Button b2 = findViewById(R.id.home_button2);//查询
+        Button b2 = findViewById(R.id.home_button2);//查询
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902133HomeActivity.this, Soft1714080902133RechargeActivity);
+                Intent intent = new Intent(Soft1714080902133HomeActivity.this, Soft1714080902133QueryActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         Button b3 = findViewById(R.id.home_button3);//缴费
         b3.setOnClickListener(new View.OnClickListener() {

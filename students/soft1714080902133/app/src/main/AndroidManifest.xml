@@ -9,20 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1714080902133PaymentActivity"></activity>
-
+        <activity android:name=".Soft1714080902133QueryActivity"></activity>
+        <activity android:name=".Soft1714080902133PaymentActivity" />
         <activity android:name=".Soft1714080902133RechargeActivity" />
-
         <activity android:name=".Soft1714080902133PerfectInformationActivity" />
-
         <activity android:name=".Soft1714080902133HomeActivity" />
-
         <activity android:name=".Soft1714080902133UserActivity" />
-
         <activity android:name=".Soft1714080902133ForgetPasswordActivity" />
-
         <activity android:name=".Soft1714080902133RegisterActivity" />
-
         <activity android:name=".Soft1714080902133LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

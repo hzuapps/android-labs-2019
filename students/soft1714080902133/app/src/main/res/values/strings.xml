@@ -39,4 +39,28 @@
     <string name="button_01">退出账号</string>
 
 
+    <!--查询-->
+    <string name="query_button">查询电量</string>
+    <string name="query">查询</string>
+    <string name="building">宿舍楼:</string>
+    <string name="Nobuilding">宿舍号:</string>
+    <string-array name="Data01">
+        <item>17栋</item>
+        <item>18栋</item>
+        <item>19栋</item>
+        <item>20栋</item>
+        <item>21栋</item>
+    </string-array>
+    <string-array name="Data02">
+        <item>a401</item>
+        <item>a402</item>
+        <item>a403</item>
+        <item>a404</item>
+        <item>a405</item>
+        <item>a406</item>
+        <item>a407</item>
+        <item>a408</item>
+    </string-array>
+
+
 </resources>
