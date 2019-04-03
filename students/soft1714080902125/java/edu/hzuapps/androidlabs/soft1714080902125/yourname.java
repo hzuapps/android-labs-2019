@@ -17,14 +17,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class shawshank extends AppCompatActivity {
+public class yourname extends AppCompatActivity {
 
     private EditText edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shawshank);
+        setContentView(R.layout.activity_yourname);
         edit = (EditText) findViewById(R.id.edit);
         String inputText = load();
         if(!TextUtils.isEmpty(inputText)){
@@ -39,7 +39,7 @@ public class shawshank extends AppCompatActivity {
         BufferedReader reader = null;
         StringBuilder content = new StringBuilder();
         try{
-            in = openFileInput("data2");
+            in = openFileInput("data3");
             reader = new BufferedReader(new InputStreamReader(in));
             String line = "";
             while((line = reader.readLine()) != null){
@@ -70,7 +70,7 @@ public class shawshank extends AppCompatActivity {
         FileOutputStream out = null;
         BufferedWriter writer = null;
         try {
-            out = openFileOutput("data2", Context.MODE_PRIVATE);
+            out = openFileOutput("data3", Context.MODE_PRIVATE);
             writer = new BufferedWriter(new OutputStreamWriter(out));
             writer.write(inputText);
         } catch (IOException e) {

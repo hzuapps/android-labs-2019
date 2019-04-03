@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="415dp"
             android:layout_height="250dp"
-            android:src="@drawable/greenbook" />
+            android:src="@drawable/greenbook2" />
         <TextView
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -34,6 +34,15 @@
             android:gravity="center"
             android:layout_marginTop="20dp"
             android:text="简介:《绿皮书》是由彼得·法拉利执导，维果·莫特森、马赫沙拉·阿里主演的剧情片，于2018年9月11日在多伦多国际电影节首映；2019年3月1日在中国内地上映。该片改编自真人真事，讲述了意裔美国人保镖托尼，他被聘用为世界上优秀的爵士钢琴家唐开车。钢琴家将从纽约开始举办巡回演奏，俩人之间一段跨越种族、阶级的友谊的故事。" />
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="5"
+            android:hint="此处可写影评"
+            android:layout_marginTop="20dp"
+            />
 
         <TextView
             android:layout_width="match_parent"

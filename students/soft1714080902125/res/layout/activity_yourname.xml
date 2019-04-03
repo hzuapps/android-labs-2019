@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="415dp"
+                android:layout_height="250dp"
+                android:src="@drawable/yourname2" />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_shape"
+                android:text="豆瓣评分：8.4"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="简介:《你的名字。》是由新海诚执导，由神木隆之介、上白石萌音担任主要配音的一部原创日本动画电影。作品于2016年8月26日在日本上映。中国内地于2016年12月2日上映。作品讲述了男女高中生在梦中相遇，并寻找彼此的故事。" />
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="5"
+                android:hint="此处可写影评"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:text="更多资讯如下:"
+                android:textColor="#551A8B"
+                android:gravity="center"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:autoLink="web"
+                android:text="http://movie.mtime.com/232556/"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:autoLink="web"
+                android:text="https://movie.douban.com/subject/26683290/"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:autoLink="web"
+                android:text="http://www.1905.com/mdb/film/2232962/"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
