@@ -19,6 +19,51 @@
         <!--菜单界面的布局-->
         <include layout="@layout/layout_menu"/>
         <!--主界面的布局-->
-        <include layout="@layout/layout_main"/>
+        <include layout="@layout/layout_main" />
     </edu.hzuapps.androidlabs.soft1714080902226activity.view.SlideMenu>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="73dp"
+        android:text="易忘词汇小记:"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="-37dp"
+        android:ems="10" />
+    <requestFocus/>
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="57dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/et_info"
+        android:layout_alignEnd="@+id/et_info"
+        android:layout_alignRight="@id/et_info"
+        android:layout_marginTop="-37dp"
+        android:layout_marginEnd="-117dp"
+        android:layout_marginRight="-117dp"
+        android:text="查看" />
+
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="57dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/et_info"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="256dp"
+        android:layout_marginTop="-36dp"
+        android:text="保存" />
 </RelativeLayout>
