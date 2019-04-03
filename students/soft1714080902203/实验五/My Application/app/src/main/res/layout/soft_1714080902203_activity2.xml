@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFE0"
+        tools:context=".Soft1714080902203Activity2">
+
+        <TextView
+            android:id="@+id/jianjie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="0.1dp"
+            android:background="#FFD700"
+            android:paddingLeft="20dp"
+            android:text="输入你的爱豆简介："
+            android:textColor="#454545"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/et_info"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@+id/jianjie"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="0.1dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:paddingLeft="20dp"
+            android:textColor="#454545">
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_info"
+            android:layout_alignRight="@+id/et_info"
+            android:background="#FFD700"
+            android:text="查看"
+            android:textColor="#454545" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_info"
+            android:layout_alignParentLeft="@+id/et_info"
+            android:background="#FFD700"
+            android:text="保存"
+            android:textColor="#454545" />
+    </RelativeLayout>
