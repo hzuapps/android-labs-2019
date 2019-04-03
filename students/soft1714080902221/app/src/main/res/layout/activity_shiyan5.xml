@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Soft1714080902221activity_shiyan5">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_x="75dp"
+        android:layout_y="261dp"
+        android:text="明天要做的事情："
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="173dp" />
+
+    <EditText
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_x="76dp"
+        android:layout_y="303dp"
+        android:ems="12"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <Button
+        android:id="@+id/baochun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="205dp"
+        android:layout_y="384dp"
+        android:ems="5"
+        android:text="显示事情"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="324dp" />
+
+    <Button
+        android:id="@+id/xianshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="90dp"
+        android:layout_y="384dp"
+        android:ems="5"
+        android:text="保存起来"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="324dp" />
+
+</AbsoluteLayout>
