@@ -76,7 +76,33 @@
             android:gravity="start"
             android:hint="@string/edit_body_hint"
             android:textSize="12sp" />
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="#fffff0"
+            android:text="@string/button_back"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            />
 
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="2dp"
+            android:background="#fffff0"
+            android:text="@string/button_save"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
     </RelativeLayout>
 
 
