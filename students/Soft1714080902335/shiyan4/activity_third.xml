@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ThirdActivity">
+
+        <TextView
+            android:id="@+id/dt01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" 请选择图书类型：\n"
+            android:textColor="#EA5246"
+            android:textSize="35sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/dtn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="侦探类"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+        android:id="@+id/dtn6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity ="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold|italic"
+        android:text="言情类"/>
+
+    <Button
+        android:id="@+id/dtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="科幻类"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/dtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="散文类"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/dtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="小说类"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+</LinearLayout>
+
+
+
