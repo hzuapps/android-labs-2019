@@ -39,11 +39,36 @@
         android:text="单词积累" />
 
 
-    <TextView
-        android:id="@+id/imageview_01"
-        android:layout_width="408dp"
-        android:layout_height="181dp"
-        android:layout_marginTop="200dp"
-        android:layout_gravity="center_horizontal|center"
-        android:drawableBottom="@drawable/okok" />
+    <Button
+        android:id="@+id/button_write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="记录生词" />
+
+
+
+
+    <!--
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:ems="10"
+
+            android:inputType="textMultiLine"
+            android:text="记录生词" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:ems="10"
+
+            android:inputType="textMultiLine"
+            android:text="查看生词" />
+    -->
+
 </LinearLayout>
