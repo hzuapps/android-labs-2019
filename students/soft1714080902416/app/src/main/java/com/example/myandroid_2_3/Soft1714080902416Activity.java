@@ -31,15 +31,21 @@ public class Soft1714080902416Activity extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                Intent intent = new Intent(Soft1714080902416Activity.this,MainActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902416Activity.this, MainActivity.class);
                 startActivity(intent);
             }
         };
 
+        Button button1 = findViewById(R.id.button1);
+        View.OnClickListener onClickListener1 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(Soft1714080902416Activity.this, NewCreateActivity.class);
+                startActivity(intent1);
+            }
+        };
         button.setOnClickListener(onClickListener);
-
+        button1.setOnClickListener(onClickListener1);
     }
-
 }
