@@ -12,22 +12,42 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1500px"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150px">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="聊天信息"
+                    android:layout_gravity="center"
+                    android:textSize="100px"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/et_info_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#DCDCDC"
+                    android:gravity="top|left"/>
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150px"
             android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="500px"
+                android:layout_width="800px"
                 android:layout_height="match_parent"
                 android:background="#E6E6FA">
                 <EditText
-                    android:id="@+id/chattext1"
+                    android:id="@+id/et_info"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="请输入" />
@@ -36,12 +56,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <Button
-                    android:id="@+id/button_sent"
+                    android:id="@+id/btn_send"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#87CEFA"
                     android:text="发送"/>
             </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200px">
+            <Button
+                android:id="@+id/btn_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#AEEEEE"
+                android:text="显示聊天记录"
+                android:textSize="80px"/>
         </LinearLayout>
     </LinearLayout>
 
