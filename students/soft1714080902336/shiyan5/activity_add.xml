@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/add">
+
+    <TextView
+        android:id="@+id/textView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="21dp"
+        android:text="请输入你的好友姓名："
+        android:textSize="22dp" />
+
+    <EditText
+        android:id="@+id/et_info01"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_alignLeft="@id/textView01"
+        android:layout_alignBottom="@+id/textView01"
+        android:layout_marginLeft="208dp"
+        android:layout_marginBottom="-6dp" />
+
+    <TextView
+        android:id="@+id/textView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="148dp"
+        android:text="请输入你的好友性别："
+        android:textSize="22dp" />
+
+    <EditText
+        android:id="@+id/et_info02"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_alignLeft="@id/textView02"
+        android:layout_alignBottom="@+id/textView02"
+        android:layout_marginLeft="208dp"
+        android:layout_marginBottom="-6dp" />
+
+    <TextView
+        android:id="@+id/textView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="285dp"
+        android:text="请输入你的好友等级："
+        android:textSize="22dp" />
+
+    <EditText
+        android:id="@+id/et_info03"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_alignLeft="@id/textView03"
+        android:layout_alignBottom="@+id/textView03"
+        android:layout_marginLeft="208dp"
+        android:layout_marginBottom="-6dp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="137dp"
+        android:text="保存查询"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="137dp"
+        android:text="读取查询"
+        android:textSize="22dp" />
+
+</RelativeLayout>

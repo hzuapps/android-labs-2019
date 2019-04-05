@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/open_test"
+    tools:context=".Soft1714080902336Activity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview01"
+        android:layout_width="420dp"
+        android:layout_height="305dp"
+        android:gravity="center"
+        android:text="头脑王者"
+        android:textColor="#EA5246"
+        android:textStyle="bold|italic"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/cs01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity ="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold|italic"
+        android:text="自我练习"/>
+
+    <Button
+        android:id="@+id/cs02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity ="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold|italic"
+        android:text="好友对战"/>
+
+    <Button
+        android:id="@+id/cs03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity ="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold|italic"
+        android:text="添加好友"/>
+
+</LinearLayout>
