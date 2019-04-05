@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".Post">
+
+    <TextView
+        android:id="@+id/postT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入你的问题："
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/postB1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postT1"
+        android:textSize="16dp"
+        tools:ignore="MissingConstraints" />
+    <requestFocus />
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@+id/postB1"
+        android:onClick="Clicksave"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="637dp"
+        tools:ignore="MissingConstraints,OnClick" />
+    <Button
+        android:id="@+id/look"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Look"
+        android:layout_below="@+id/postB1"
+        android:layout_toRightOf="@id/save"
+        android:onClick="Clicklook"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="637dp"
+        tools:ignore="MissingConstraints,OnClick" />
+
+</RelativeLayout>
