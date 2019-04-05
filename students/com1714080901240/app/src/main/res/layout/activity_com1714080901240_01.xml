@@ -6,27 +6,41 @@
     tools:context=".Com1714080901240Activity_01">
 
     <EditText
+        android:id="@+id/et_info"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="27dp"
         android:hint="搜索歌曲" />
 
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
         android:onClick="findSong"
-        android:text="搜索" />
+        android:text="保存" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginRight="240dp"
+        android:onClick="findSong"
+        android:text="加载" />
 </RelativeLayout>
