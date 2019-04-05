@@ -33,15 +33,15 @@
             android:id="@+id/textView2"
             android:layout_width="218dp"
             android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/searh1"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
             android:layout_marginStart="-6dp"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="70dp"
-            android:textColor="#000000"
-            android:textSize="15dp"
+            android:layout_marginEnd="-11dp"
             android:inputType="text"
-            android:text="" />
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="15dp" />
 
         <SearchView
             android:id="@+id/searh1"
@@ -138,5 +138,205 @@
         android:background="#686868"
         android:layout_below="@+id/LinearLayout1"
         android:layout_width="match_parent"/>
+        <LinearLayout
+            android:id="@+id/news1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="-2dp">
+
+            <ImageView
+                android:id="@+id/newsIV1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/news1"
+                android:src="@drawable/title1" />
+
+            <RelativeLayout
+                android:layout_width="269dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tVi1"
+                    android:layout_width="258dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:text="湖南一小学发生砍人事件值致2死2伤"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/newsTextId1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="1"
+                    />
+
+                <TextView
+                    android:id="@+id/tV1"
+                    android:layout_width="259dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="48dp"
+                    android:textSize="12dp"
+                    android:text="犯罪嫌疑人郑某君（男，31岁，宁运县柏家坪镇人）已被公安机关抓获，事件调" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/news2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/news1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-2dp">
+
+        <ImageView
+            android:id="@+id/newsIV2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/news2"
+            android:src="@drawable/news2" />
+
+        <RelativeLayout
+            android:layout_width="269dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tVi2"
+                android:layout_width="258dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:text="10位志愿军烈士遗骸回国了！两架歼-11战机护航"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/newsTextId2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="2"
+                />
+
+            <TextView
+                android:id="@+id/tV2"
+                android:layout_width="259dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="48dp"
+                android:textSize="12dp"
+                android:text="11时36分，军方伊尔-76运输机将10位赴韩作战志愿军烈士遗骸送达沈阳。" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/news3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/news2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-2dp">
+
+        <ImageView
+            android:id="@+id/newsIV3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/news1"
+            android:src="@drawable/new3" />
+
+        <RelativeLayout
+            android:layout_width="269dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tVi3"
+                android:layout_width="258dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:text="印媒：印藏边境部队指挥部前移“应对中国”"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/newsTextId3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="3"
+                />
+
+            <TextView
+                android:id="@+id/tV3"
+                android:layout_width="259dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="48dp"
+                android:textSize="12dp"
+                android:text="据印度《经济时报》2日报道，隶属印度内政部的“印藏边境警察部队”1日将指挥部正式" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/news4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/news3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-2dp">
+
+        <ImageView
+            android:id="@+id/newsIV4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/news1"
+            android:src="@drawable/news4" />
+
+        <RelativeLayout
+            android:layout_width="269dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tVi4"
+                android:layout_width="258dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:text="胡锡进再评赵立新言论：演艺界商界人士别乱碰政治"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/newsTextId4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="4"
+                />
+
+            <TextView
+                android:id="@+id/tV4"
+                android:layout_width="259dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="48dp"
+                android:textSize="12dp"
+                android:text="4月3日凌晨，赵立新在微博为自己引发争议的言论致歉，称自己的表达方式以及在与网" />
+        </RelativeLayout>
+
+    </LinearLayout>
 </RelativeLayout>
 
