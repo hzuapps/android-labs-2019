@@ -3,10 +3,22 @@
     androi:layout_width="match_parent"
     androi:orientation="vertical">
 
+    <TextView
+        androi:id="@+id/cp_caiming_text"
+        androi:layout_width="wrap_content"
+        androi:layout_height="wrap_content"
+        androi:layout_gravity="center"
+        androi:textSize="20dp"
+        androi:text="菜名"
+        androi:layout_margin="5dp"/>
+
     <ImageView
+        androi:id="@+id/cp_tupian_image"
         androi:layout_width="wrap_content"
         androi:layout_height="wrap_content"
         androi:background="@drawable/cp"
         androi:layout_gravity="center"/>
+    
+    
 
 </LinearLayout>
