@@ -1,8 +1,8 @@
 package edu.hzuapps.androidlabs.soft1714080902110;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -12,15 +12,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Soft1714080902110Activity extends AppCompatActivity {
-
+    //双击退出
     public boolean isExit = false;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1714080902110_activity);
 
-        Button start_game = (Button) findViewById(R.id.start_game);
-        Button rank_list = (Button) findViewById(R.id.rank_list);
+        Button start_game = findViewById(R.id.start_game);
+        Button rank_list = findViewById(R.id.rank_list);
 
         start_game.setOnClickListener(new View.OnClickListener() {
             @Override

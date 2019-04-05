@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/rank_name_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rank_name_show"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/rank_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/rank_name_show"
+        android:layout_toEndOf="@id/rank_name_show" />
+
+    <TextView
+        android:id="@+id/rank_score_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rank_score_show"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/rank_name"
+        android:layout_toEndOf="@id/rank_name" />
+
+    <TextView
+        android:id="@+id/rank_score"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/rank_score_show"
+        android:layout_toEndOf="@id/rank_score_show" />
+
+</RelativeLayout>

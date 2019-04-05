@@ -14,7 +14,9 @@
         android:layout_marginTop="200dp"
         android:text="@string/title"
         android:textColor="@color/colorWhite"
-        android:textSize="30sp"/>
+        android:textSize="30sp"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:drawableStart="@drawable/ic_launcher_foreground" />
 
     <Button
         android:id="@+id/start_game"
