@@ -5,4 +5,6 @@
     <string name="edit_hint">请输入标题</string>
     <string name="edit_body_hint">请输入内容...</string>
     <string name="edit_title_text">新建备忘录</string>
+    <string name="button_back">返回</string>
+    <string name="button_save">保存</string>
 </resources>
