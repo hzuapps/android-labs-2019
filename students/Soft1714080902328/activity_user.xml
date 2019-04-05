@@ -6,143 +6,189 @@
     android:layout_height="match_parent"
     tools:context=".UserActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="164dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="45dp">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="122dp"
+                    android:layout_height="114dp"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginLeft="64dp"
+                    android:layout_marginTop="48dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/kenan1" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginLeft="44dp"
+                    android:layout_marginTop="96dp"
+                    android:text="晚归"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:text="用户名1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:layout_editor_absoluteX="45dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_blue_background"
+                        android:text="画板"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="208dp"
+                        tools:layout_editor_absoluteY="202dp"
+                        tools:text="画板" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_blue_background"
+                        android:text="关注"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="307dp"
+                        tools:layout_editor_absoluteY="202dp"
+                        tools:text="关注" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_blue_background"
+                        android:text="喜欢"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="108dp"
+                        tools:layout_editor_absoluteY="202dp"
+                        tools:text="喜欢" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_blue_background"
+                        android:text="采集"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="2dp"
+                        tools:layout_editor_absoluteY="202dp"
+                        tools:text="采集" />
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="448dp"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/sea_sky"
+                            android:layout_width="180dp"
+                            android:layout_height="320dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@drawable/sea_cloud"
+                            tools:srcCompat="@drawable/sea_cloud" />
+
+                        <ImageView
+                            android:id="@+id/hilltop"
+                            android:layout_width="180dp"
+                            android:layout_height="320dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+
+                            tools:srcCompat="@drawable/hilltop" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView11"
+                            android:layout_width="180dp"
+                            android:layout_height="320dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@drawable/moon"
+                            tools:srcCompat="@drawable/moon" />
+
+                        <ImageView
+                            android:id="@+id/imageView13"
+                            android:layout_width="180dp"
+                            android:layout_height="320dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                            app:srcCompat="@drawable/flag"
+                            tools:srcCompat="@drawable/flag" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        android:gravity="center_horizontal" />
+
+                </TableLayout>
+
+            </LinearLayout>
 
             <Button
-                android:id="@+id/button3"
-                android:layout_width="100dp"
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="画板"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="208dp"
-                tools:layout_editor_absoluteY="202dp"
-                tools:text="画板" />
+                android:text="@string/title_home"
+                android:background="@drawable/button_blue_background"
+                tools:layout_editor_absoluteY="886dp" />
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="关注"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="307dp"
-                tools:layout_editor_absoluteY="202dp"
-                tools:text="关注" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="喜欢"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="108dp"
-                tools:layout_editor_absoluteY="202dp"
-                tools:text="喜欢" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="采集"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="2dp"
-                tools:layout_editor_absoluteY="202dp"
-                tools:text="采集" />
         </LinearLayout>
-
-        <TableLayout
-            android:layout_width="500dp"
-            android:layout_height="300dp">
-
-            <TableRow
-                android:layout_width="200dp"
-                android:layout_height="150dp">
-
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="180dp"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="12dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic[2]" />
-
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="200dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="4dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView10"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic[17]" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="200dp"
-                android:layout_height="162dp">
-
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="200dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic[16]" />
-
-                <ImageView
-                    android:id="@+id/imageView13"
-                    android:layout_width="200dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView11"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic[18]" />
-            </TableRow>
-
-        </TableLayout>
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="122dp"
-        android:layout_height="114dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kenan1" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="96dp"
-        android:text="用户名"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:text="用户名" />
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
