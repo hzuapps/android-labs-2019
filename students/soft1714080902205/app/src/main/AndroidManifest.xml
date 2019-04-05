@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Soft1714080902205Activity"></activity>
+        <activity android:name=".NewActivity"/>
+        <activity android:name=".Soft1714080902205Activity_bottom" />
+        <activity android:name=".Soft1714080902205Activity" android:label="创作工作室"></activity>
         <activity android:name=".Soft1714080902205Activity_start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
