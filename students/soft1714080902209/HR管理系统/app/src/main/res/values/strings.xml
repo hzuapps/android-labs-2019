@@ -12,4 +12,9 @@
     <string name="title_home">信息</string>
     <string name="title_dashboard">更多</string>
     <string name="title_notifications">我</string>
+    <string name="Add_Name">姓名</string>
+    <string name="Add_Age">出生年份</string>
+    <string name="Add_Sex">性别</string>
+    <string name="Add_TEL">手机</string>
+    <string name="Add_SaveBtn">保存</string>
 </resources>
