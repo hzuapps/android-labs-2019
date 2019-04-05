@@ -23,7 +23,8 @@ public class Soft1714080902201_Activity extends AppCompatActivity {
          *  ActionBar actionBar = getSupportActionBar();
          * if (actionBar != null){
          *   actionBar.hide();
-        } */
+         * }
+         */
     }
 
 
