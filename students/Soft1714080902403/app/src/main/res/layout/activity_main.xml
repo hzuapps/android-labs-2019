@@ -9,31 +9,61 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="193dp"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <Button
-            android:id="@+id/button"
+        <TextView
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_below="@id/coke"
-            android:layout_marginTop="500dp"
-            android:text="这是谁"
-            android:onClick="click"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="请问这是谁？"
             />
+
+        <EditText
+            android:id="@+id/et_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:layout_alignParentLeft="true"
+            android:ems="10" />
+
 
         <TextView
             android:id="@+id/coke"
-            android:layout_width="440dp"
-            android:layout_height="602dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:drawableTop="@drawable/jaychou"
             android:drawablePadding="10dp"
             android:gravity="center"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="88dp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/et_info"
+            android:text="确认答案"
+
+
+            />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_save"
+
+
+
+            android:onClick="click"
+            android:text="查看答案" />
 
 
     </RelativeLayout>
