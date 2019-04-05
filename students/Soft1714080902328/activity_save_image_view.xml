@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SaveImageViewActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/kenan1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/save"
+            android:layout_weight="1"
+            android:onClick="readImg"
+            android:text="读取图片"
+            android:layout_alignParentRight="true" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_weight="1"
+            android:onClick="saveImg"
+            android:text="保存图片" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/readUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_weight="1"
+            android:onClick="getUrlImg"
+            android:text="获取网络图片"/>
+
+        <Button
+            android:id="@+id/saveImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_weight="1"
+            android:onClick="saveHttpImg"
+            android:text="保存网络图片"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/showImg"
+        android:layout_width="match_parent"
+        android:layout_height="465dp"
+        android:layout_below="@+id/ll2"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="RtlCompat"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+
+</android.support.constraint.ConstraintLayout>
