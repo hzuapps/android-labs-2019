@@ -6,13 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".Soft1714080902403">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="周杰伦"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+      <TextView
+          android:id="@+id/textview2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="答案：周杰伦"
+          />
+
+       <EditText
+           android:id="@+id/et_info1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/textview2"
+           android:layout_alignParentLeft="true"
+           android:ems="10" />
+
+
+
+
+       <Button
+           android:id="@+id/btn_read"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@id/et_info1"
+           android:text="查看自己的答案"
+></Button>
+
+
+
+    </RelativeLayout>
+
+
+
 </android.support.constraint.ConstraintLayout>
 
