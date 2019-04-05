@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Yourname1 extends AppCompatActivity {
+public class Yourname extends AppCompatActivity {
 
     private EditText edit;
 

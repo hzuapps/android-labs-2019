@@ -21,7 +21,7 @@ public class Soft1714080902125Activity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902125Activity.this, Greenbook1.class);
+                Intent intent = new Intent(Soft1714080902125Activity.this, Greenbook.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class Soft1714080902125Activity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902125Activity.this, Shawshank1.class);
+                Intent intent = new Intent(Soft1714080902125Activity.this, Shawshank.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +37,7 @@ public class Soft1714080902125Activity extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902125Activity.this, Yourname1.class);
+                Intent intent = new Intent(Soft1714080902125Activity.this, Yourname.class);
                 startActivity(intent);
             }
         });
