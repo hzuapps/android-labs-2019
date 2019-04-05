@@ -1,35 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
     tools:context=".Soft1714080902201_Activity_3">
 
-    <TextView
-        android:id="@+id/textView3"
+<LinearLayout
+    android:id="@+id/addLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="图书名称"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/authorET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="作者"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/balanceET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="金额"
+        android:inputType="number"/>
+    <ImageView
+        android:onClick="add"
+        android:id="@+id/addIV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="206dp"
-        android:layout_marginBottom="16dp"
-        android:text="404新大陆寻找中哟~"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/banner_3" />
-
-</android.support.constraint.ConstraintLayout>
+        android:src="@android:drawable/ic_input_add"/>
+</LinearLayout>
+    <ListView
+        android:id="@+id/bookLV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addLL">
+    </ListView>
+</LinearLayout>
