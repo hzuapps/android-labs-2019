@@ -1,27 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Com1714080901237Activity">
+    android:id="@+id/mune"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Com1714080901237Activity"
+    android:background="#ccbbcc"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/Button01"
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:background="#ccccbb"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp">
+
+        <TableRow
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Button01"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#8888dd"
+                android:onClick="onClick"
+                android:text="OpenAlarm" />
+
+            <Button
+                android:id="@+id/Button02"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="#8888dd"
+                android:onClick="onClick"
+                android:text="ToSetting" />
+        </TableRow>
+    </TableLayout>
+
+    <GridLayout
+        android:id="@+id/classesTable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="OpenAlarm"
-        tools:ignore="MissingConstraints"
-        tools:layout_marginTop="260dp" />
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:columnCount="7"
+        android:background="#8899cc"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/Button02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="ToSetting"
-        tools:ignore="MissingConstraints"
-        android:layout_marginTop="300dp"/>
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:text="一" />
+        <TextView
+             android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:text="二" />
+        <TextView
+             android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:text="三" />
+        <TextView
+             android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:text="四" />
+        <TextView
+             android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:text="五" />
+        <TextView
+             android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:text="六" />
+        <TextView
+             android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:text="日" />
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="课程1" />
+    </GridLayout>
+
+</LinearLayout>

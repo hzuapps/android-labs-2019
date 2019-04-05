@@ -1,16 +1,19 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".Com1714080901237Activity03">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="设置界面" />
+        android:textSize="20dp"
+        android:textColor="#003299"
+        android:text="设置界面"
+        android:background="@drawable/setting"
+        android:id="@+id/setting"
+        tools:ignore="InvalidId" />
 
 
 </RelativeLayout>
