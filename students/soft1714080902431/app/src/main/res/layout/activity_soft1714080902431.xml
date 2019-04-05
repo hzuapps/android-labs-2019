@@ -31,24 +31,6 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-   <!-- <ImageView
-
-        android:id="@+id/imageView"
-        android:layout_width="375dp"
-        android:layout_height="424dp"
-        android:layout_margin="3dp"
-        android:src="@drawable/desk"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.837"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />-->
-    <!--android:layout_marginTop="18dp"
-           android:layout_marginEnd="40dp"
-           android:layout_marginRight="40dp"
-           android:layout_marginBottom="2dp"-->
 
     <Button
         android:id="@+id/button1"
@@ -68,6 +50,16 @@
         android:layout_marginLeft="215dp"
         android:layout_marginTop="400dp"
         android:text="切换难度"
+        android:textSize="23sp"
+
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="470dp"
+        android:text="玩家信息"
         android:textSize="23sp"
 
         tools:ignore="MissingConstraints" />
