@@ -10,16 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Soft1714080902416Activity"
-            android:label="@string/title_activity_soft1714080902416"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:name=".Soft1714080902416Activity"
+        android:label="@string/title_activity_soft1714080902416"
+        android:theme="@style/AppTheme.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".NewCreateActivity"
+            android:label="@string/title_activity_newcreate"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
     </application>
 

@@ -4,23 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Soft1714080902416Activity"
     tools:showIn="@layout/activity_soft1714080902416">
 
     <TextView
         android:id="@+id/textview_01"
-        android:layout_width="241dp"
+        android:layout_width="match_parent"
         android:layout_height="249dp"
         android:drawableBottom="@drawable/zhangdan" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:text="新建账单" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="116dp"
         android:layout_height="wrap_content"
-        android:text="查看订单"
-         />
+        android:text="查看订单" />
 
 
 </LinearLayout>
