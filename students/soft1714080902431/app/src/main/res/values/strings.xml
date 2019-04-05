@@ -2,4 +2,5 @@
     <string name="app_name">游戏界面</string>
     <string name="title_activity_soft1714080902431">拼图</string>
     <string name="title_activity_main2">难度设置</string>
+    <string name="title_activity_main3">Main3Activity</string>
 </resources>

@@ -14,6 +14,7 @@ public class Soft1714080902431Activity extends AppCompatActivity {
 
     private Button button1;
     private  Button button2;
+    private  Button button3;
     //private ImageView imageView;
 
 
@@ -47,9 +48,16 @@ public class Soft1714080902431Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Soft1714080902431Activity.this, Main2Activity.class);
                 startActivity(intent);
-
             }
+        });
 
+        button1 = (Button) findViewById(R.id.button3);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902431Activity.this, Main3Activity.class);
+                startActivity(intent);
+            }
         });
         /*imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setOnClickListener(new View.OnClickListener() {
