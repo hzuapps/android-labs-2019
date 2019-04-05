@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Soft1714080902436Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="记录你的个人资料"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_message1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="昵称"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/edit_message2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="性别"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/edit_message3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="年龄"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/edit_message4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="城市"
+        tools:ignore="MissingConstraints" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/savebutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/readbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="查看" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
