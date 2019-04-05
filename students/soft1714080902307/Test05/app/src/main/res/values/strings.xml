@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">My Toolbox</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">My Toolbox</string>
+    <string name="nav_header_subtitle">1714080902307@hzu.edu.cn</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">设置</string>
+
+    <string name="module_all">全部</string>
+    <string name="module_tool">工具</string>
+    <string name="module_emoji">表情包</string>
+    <string name="module_media">影音视听</string>
+    <string name="module_wallpaper">壁纸</string>
+
+    <string name="function_notepad">记事本</string>
+    <string name="function_second">第二项功能</string>
+
+
+
+</resources>
