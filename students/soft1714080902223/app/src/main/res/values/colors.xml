@@ -4,4 +4,5 @@
     <color name="colorAccent">#FF8247</color>
     <color name="colorBtnPress">#CD3700</color>
     <color name="colorBackground">#FEFEFE</color>
+    <color name="colorTimeText">#989886</color>
 </resources>
