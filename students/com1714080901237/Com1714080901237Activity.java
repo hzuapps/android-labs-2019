@@ -15,7 +15,7 @@ public class Com1714080901237Activity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.Button01:
-                Intent intent_1 = new Intent(this, Com1714080901237Activity02.class);
+                Intent intent_1 = new Intent(this, FileStorageActivity.class);
                 startActivity(intent_1);
                 break;
             case R.id.Button02:
