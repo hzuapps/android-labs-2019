@@ -12,6 +12,7 @@ public class Soft1714080902125Activity extends AppCompatActivity {
 
     private Button b1;
     private Button b2;
+    private Button b3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,7 @@ public class Soft1714080902125Activity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902125Activity.this,greenbook.class);
+                Intent intent = new Intent(Soft1714080902125Activity.this, Greenbook.class);
                 startActivity(intent);
             }
         });
@@ -28,7 +29,15 @@ public class Soft1714080902125Activity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902125Activity.this,shawshank.class);
+                Intent intent = new Intent(Soft1714080902125Activity.this, Shawshank.class);
+                startActivity(intent);
+            }
+        });
+        b3=findViewById(R.id.b3);
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902125Activity.this, Yourname.class);
                 startActivity(intent);
             }
         });
