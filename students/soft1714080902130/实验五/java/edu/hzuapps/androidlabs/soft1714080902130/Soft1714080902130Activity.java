@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.Soft1714080902130;
+package edu.hzuapps.androidlabs.soft1714080902130;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +16,8 @@ public class Soft1714080902130Activity extends AppCompatActivity {
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902130Activity.this,Soft1714080902130LoginActivity.class);
+                Intent intent = new Intent(Soft1714080902130Activity.this,
+                        Soft1714080902130LoginActivity.class);
                 startActivity(intent);
             }
         });

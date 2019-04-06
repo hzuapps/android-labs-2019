@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.Soft1714080902130;
+package edu.hzuapps.androidlabs.soft1714080902130;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +17,7 @@ public class Soft1714080902130LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Soft1714080902130LoginActivity.this,
-                        Soft1714080902130SecondActivity.class);
+                        Soft1714080902130Activity.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +35,7 @@ public class Soft1714080902130LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Soft1714080902130LoginActivity.this,
-                        Soft1714080902130SecondActivity.class);
+                        Soft1714080902130Activity.class);
                 startActivity(intent);
             }
         });
