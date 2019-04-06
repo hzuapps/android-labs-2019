@@ -25,4 +25,21 @@
         android:layout_height="37dp"
         android:iconifiedByDefault="false"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="70dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#81ffFF"></ListView>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
