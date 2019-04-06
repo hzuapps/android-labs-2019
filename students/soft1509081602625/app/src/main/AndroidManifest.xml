@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="soft1509081602625.androidlabs.hzuapps.edu.soft1509081602625activity">
+    package="soft1714080902407.androidlabs.hzuapps.edu.soft1509081602625activity">
 
     <application
         android:allowBackup="true"
@@ -16,10 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CarinfoActivity"></activity>
+        <activity android:name=".CarinfoActivity" />
+        <activity
+            android:name=".MyCollectionActivity"
+            android:label="@string/title_activity_my_collection"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
-<<<<<<< HEAD
 
-=======
->>>>>>> 8c229279cd473102680009ca80425cde3d7130f2
 </manifest>
