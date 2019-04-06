@@ -9,14 +9,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyInfo"></activity>
-        <activity android:name=".ReceiveExpress" />
-        <activity android:name=".SendExpress" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.example.soft1714080902113myexpress.main"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MyInfo"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.example.soft1714080902113myexpress.myinfoStart"/>
+                <category android:name="com.example.soft1714080902113myexpress.myinfo"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReceiveExpress"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.example.soft1714080902113myexpress.receiveStart"/>
+                <category android:name="com.example.soft1714080902113myexpress.receiveExpress"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".SendExpress"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.example.soft1714080902113myexpress.sendStart"/>
+                <category android:name="com.example.soft1714080902113myexpress.sendExpress"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
     </application>
