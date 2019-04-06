@@ -4,8 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.soft1714080902113myexpress.menuLayout
+    <EditText
+        android:id="@+id/toFindPackage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:hint="运单号"/>
+    <Button
+        android:id="@+id/findBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="搜索查询运单号"/>
+
+    <com.example.soft1714080902113myexpress.menuLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1    " />
+
 </LinearLayout>
