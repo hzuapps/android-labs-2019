@@ -17,13 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.hzuapps.androidlabs.Com1714080901133.Com1714080901133Activity"
-            android:label="@string/title_activity_com1714080901133"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name="edu.hzuapps.androidlabs.com1714080901133.Com1714080901133Activity"
-            android:label="@string/title_activity_com1714080901133"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_com1714080901133" />
+        <activity
+            android:name="edu.hzuapps.androidlabs.com1714080901133.Com1714080901133Activity2"
+            android:label="@string/title_activity_com17140809011332" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
