@@ -19,6 +19,33 @@
         androi:background="@drawable/cp"
         androi:layout_gravity="center"/>
     
-    
+    <TextView
+        androi:id="@+id/cp_jianjie_text"
+        androi:layout_width="wrap_content"
+        androi:layout_height="wrap_content"
+        androi:text="简介:"
+        androi:textSize="20dp" />
+
+    <TextView
+        androi:id="@+id/cp_jianjieneirong_text"
+        androi:layout_width="match_parent"
+        androi:layout_height="wrap_content"
+        androi:textSize="20dp"
+        androi:text="11111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+        androi:ellipsize="end"/>
+
+    <TextView
+        androi:layout_width="wrap_content"
+        androi:layout_height="wrap_content"
+        androi:textSize="20dp"
+        androi:text="材料:"
+        androi:layout_marginTop="5dp"/>
+
+    <TextView
+        androi:id="@+id/cp_buzhou_text"
+        androi:layout_width="wrap_content"
+        androi:layout_height="wrap_content"
+        androi:text="步骤："
+        androi:textSize="20dp"/>
 
 </LinearLayout>

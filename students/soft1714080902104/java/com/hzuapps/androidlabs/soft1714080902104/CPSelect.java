@@ -5,6 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.menu.Model.CaiPu;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,16 +20,24 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import okhttp3.Call;
 
 import static android.provider.Telephony.Mms.Part.FILENAME;
 
+
 public class CPSelect extends AppCompatActivity {
+
+    private List<CaiPu>caiPuList=new ArrayList<>();
+    private StringBuilder stringBuilder=new StringBuilder("");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cpselect);
-        saveTextIntoInternalStorage("存储读取成功");
+        getDatasync();
     }
 
     private void saveTextIntoInternalStorage(String text) {
@@ -82,22 +98,55 @@ public class CPSelect extends AppCompatActivity {
             String line = bReader.readLine();
             bReader.close();
             reader.close();
-            showResult(line);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // 显示结果
-
-        // 删除文件
-        // file.delete();
-        // deleteFile(FILENAME);
+        Toast.makeText(getApplicationContext(),"存储数据成功",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"存储数据为：",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),text.toString(),Toast.LENGTH_SHORT).show();
     }
 
-    private void showResult(String result) {
-        ((TextView) findViewById(R.id.cp_caiming_text)) //
-                .setText(result.toCharArray(), 0, result.length());
+    public void getDatasync(){
+        OkHttpUtils
+                .post()
+                .url("http://apis.juhe.cn/cook/index")
+                .addParams("key","ec094bb8c7cd8ad35114c5fa0c81d678")
+                .addParams("cid","10")
+                .addParams("rn","30")
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        Toast.makeText(getApplicationContext(),"失败",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        try{
+                            JSONObject jsonObject=new JSONObject(response);
+                            JSONObject jsonObject1=jsonObject.getJSONObject("result");
+                            JSONArray jsonArray=jsonObject1.getJSONArray("data");
+
+                            for(int i=0;i<30;i++){
+                                CaiPu caiPu=new CaiPu();
+                                JSONObject jsonObject2=jsonArray.getJSONObject(i);
+                                caiPu.setTitle(jsonObject2.getString("title"));
+                                caiPu.setImtro(jsonObject2.getString("imtro"));
+                                caiPu.setIngredients(jsonObject2.getString("ingredients"));
+                                caiPu.setBurden(jsonObject2.getString("burden"));
+                                //caiPu.setAlbum(jsonObject2.getString("albums"));
+                                caiPuList.add(caiPu);
+                                stringBuilder.append(caiPu.ToString());
+                            }
+                            saveTextIntoInternalStorage(stringBuilder.toString());
+                        }catch (Exception e)
+                        {
+                            e.printStackTrace();
+                        }
+                    }
+                });
     }
 }
