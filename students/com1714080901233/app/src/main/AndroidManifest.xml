@@ -11,10 +11,12 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Com1714080901233Activity04"
-            android:label="设置"/>
+            android:label="设置"
+            android:exported="true"/>
         <activity
             android:name=".Com1714080901233Activity03"
-            android:label="回收站"/>
+            android:label="回收站"
+            android:exported="true"/>
         <activity
             android:name=".Com1714080901233Activity"
             android:label="@string/app_name"

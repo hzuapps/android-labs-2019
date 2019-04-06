@@ -8,6 +8,6 @@ public class Com1714080901233Activity03 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.com_171408090123303_activity_03);
+        setContentView(R.layout.com_1714080901233_activity_02);
     }
 }
