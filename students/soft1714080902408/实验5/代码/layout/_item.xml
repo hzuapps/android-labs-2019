@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/idTV"
+            android:layout_width="21dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="13"
+            android:textColor="#00ff00"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:singleLine="true"
+            android:text="PQ"
+            android:textColor="#00ff00"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/balanceTV"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:singleLine="true"
+            android:text="12345"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="112dp"
+            android:layout_height="26dp">
+
+            <ImageView
+                android:id="@+id/upIV"
+                android:layout_width="29dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/jiahao" />
+
+            <ImageView
+                android:id="@+id/downIV"
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/jianhao" />
+
+            <ImageView
+                android:id="@+id/deleteIV"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/delete" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
