@@ -7,6 +7,22 @@
     tools:context=".SweepActivity"
     android:background="@drawable/p3"
     android:orientation="horizontal">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
+     <EditText
+         android:id="@+id/username"
+         android:hint="Please Enter Your Name:"
+         android:textSize="45dp"
+         android:layout_weight="1"
+         android:singleLine="true"/>
+        <Button
+            android:id="@+id/save"
+            android:text="save"
+            android:textSize="30dp"
+            />
+    </TableLayout>
 
 </LinearLayout>
