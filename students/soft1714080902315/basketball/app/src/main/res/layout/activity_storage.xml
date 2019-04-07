@@ -14,16 +14,16 @@
         android:id="@+id/text_view1"
         android:textSize="20dp"
         android:text="请输入您信息生成训练内容："
-        android:layout_above="@+id/et_info1"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="69dp" />
+        android:layout_marginTop="48dp" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/et_info1"
         android:ems="10"
-        android:layout_marginBottom="66dp"
-        android:layout_above="@+id/et_info2"
+        android:layout_marginTop="66dp"
+        android:layout_below="@+id/text_view1"
         android:layout_alignRight="@+id/text_view1"
         android:layout_alignEnd="@+id/text_view1">
         <requestFocus/>
@@ -33,8 +33,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/et_info2"
         android:ems="10"
-        android:layout_marginBottom="73dp"
-        android:layout_above="@+id/et_info3"
+        android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/et_info1"
         android:layout_alignStart="@+id/et_info1" />
     <EditText
@@ -42,7 +41,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/et_info3"
         android:ems="10"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="58dp"
         android:layout_above="@+id/btn_read"
         android:layout_toRightOf="@+id/textView4"
         android:layout_toEndOf="@+id/textView4" />
@@ -59,38 +58,35 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_save"
         android:text="保存信息"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="45dp"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/text_view1"
-        android:layout_alignStart="@+id/text_view1"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp" />
+        android:layout_alignStart="@+id/text_view1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="年龄（岁）："
+        android:text="年龄(岁)："
         android:textSize="15dp"
         android:id="@+id/textView2"
-        android:layout_alignTop="@+id/et_info1"
-        android:layout_toLeftOf="@+id/et_info1"
-        android:layout_toStartOf="@+id/et_info1"
-        android:layout_marginTop="17dp" />
+        android:layout_alignBottom="@+id/et_info1"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="身高（cm）："
+        android:text="身高(cm)："
         android:textSize="15dp"
         android:id="@+id/textView3"
         android:layout_alignBottom="@+id/et_info2"
-        android:layout_toLeftOf="@+id/et_info2"
-        android:layout_toStartOf="@+id/et_info2" />
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="体重（kg)："
+        android:text="体重(kg)："
         android:textSize="15dp"
         android:id="@+id/textView4"
         android:layout_alignBottom="@+id/et_info3"

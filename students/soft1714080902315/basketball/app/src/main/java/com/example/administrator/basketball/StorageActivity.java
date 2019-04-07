@@ -55,7 +55,7 @@ public class StorageActivity extends ActionBarActivity {
                     }catch(Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(StorageActivity.this, "数据保存成功", 0).show();
+                    Toast.makeText(StorageActivity.this, "数据保存成功",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btn_read:
                     String content="";
@@ -68,7 +68,7 @@ public class StorageActivity extends ActionBarActivity {
                     }catch(Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(StorageActivity.this,"保存的数据是："+content,0).show();
+                    Toast.makeText(StorageActivity.this,"保存的数据是："+content,Toast.LENGTH_SHORT).show();
                     break;
                 default:
                     break;
