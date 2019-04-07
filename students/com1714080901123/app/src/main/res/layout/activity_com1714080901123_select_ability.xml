@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Com1714080901123ActivitySelectAbility">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="选择技能"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_com1714080901123_activity_select_ability" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="4">
+
+            <View
+                android:id="@+id/counter_title_select_weapon"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:text="选择技能"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/imgButton_select_ability_main_01"
+                    style="@style/counter_select_style"
+                    android:src="@drawable/ability_ink_saver_sub" />
+
+                <ImageButton
+                    android:id="@+id/imgButton_select_ability_main_02"
+                    style="@style/counter_select_style"
+                    android:src="@drawable/ability_ink_recovery_up" />
+
+                <ImageButton
+                    android:id="@+id/imgButton_select_ability_main_03"
+                    style="@style/counter_select_style"
+                    android:src="@drawable/ability_swim_speed_up" />
+
+                <ImageButton
+                    android:id="@+id/imgButton_select_ability_main_04"
+                    style="@style/counter_select_style"
+                    android:src="@drawable/ability_quick_super_jump" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

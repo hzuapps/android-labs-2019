@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-public class Com1714080901123Activity01 extends AppCompatActivity {
+public class Com1714080901123ActivityMain extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private Com1714080901123FragmentHome fragmentHome;

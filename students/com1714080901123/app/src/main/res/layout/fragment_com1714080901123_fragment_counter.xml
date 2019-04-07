@@ -1,14 +1,429 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Com1714080901123FragmentCounter">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/button_counter" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Weapon Part -->
+            <TextView
+                android:id="@+id/text_indicate1"
+                style="@style/counter_text_indicate_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/counter_indicate_weapon"
+                app:layout_constraintBottom_toTopOf="@id/imgButton_weapon_main"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imgButton_weapon_main"
+                android:layout_width="164dp"
+                android:layout_height="173dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="32dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/weapon_main_enperry_splat_dualies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_weapon_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginLeft="44dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/weapon_sub_curling_bomb"
+                app:layout_constraintStart_toEndOf="@id/imgButton_weapon_main"
+                app:layout_constraintTop_toTopOf="@id/imgButton_weapon_main" />
+
+            <ImageView
+                android:id="@+id/img_weapon_special"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:src="@drawable/weapon_special_inkjet"
+                app:layout_constraintStart_toEndOf="@id/img_weapon_sub"
+                app:layout_constraintTop_toTopOf="@id/img_weapon_sub" />
+
+            <TextView
+                android:id="@+id/text_weapon_main"
+                style="@style/counter_text_name_style"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/weapon_main_enperry_splat_dualies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgButton_weapon_main" />
+
+            <TextView
+                android:id="@+id/text_weapon_sub"
+                style="@style/counter_text_name_style"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/weapon_sub_curling_bomb"
+                app:layout_constraintStart_toEndOf="@id/text_weapon_main"
+                app:layout_constraintTop_toTopOf="@id/text_weapon_main" />
+
+            <TextView
+                android:id="@+id/text_weapon_special"
+                style="@style/counter_text_name_style"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:text="@string/weapon_special_inkjet"
+                app:layout_constraintStart_toEndOf="@id/text_weapon_sub"
+                app:layout_constraintTop_toTopOf="@id/text_weapon_sub" />
+
+            <!-- Ability Part -->
+            <TextView
+                android:id="@+id/text_indicate2"
+                style="@style/counter_text_indicate_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/counter_indicate_skill"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_weapon_main" />
+
+            <!-- Headgear Ability Part -->
+            <TextView
+                android:id="@+id/text_indecate_headgear"
+                style="@style/counter_text_indicate_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/counter_headgear"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_indicate2" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_headgear_1"
+                android:layout_width="108dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_indecate_headgear" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_headgear_2"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_headgear_1"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_headgear_1" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_headgear_3"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_headgear_2"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_headgear_2" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_headgear_4"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_headgear_3"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_headgear_3" />
+
+            <TextView
+                android:id="@+id/text_ability_headgear_1"
+                style="@style/counter_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/ability_ink_saver_sub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgButton_ability_headgear_1" />
+
+            <!-- Clothing Ability Part -->
+            <TextView
+                android:id="@+id/text_indecate_clothing"
+                style="@style/counter_text_indicate_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/counter_clothing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_ability_headgear_1" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_clothing_1"
+                android:layout_width="108dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_indecate_clothing" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_clothing_2"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_clothing_1"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_clothing_1" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_clothing_3"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_clothing_2"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_clothing_2" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_clothing_4"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_clothing_3"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_clothing_3" />
+
+            <TextView
+                android:id="@+id/text_ability_clothing_1"
+                style="@style/counter_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/ability_ink_saver_sub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgButton_ability_clothing_1" />
+
+            <!-- Shoes Ability Part -->
+            <TextView
+                android:id="@+id/text_indecate_shoes"
+                style="@style/counter_text_indicate_style2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/counter_shoes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_ability_clothing_1" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_shoes_1"
+                android:layout_width="108dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_indecate_shoes" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_shoes_2"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_shoes_1"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_shoes_1" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_shoes_3"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_shoes_2"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_shoes_2" />
+
+            <ImageButton
+                android:id="@+id/imgButton_ability_shoes_4"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ability_ink_saver_sub"
+                app:layout_constraintStart_toEndOf="@id/imgButton_ability_shoes_3"
+                app:layout_constraintTop_toTopOf="@id/imgButton_ability_shoes_3" />
+
+            <TextView
+                android:id="@+id/text_ability_shoes_1"
+                style="@style/counter_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/ability_ink_saver_sub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgButton_ability_shoes_1" />
+
+            <!-- Config Button -->
+            <Button
+                android:id="@+id/button_config_1"
+                style="@style/counter_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/counter_config_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_ability_shoes_1" />
+
+            <Button
+                android:id="@+id/button_config_2"
+                style="@style/counter_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:text="@string/counter_config_2"
+                app:layout_constraintStart_toEndOf="@+id/button_config_1"
+                app:layout_constraintTop_toTopOf="@id/button_config_1" />
+
+            <Button
+            android:id="@+id/button_config_3"
+            style="@style/counter_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:text="@string/counter_config_3"
+            app:layout_constraintStart_toEndOf="@id/button_config_2"
+            app:layout_constraintTop_toTopOf="@id/button_config_2" />
+
+            <Button
+                android:id="@+id/button_config_4"
+                style="@style/counter_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:text="@string/counter_config_4"
+                app:layout_constraintStart_toEndOf="@id/button_config_3"
+                app:layout_constraintTop_toTopOf="@id/button_config_3" />
+            <!-- Save Config Button -->
+            <Button
+                android:id="@+id/button_save_config_1"
+                style="@style/counter_text_name_style"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/counter_save_config_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_config_1" />
+
+            <Button
+                android:id="@+id/button_save_config_2"
+                style="@style/counter_text_name_style"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/counter_save_config_2"
+                app:layout_constraintStart_toEndOf="@id/button_save_config_1"
+                app:layout_constraintTop_toTopOf="@id/button_save_config_1" />
+
+            <Button
+                android:id="@+id/button_save_config_3"
+                style="@style/counter_text_name_style"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/counter_save_config_3"
+                app:layout_constraintStart_toEndOf="@id/button_save_config_2"
+                app:layout_constraintTop_toTopOf="@id/button_save_config_2" />
+
+            <Button
+                android:id="@+id/button_save_config_4"
+                style="@style/counter_text_name_style"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/counter_save_config_4"
+                app:layout_constraintStart_toEndOf="@id/button_save_config_3"
+                app:layout_constraintTop_toTopOf="@id/button_save_config_3" />
+
+            <Button
+                android:id="@+id/button_count"
+                style="@style/counter_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginLeft="160dp"
+                android:text="@string/counter_count"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_save_config_1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:layout_constraintTop_toBottomOf="@id/button_count"
+                app:layout_constraintStart_toStartOf="parent"
+                /><!-- 放一个空白view，用来防止scrollview最底部被菜单挡住 -->
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </FrameLayout>
