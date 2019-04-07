@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.myproject2.Soft1714080902105Activity">
+    tools:context="example.demo0904.Soft17134080902105Activity">
 
-
-    <Button
-        android:id="@+id/id_playNext"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="下一张"
-        android:textSize="28sp"/>
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
-        android:id="@+id/id_imageBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/im_055"/>
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
