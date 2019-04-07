@@ -15,4 +15,3 @@
         android:layout_weight="1"
         app:srcCompat="@drawable/timg" />
 </LinearLayout>
-    <!--android:background="@drawable/timg"-->
