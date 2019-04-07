@@ -1,8 +1,4 @@
 <resources>
     <string name="app_name">生日管家</string>
-    <string name="birthday_coming">即将过生日</string>
-    <string name="birthday_lable">标为星标</string>
-    <string name="birthday_lableperson">你的星标</string>
-    <string name="birthday_wishes">送上生日祝福！</string>
-    <string name="wishes">Happy Birthday！</string>
+    <string name="filesave">生日存储</string>
 </resources>
