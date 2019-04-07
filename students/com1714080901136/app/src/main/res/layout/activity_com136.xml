@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
-                android:layout_marginLeft="230dp"
+                android:layout_marginLeft="180dp"
                 android:textColor="@color/colorPrimary"
                 android:onClick="tianjia"
                 android:text="添加" />
@@ -69,9 +69,9 @@
             android:layout_below="@+id/l11"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:drawableTop="@drawable/three"
+
             android:orientation="horizontal"
-            android:background="#D0D0D0"
+
             app:popupTheme="@style/AppTheme.PopupOverlay"
             >
         </LinearLayout>

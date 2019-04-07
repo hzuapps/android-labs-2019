@@ -25,11 +25,11 @@ public class Com136Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-    } public void tianjia(View v) {
+    }
+    public void tianjia(View v) {
+        Intent intent1 = new Intent(Com136Activity.this,Com136Activity2.class);
 
-        Intent intent = new Intent(Com136Activity.this,Com136Activity2.class);
-
-        startActivity(intent);
+        startActivity(intent1);
     }
     public void fanhui(View v) {
 

@@ -53,6 +53,7 @@
                 android:textSize="20dp"/>
 
           <EditText
+              android:id="@+id/biaoti"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:hint="请输入倒数日标题"
@@ -70,6 +71,7 @@
             android:orientation="horizontal">
 
             <TextView
+
                 android:id="@+id/t2"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
@@ -79,6 +81,7 @@
                 android:textSize="20dp"/>
 
             <EditText
+                android:id="@+id/riqi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入倒数日日期"
@@ -106,6 +109,7 @@
                 android:textSize="20dp"/>
 
             <EditText
+                android:id="@+id/beizhu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入备注"
@@ -168,27 +172,29 @@
             android:layout_below="@+id/l4"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/b21"
+                android:id="@+id/clean"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
-                android:layout_marginLeft="80dp"
-                android:textSize="18dp"
+
 
                 android:text="重置"
                 tools:ignore="ButtonStyle" />
 
             <Button
-                android:id="@+id/b2"
+                android:id="@+id/sava"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
+
                 android:layout_marginLeft="50dp"
-                android:layout_a="vertical"
-
-                android:textSize="18dp"
-
                 android:text="保存"
+                tools:ignore="ButtonStyle" />
+            <Button
+                android:id="@+id/read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="50dp"
+                android:text="读取"
                 tools:ignore="ButtonStyle" />
         </LinearLayout>
     </RelativeLayout>
