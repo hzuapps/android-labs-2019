@@ -6,6 +6,7 @@
     <string name="button_counter">技能计算</string>
     <string name="button_amiibo">amiibo</string>
 
+    <!-- amiibo name -->
     <string name="name_inkling_girl">Inkling Girl</string>
     <string name="name_inkling_boy">Inkling Boy</string>
     <string name="name_inkling_squid">Inkling Squid</string>
@@ -28,9 +29,57 @@
     <string name="amiibo_recolor">Recolor</string>
     <string name="amiibo_special">Special</string>
 
+    <!-- Gear Name -->
+    <string name="gear_headgear_squid_hairclip">Squid Hairclip</string>
+    <string name="gear_headgear_samurai_helmet">Samurai Helmet</string>
+    <string name="gear_clothing_school_uniform">School Uniform</string>
+    <string name="gear_clothing_samurai_jacket">Samurai Jacket</string>
+    <string name="gear_shoes_school_shoes">School Shoes</string>
+    <string name="gear_shoes_samurai_shoes">Samurai Shoes</string>
+
+    <!-- Weapon Name -->
+    <string name="weapon_main_enperry_splat_dualies">Enperry Splat Dualies</string>
+    <string name="weapon_main_kensa_charger">Kensa Charger</string>
+    <string name="weapon_sub_curling_bomb">Curling Bomb</string>
+    <string name="weapon_sub_sprinkler">Sprinkler</string>
+    <string name="weapon_special_inkjet">Inkjet</string>
+    <string name="weapon_special_baller">Baller</string>
+
+    <!-- Ability Name -->
+    <string name="ability_ink_saver_sub">Ink Saver(Sub)</string>
+    <string name="ability_ink_recovery_up">Ink Recovery Up</string>
+    <string name="ability_quick_super_jump">Quick Super Jump</string>
+    <string name="ability_special_charge_up">Special Charge Up</string>
+    <string name="ability_special_power_up">Special Power Up</string>
+    <string name="ability_swim_speed_up">Swim Speed Up</string>
+
+    <!-- Counter界面操作说明 -->
+    <string name="counter_indicate_weapon">点击图片更改武器:</string>
+    <string name="counter_indicate_skill">点击图片更改技能:</string>
+    <string name="counter_headgear">头部装备</string>
+    <string name="counter_clothing">衣服</string>
+    <string name="counter_shoes">鞋子</string>
+    <string name="counter_config_1">配置1</string>
+    <string name="counter_config_2">配置2</string>
+    <string name="counter_config_3">配置3</string>
+    <string name="counter_config_4">配置4</string>
+    <string name="counter_save_config_1">存为 配置1</string>
+    <string name="counter_save_config_2">存为 配置2</string>
+    <string name="counter_save_config_3">存为 配置3</string>
+    <string name="counter_save_config_4">存为 配置4</string>
+    <string name="counter_count">计算</string>
+
+    <!-- news -->
     <string name="home_gameupdate_4_5_0">[NGA] 4.5.0补丁更新 武器调整相关 [中文翻译]</string>
     <string name="home_splatfest_wizard_vs_knigh">[Splatfest] Wizard VS Knight !</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_com1714080901123_amiibo">Com1714080901123ActivityAmiibo</string>
+    <string name="title_activity_com1714080901123_select_weapon">
+        Com1714080901123ActivitySelectWeapon
+    </string>
+    <string name="title_activity_com1714080901123_select_ability">
+        Com1714080901123ActivitySelectAbility
+    </string>
 </resources>
