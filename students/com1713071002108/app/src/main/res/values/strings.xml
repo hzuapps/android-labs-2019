@@ -1,10 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">重要日子显示器</string>
-    <string name="birthday">生日界面</string>
-    <string name="perent">perent</string>
-    <string name="parent">parent</string>
-    <string name="母亲生日">母亲生日</string>
-    <string name="自己生日">自己生日</string>
-    <string name="父亲生日">父亲生日</string>
-    <string name="生日界面">生日界面</string>
+    <string name="app_name">重要日期显示器</string>
+    <string name="cc">需要储存的日期是：</string>
+    <string name="bcrq">保存生日信息</string>
+    <string name="bc1">保存日期</string>
+    <string name="filesave">日期储存</string>
 </resources>
