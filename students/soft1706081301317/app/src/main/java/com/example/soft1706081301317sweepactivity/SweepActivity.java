@@ -1,5 +1,6 @@
 package com.example.soft1706081301317sweepacticity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -23,6 +24,8 @@ public class SweepActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = getSharedPreferences("data",MODE_PRIVATE).edit();
                 editor.putString("username",editText.getText().toString());
                 editor.apply();
+                Intent intent = new Intent(SweepActivity.this,WeclomeActivity.class);
+                startActivity(intent);
             }
         });
     }

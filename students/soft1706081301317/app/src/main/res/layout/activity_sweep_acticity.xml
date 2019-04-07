@@ -14,7 +14,8 @@
 
      <EditText
          android:id="@+id/username"
-         android:hint="Please Enter Your Name:"
+         android:hint=" Enter Your Name:"
+         android:textColor="#63B8FF"
          android:textSize="45dp"
          android:layout_weight="1"
          android:singleLine="true"/>

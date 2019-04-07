@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:gravity="center"
-            android:text="右键标记地雷"
+            android:text="双击标记地雷"
             android:textColor="#3399CC	"
             android:textSize="60dp"
             android:textStyle="bold" />
