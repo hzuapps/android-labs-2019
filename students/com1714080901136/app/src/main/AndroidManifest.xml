@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="edu.hzuapps.androidlabs.com1714080901136">
 
     <application
@@ -8,23 +9,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".Com136Activity2"
-            android:label="@string/title_activity_com1362"></activity>
-        <activity
-            android:name=".Com136Activity"
-            android:label="@string/title_activity_com136"
-            android:theme="@style/AppTheme.NoActionBar" />
+        android:theme="@style/AppTheme"
+        tools:ignore="ExtraText,GoogleAppIndexingWarning">
         <activity
             android:name=".Com1714080901136Activity"
-            android:label="@string/app_name"
+            android:label="倒数日"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="edu.hzuapps.androidlabs.com1714080901136.Com136Activity2"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="显示界面">
+
+        </activity>
+
+
+        <activity android:name=".Com136Activity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="添加">
+
         </activity>
     </application>
 
