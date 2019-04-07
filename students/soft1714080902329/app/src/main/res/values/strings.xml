@@ -6,9 +6,9 @@
     <string name="text4">2</string>
     <string name="text5">日期:</string>
     <string name="text6">事件:</string>
-    <string name="text7">               年               月               日</string>
+    <string name="text7">提交</string>
     <string name="text8">是否重复</string>
-    <string name="text9">暂时不知道数据如何交互，所以查看功能还未能实现</string>
+    <string name="text9">存储</string>
     <string name="title_activity_soft1714080902329">Soft1714080902329Activity纪念日历</string>
     <string name="title_activity_3">Activity3</string>
     <string name="title_home">主页</string>
