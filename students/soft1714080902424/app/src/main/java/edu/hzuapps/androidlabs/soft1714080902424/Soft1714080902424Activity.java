@@ -6,19 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Soft1714080902424Activity extends Activity{
+public class Soft1714080902424Activity extends Activity {
 
-    private Button button1;
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.soft_1714080902424_activity);
-        button1 = findViewById(R.id.login);
+        setContentView(R.layout.activity_main);
+        button = (Button) findViewById(R.id.button);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(edu.hzuapps.androidlabs.soft1714080902424.Soft1714080902424Activity.this, SecondActivity.class);
+                Intent intent = new Intent(Soft1714080902424Activity.this, SecondActivity.class);
                 startActivity(intent);
             }
         });
