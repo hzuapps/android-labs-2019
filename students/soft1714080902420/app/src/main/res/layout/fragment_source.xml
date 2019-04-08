@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/movie"
+    tools:context=".sourceFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="74dp" />
+</FrameLayout>
