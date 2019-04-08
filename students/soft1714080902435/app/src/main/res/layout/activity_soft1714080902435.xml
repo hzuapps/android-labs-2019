@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:background="@drawable/se"
     tools:context=".Soft1714080902435Activity">
-
     <Button
         android:id="@+id/Start"
         android:layout_width="100dp"
