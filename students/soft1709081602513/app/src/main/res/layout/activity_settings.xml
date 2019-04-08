@@ -4,11 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:gravity="center">
+    android:gravity="top">
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="设置"
     android:textSize="50dp"
     />
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/setname"
+    android:hint="用户名"
+    android:inputType="text"
+    />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/config_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存"/>
 </LinearLayout>

@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //初始化数据
+
 
         mBtnStart = findViewById(R.id.btn_start);
         mBtnStart.setOnClickListener(new View.OnClickListener() {
