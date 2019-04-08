@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1714080902419pikaActivity"></activity>
+        <activity android:name=".Soft1714080902419huaActivity"></activity>
+        <activity android:name=".Soft1714080902419pikaActivity" />
         <activity android:name=".aa" />
         <activity android:name=".mald" />
         <activity
