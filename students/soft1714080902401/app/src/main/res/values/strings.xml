@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Diary</string>
+    <string name="app_name">我的日记</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
