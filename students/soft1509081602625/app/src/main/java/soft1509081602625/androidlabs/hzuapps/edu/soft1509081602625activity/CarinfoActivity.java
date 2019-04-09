@@ -1,4 +1,4 @@
-package soft1714080902407.androidlabs.hzuapps.edu.soft1509081602625activity;
+﻿package soft1509081602625.androidlabs.hzuapps.edu.soft1509081602625activity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
