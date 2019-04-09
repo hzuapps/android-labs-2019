@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="136dp"
-        android:layout_y="293dp"
+        android:layout_y="248dp"
         android:onClick="Record"
         android:text="记录" />
 
@@ -24,10 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="180dp"
         android:layout_x="136dp"
-        android:layout_y="377dp"
-        android:onClick="Data"
+        android:layout_y="310dp"
         android:text="查询" />
-
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -35,7 +33,15 @@
         android:layout_height="125dp"
         android:layout_x="113dp"
         android:layout_y="112dp"
-        android:background="@drawable/b4"
-        android:onClick="User" />
+        android:background="@drawable/b4"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:layout_x="135dp"
+        android:layout_y="368dp"
+        android:text="查看图片" />
 
 </AbsoluteLayout>
