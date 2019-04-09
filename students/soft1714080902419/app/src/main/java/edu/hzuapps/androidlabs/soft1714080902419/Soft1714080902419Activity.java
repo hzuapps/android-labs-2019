@@ -13,13 +13,26 @@ public class Soft1714080902419Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soft1714080902419);
 
-        Button GoButton = (Button) findViewById(R.id.button);
+        Button GoButton = (Button) findViewById(R.id.button11);
         GoButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(Soft1714080902419Activity.this,Soft1714080902419pikaActivity.class);
                 startActivity(intent);
+
+
+            }
+        });
+        Button GoButton1 = (Button) findViewById(R.id.button22);
+        GoButton1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Soft1714080902419Activity.this,Soft1714080902419huaActivity.class);
+                startActivity(intent);
+
+
             }
         });
     }
