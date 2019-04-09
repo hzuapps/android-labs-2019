@@ -11,5 +11,4 @@
         android:layout_height="wrap_content"
         android:hint="Type something here"
         android:maxLines="10" />
-
 </LinearLayout>
