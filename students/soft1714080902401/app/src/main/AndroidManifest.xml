@@ -5,11 +5,12 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_appico"
-        android:label="我的日记"
+        android:label="@string/app_name"
         android:roundIcon="@drawable/ic_launcher_appico"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1714080902401_01Activity"></activity>
+        <activity android:name=".Soft1714080902401_newActivity"></activity>
+        <activity android:name=".Soft1714080902401_01Activity" />
         <activity android:name=".Soft1714080902401Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fbackgroud"
+    android:orientation="vertical"
+    tools:context=".Soft1714080902401_01Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:lineSpacingMultiplier="1.5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="13"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorwhite"
+                android:shadowColor="@color/colorbalck">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02/06/19"
+                    android:textSize="16sp"
+                    tools:text="@tools:sample/date/mmddyy" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:autoText="false"
+                    android:background="@color/colorliwhite"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxEms="8"
+                    android:text="第一条日记：这是一条测试用数据文本"
+                    android:textSize="16sp" />
+                <!--android:maxEms="8"   //限制字节长度为8
+                        android:ellipsize="end"  //省略号在最后面
+                        android:singleLine="true" //超过长度8为省略号-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorwhite"
+                android:shadowColor="@color/colorbalck">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02/06/19"
+                    android:textSize="16sp"
+                    tools:text="@tools:sample/date/mmddyy" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/colorliwhite"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxEms="8"
+                    android:text="第二条日记：这是一条测试用数据文本"
+                    android:textSize="16sp" />
+                <!--android:maxEms="8"   //限制字节长度为8
+                        android:ellipsize="end"  //省略号在最后面
+                        android:singleLine="true" //超过长度8为省略号-->
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/newD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorliwhite"
+                android:text="添加日记"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
