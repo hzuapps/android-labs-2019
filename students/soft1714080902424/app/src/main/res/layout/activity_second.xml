@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:gravity="center"
-        android:textSize="50dp"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:textSize="50dp" />
 
     <Space
         android:layout_width="match_parent"
@@ -24,9 +24,8 @@
         android:id="@+id/button_return"
         android:layout_width="match_parent"
         android:layout_height="105dp"
-        android:textSize="50dp"
         android:text="返回"
-        />
+        android:textSize="50dp" />
 
     <Space
         android:layout_width="match_parent"
@@ -36,7 +35,7 @@
         android:id="@+id/button_next"
         android:layout_width="match_parent"
         android:layout_height="105dp"
-        android:textSize="50dp"
         android:text="下一步"
-        />
+        android:textSize="50dp" />
+
 </LinearLayout>
