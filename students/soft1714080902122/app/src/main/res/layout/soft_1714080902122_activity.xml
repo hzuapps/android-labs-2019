@@ -5,6 +5,7 @@
     android:background="@drawable/aaa"
     android:orientation="vertical"
     android:gravity="center"
+    tools:context=".Soft1714080902122Activity"
     >
     <TextView
         android:id="@+id/news_item_content_text_view"
@@ -13,11 +14,11 @@
         android:text="养生堂"
         android:textSize="60dp"
         android:layout_margin="20dp"
-         />
+        />
 
     <Button
 
-        android:id="@+id/button1"
+        android:id="@+id/button_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="花茶类"
@@ -25,19 +26,19 @@
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="水果类" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="蔬菜类" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="五谷类"
