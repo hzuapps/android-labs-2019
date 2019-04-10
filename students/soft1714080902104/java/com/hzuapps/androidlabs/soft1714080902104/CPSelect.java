@@ -1,12 +1,17 @@
 package com.example.menu;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.menu.Model.CaiPu;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -20,6 +25,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,10 +41,19 @@ public class CPSelect extends AppCompatActivity {
     private List<CaiPu>caiPuList=new ArrayList<>();
     private StringBuilder stringBuilder=new StringBuilder("");
 
+    private TextView cp_caiming_text;
+    private ImageView cp_image;
+    private TextView cp_jianjieneirong_text;
+    private TextView cp_cailiao_text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cpselect);
+        cp_image=(ImageView)findViewById(R.id.cp_tupian_image);
+        cp_caiming_text=(TextView)findViewById(R.id.cp_caiming_text);
+        cp_cailiao_text=(TextView)findViewById(R.id.cp_cailiao_text);
+        cp_jianjieneirong_text=(TextView)findViewById(R.id.cp_jianjieneirong_text);
         getDatasync();
     }
 
@@ -137,11 +154,15 @@ public class CPSelect extends AppCompatActivity {
                                 caiPu.setImtro(jsonObject2.getString("imtro"));
                                 caiPu.setIngredients(jsonObject2.getString("ingredients"));
                                 caiPu.setBurden(jsonObject2.getString("burden"));
-                                //caiPu.setAlbum(jsonObject2.getString("albums"));
+                                JSONArray jsonArray1=jsonObject2.getJSONArray("albums");
+                                caiPu.setAlbum(jsonArray1.getString(0));
                                 caiPuList.add(caiPu);
-                                stringBuilder.append(caiPu.ToString());
                             }
-                            saveTextIntoInternalStorage(stringBuilder.toString());
+                            cp_caiming_text.setText(caiPuList.get(0).getTitle());
+                            cp_cailiao_text.setText(caiPuList.get(0).getBurden());
+                            cp_jianjieneirong_text.setText(caiPuList.get(0).getImtro());
+                            Glide.with(getApplicationContext()).load(caiPuList.get(0).getAlbum()).into(cp_image);
+                            //saveTextIntoInternalStorage(jsonArray.toString());
                         }catch (Exception e)
                         {
                             e.printStackTrace();
