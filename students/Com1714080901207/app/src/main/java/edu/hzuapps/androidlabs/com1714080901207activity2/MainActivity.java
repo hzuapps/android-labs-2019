@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     public void onClick1(View v) {
@@ -24,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick3(View v) {
         Intent intent = new Intent(MainActivity.this, CommunicatyActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick4(View v) {
+        Intent intent = new Intent(MainActivity.this, SelfActivity.class);
         startActivity(intent);
     }
 }

@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/textview_01"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="990dp"
         android:drawableTop="@drawable/picture"
         app:layout_constraintStart_toStartOf="@+id/button1"
         app:layout_constraintTop_toTopOf="@+id/button2"
@@ -21,6 +21,7 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
         android:onClick="onClick1"
         android:text="消息"
         app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -47,6 +48,7 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
         android:onClick="onClick3"
         android:text="动态"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,4 +70,14 @@
         app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:autoSizeMaxTextSize="5dp"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="81dp"
+        android:layout_height="42dp"
+        android:onClick="onClick4"
+        android:text="个人信息"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="323dp"
+        tools:layout_editor_absoluteY="6dp" />
 </android.support.constraint.ConstraintLayout>
