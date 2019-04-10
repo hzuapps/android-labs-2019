@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.hzuapps.androidlabs.com1714080901140">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -8,21 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.com1714080901140.MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/my" >
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="edu.hzuapps.androidlabs.com1714080901140.com1714080901140Activity"
-            android:theme="@style/my" >
-        </activity>
-        <activity android:name="edu.hzuapps.androidlabs.com1714080901140.updateActivity"
-            android:theme="@style/my" >
-        </activity>
+        <activity
+            android:name=".Com1714080901140Activity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".UpdateActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
