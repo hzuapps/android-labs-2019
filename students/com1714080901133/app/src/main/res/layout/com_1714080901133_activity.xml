@@ -4,13 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sport"
     tools:context="edu.hzuapps.androidlabs.com1714080901133.Com1714080901133Activity">
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:text="请输入想要保存的信息："
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="72dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="104dp"
+        android:text="运动地点："
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="72dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="189dp"
+        android:text="运动时间："
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="@+id/et_info2"
+        app:layout_constraintStart_toStartOf="@+id/et_info2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/et_info2"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:ems="10"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/btn_read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击进入"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="129dp" />
+        android:layout_below="@+id/et_info"
+        android:layout_alignRight="@+id/et_info"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:text="读取"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_save"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_info"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="94dp"
+        android:text="保存"
+        app:layout_constraintStart_toEndOf="@+id/btn_read"
+        app:layout_constraintTop_toBottomOf="@+id/et_info2" />
+
 </android.support.constraint.ConstraintLayout>
+
