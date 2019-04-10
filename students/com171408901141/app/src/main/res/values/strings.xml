@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OnlineStudySystem</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_first">mine</string>
+    <string name="title_second">study</string>
+    <string name="title_third">communication</string>
+    <string name="title_forth">Friendship Recommended</string>
+</resources>
