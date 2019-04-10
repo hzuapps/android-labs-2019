@@ -5,4 +5,5 @@
     <string name="anniu">开始游戏</string>
     <string name="button">Button</string>
     <string name="again">再玩一次</string>
+    <string name="data">存储信息</string>
 </resources>
