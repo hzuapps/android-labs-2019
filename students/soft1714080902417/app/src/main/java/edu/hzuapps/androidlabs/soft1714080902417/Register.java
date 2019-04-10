@@ -8,10 +8,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 
 public class Register extends AppCompatActivity {
     private TextView textView;
@@ -27,6 +36,7 @@ public class Register extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.button3);
         button.setOnClickListener(new MyonclickListener());
 
+
     }
     private class MyonclickListener implements View.OnClickListener {
 
@@ -34,6 +44,7 @@ public class Register extends AppCompatActivity {
         public void onClick(View v) {
             String string = textView.getText().toString();
             saveTextIntoInternalStorage(string);
+
         }
     }
     private void saveTextIntoInternalStorage(String text) {
@@ -90,6 +101,9 @@ public class Register extends AppCompatActivity {
         }
 
         Toast.makeText( Register.this,"数据提交成功！",0).show();
+
+
     }
+
 
 }
