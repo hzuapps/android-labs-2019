@@ -36,6 +36,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
+        android:id="@+id/SCNY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -46,15 +47,25 @@
         android:lineSpacingExtra="5dp"
         />
     <TextView
+        android:id="@+id/TCNY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="300dp"
         android:layout_marginLeft="20dp"
         android:text="@string/rate_list02"
         android:textSize="22dp"
         android:textColor="#FFFFFF"
         android:lineSpacingExtra="5dp"
         />
+    <Button
+        android:id="@+id/createText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="20dp"
+        android:text="生成TXT文件"
+        android:textSize="17dp"
+        android:onClick="createText"/>
     <!--include layout="@layout/content_soft1714080902121_rate_list" /-->
 
     <!--android.support.design.widget.FloatingActionButton
