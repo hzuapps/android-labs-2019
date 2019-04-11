@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fore_back"
+    android:orientation="vertical"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902421.ForeDownActivity">
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="338dp"
+        android:layout_height="228dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/show" />
+    <EditText
+        android:id="@+id/et_path"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:hint="请输入下载的路径"
+        android:text="http://pic7.nipic.com/20100607/4791134_172835008083_2.jpg"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:alpha="0.5"
+        android:text="下载"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
