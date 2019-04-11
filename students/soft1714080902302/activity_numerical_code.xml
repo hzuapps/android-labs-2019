@@ -4,6 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Activity_numerical_code">
+    tools:context=".first_activity.Numerical_code">
 
+
+    <Button
+        android:id="@+id/local_button"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="91dp"
+        android:layout_marginTop="87dp"
+        android:textSize="30dp"
+        android:text="本地存储"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/network_button"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="91dp"
+        android:layout_marginTop="200dp"
+        android:textSize="30dp"
+        android:text="网络图片"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
