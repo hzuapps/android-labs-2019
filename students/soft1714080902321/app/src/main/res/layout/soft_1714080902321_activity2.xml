@@ -1,20 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Soft1714080902321Activity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/image_view2"
-        android:layout_width="235dp"
-        android:layout_height="236dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="112dp"
-        android:src="@drawable/picture2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/editText_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="称呼："
+        android:layout_marginTop="100dp"
+        android:textSize="25sp"/>
+    <EditText
+        android:id="@+id/editText_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="手机号码："
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/editText_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="电话号码："
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/editText_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="关系："
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/editText_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="来电铃声："
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"/>
+</LinearLayout>
