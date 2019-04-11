@@ -18,7 +18,7 @@ public class Soft1714080902232Activity_Web extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                myImageView.setImageURL("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1997820975,4255973498&fm=26&gp=0.jpg");
+                myImageView.setImageURL("http://g.hiphotos.baidu.com/image/pic/item/50da81cb39dbb6fd04a2a7440724ab18962b37d2.jpg");
             }
         });
     }

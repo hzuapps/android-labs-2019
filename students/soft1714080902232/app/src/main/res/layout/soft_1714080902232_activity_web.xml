@@ -8,7 +8,7 @@
 
 
     <Button
-        android:text="加载网络图片"
+        android:text="从网络加载游戏帮助"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button"
