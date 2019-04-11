@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Com1714080901141MainActivity">
+
+    <Button
+        android:id="@+id/regret_to_exit"
+        android:layout_width="51dp"
+        android:layout_height="35dp"
+        android:text="No"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:text="Are you sure to exit?" />
+
+    <Button
+        android:id="@+id/hope_to_exit"
+        android:layout_width="58dp"
+        android:layout_height="35dp"
+        android:text="Yes"
+        android:textAllCaps="false" />
+</LinearLayout>
