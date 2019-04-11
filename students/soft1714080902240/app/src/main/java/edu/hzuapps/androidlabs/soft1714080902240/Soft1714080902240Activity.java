@@ -13,12 +13,12 @@ public class Soft1714080902240Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1714080902240_activity);
 
-        final MyImageView myImageView = (MyImageView) findViewById(R.id.image_view);
+        final MyImageView myImageView = findViewById(R.id.image_view);
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myImageView.setImageURL("https://pic.cnblogs.com/avatar/1142647/20170416093225.png");
+                myImageView.setImageURL("http://c.hiphotos.baidu.com/zhidao/pic/item/b3fb43166d224f4ac217158f0df790529922d1a4.jpg");
             }
         });
 

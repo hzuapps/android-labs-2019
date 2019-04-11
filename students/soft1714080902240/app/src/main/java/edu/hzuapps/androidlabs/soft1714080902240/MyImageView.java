@@ -22,7 +22,7 @@ public class MyImageView extends android.support.v7.widget.AppCompatImageView {
     public static final int SERVER_ERROR = 3;
     //子线程不能操作UI，通过Handler设置图片
     private Handler handler = new Handler() {
-        @Override
+       @Override
         public void handleMessage(Message msg) {
             switch (msg.what){
                 case GET_DATA_SUCCESS:
@@ -69,6 +69,7 @@ public class MyImageView extends android.support.v7.widget.AppCompatImageView {
                     //获取返回码
                     int code = connection.getResponseCode();
                     if (code == 200) {
+                        System.out.println("---------------------------");
                         InputStream inputStream = connection.getInputStream();
                         //使用工厂把网络的输入流生产Bitmap
                         Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
