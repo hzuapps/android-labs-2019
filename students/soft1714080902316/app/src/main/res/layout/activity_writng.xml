@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorBackground"
-    tools:context=".soft1714080902316.Writng">
+    tools:context=".soft1714080902316.Writing">
     <Button
         android:id="@+id/button1"
         android:layout_width="60dp"
