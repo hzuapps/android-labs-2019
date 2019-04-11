@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.hzuapps.androidlabs.soft1714080902331">
@@ -10,17 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".Soft1714080902331Activity2"
+            android:name="edu.hzuapps.androidlabs.soft1714080902331.Soft1714080902331Activity2"
             android:label="@string/title_activity_soft17140809023312"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity
-            android:name=".Soft1714080902331Activity3"
+            android:name="edu.hzuapps.androidlabs.soft1714080902331.Soft1714080902331Activity3"
             android:label="@string/title_activity_soft17140809023313"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name=".Soft1714080902331Activity"
+            android:name="edu.hzuapps.androidlabs.soft1714080902331.Soft1714080902331Activity"
             android:label="@string/title_activity_soft1714080902331"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -30,38 +31,10 @@
             </intent-filter>
         </activity>
     </application>
-
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.soft1714080902331">
-
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".Soft1714080902331Activity3"
-            android:label="@string/title_activity_soft17140809023313"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".Soft1714080902331Activity2"
-            android:label="@string/title_activity_soft17140809023312"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Soft1714080902331Activity"
-            android:label="@string/title_activity_soft1714080902331"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
-
->>>>>>> 04de59006bcef14253116cac674bc33ccca7169d
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

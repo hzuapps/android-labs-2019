@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,10 +25,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/mood"
+        android:contentDescription="TODO" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/getmood"
+        android:text="获取心情图片"
+        />
+
+
     <EditText
         android:id="@+id/record"
         android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:hint="@string/Write1"
 
         android:inputType=""
@@ -41,6 +56,8 @@
         android:layout_marginLeft="100dp"
         android:text="@string/Record"
         android:layout_marginStart="100dp" />
+
+
     <Button
         android:id="@+id/button2"
         android:layout_width="80dp"
