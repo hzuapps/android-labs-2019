@@ -41,9 +41,7 @@ public class TaskDao {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
                 new Locale("zh", "CN"));
         Date d = new Date();
-        System.out.println(d);
         String date = sdf.format(d);
-        System.out.println(date);
         values.put("last_time",date);
         long id = database.insert(tableName,null,values);
         database.close();
@@ -55,7 +53,7 @@ public class TaskDao {
         ContentValues values = new ContentValues();
         values.put("title", title);
         values.put("content", content);
-        database.update(tableName, values, "where id=?",
+        database.update(tableName, values, "id=?",
                 new String[]{Long.toString(id)});
         database.close();
     }
@@ -78,6 +76,7 @@ public class TaskDao {
 
         //遍历
         if(cursor.moveToFirst()){
+            task.setId(cursor.getLong(cursor.getColumnIndex("id")));
             task.setTitle(cursor.getString(cursor.getColumnIndex("title")));
             task.setContent(cursor.getString(cursor.getColumnIndex("content")));
             task.setDate(cursor.getString(cursor.getColumnIndex("last_time")));
@@ -99,6 +98,7 @@ public class TaskDao {
         Cursor cursor = database.query(tableName, null, null, null, null, null, "id desc");
         while(cursor.moveToNext()){
             Task task = new Task();
+            task.setId(cursor.getLong(cursor.getColumnIndex("id")));
             task.setTitle(cursor.getString(cursor.getColumnIndex("title")));
             task.setContent(cursor.getString(cursor.getColumnIndex("content")));
             task.setFinish(cursor.getInt(cursor.getColumnIndex("finish")));

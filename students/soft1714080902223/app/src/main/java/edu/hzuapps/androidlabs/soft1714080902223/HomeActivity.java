@@ -7,14 +7,28 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import edu.hzuapps.androidlabs.model.Task;
+import edu.hzuapps.androidlabs.presenter.JsonService;
 import edu.hzuapps.androidlabs.presenter.TaskService;
 
 public class HomeActivity extends AppCompatActivity {
 
     private ImageButton mDetailBtn;
     private ListView lv_1;
+    private TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +50,32 @@ public class HomeActivity extends AppCompatActivity {
         lv_1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(HomeActivity.this, "您单击了" + position, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(HomeActivity.this, DetailActivity.class);
+                Task task = (Task)parent.getItemAtPosition(position);
+                long taskId = task.getId();
+                intent.putExtra("id", taskId);
+                System.out.println(id);
+                startActivity(intent);
+//                Toast.makeText(HomeActivity.this, "您单击了" + position, Toast.LENGTH_SHORT).show();
             }
         });
 
+
+        //创建一个新线程异步获取json数据
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                JSONObject jsonObject = new JsonService().getHomeJson();
+                tv = findViewById(R.id.bottom_text);
+                try {
+                    String text = jsonObject.getString("author") + "  "
+                            + jsonObject.getString("code");
+                    tv.setText(text);
+                }catch (JSONException e){
+                    e.printStackTrace();
+                }
+            }
+        }).start();
 
     }
 

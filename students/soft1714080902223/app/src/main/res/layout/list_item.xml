@@ -15,7 +15,7 @@
     <TextView
         android:id="@+id/lv_content"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="25dp"
         android:maxLines="3"
         android:textSize="18sp"/>
 
