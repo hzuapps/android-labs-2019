@@ -38,8 +38,7 @@ public class Soft1714080902201_Activity extends AppCompatActivity {
     }
 
     public void sendMessage2 (View view){
-        Intent intent2 = new Intent(Intent.ACTION_VIEW);
-        intent2.setData(Uri.parse("http://www.ituring.com.cn/book"));
+        Intent intent2 = new Intent(this, Soft1714080902201_Activity_Recommendation.class);
         startActivity(intent2);
     }
 

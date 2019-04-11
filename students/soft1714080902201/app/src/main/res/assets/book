@@ -1,0 +1,21 @@
+{
+    "book": [
+        {
+            "name": "Android移动应用基础",
+            "author": "传智播客",
+            "balance": 39
+        },
+        { 
+            "name": "Web开发权威指南",
+            "author": "Chris Aquino",
+            "balance": 50
+        },
+        {
+            "name": "流畅的Python",
+            "author": "Luciano Ramalho",
+            "balance": 70
+        }
+    ],
+    "description": "查询成功",
+    "flag": "success"
+}

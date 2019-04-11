@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.hzuapps.androidlabs.soft1714080902201">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +14,6 @@
         <activity
             android:name=".Soft1714080902201_Activity_2"
             android:parentActivityName=".Soft1714080902201_Activity">
-
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -21,7 +22,19 @@
                 <action android:name="edu.hzuapps.androidlabs.soft1714080902201.ACTION_START" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
 
+        <activity
+            android:name=".Soft1714080902201_Activity_Recommendation"
+            android:parentActivityName=".Soft1714080902201_Activity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Soft1714080902201_Activity" />
+            <intent-filter>
+                <action android:name="edu.hzuapps.androidlabs.soft1714080902201.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <activity
