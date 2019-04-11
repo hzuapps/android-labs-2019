@@ -15,7 +15,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Activity_numerical_code_network extends AppCompatActivity {
+public class NumericalCodeNetwork extends AppCompatActivity {
     protected static final int CHANGE_UI=1;
     protected static final int ERROR=2;
     private ImageView iv;
@@ -26,7 +26,7 @@ public class Activity_numerical_code_network extends AppCompatActivity {
                 Bitmap bitmap = (Bitmap) msg.obj;
                 iv.setImageBitmap(bitmap);
             }else if (msg.what == ERROR){
-                Toast.makeText(Activity_numerical_code_network.this,"显示图片错误",Toast.LENGTH_SHORT).show();
+                Toast.makeText(NumericalCodeNetwork.this,"显示图片错误",Toast.LENGTH_SHORT).show();
             }
         };
     };

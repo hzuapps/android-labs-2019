@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import com.example.soft1714080902302.R;
-import com.example.soft1714080902302.second_activity.Activity_numerical_code_local;
-import com.example.soft1714080902302.second_activity.Activity_numerical_code_network;
+import com.example.soft1714080902302.second_activity.NumericalCodeLocal;
+import com.example.soft1714080902302.second_activity.NumericalCodeNetwork;
 
 
-public class Numerical_code extends AppCompatActivity {
+public class NumericalCode extends AppCompatActivity {
     private Button local_button;
     private Button network_button;
 
@@ -26,7 +26,7 @@ public class Numerical_code extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(Numerical_code.this, Activity_numerical_code_local.class);
+                intent.setClass(NumericalCode.this, NumericalCodeLocal.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class Numerical_code extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent();
-                intent1.setClass(Numerical_code.this, Activity_numerical_code_network.class);
+                intent1.setClass(NumericalCode.this, NumericalCodeNetwork.class);
                 startActivity(intent1);
             }
         });

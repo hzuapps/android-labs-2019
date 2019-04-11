@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".second_activity.Activity_numerical_code_network">
+    tools:context=".second_activity.NumericalCodeNetwork">
 
 
     <ImageView
