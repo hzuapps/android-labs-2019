@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mytree_back"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902421.MyTreeActivity">
+
+    <Button
+    android:id="@+id/btn_foredownload"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="500dp"
+    android:alpha="0.6"
+    android:text="点击此处保存森林照片\n快去跟好友炫耀你的森林把！"
+    android:textColor="@color/colorPrimaryDark"
+    android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_foremore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="560dp"
+        android:alpha="0.6"
+        android:text="点击查看更多森林"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+
+</FrameLayout>
