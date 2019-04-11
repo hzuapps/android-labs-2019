@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+    <!--备忘录信息-->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginleft"
+        android:layout_marginRight="@dimen/marginright"
+        android:layout_marginTop="@dimen/margintop"
+        android:background="@null"
+        android:gravity="top" />
+    <!--保存按钮-->
+    <ImageButton
+        android:id="@+id/btn_save"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/btn1" />
+    <!--取消按钮-->
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:layout_toLeftOf="@+id/btn_save"
+        android:src="@drawable/btn2" />
+</RelativeLayout>
