@@ -1,5 +1,7 @@
 package com.example.menu.Model;
 
+import android.graphics.Bitmap;
+
 import java.util.List;
 
 public class CaiPu {
