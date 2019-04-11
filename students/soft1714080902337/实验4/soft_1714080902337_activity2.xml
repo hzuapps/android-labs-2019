@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CDB79E"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="0.1dp"
+            android:paddingTop="12dp"
+            android:text="李白《春思》"
+            android:paddingLeft="20dp"
+            android:textStyle="bold"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:singleLine="false">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="【其一】\n
+草色青青柳色黄，桃花历乱李花香。\n
+东风不为吹愁去，春日偏能惹恨长。\n
+【其二】\n
+红粉当垆弱柳垂，金花腊酒解酴醿。\n
+笙歌日暮能留客，醉杀长安轻薄儿。\n"
+            android:textSize="25sp" />
+    </LinearLayout>
+</LinearLayout>
