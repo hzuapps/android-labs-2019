@@ -1,0 +1,8 @@
+{
+	"name": "Tom",
+	"age": 19,
+	"isBoy": true,
+	"lost": [{
+		"name": "money"
+	}]
+}
