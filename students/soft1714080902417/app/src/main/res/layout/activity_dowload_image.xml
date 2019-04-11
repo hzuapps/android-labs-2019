@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DowloadImage">
+    <ImageView
+        android:layout_weight="1000"
+        android:id="@+id/iv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <EditText
+        android:singleLine="true"
+        android:id="@+id/et_path"
+        android:hint="请输入图片路径"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="http://b.hiphotos.baidu.com/image/w%3D310/sign=a439f5b24510b912bfc1f0fff3fdfcb5/83025aafa40f4bfb92c52c5d014f78f0f73618a5.jpg"
+        />
+
+    <Button
+        android:onClick="onClick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="浏览" />
+</LinearLayout>
