@@ -14,7 +14,7 @@ import com.example.edu.hzuapps.androidlabs.R;
 import java.lang.String;
 import java.io.FileOutputStream;
 
-public class Writng extends AppCompatActivity {
+public class Writing extends AppCompatActivity {
     private EditText write;
     private Button button1;
     private Button button2;
@@ -33,7 +33,7 @@ public class Writng extends AppCompatActivity {
             public void onClick(View v){
                 switch (v.getId()){
                     case R.id.button1:
-                        Intent intent = new Intent(Writng.this, Soft1714080902316.class) ;
+                        Intent intent = new Intent(Writing.this, Soft1714080902316.class) ;
                         startActivity(intent);
                         break;
                     case R.id.button2:
@@ -48,7 +48,7 @@ public class Writng extends AppCompatActivity {
                         {
                             e.printStackTrace();
                         }
-                        Toast.makeText(Writng.this,"日记保存成功",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Writing.this,"日记保存成功",Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
