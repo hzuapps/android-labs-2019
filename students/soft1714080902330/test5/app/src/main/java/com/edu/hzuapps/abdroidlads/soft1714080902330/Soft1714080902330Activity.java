@@ -64,7 +64,7 @@ public class Soft1714080902330Activity extends AppCompatActivity {
 
         new AlertDialog.Builder(this)
                 .setTitle("存储权限不可用")
-                .setMessage("由于支付宝需要获取存储空间，为你存储个人信息；\n否则，您将无法正常使用支付宝")
+                .setMessage("由于绘画需要获取存储空间，为你存储作品；\n否则，您将无法正常使用绘画")
                 .setPositiveButton("立即开启", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -113,7 +113,7 @@ public class Soft1714080902330Activity extends AppCompatActivity {
 
         dialog = new AlertDialog.Builder(this)
                 .setTitle("存储权限不可用")
-                .setMessage("请在-应用设置-权限-中，允许支付宝使用存储权限来保存用户数据")
+                .setMessage("请在-应用设置-权限-中，允许绘画使用存储权限来保存用户数据")
                 .setPositiveButton("立即开启", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
