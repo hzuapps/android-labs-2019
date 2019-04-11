@@ -1,32 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Soft1714080902321Activity">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="288dp"
-        android:layout_height="271dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="112dp"
-        android:src="@drawable/picture1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        app:srcCompat="@drawable/picture3" />
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="54dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="32dp"
-        android:text="点击进入下一页面"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/image_view" />
+        android:id="@+id/Button_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="新建联系人"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="查看联系人"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="通话语音记录"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="群组"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/Button_5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="帮助"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
 
-</android.support.constraint.ConstraintLayout>
+
+
+
+
+</LinearLayout>

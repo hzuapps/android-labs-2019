@@ -15,7 +15,13 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter></activity>
         <activity
-            android:name=".Soft1714080902321Activity2">
+            android:name=".Soft1714080902321Activity2"
+            android:label="新建联系人">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
