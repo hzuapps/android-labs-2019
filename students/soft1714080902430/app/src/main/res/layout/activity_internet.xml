@@ -33,7 +33,7 @@
             android:layout_width="100dp"
             android:layout_height="200dp" />
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button1"
             android:layout_width="100dp"
             android:layout_height="59dp"
             android:text="获取1号女嘉宾的信息"
