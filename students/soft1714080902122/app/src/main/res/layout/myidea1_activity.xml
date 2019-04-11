@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.菊花茶、柠檬" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="祛痘痘闭口，败火消炎" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="柠檬含维C，有抗菌、提高免疫力;菊花提神醒脑，
+            疏风清热，肝火旺盛是长痘的主要原因，连续喝一周，红肿痘痘就消一-半!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.红枣，枸杞，益母草" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暖宫补气血，解决宫寒痛经" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红枣与枸杞补血气功效，益母草活血，出油起痘多，痛经严重，就需要红枣枸杞补起来!温水冲泡，
+            喝两周人气色就上来了!姨妈也没那么痛了!月经过多不宜服!" />
+
+
+        <Button
+            android:id="@+id/button_5"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击跳转到收藏页面"
+            android:layout_gravity="center"/>
+</LinearLayout>
