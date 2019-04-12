@@ -24,8 +24,8 @@ public class Com1714080901141DialogActivity extends Com1714080901141BaseActivity
         select_yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Com1714080901141MainActivity.exit=true;
                 Com1714080901141ActivityCollector.finishAll();//exit all activity
-
             }
         });
 

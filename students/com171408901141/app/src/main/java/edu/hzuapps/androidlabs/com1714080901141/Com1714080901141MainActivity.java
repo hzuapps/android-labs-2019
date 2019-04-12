@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class Com1714080901141MainActivity extends Com1714080901141BaseActivity {
 
     private TextView mTextMessage;
+    public static boolean exit;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -38,22 +39,17 @@ public class Com1714080901141MainActivity extends Com1714080901141BaseActivity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        Button startDialogActivity=(Button) findViewById(R.id.start_dialog_activity);
-        startDialogActivity.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(Com1714080901141MainActivity.this,Com1714080901141DialogActivity.class);
-                startActivity(intent);
-            }
-        });
+    public void onBackPressed() {
+        Intent intent=new Intent(Com1714080901141MainActivity.this,Com1714080901141DialogActivity.class);
+        startActivity(intent);
     }
 
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        exit=false;
+        setContentView(R.layout.activity_main);
+        mTextMessage = (TextView) findViewById(R.id.message);
+    }
 }

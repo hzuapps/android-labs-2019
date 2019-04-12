@@ -20,6 +20,6 @@ public class Com1714080901141ActivityCollector {
             }
         }
         activities.clear();
-        android.os.Process.killProcess(android.os.Process.myPid());//kill all processes
+        //android.os.Process.killProcess(android.os.Process.myPid());//kill all processes,exit without heritage
     }
 }
