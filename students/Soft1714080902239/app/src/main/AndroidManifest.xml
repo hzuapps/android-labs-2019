@@ -17,5 +17,5 @@
         </activity>
         <activity android:name=".Soft1714080902239.Second_A"></activity>
     </application>
-
+<uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

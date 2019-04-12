@@ -1,29 +1,21 @@
-package edu.hzuapps.androidlabs.Soft1714080902239;
+package edu.hzuapps.myapplication;
 
-import android.content.Intent;
-import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.TextView;
-
-import edu.hzuapps.androidlabs.R;
+import android.os.Bundle;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView textView;
+    private  Handler handler;
+    private  ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activty_soft1714080902239);
-        textView=(TextView)findViewById(R.id.fdr);
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Second_A.class);
-                startActivity(intent);
-            }
+        setContentView(R.layout.activity_main);
 
+        imageView =(ImageView)findViewById(R.id.imageview);
+        handler = new Handler();
+        new HttpThread("https://github.com/ridworld/android-labs-2019/blob/master/students/Soft1714080902239/app/src/main/res/drawable/xiaoxin.jpg", imageView, handler).start();
 
-            });
     }
 }
