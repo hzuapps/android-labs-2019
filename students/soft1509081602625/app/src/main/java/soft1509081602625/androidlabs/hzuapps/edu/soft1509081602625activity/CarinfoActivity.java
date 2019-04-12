@@ -1,25 +1,19 @@
 ﻿package soft1509081602625.androidlabs.hzuapps.edu.soft1509081602625activity;
 
-import android.annotation.SuppressLint;
+
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
+
 
 public class CarinfoActivity extends AppCompatActivity {
     private TextView aodi_info;
@@ -42,7 +36,6 @@ public class CarinfoActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private class ButtonListener implements View.OnClickListener{
-        @SuppressLint("WrongConstant")
         public void onClick(View v){
             switch (v.getId()){
                 case R.id.btn_collect:
@@ -55,7 +48,7 @@ public class CarinfoActivity extends AppCompatActivity {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(CarinfoActivity.this,"收藏成功",0).show();
+                    Toast.makeText(CarinfoActivity.this,"收藏成功",Toast.LENGTH_SHORT).show();
                     break;
             }
         }

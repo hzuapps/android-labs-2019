@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import soft1714080902407.androidlabs.hzuapps.edu.soft1509081602625activity.R;
+
 public class Soft1509081602625Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

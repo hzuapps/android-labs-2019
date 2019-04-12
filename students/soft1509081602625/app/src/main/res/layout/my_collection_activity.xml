@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
-            android:text="搜索"
+            android:text="最新车款"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -30,18 +30,12 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
 
-        <EditText
-            android:singleLine="true"
-            android:id="@+id/et_path"
-            android:hint="请输入图片路径"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
 
         <Button
             android:onClick="onClick5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="浏览" />
+            android:text="在线查看最新车款" />
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

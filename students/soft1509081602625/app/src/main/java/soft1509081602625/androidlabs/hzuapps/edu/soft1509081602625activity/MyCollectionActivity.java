@@ -18,11 +18,12 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import soft1714080902407.androidlabs.hzuapps.edu.soft1509081602625activity.R;
+
 
 public class MyCollectionActivity extends Activity {
     protected static final int CHANGE_UI=1;
     protected static final int ERROR=2;
-    private EditText et_path;
     private ImageView iv;
     private Handler handler = new Handler(){
         public void handleMessage(android.os.Message msg){
@@ -38,20 +39,16 @@ public class MyCollectionActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_collection_activity);
-        et_path=(EditText)findViewById(R.id.et_path);
         iv=(ImageView) findViewById(R.id.iv);
     }
     public void onClick5(View view){
-        final String path = et_path.getText().toString().trim();
-        if(TextUtils.isEmpty(path)){
-            Toast.makeText(this,"图片路径不能为空",Toast.LENGTH_SHORT).show();
-        }else {
+
             new Thread() {
                 private HttpURLConnection conn;
                 private Bitmap bitmap;
                 public void run() {
                     try {
-                        URL url = new URL(path);
+                        URL url = new URL("https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=8f0d9a9b56afa40f38c6c9df9b66038c/a8014c086e061d95f6861a9177f40ad163d9ca53.jpg");
                         conn = (HttpURLConnection) url.openConnection();
                         conn.setRequestMethod("GET");
                         conn.setConnectTimeout(5000);
@@ -79,5 +76,4 @@ public class MyCollectionActivity extends Activity {
             }.start();
         }
     }
-}
 
