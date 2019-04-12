@@ -1,18 +1,120 @@
 package edu.hzuapps.androidlabs.Soft1714080902219;
 
+import android.os.Handler;
+import android.os.Message;
+import android.os.StrictMode;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Soft1714080902219Activity3 extends FragmentActivity implements View.OnClickListener {
+    ArrayList<HashMap<String,String>> arrayList = new ArrayList<>();
+    Soft1714080902219MyAdapter adapter;
+    ListView listView;
+
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            if(msg.what == 1){
+                Log.d("mylog","listView.setAdapter(adapter);");
+                adapter = new Soft1714080902219MyAdapter(Soft1714080902219Activity3.this,arrayList);
+                listView.setAdapter(adapter);
+            }
+        }
+    };
+
+    public void getDataByNet(){
+
+        try {
+            String url_s = "https://raw.githubusercontent.com/wanshanghong/liulangzhe/master/myjson.json"; //我的阿里云的url:http://47.103.6.223:8080/liulangzhe-manager-web/myjson.json
+            URL url = new URL(url_s);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setConnectTimeout(500000);
+            conn.setUseCaches(false);
+            conn.setRequestProperty("User-Agent","Mozilla/4.0(compatible;MSIE 6.0;Windows NT 5.1;"+"SV1;.NET4.0C;.NET4.0E;.NET CLR 2.0.50727;"
+                    +".NET CLR 3.0.4506.2152;.NET CLR 3.5.30729;Shuame)");
+            conn.connect();
+            InputStream inputStream = conn.getInputStream();
+            InputStreamReader input = new InputStreamReader(inputStream);
+            BufferedReader buffer = new BufferedReader(input);
+            if (conn.getResponseCode() == 200) {
+                String inputLine;
+                StringBuffer resultData = new StringBuffer();
+                while ((inputLine = buffer.readLine()) != null) {
+                    resultData.append(inputLine);
+                }
+
+                String text = resultData.toString();
+                String sb=new String(text.getBytes("8859_1"), "GB2312");
+                System.out.println(sb);
+                input.close();
+                inputStream.close();
+                Log.d("mylog","sb:"+sb);
+                parseJson(text.toString());
+            }
+        } catch (Exception e) {
+            Log.d("mylog","e.printStackTrace();22222222");
+            e.printStackTrace();
+        }
+        /**
+         OkHttpClient okHttpClient=new OkHttpClient();
+         //服务器返回的地址
+         Request request=new Request.Builder()
+         .url("http://47.103.6.223:8080/liulangzhe-manager-web/myjson.json").build();
+         try {
+         Response response=okHttpClient.newCall(request).execute();
+         //获取到数据
+         String date=response.body().string();
+         Log.d("mylog","date;"+date);
+         // 把数据传入解析josn数据方法
+         parseJson(date);
+         } catch (IOException e) {
+         Log.d("mylog","e.printStackTrace();22222222");
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+         }
+         */
+    }
+
+
+    public void parseJson(String json){
+        try {
+            JSONArray jsonArray = new JSONArray(json);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                Log.d("mylog", "i" + i);
+                HashMap<String, String> map = new HashMap<>();
+                JSONObject jo = jsonArray.getJSONObject(i);
+                map.put("title", jo.getString("title"));
+                map.put("pdate", jo.getString("pdate"));
+                map.put("src", jo.getString("src"));
+                arrayList.add(map);
+            }
+            handler.sendEmptyMessage(1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     //定义3个Fragment的对象
     protected Soft1714080902219Fragment1 fragment1;
@@ -43,11 +145,14 @@ public class Soft1714080902219Activity3 extends FragmentActivity implements View
 
     //定义要用的颜色值
     FragmentManager fManager;
-
+    private Soft1714080902219Fragment2 soft1714080902219Fragment2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1714080902219_activity3);
+
+        Log.d("mylog","Soft1714080902219Activity3;运行");
         fManager = getSupportFragmentManager();
 
         initViews();
@@ -135,6 +240,10 @@ public class Soft1714080902219Activity3 extends FragmentActivity implements View
                 } else {
                     // 如果MessageFragment不为空，则直接将它显示出来
                     transaction.show(fragment3);
+                    StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
+                    Log.d("mylog","Soft1714080902219Fragment2onCreateView;运行");
+                    listView =this.findViewById(R.id.listview);
+                    getDataByNet();
                 }
                 break;
         }
@@ -166,4 +275,7 @@ public class Soft1714080902219Activity3 extends FragmentActivity implements View
         ll_tab3.setBackgroundColor(whirt);
         tv3.setTextColor(gray);
     }
+
+
+
 }

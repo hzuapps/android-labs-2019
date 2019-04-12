@@ -75,5 +75,13 @@
         android:background="#686868"
         android:layout_below="@+id/LinearLayout1"
         android:layout_width="match_parent"/>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_height="wrap_content">
+    </ListView>
+
 </RelativeLayout>
 
