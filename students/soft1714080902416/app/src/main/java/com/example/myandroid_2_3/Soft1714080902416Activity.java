@@ -45,7 +45,17 @@ public class Soft1714080902416Activity extends AppCompatActivity {
                 startActivity(intent1);
             }
         };
+
+        Button button2 = findViewById(R.id.button2);
+        View.OnClickListener onClickListener2 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(Soft1714080902416Activity.this, GetInternetActivity.class);
+                startActivity(intent2);
+            }
+        };
         button.setOnClickListener(onClickListener);
         button1.setOnClickListener(onClickListener1);
+        button2.setOnClickListener(onClickListener2);
     }
 }

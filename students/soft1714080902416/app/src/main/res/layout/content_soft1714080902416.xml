@@ -27,5 +27,11 @@
         android:layout_height="wrap_content"
         android:text="查看订单" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:text="浏览历史账单"/>
+
 
 </LinearLayout>
