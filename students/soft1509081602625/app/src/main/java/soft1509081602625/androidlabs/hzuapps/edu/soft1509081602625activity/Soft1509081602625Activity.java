@@ -1,10 +1,12 @@
-package soft1714080902407.androidlabs.hzuapps.edu.soft1509081602625activity;
+package soft1509081602625.androidlabs.hzuapps.edu.soft1509081602625activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import soft1714080902407.androidlabs.hzuapps.edu.soft1509081602625activity.R;
 
 public class Soft1509081602625Activity extends AppCompatActivity {
     @Override

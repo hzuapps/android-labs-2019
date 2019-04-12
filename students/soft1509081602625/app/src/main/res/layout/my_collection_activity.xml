@@ -8,27 +8,34 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="我的收藏"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="532dp"
-            />
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="最新车款"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_weight="1000"
+            android:id="@+id/iv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+
+        <Button
+            android:onClick="onClick5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="在线查看最新车款" />
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
