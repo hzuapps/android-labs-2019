@@ -1,14 +1,14 @@
 [
-  {
+{
     "id": "1",
-    "name":"《绿皮书》"
+    "name":"GreenBook"
   },
   {
     "id": "2",
-    "name":"《肖申克的救赎》"
+    "name":"ShawShank"
   },
   {
     "id": "3",
-    "name":"《你的名字》"
+    "name":"YourName"
   }
 ] 
