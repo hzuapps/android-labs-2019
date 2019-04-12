@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+    <movie>
+        <name>复仇者联盟4</name>
+        <type>Science fiction</type>
+        <language>English</language>
+    </movie>
+    <movie>
+        <name>蜘蛛侠：英雄远征</name>
+        <type>Action</type>
+        <language>English</language>
+    </movie>
+    <movie>
+        <name>奇乐园历险记</name>
+        <type>Animation</type>
+        <language>English</language>
+    </movie>
+</movies>
