@@ -6,7 +6,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Com17140809011MainActivity">
+    tools:context=".Com1714080901141MainActivity">
 
     <TextView
         android:id="@+id/message"
