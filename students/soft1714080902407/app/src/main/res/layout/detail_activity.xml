@@ -8,14 +8,11 @@
     tools:layout_editor_absoluteY="25dp">
 
 
-    <TextView
-        android:id="@+id/textView1"
+    <ImageView
+        android:id="@+id/image"
         android:layout_width="73dp"
         android:layout_height="88dp"
-        android:layout_marginBottom="63dp"
         android:layout_marginTop="92dp"
-        android:drawableLeft="@drawable/zjq"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,23 +20,24 @@
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textView1">
+        android:layout_height="42dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="125dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="昵称:"
             android:textSize="30dp" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="125dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="pinky"
             android:textSize="30dp" />
@@ -47,17 +45,20 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="250dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="49dp"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+        app:layout_constraintTop_toTopOf="@+id/linearLayout1">
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="125dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="性别:"
             android:textSize="30dp" />
@@ -68,26 +69,86 @@
             android:layout_height="wrap_content"
             android:text="女"
             android:textSize="30dp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="100dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="118dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="38dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="181dp"
+        <TextView
+            android:id="@+id/text_network1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClick"
-            android:text="返回"
-            android:textSize="20dp" />
+            android:text="网络："
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/text_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:textSize="30dp" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_weight="1"
+        android:onClick="onClick1"
+        android:text="返回聊天"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_loadimg"
+        app:layout_constraintStart_toStartOf="@+id/button_loadimg" />
+
+    <Button
+        android:id="@+id/button_download_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:text="下载头像"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_check"
+        app:layout_constraintStart_toStartOf="@+id/button_check" />
+
+    <Button
+        android:id="@+id/button_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="13dp"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:text="检查网络"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_loadimg"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_loadimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="23dp"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:text="加载头像"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_check" />
+
 </android.support.constraint.ConstraintLayout>
