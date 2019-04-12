@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<students>
+    <student id="1">
+        <name>sql server2012</name>
+        <price>100</price>
+        <date>2018-4-12</date>
+    </student>
+    <student id="2">
+        <name>Android Studio</name>
+        <price>120</price>
+        <date>2019-2-09</date>
+    </student>
+    <student id="3">
+        <name>eclipse</name>
+        <price>50</price>
+        <date>2019-4-12</date>
+    </student>
+    <student id="4">
+        <name>IntelliJ IDEA</name>
+        <price>300</price>
+        <date>2019-4-12</date>
+    </student>
+
+</students>
