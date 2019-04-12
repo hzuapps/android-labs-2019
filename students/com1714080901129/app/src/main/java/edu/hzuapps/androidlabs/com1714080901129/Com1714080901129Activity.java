@@ -14,7 +14,7 @@ import android.widget.Button;
 import com.yzk.ordis.bean.Sortie;
 
 public class Com1714080901129Activity extends AppCompatActivity {
-    private Button bt,Bt_Sortie;
+    private Button bt,Bt_Sortie,bt_lab5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,14 @@ public class Com1714080901129Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Com1714080901129Activity.this, SortieActivity.class);
+                startActivity(intent);
+            }
+        });
+        bt_lab5=(Button)findViewById(R.id.bt_lab5);
+        bt_lab5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Com1714080901129Activity.this,Lab5Activity.class);
                 startActivity(intent);
             }
         });
