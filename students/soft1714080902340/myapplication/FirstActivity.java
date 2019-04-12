@@ -34,6 +34,10 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
+            case R.id.login_item:                       //登录界面
+                        Intent intent=new Intent(FirstActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                break;
             case R.id.add_item:
                 Toast.makeText(this,"You clicked Add",Toast.LENGTH_SHORT).show();
                 break;
