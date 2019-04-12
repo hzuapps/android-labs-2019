@@ -15,6 +15,7 @@ public class Soft1714080902431Activity extends AppCompatActivity {
     private Button button1;
     private  Button button2;
     private  Button button3;
+    private Button button4;
     //private ImageView imageView;
 
 
@@ -56,6 +57,15 @@ public class Soft1714080902431Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Soft1714080902431Activity.this, Main3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        button1 = (Button) findViewById(R.id.button4);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902431Activity.this, ImageActivity.class);
                 startActivity(intent);
             }
         });
