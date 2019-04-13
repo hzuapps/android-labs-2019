@@ -1,0 +1,13 @@
+{
+  "name": "xhchen",
+  "age": 21,
+  "isBoy": true,
+  "numbers": [1, 0, 8],
+  "courses": [{
+    "name": "Chinese",
+    "date": "2019-3-15"
+  }, {
+    "name": "English",
+    "date": "2019-4-13"
+  }]
+}
