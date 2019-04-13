@@ -6,31 +6,49 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <CalendarView
-        android:id="@+id/calendarView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:selectedDateVerticalBar="@color/royalblue"
-        android:selectedWeekBackgroundColor="@color/royalblue"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/desc_text"
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minDate="01/01/1950"
+            android:unfocusedMonthDateColor="@color/colorBlack"
+            android:weekNumberColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/desc_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加生日"
+            android:textAlignment="center"
+            android:textColorLink="@android:color/background_dark"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/add_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center|center_horizontal"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/button"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+        <TextView
+            android:id="@+id/haved_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最近的生日"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/birthLV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="添加生日"
-        android:textSize="18dp"
-        android:textColorLink="@android:color/background_dark"
-        android:textAlignment="center"/>
-
-    <ImageButton
-        android:id="@+id/add_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:scaleType="fitXY"
-        android:layout_gravity="center|center_horizontal"
-        android:adjustViewBounds="false"
-        android:contentDescription="@string/button"
-        android:cropToPadding="false"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-
+        android:layout_below="@id/add_button"></ListView>
 </LinearLayout>

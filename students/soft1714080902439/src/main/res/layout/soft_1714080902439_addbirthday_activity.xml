@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439AddBirthdayActivity">
 <!--标题-->
     <LinearLayout
         android:id="@+id/addbirth_title"
@@ -99,10 +102,9 @@
             android:id="@+id/birth_year"
             android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:gravity="right"
-            android:spinnerMode="dialog"
-            android:background="@drawable/rectborder">
+            android:spinnerMode="dialog">
         </Spinner>
+
         <TextView
             android:layout_width="30dp"
             android:layout_height="wrap_content"
@@ -111,10 +113,10 @@
             android:textAlignment="center"/>
         <!--月-->
         <Spinner
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        android:spinnerMode="dialog"
-        android:background="@drawable/rectborder">
+            android:id="@+id/birth_month"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:spinnerMode="dialog">
         </Spinner>
         <TextView
             android:layout_width="30dp"
@@ -124,10 +126,10 @@
             android:textAlignment="center"/>
         <!--日-->
         <Spinner
-            android:layout_width="40dp"
+            android:id="@+id/birth_day"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
-            android:spinnerMode="dialog"
-            android:background="@drawable/rectborder">
+            android:spinnerMode="dialog">
         </Spinner>
         <TextView
             android:layout_width="30dp"
@@ -158,6 +160,6 @@
             android:layout_height="wrap_content"
             android:background="@color/lightgray"
             android:text="取消"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="18dp"/>
     </LinearLayout>
 </RelativeLayout>
