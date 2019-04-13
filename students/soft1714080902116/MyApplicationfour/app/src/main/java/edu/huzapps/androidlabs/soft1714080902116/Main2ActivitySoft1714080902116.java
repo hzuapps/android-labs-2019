@@ -1,11 +1,13 @@
-package edu.hzuapps.androidlabs.soft1714080902116;
+package edu.huzapps.androidlabs.soft1714080902116;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import android.content.Context;
+
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,18 +20,21 @@ public class Main2ActivitySoft1714080902116 extends AppCompatActivity {
     private Button btn_save;
     private Button btn_read;
     private Button button2;
+    private Button button3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2_activity_soft1714080902116);
+        setContentView(R.layout.activity_main2_soft1714080902116);
 
         et_info = (EditText) findViewById(R.id.et_info);
         btn_save = (Button) findViewById(R.id.btn_save);
         btn_read = (Button) findViewById(R.id.btn_read);
         button2=(Button) findViewById(R.id.button_2);
+        button3=(Button) findViewById(R.id.button_3);
         btn_save.setOnClickListener(new ButtonListener());
         btn_read.setOnClickListener(new ButtonListener());
         button2.setOnClickListener(new ButtonListener());
+        button3.setOnClickListener(new ButtonListener());
 
        /* Button button2 = (Button) findViewById(R.id.button_2);
         button2.setOnClickListener(new View.OnClickListener(){
@@ -79,6 +84,10 @@ public class Main2ActivitySoft1714080902116 extends AppCompatActivity {
                 case R.id.button_2:
                     Intent intent = new Intent( Main2ActivitySoft1714080902116.this,MainActivitySoft1714080902116.class);
                     startActivity(intent);
+                    break;
+                case R.id.button_3:
+                    Intent intent1 = new Intent( Main2ActivitySoft1714080902116.this,Main3Activity.class);
+                    startActivity(intent1);
 
 
                 default:

@@ -3,19 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.soft1714080902116.Main2ActivitySoft1714080902116">
+    tools:context=".Main2ActivitySoft1714080902116">
 
 
     <TextView
         android:id="@+id/textview_02"
-        android:text="宇智波佐助"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/draw2" />
+        android:drawableTop="@drawable/draw2"
+        android:text="宇智波佐助" />
 
 
     <Button
@@ -43,22 +39,30 @@
         android:id="@+id/et_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft = "true"
-        android:layout_below = "@+id/textview1"
-        android:ems = "10"
+        android:layout_below="@+id/textview1"
+        android:layout_alignEnd="@+id/btn_read"
         android:layout_alignRight="@+id/btn_read"
-        android:layout_alignEnd="@+id/btn_read">
-        <requestFocus/>
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="10">
+
+        <requestFocus />
     </EditText>
 
     <Button
         android:id="@+id/btn_read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="读取已经保存的人物"
-        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/button_2"
         android:layout_alignRight="@+id/button_2"
-        android:layout_alignEnd="@+id/button_2" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="199dp"
+        android:text="读取已经保存的人物" />
 
     <Button
         android:id="@+id/btn_save"
@@ -67,4 +71,11 @@
         android:layout_alignParentLeft = "true"
         android:layout_below = "@+id/et_info"
         android:text="保存观众喜欢的人物"/>
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="访问网络" />
+
 </RelativeLayout>
