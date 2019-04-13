@@ -9,7 +9,7 @@ import android.widget.Button;
 public class Com1714080901141DialogActivity extends Com1714080901141BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {//This is DialogActivity's onCreate function.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog);
         Button select_yes=(Button) findViewById(R.id.hope_to_exit);
@@ -17,6 +17,9 @@ public class Com1714080901141DialogActivity extends Com1714080901141BaseActivity
         select_no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent=new Intent(Com1714080901141DialogActivity.this,Com1714080901141MainActivity.class);
+                //Its launcher is singleTask,so it will start the old one instead of a new one.
+                startActivity(intent);
                 finish();//exit dialog activity
 
             }
@@ -28,6 +31,5 @@ public class Com1714080901141DialogActivity extends Com1714080901141BaseActivity
                 Com1714080901141ActivityCollector.finishAll();//exit all activity
             }
         });
-
     }
 }
