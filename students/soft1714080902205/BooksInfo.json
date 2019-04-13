@@ -1,0 +1,26 @@
+{
+  "books": {
+    "booksInfo": [
+      {
+        "title": "斗破苍穹",
+        "content": "莫欺少年穷",
+        "type": "1"
+      },
+      {
+        "title": "大王饶命",
+        "content": "毒鸡汤称霸世界",
+        "type": "2"
+      },
+      {
+        "title": "夜天子",
+        "content": "全靠智商与霸气",
+        "type": "3"
+      },
+      {
+        "title": "全职法师",
+        "content": "魔法的世界",
+        "type": "4"
+      }
+    ]
+  }
+}
