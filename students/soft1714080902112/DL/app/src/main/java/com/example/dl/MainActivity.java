@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView mThread1TV;
     private TextView mThread3CompleteTV;
     protected static int threadCount;
-    private Button button3;
-    private RelativeLayout layout;
     private ImageView image;
 
     protected void onCreate(Bundle savedInstanceState) {
