@@ -70,5 +70,12 @@
             android:background="@drawable/btn_shape"/>
 
     </LinearLayout>
-
+    <Button
+        android:id="@+id/bb"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:text="文件解析/图片下载"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_shape"/>
 </LinearLayout>
