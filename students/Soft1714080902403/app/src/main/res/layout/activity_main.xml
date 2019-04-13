@@ -63,7 +63,7 @@
 
 
             android:onClick="click"
-            android:text="查看答案" />
+            android:text="进入答案界面" />
 
 
     </RelativeLayout>

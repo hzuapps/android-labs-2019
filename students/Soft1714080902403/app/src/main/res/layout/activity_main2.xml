@@ -13,19 +13,15 @@
     tools:layout_editor_absoluteY="0dp">
 
       <TextView
+          android:layout_centerHorizontal="true"
+
           android:id="@+id/textview2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="答案：周杰伦"
+
           />
 
-       <EditText
-           android:id="@+id/et_info1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@id/textview2"
-           android:layout_alignParentLeft="true"
-           android:ems="10" />
+
 
 
 
@@ -35,9 +31,17 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_alignParentLeft="true"
-           android:layout_below="@id/et_info1"
-           android:text="查看自己的答案"
-></Button>
+           android:layout_below="@id/textview2"
+           android:text="查看输入的答案"
+/>
+
+       <Button
+           android:id="@+id/button1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/btn_read"
+           android:text="查看答案"
+           />
 
 
 
