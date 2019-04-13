@@ -1,0 +1,8 @@
+{"movies":
+[{"id":1,"name":"复仇者联盟4","type":"Science fiction","language":"English",
+  "date":"2019-4-24","price":"$10"},
+  {"id":2,"name":"蜘蛛侠：英雄远征","type":"Action","language":"English",
+    "date":"2019-?-?","price":"$8"},
+  {"id":3,"name":"奇乐园历险记","type":"Animation","language":"English",
+    "date":"2019-4-19","price":"$5"}
+]}
