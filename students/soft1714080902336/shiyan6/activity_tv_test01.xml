@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/findbackground">
+
+    <TextView
+        android:id="@+id/art_text01"
+        android:layout_width="120dp"
+        android:layout_height="76dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="第1题"
+        android:textColor="#EA5246"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/tvtext"
+        android:layout_width="119dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="140dp" />
+
+    <Button
+        android:id="@+id/gettvtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="158dp"
+        android:layout_marginLeft="158dp"
+        android:layout_marginTop="147dp"
+        android:gravity="center"
+        android:text="获取图片" />
+
+    <TextView
+        android:id="@+id/problem01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="215dp"
+        android:gravity="center"
+        android:text="请问动图是哪部电影的内容？"
+        android:textSize="26dp" />
+
+
+    <Button
+        android:id="@+id/choose01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="286dp"
+        android:gravity="center"
+        android:text="A.乘风破浪"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/choose02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="197dp"
+        android:layout_marginLeft="197dp"
+        android:layout_marginTop="285dp"
+        android:gravity="center"
+        android:text="B.复仇者联盟"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/choose03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="355dp"
+        android:gravity="center"
+        android:text="C.海军上将"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/choose04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="354dp"
+        android:gravity="center"
+        android:text="D.海王"
+        android:textSize="22dp" />
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="72dp"
+        android:text="下一题"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="72dp"
+        android:text="查看你的选择及答案"
+        android:textSize="22dp" />
+
+</RelativeLayout>
