@@ -1,45 +1,46 @@
 {
-	"Currency": [{
-			"name": "美元",
-			"abbr": "USD",
-			"CNYtoItself": 0.1490,
-			"toCNY": 6.7131
-		},
-		{
-			"name": "日元",
-			"abbr": "JPY",
-			"CNYtoItself": 16.5695,
-			"toCNY": 0.0604
-		},
-		{
-			"name": "欧元",
-			"abbr": "EUR",
-			"CNYtoItself": 0.1312,
-			"toCNY": 7.6206
-		},
-		{
-			"name": "英镑",
-			"abbr": "GBP",
-			"CNYtoItself": 0.1123,
-			"toCNY": 8.9033
-		},
-		{
-			"name": "韩元",
-			"abbr": "KRW",
-			"CNYtoItself": 168.4069,
-			"toCNY": 0.0059
-		},
-		{
-			"name": "港币",
-			"abbr": "HKD",
-			"CNYtoItself": 1.1692,
-			"toCNY": 0.8553
-		},
-		{
-			"name": "澳币",
-			"abbr": "AUD",
-			"CNYtoItself": 1.2039,
-			"toCNY": 4.7417
-		}
+"Currency": [
+	{
+		"name": "美元",
+		"abbr": "USD",
+		"CNYtoItself": 0.1490,
+		"toCNY": 6.7131
+	},
+	{
+		"name": "日元",
+		"abbr": "JPY",
+		"CNYtoItself": 16.5695,
+		"toCNY": 0.0604
+	},
+	{
+		"name": "欧元",
+		"abbr": "EUR",
+		"CNYtoItself": 0.1312,
+		"toCNY": 7.6206
+	},
+	{
+		"name": "英镑",
+		"abbr": "GBP",
+		"CNYtoItself": 0.1123,
+		"toCNY": 8.9033
+	},
+	{
+		"name": "韩元",
+		"abbr": "KRW",
+		"CNYtoItself": 168.4069,
+		"toCNY": 0.0059
+	},
+	{
+		"name": "港币",
+		"abbr": "HKD",
+		"CNYtoItself": 1.1692,
+		"toCNY": 0.8553
+	},
+	{
+		"name": "澳币",
+		"abbr": "AUD",
+		"CNYtoItself": 1.2039,
+		"toCNY": 4.7417
+	}
 	]
 }
