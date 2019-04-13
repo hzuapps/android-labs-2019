@@ -37,15 +37,13 @@ public class DetailActivity extends AppCompatActivity {
         super.onStart();
         //获取传递过来的id的值
         Intent intent = getIntent();
-        System.out.println("---------start-------------");
         long id = intent.getLongExtra("id", -1);
-        System.out.println(id);
-        System.out.println("---------end-------------");
         tv_title = findViewById(R.id.detail_title);
         tv_content = findViewById(R.id.detail_body);
         TaskService taskService = new TaskService(this);
         Map<String, String> map = taskService.get(id);
         tv_title.setText(map.get("title"));
         tv_content.setText(map.get("content"));
+
     }
 }
