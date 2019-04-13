@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/c_text">
+
+    <TextView
+        android:id="@+id/di03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="19dp"
+        android:text="请输入你的姓名："
+        android:textSize="22dp" />
+
+    <EditText
+        android:id="@+id/et_info01"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_alignLeft="@id/a_text"
+        android:layout_alignBottom="@+id/a_text"
+        android:layout_marginLeft="208dp"
+        android:layout_marginBottom="-6dp" />
+
+    <TextView
+        android:id="@+id/textView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="96dp"
+        android:text="请输入喜好的图书："
+        android:textSize="22dp" />
+
+    <EditText
+        android:id="@+id/et_info02"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_alignLeft="@id/textView02"
+        android:layout_alignBottom="@+id/textView02"
+        android:layout_marginLeft="208dp"
+        android:layout_marginBottom="-6dp" />
+
+    <TextView
+        android:id="@+id/textView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="169dp"
+        android:text="请输入喜欢的作者："
+        android:textSize="22dp" />
+
+    <EditText
+        android:id="@+id/et_info03"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_alignLeft="@id/textView03"
+        android:layout_alignBottom="@+id/textView03"
+        android:layout_marginLeft="208dp"
+        android:layout_marginBottom="-6dp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="319dp"
+        android:text="确认保存"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="134dp"
+        android:layout_marginRight="134dp"
+        android:layout_marginBottom="176dp"
+        android:text="我的中心"
+        android:textSize="22dp" />
+
+</RelativeLayout>
