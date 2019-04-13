@@ -7,7 +7,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.widget.Toast;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -17,7 +16,6 @@ public class MyImageView extends android.support.v7.widget.AppCompatImageView {
     public static final int GET_DATA_SUCCESS = 1;
     public static final int NETWORK_ERROR = 2;
     public static final int SERVER_ERROR = 3;
-    //子线程不能操作UI，通过Handler设置图片
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message msg) {
@@ -49,45 +47,31 @@ public class MyImageView extends android.support.v7.widget.AppCompatImageView {
         super(context, attrs);
     }
 
-    //设置网络图片
-    public void setImageURL(final String path) {
-        //开启一个线程用于联网
-        new Thread() {
+    public void setImageURL(final String path) {new Thread() {
             @Override
             public void run() {
-                try {
-                    //把传过来的路径转成URL
-                    URL url = new URL(path);
-                    //获取连接
-                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    //使用GET方法访问网络
-                    connection.setRequestMethod("GET");
-                    //超时时间为10秒
+                try {    
+                    URL url = new URL(path);   
+                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();    
+                    connection.setRequestMethod("GET");      
                     connection.setConnectTimeout(10000);
-                    //获取返回码
                     int code = connection.getResponseCode();
                     if (code == 200) {
                         InputStream inputStream = connection.getInputStream();
-                        //使用工厂把网络的输入流生产Bitmap
                         Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                        //利用Message把图片发给Handler
                         Message msg = Message.obtain();
                         msg.obj = bitmap;
                         msg.what = GET_DATA_SUCCESS;
                         handler.sendMessage(msg);
                         inputStream.close();
                     } else {
-                        //服务启发生错误
                         handler.sendEmptyMessage(SERVER_ERROR);
                     }
                 }
                 catch (IOException e) {
                     e.printStackTrace();
-                    //网络连接错误
                     handler.sendEmptyMessage(NETWORK_ERROR);
                 }
             }
         }.start();
-    }
-
-}
+    }}
