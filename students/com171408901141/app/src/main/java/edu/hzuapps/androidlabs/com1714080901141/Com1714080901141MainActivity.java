@@ -42,11 +42,10 @@ public class Com1714080901141MainActivity extends Com1714080901141BaseActivity {
     public void onBackPressed() {
         Intent intent=new Intent(Com1714080901141MainActivity.this,Com1714080901141DialogActivity.class);
         startActivity(intent);
-    }
-
+    };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {//This is MainActivity's onCreate function.
         super.onCreate(savedInstanceState);
         exit=false;
         setContentView(R.layout.activity_main);
