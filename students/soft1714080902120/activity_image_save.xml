@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击获取战神白起的图片"
+        android:textSize="70px"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@id/iv_image"/>
+
+    <Button
+        android:id="@+id/bt_get_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取图片"
+        android:onClick="getImage"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/bt_set_wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置壁纸"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:enabled="false"
+        />
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_get_image" />
+
+
+
+</RelativeLayout>
