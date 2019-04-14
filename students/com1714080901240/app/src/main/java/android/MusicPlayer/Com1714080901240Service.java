@@ -3,15 +3,7 @@ package android.MusicPlayer;
 import android.media.MediaPlayer;
 
 public class Com1714080901240Service {
-    MediaPlayer mediaPlayer = new MediaPlayer();
 
-    public void setMediaPlayer(MediaPlayer mediaPlayer) {
-        this.mediaPlayer = mediaPlayer;
-    }
-
-    public MediaPlayer getMediaPlayer() {
-        return mediaPlayer;
-    }
 
     //加载本地歌曲
     public void addSong(){

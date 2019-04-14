@@ -20,7 +20,8 @@
             android:layout_width="103dp"
             android:layout_height="wrap_content"
             android:layout_column="1"
-            android:text="删除歌曲" />
+            android:onClick="click03"
+            android:text="开发者信息" />
 
         <Button
             android:id="@+id/button9"
