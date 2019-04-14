@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.hzuapps.androidlabs.soft171408902126">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Button5activity"></activity>
+        <activity android:name=".Button4activity" />
+        <activity android:name=".Button3activity" />
+        <activity android:name=".Button2activity" />
+        <activity android:name=".Button1activity" />
         <activity android:name=".tzactivity" />
         <activity
             android:name=".Soft1714080902126Activity"
