@@ -17,9 +17,17 @@ public class MainActivity extends AppCompatActivity {
         myFirstButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,Soft1714080902434Activity.class);
+                Intent intent1=new Intent(MainActivity.this,Soft1714080902434Activity.class);
+                startActivity(intent1);
+            }
+        });
 
-                startActivity(intent);
+        Button SecondButton=(Button) findViewById(R.id.buttonaa);
+        SecondButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v){
+                Intent intent2=new Intent(MainActivity.this,ThirdActivity.class);
+                startActivity(intent2);
             }
         });
     }
