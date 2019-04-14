@@ -1,7 +1,5 @@
 {
-	"singer": [{
-		"id": 123,
-		"name": "Ð¡Ã÷",
-		"gender": "ÄÐ"
-	}]
+	"id": 123,
+	"name": "xiaoming",
+	"gender": "male"
 }
