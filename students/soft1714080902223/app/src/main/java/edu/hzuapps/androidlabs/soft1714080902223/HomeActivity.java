@@ -8,21 +8,13 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
+import edu.hzuapps.androidlabs.listview.HomeListAdapter;
 import edu.hzuapps.androidlabs.model.Task;
 import edu.hzuapps.androidlabs.presenter.JsonService;
-import edu.hzuapps.androidlabs.presenter.TaskService;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -45,7 +37,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         lv_1 = findViewById(R.id.home_list);
-        lv_1.setAdapter(new TaskService(this).allListAdapter());
+        lv_1.setAdapter(new HomeListAdapter(this));
         //为每个list_Item设置点击事件
         lv_1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -53,10 +45,10 @@ public class HomeActivity extends AppCompatActivity {
                 Intent intent = new Intent(HomeActivity.this, DetailActivity.class);
                 Task task = (Task)parent.getItemAtPosition(position);
                 long taskId = task.getId();
+                intent.putExtra("position", position);
+                System.out.println(position);
                 intent.putExtra("id", taskId);
-                System.out.println(id);
                 startActivity(intent);
-//                Toast.makeText(HomeActivity.this, "您单击了" + position, Toast.LENGTH_SHORT).show();
             }
         });
 

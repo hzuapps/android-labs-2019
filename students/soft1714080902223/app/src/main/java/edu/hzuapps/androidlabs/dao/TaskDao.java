@@ -53,6 +53,21 @@ public class TaskDao {
         ContentValues values = new ContentValues();
         values.put("title", title);
         values.put("content", content);
+        values.put("finish", 0);
+        database.update(tableName, values, "id=?",
+                new String[]{Long.toString(id)});
+        database.close();
+    }
+
+    public void update(String title, String content, int finish, long id){
+        SQLiteDatabase database = taskDatabaseHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        if(title != null)
+            values.put("title", title);
+        if(content != null)
+            values.put("content", content);
+        values.put("finish", 0);
+        if(finish != 0) values.put("finish", 1);
         database.update(tableName, values, "id=?",
                 new String[]{Long.toString(id)});
         database.close();
@@ -94,8 +109,11 @@ public class TaskDao {
 
     public List<Task> findAll(){
         List<Task> taskList = new ArrayList<Task>();
+        System.out.println("11111111111111111111111");
         SQLiteDatabase database = taskDatabaseHelper.getReadableDatabase();
+        System.out.println("----------------------------");
         Cursor cursor = database.query(tableName, null, null, null, null, null, "id desc");
+        System.out.println("+++++++++++++++++++++++");
         while(cursor.moveToNext()){
             Task task = new Task();
             task.setId(cursor.getLong(cursor.getColumnIndex("id")));

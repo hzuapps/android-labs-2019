@@ -1,6 +1,5 @@
 package edu.hzuapps.androidlabs.presenter;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -9,7 +8,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import edu.hzuapps.androidlabs.soft1714080902223.R;
 
 public class JsonService {
 
