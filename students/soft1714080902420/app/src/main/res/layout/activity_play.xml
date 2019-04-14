@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".playActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="254dp"
+        android:orientation="vertical">
+
+        <VideoView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="146dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/view"
+                    android:layout_width="318dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="78dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="   复仇者联盟4：终局之战"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="     热度258.1万·美国·科幻·" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/turnbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="简介" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/button11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="收藏" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  请写下你的影评"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@layout/editsharp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="保存影评" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="86dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="看看影评" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
