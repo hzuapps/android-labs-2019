@@ -1,0 +1,17 @@
+<apps>
+	<app>
+		<id>1</id>
+		<name>Google Maps</name>
+		<version>1.0</version>
+	</app>
+	<app>
+		<id>2</id>
+		<name>Chrome</name>
+		<version>2.1</version>
+	</app>
+	<app>
+		<id>3</id>
+		<name>Google Play</name>
+		<version>2.3</version>
+	</app>
+</apps>

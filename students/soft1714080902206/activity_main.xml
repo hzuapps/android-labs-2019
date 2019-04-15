@@ -5,33 +5,19 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/create_database"
+        android:id="@+id/send_request"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create database" />
+        android:text="Send Request" />
 
-    <Button
-        android:id="@+id/add_data"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add data" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/update_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update data" />
-
-    <Button
-        android:id="@+id/delete_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete data" />
-
-    <Button
-        android:id="@+id/query_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Query data" />
+        <TextView
+            android:id="@+id/response_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
 
 </LinearLayout>
