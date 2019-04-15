@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="66dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="164dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="城市："
+            tools:text="@tools:sample/cities" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="182dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date"
+            android:text="日期："
+            tools:text="@tools:sample/date/ddmmyy" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="633dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="82dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="416dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="获取文字配图" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="500dp"
+                android:layout_height="170dp"
+                android:layout_weight="1"
+                android:ems="10" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="155dp" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="保存" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
