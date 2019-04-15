@@ -14,7 +14,7 @@ public class SettingsActivity extends AppCompatActivity{
     private EditText mName;
     private Button mSave;
 //    private String TAG="SettingsActivity";
-    private SharedPreferences sharedPreferences;
+//    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,20 +34,12 @@ public class SettingsActivity extends AppCompatActivity{
         // 保存用户名
             @Override
         public void onClick(View v){
-//            //实例化获取SharedPreferences对象,创建config.xml文件保存
-//            SharedPreferences sharedPre=getApplicationContext().getSharedPreferences("config", Context.MODE_PRIVATE);
-//            //获取Editor对象
-//            SharedPreferences.Editor editor=sharedPre.edit();
-//            //设置参数
-//            editor.putString("username", mName.getText().toString().trim());
-//            //提交
-//            editor.commit();
                 mName=findViewById(R.id.setname);
                 String name=mName.getText().toString();
                 SharedPreferences.Editor editor=getSharedPreferences("config",MODE_PRIVATE).edit();
                 editor.putString("username",name);
                 editor.commit();
-                Toast.makeText(SettingsActivity.this,"提交成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText(SettingsActivity.this,"提交成功,下次启动生效！",Toast.LENGTH_SHORT).show();
 
         }
     });
