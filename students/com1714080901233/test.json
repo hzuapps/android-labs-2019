@@ -1,0 +1,13 @@
+[{
+	"id": "001",
+	"name": "xiaoming",
+	"gender": "male"
+}, {
+	"id": "002",
+	"name": "xiaohong",
+	"gender": "female"
+}, {
+	"id": "003",
+	"name": "xiaotian",
+	"gender": "male"
+}]
