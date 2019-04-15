@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Aishop</string>
+    <string name="title_activity_show">ShowActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_adress">AdressActivity</string>
+    <string name="title_activity_download">DownloadActivity</string>
+    <string name="title_activity_m">MActivity</string>
+    <string name="title_activity_m2">M2Activity</string>
+    <string name="title_activity_find_image">FindImageActivity</string>
+</resources>
