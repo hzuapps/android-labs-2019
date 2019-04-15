@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/p7"
+    tools:context=".ThirdActivity">
+
+    <TextView
+        android:id="@+id/textViewa"
+        android:layout_width="408dp"
+        android:layout_height="30dp"
+        android:text="请输入您的评价："
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/evaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewa"
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:textColor="@android:color/holo_red_dark">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/save_eva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/evaluation"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:text="保存评价" />
+
+    <Button
+        android:id="@+id/read_eva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/evaluation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="@+id/evaluation"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="1dp"
+        android:text="读取评价" />
+
+</RelativeLayout>
