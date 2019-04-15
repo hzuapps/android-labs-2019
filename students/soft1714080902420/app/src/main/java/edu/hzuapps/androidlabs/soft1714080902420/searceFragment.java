@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class searceFragment extends Fragment {
+public class SearceFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,7 +29,7 @@ public class searceFragment extends Fragment {
                 switch (v.getId()) {
                     case R.id.button1:
                         Intent intent = new Intent();
-                        intent.setClass(getActivity(), playActivity.class);
+                        intent.setClass(getActivity(), PlayActivity.class);
                         startActivity(intent);
                         break;
                 }

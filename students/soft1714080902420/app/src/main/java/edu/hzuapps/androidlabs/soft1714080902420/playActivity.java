@@ -11,7 +11,7 @@ import android.widget.Toast;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-public class playActivity extends AppCompatActivity {
+public class PlayActivity extends AppCompatActivity {
 
     private EditText Text1;
     private Button btu_save;
@@ -37,7 +37,7 @@ public class playActivity extends AppCompatActivity {
                         fos.write(saveinfo.getBytes());
                         fos.close();
                     }catch (Exception e){e.printStackTrace();}
-                    Toast.makeText(playActivity.this,"影评已保存",Toast.LENGTH_LONG).show();
+                    Toast.makeText(PlayActivity.this,"影评已保存",Toast.LENGTH_LONG).show();
                     break;
                 case R.id.button14:
                     String content="";
@@ -50,7 +50,7 @@ public class playActivity extends AppCompatActivity {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(playActivity.this,"您的影评是:"+content,Toast.LENGTH_LONG).show();
+                    Toast.makeText(PlayActivity.this,"您的影评是:"+content,Toast.LENGTH_LONG).show();
                     break;
                 default:
                     break;
