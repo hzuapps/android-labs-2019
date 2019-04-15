@@ -1,79 +1,79 @@
 package edu.hzuapps.androidlabs.com1714080901133;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-
-import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.ImageView;
 
-public class Com1714080901133Activity extends Activity implements OnClickListener {
-    private EditText et_info;
-    private EditText et_info2;
-    private Button btn_save;
-    private Button btn_read;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class Com1714080901133Activity extends AppCompatActivity {
+
+    private  String imageUrl = "http://img.mp.itc.cn/upload/20170628/b0dabda375494e078340073efc4156c4_th.jpg";
+    private ImageView img;
+    private Handler handle = new Handler() {
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 0:
+                    Bitmap bmp=(Bitmap)msg.obj;
+                    img.setImageBitmap(bmp);
+                    break;
+            }
+        };
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_1714080901133_activity);
-        et_info=(EditText) findViewById(R.id.et_info);
-        et_info2=(EditText) findViewById(R.id.et_info2);
-        btn_save=(Button) findViewById(R.id.btn_save);
-        btn_read=(Button) findViewById(R.id.btn_read);
-        btn_save.setOnClickListener(new ButtonListener());
-        btn_read.setOnClickListener(new ButtonListener());
-    }
-    private class ButtonListener implements View.OnClickListener {
 
-        @Override
-        public void onClick(View v) {
-            switch(v.getId()){
-                case R.id.btn_save:
-                    String saveinfo=et_info.getText().toString().trim();
-                    String saveinfo2=et_info2.getText().toString().trim();
-                    FileOutputStream fos;
-                    try{
-                        fos=openFileOutput("data.txt", Context.MODE_APPEND);
-                        fos.write(saveinfo.getBytes());
-                        fos.write(saveinfo2.getBytes());
-                        fos.close();
+
+        ImageView jmp = findViewById(R.id.hzu);
+         {
+
+        img = (ImageView) findViewById(R.id.img);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        Bitmap bmp = getURLimage(imageUrl);
+                        Message msg = new Message();
+                        msg.what = 0;
+                        msg.obj = bmp;
+                        handle.sendMessage(msg);
                     }
-                    catch(Exception e){
-                        e.printStackTrace();
-                    }
-                    Toast.makeText(Com1714080901133Activity.this, "保存成功", 1).show();
-                    break;
-                case R.id.btn_read:
-                    String content = "";
-                    try {
-                        FileInputStream fis = openFileInput("data.txt");
-                        byte[] buffer = new byte[fis.available()];
-                        fis.read(buffer);
-                        content = new String(buffer);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    Toast.makeText(Com1714080901133Activity.this, "保存数据是" + content, 1)
-                            .show();
-                    break;
-                default:
-                    break;
+                }).start();
             }
+        });
+    }}
+
+    private Bitmap getURLimage(String imageUrl) {
+        Bitmap bmp = null;
+        try {
+            URL myurl = new URL(imageUrl);
+            HttpURLConnection conn = (HttpURLConnection) myurl.openConnection();
+            conn.setConnectTimeout(6000);
+            conn.setDoInput(true);
+            conn.setUseCaches(false);
+            conn.connect();
+            InputStream is = conn.getInputStream();
+            bmp = BitmapFactory.decodeStream(is);
+            is.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    }
-
-    public void read(View view) {
+        return bmp;
 
     }
 
-    @Override
-    public void onClick(View v) {
 
-    }
 }
