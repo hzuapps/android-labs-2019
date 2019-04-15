@@ -36,36 +36,30 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:id="@+id/SCNY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtRateList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:text="@string/rate_list01"
-        android:textSize="22dp"
-        android:textColor="#FFFFFF"
-        android:lineSpacingExtra="5dp"
-        />
-    <TextView
-        android:id="@+id/TCNY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="20dp"
-        android:text="@string/rate_list02"
-        android:textSize="22dp"
-        android:textColor="#FFFFFF"
-        android:lineSpacingExtra="5dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="150dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="30dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:lineSpacingExtra="2dp"
         />
     <Button
-        android:id="@+id/createText"
+        android:id="@+id/btnCreateText"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="20dp"
-        android:text="生成TXT文件"
-        android:textSize="17dp"
-        android:onClick="createText"/>
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="80dp"
+        android:onClick="onClick"
+        android:text="保存汇率表"
+        android:textSize="17dp" />
     <!--include layout="@layout/content_soft1714080902121_rate_list" /-->
 
     <!--android.support.design.widget.FloatingActionButton
