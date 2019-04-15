@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -23,6 +22,20 @@
         android:textSize="28dp" />
 
     <Button
+        android:id="@+id/button1"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:text="川菜" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:text="粤菜" />
+
+    <Button
         android:id="@+id/button3"
         android:layout_width="140dp"
         android:layout_height="60dp"
@@ -43,19 +56,6 @@
         android:background="@android:color/transparent"
         android:text="鲁菜" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:text="川菜" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:text="粤菜" />
 
 
 </LinearLayout>
