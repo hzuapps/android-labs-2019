@@ -9,12 +9,27 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
+
+import java.util.List;
+
+import edu.hzuapps.androidlabs.soft1714080902133.javabean.Soft1714080902133Dor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class Soft1714080902133QueryActivity extends AppCompatActivity {
 
@@ -43,8 +58,11 @@ public class Soft1714080902133QueryActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);//菜单，默认图片返回图片
         }
 
+        //getDatasync();
+
         final Spinner spinner01 = findViewById(R.id.building_spinner);
         final Spinner spinner02 = findViewById(R.id.nobuilding_spinner);
+
 
         mSharedPref1 = PreferenceManager.getDefaultSharedPreferences(this);
         boolean b = mSharedPref1.getBoolean(BUILDING_bool1,false); //没有设置为false
@@ -69,6 +87,7 @@ public class Soft1714080902133QueryActivity extends AppCompatActivity {
                 }
             }
         }
+
 
         //内部文件存储，纪录保存上一次下拉框所选择的内容
         spinner01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -100,8 +119,81 @@ public class Soft1714080902133QueryActivity extends AppCompatActivity {
         });
 
 
+        //获取下拉框的宿舍楼，宿舍号，以便对应josn文件中的数据，查询对应的电量
+        final boolean b3 = mSharedPref1.getBoolean(BUILDING_bool1,false); //没有设置为false
+        final String t1 = mSharedPref1.getString(BUILDING_KEY1,"");
+
+        final boolean b4 = mSharedPref2.getBoolean(BUILDING_bool2,false); //没有设置为false
+        final String t2 = mSharedPref2.getString(BUILDING_KEY2,"");
+
+        //实验6，访问事先上传在GitHub上的json文件中的数据，然后点击按钮在Textview上显示，查询电量
+        final TextView textView = findViewById(R.id.query_view1);
+        Button button = findViewById(R.id.query_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //主线程
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            OkHttpClient client = new OkHttpClient();
+                            Request request = new Request.Builder()
+                                    //指定访问的网址，即在github上的文件
+                                    .url("https://github.com/wzq-55552/android-labs-2019/blob/master/students/soft1714080902133/data.json")
+                                    .build();
+                            Response response = client.newCall(request).execute();
+                            String responseData = response.body().string();
+                            //获取json数组和对象
+                            Gson gson  = new Gson();
+                            List<Soft1714080902133Dor> dorList = gson.fromJson(responseData,new TypeToken<List<Soft1714080902133Dor>>(){}.getType());
+                            for(Soft1714080902133Dor soft1714080902133Dor:dorList){
+                                //日志,以便查看
+                                Log.d("QueryActivity","宿舍楼:"+soft1714080902133Dor.getDormitory());
+                                Log.d("QueryActivity","宿舍号:"+soft1714080902133Dor.getDno());
+                                Log.d("QueryActivity","欠费电量:"+soft1714080902133Dor.getElectricQuantity());
+                                if(b3&&b4&&t1.equals(soft1714080902133Dor.getDormitory())&&t2.equals(soft1714080902133Dor.getDno())){
+                                    textView.setText(soft1714080902133Dor.getElectricQuantity());//设置显示
+                                    Intent intent = new Intent(Soft1714080902133QueryActivity.this,Soft1714080902133QueryActivity.class);
+                                    startActivity(intent);
+                                }
+                            }
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+            }
+        });
     }
 
+
+    /*public void getDatasync(String Dormitory,String Dno,String ElectricQuantity){
+        OkHttpUtils
+                .post()
+                .url("https://github.com/wzq-55552/android-labs-2019/blob/master/students/soft1714080902133/data.json")
+                .addParams("Dormitory",Dormitory)
+                .addParams("Dno",Dno)
+                .addParams("ElectricQuantity",ElectricQuantity)
+                .build()
+                .execute(new StringCallback() {
+                             @Override
+                             public void onError(Call call, Exception e, int id) {
+                                 Toast.makeText(getApplicationContext(), "请求失败", Toast.LENGTH_SHORT).show();
+                             }
+
+                             @Override
+                             public void onResponse(String response, int id) {
+                                 try {
+                                     Log.d("QueryActivity","宿舍楼:"+response.Dormitory);
+                                     Log.d("QueryActivity","宿舍号:"+response.Dno);
+                                     Log.d("QueryActivity","欠费电量:"+response.ElectricQuantity);
+                                 } catch (Exception e) {
+                                     e.printStackTrace();
+                                 }
+                             }
+                         });
+    }*/
 
 
     /**
@@ -122,7 +214,7 @@ public class Soft1714080902133QueryActivity extends AppCompatActivity {
 
 
     /**
-     * 保存设置值,宿舍楼
+     * 保存设置值,宿舍号
      */
     private void saveValueToPreferences2(String t) {
         if (mSharedPref2 == null) {

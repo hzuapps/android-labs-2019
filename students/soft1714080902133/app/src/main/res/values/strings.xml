@@ -40,6 +40,7 @@
 
 
     <!--查询-->
+    <string name="query_view">欠费电量为：</string>
     <string name="query_button">查询电量</string>
     <string name="query">查询</string>
     <string name="building">宿舍楼:</string>
