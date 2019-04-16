@@ -4,7 +4,7 @@ package com.example.soft1714080902328;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
+
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -31,29 +31,27 @@ import java.net.URL;
 public class SaveImageViewActivity extends AppCompatActivity {
     private ImageView img, showImg;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_save_image_view);
         img = (ImageView) findViewById(R.id.img);
         showImg = (ImageView) findViewById(R.id.showImg);
+
     }
+
 
     public void readImg(View v) {
         String path = Environment.getExternalStorageDirectory() + "/1.png";
-        showImg.setImageURI(Uri.parse(path));
+        //showImg.setImageURI(Uri.parse(path));
+        Bitmap bitmap = BitmapFactory.decodeFile(path);
+        showImg.setImageBitmap(bitmap);
     }
     public void saveImg(View v) {
         //获取BitmapDrawable对象
         BitmapDrawable bitmapDrawable = (BitmapDrawable) img.getDrawable();
         Bitmap bitmap = bitmapDrawable.getBitmap();
-        /*
-        通过Bitmap(位图)压缩的方法（compress）保存图片到SD卡
-        参数1:图片格式（PNG JPEJ WEBP）
-        参数2：图片质量（0-100）
-        参数3：输出流
-         */
-        //取得SD卡根目录
         File root = Environment.getExternalStorageDirectory();
         FileOutputStream fos = null;
         try {
@@ -75,11 +73,11 @@ public class SaveImageViewActivity extends AppCompatActivity {
 
     //从网络获取图片
     public void getUrlImg(View v) {
-        new GetImg().execute("http://image.so.com/i?q=%E6%9F%AF%E5%8D%97&src=srp#/liteflow/list?imgkey=t018058f1a75ffa66fb.jpg&prevsn=-1&currsn=0");
+        new GetImg().execute("http://img4.imgtn.bdimg.com/it/u=4249628687,3914076657&fm=26&gp=0.jpg");
     }
 
     public  void saveHttpImg(View v){
-        new SaveHttpImg().execute(" http://image.so.com/i?q=%E6%9F%AF%E5%8D%97&src=srp#/liteflow/list?imgkey=t018058f1a75ffa66fb.jpg&prevsn=-1&currsn=0");
+        new SaveHttpImg().execute("http://img4.imgtn.bdimg.com/it/u=4249628687,3914076657&fm=26&gp=0.jpg");
     }
     public class GetImg extends AsyncTask<String, Void, Bitmap> {
 
