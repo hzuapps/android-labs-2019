@@ -45,8 +45,9 @@ public class Soft1714080902216MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.button3:
-                    intent=new Intent(Soft1714080902216MainActivity.this,Soft1714080902216imageActivity.class);
+                    intent=new Intent(Soft1714080902216MainActivity.this,Soft1714080902216JsonActivity.class);
                     startActivity(intent);
+                    break;
             }
         }
     }
