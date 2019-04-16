@@ -7,10 +7,14 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 
+import cn.qqtheme.framework.picker.DateTimePicker;
 import edu.hzuapps.androidlabs.presenter.TaskService;
 
 public class EditActivity extends AppCompatActivity {
@@ -18,8 +22,8 @@ public class EditActivity extends AppCompatActivity {
     private Button mBtn;
     private EditText title;
     private EditText content;
-    int position;
-
+    private int position;
+    private TextView time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +42,6 @@ public class EditActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(EditActivity.this, "请输入标题", Toast.LENGTH_SHORT);
                     int[] location = new int[2];
                     title.getLocationInWindow(location);
-                    //toast.setView(title);
                     toast.setGravity(Gravity.TOP, location[0], location[1]);
                     toast.show();
                     title.requestFocus();
@@ -56,17 +59,18 @@ public class EditActivity extends AppCompatActivity {
                     TaskService taskService = TaskService.INSTANCE.getTaskService(EditActivity.this);
                     String titleStr = title.getText().toString();
                     String contentStr = content.getText().toString();
+                    String timeStr = time.getText().toString();
                     Toast.makeText(EditActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
                     //跳转到详情页
                     Intent intent = new Intent(EditActivity.this,
                             DetailActivity.class);
-                    //如果是新建就创建，若是编辑就更新
+                    //如果是新建就创建新的任务，若是编辑就更新任务
                     if(position == -1){
-                        taskService.saveTask(titleStr, contentStr);
+                        taskService.save(titleStr, contentStr, timeStr);
                         position = 0;
                     }
                     else{
-                        taskService.update(position, titleStr, contentStr);
+                        taskService.update(position, titleStr, contentStr, timeStr);
                     }
                     //把id传递给DetailActivity
                     intent.putExtra("position", position);
@@ -75,9 +79,39 @@ public class EditActivity extends AppCompatActivity {
                 }
             }
         });
+        //点击时间文本时，显示时间选择器
+        time = findViewById(R.id.time);
+        time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DateTimePicker picker = new DateTimePicker(EditActivity.this, DateTimePicker.HOUR_24);//24小时值
+                picker.setDateRangeStart(2017, 1, 1);//日期起点
+                picker.setDateRangeEnd(2020, 1,1);//日期终点
+                picker.setTimeRangeStart(0, 0);//时间范围起点
+                picker.setTimeRangeEnd(23, 59);//时间范围终点
+                //获取文本上的时间作为默认时间
+                String timeStr = time.getText().toString();
+                Calendar date = Calendar.getInstance();
+                date.setTime(TaskService.INSTANCE.stringToDate(timeStr));
+                //设置默认值为之前的时间
+                picker.setSelectedItem(date.get(Calendar.YEAR), date.get(Calendar.MONTH),
+                        date.get(Calendar.DAY_OF_MONTH),date.get(Calendar.HOUR_OF_DAY),
+                                date.get(Calendar.MINUTE));
+                picker.setOnDateTimePickListener(new DateTimePicker.OnYearMonthDayTimePickListener() {
+                    @Override
+                    public void onDateTimePicked(String year, String month, String day, String hour, String minute) {
+                        String lastTime = String.format("%s-%s-%s %s:%s", year, month, day, hour, minute);
+                        time.setText(lastTime);
+                    }
+                });
+                picker.show();
+
+            }
+        });
 
 
     }
+
 
     @Override
     protected void onStart() {
@@ -89,9 +123,13 @@ public class EditActivity extends AppCompatActivity {
             Map<String, String> map = TaskService.INSTANCE.get(position);
             title.setText(map.get("title"));
             content.setText(map.get("content"));
-
+            time.setText(map.get("last_time"));
         }
-
+        else {
+            //若为新建，填入现在的时间
+            Date now = new Date();
+            time.setText(TaskService.INSTANCE.timeToString(now));
+        }
 
     }
 

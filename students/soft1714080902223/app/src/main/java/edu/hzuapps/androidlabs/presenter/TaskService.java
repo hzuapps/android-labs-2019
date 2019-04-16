@@ -1,6 +1,7 @@
 package edu.hzuapps.androidlabs.presenter;
 
 import android.content.Context;
+
 import android.util.ArrayMap;
 import android.widget.TextView;
 
@@ -21,9 +22,10 @@ public enum  TaskService {
      //使用单例模式实现，保证线程安全
     INSTANCE;
     private TaskService instance;
-
+    private final String LAST_TIME_PATTERN = TaskDao.LAST_TIME_PATTERN;
     public final String FINALSTATUS = "完成";
     public final String UNFINALSTATUS = "进行中";
+    private final String CREATE_TIME_PATTERN = TaskDao.CREATE_TIME_PATTERN;
 
     private TaskDao taskDao;
     //单例保证taskList的使用，而不用每次都去数据库,节约开销
@@ -60,10 +62,94 @@ public enum  TaskService {
      * @param title
      * @return 返回值为保存数据的id值
      */
-    public long saveTask(String title, String content){
-        long id = taskDao.save(title, content);
+    public TaskService save(String title, String content, String lastTime){
+        long id = taskDao.save(title, content, lastTime);
         add(id);
-        return id;
+        return INSTANCE;
+    }
+
+    /**
+     * 将数据库的数据加入列表中
+     * @param id 数据id
+     */
+
+    private void add(long id){
+        if(taskList == null){
+            taskList = taskDao.findAll();
+        }
+        else {
+            Task task = taskDao.findById(id);
+            taskList.add(0, task);
+        }
+        homeListAdapter.notifyChange();
+    }
+
+    /**
+     * 获取对应位置的Task
+     * @param position
+     * @return
+     */
+
+    public Map<String, String> get(int position){
+        Task task = taskList.get(position);
+        Map<String, String> map = new ArrayMap<>();
+        map.put("title", task.getTitle());
+        map.put("content", task.getContent());
+        map.put("create_time", task.getCreateTime());
+        map.put("last_time", task.getLastTime());
+        map.put("finish", Long.toString(task.getFinish()));
+
+        return map;
+    }
+
+    /**
+     * 更新某个Task
+     * @param position task的位置
+     * @param title
+     * @param context
+     * @return
+     */
+
+    public TaskService update(int position, String title,String context, String lastTime){
+        if(position <= taskList.size() && position >= 0){
+            Task task = taskList.get(position);
+            task.setContent(context);
+            task.setTitle(title);
+            task.setLastTime(lastTime);
+            taskList.set(position, task);
+            taskDao.update(title, context, lastTime, task.getId());
+        }
+        homeListAdapter.notifyChange();
+        return INSTANCE;
+    }
+
+    /**
+     * 删除某个task
+     * @param position task的位置
+     * @return
+     */
+    public TaskService delete(int position){
+        if(position <= taskList.size() && position >= 0){
+            Task task = taskList.remove(position);
+            taskDao.delete(task.getId());
+        }
+        //删除没加nofity也没问题，猜测是ListView有检测
+        return INSTANCE;
+    }
+
+    /**
+     *  把包含所有Task的Adapter返回
+     * @return 返回结果的设配器
+     */
+    public List<Task> getAllList(){
+        if(INSTANCE.taskList == null){
+        }
+        else if(INSTANCE.taskList.isEmpty()){
+            INSTANCE.taskList = taskDao.findAll();
+        }
+        else
+            System.out.println(taskList.size());
+        return INSTANCE.taskList;
     }
 
     /**
@@ -90,73 +176,44 @@ public enum  TaskService {
      * @param finish
      * @param position
      */
-    public void changeTaskStatus(int finish, int position){
+    private void changeTaskStatus(int finish, int position){
         Task task = taskList.get(position);
         if(task.getFinish() != finish) {
             task.setFinish(finish);
             Task task1 = taskList.set(position, task);
             task = taskList.get(position);
-            taskDao.update(null, null, finish, task.getId());
+            taskDao.update(null, null, null, finish, task.getId());
             homeListAdapter.notifyChange();
         }
     }
 
-
-    /**
-     * 将数据库的数据加入列表中
-     * @param id 数据id
-     */
-
-    private void add(long id){
-        if(taskList == null){
-            taskList = taskDao.findAll();
-        }
-        else {
-            Task task = taskDao.findById(id);
-            taskList.add(0, task);
-        }
-        homeListAdapter.notifyChange();
+    public String timeToString(Date date){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(LAST_TIME_PATTERN);
+        return simpleDateFormat.format(date);
     }
 
     /**
-     * 获取对应位置的Task
-     * @param position
+     * 将last时间字符串转化为Date
+     * @param lastTime 传入Task的lastTime参数
      * @return
      */
-    public Map<String, String> get(int position){
-        Task task = taskList.get(position);
-        Map<String, String> map = new ArrayMap<>();
-        map.put("title", task.getTitle());
-        map.put("content", task.getContent());
-        map.put("Date", task.getDate());
-        map.put("finish", Long.toString(task.getFinish()));
 
-        return map;
-    }
-
-
-    /**
-     *  把包含所有Task的Adapter返回
-     * @return 返回结果的设配器
-     */
-    public List<Task> getAllList(){
-        if(INSTANCE.taskList == null){
+    public Date stringToDate(String lastTime) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(LAST_TIME_PATTERN);
+        try {
+            return (Date) simpleDateFormat.parse(lastTime);
+        }catch (Exception e){
+            e.printStackTrace();
         }
-        else if(INSTANCE.taskList.isEmpty()){
-            INSTANCE.taskList = taskDao.findAll();
-        }
-        else
-            System.out.println(taskList.size());
-        return INSTANCE.taskList;
+        return new Date();
     }
-
     /**
      * 获取可以显示的时间，如刚刚，几分钟前
      * @param time 输入"yyyy-MM-dd HH:mm:ss"格式的字符串
      * @return
      */
     public String getTextTime(String time){
-        SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat(CREATE_TIME_PATTERN);
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd:HH:mm");
         Date now = new Date();
         Date old = null;
@@ -185,38 +242,6 @@ public enum  TaskService {
         return result;
     }
 
-    /**
-     * 更新某个Task
-     * @param position task的位置
-     * @param title
-     * @param context
-     * @return
-     */
 
-    public TaskService update(int position, String title,String context){
-        if(position <= taskList.size() && position >= 0){
-            Task task = taskList.get(position);
-            task.setContent(context);
-            task.setTitle(title);
-            taskList.set(position, task);
-            taskDao.update(title, context, task.getId());
-        }
-        homeListAdapter.notifyChange();
-        return INSTANCE;
-    }
-
-    /**
-     * 删除某个task
-     * @param position task的位置
-     * @return
-     */
-    public TaskService delete(int position){
-        if(position <= taskList.size() && position >= 0){
-            Task task = taskList.remove(position);
-            taskDao.delete(task.getId());
-        }
-        //删除没加nofity也没问题，猜测是ListView有检测
-        return INSTANCE;
-    }
 
 }

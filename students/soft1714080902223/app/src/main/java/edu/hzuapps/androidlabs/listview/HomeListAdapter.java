@@ -98,7 +98,7 @@ public class HomeListAdapter extends BaseAdapter {
         //使用task中的数据填上
         holder.lvTitle.setText(task.getTitle());
         holder.lvContent.setText(task.getContent());
-        holder.lvTime.setText(taskService.getTextTime(task.getDate()));
+        holder.lvTime.setText(taskService.getTextTime(task.getCreateTime()));
 
         //根据Finish的值的不同更改样式
         if(task.getFinish() == 0){

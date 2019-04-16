@@ -5,7 +5,8 @@ public class Task {
     private Long id;
     private String title;
     private String content;
-    private String date;
+    private String createTime;
+    private String lastTime;
     private int finish;
 
     public Long getId() {
@@ -32,12 +33,20 @@ public class Task {
         this.content = content;
     }
 
-    public String getDate() {
-        return date;
+    public String getCreateTime() {
+        return createTime;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getLastTime() {
+        return lastTime;
+    }
+
+    public void setLastTime(String lastTime) {
+        this.lastTime = lastTime;
     }
 
     public int getFinish() {
@@ -50,6 +59,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "['title': " + getTitle() + ", 'content':" + getContent() + ", 'date':" + getDate() + "]";
+        return String.format("[title: %s, content:%s, last_time:%s, create_time:%s]",
+                getTitle(), getContent(), getLastTime(), getCreateTime());
     }
 }

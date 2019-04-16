@@ -20,6 +20,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView tv_content;
     Button btn_edit;
     Button btn_delete;
+    TextView tv_last_time;
     int position;
 
     @Override
@@ -63,11 +64,12 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         position = intent.getIntExtra("position", -1);
         tv_title = findViewById(R.id.detail_title);
-        tv_content = findViewById(R.id.detail_body);
+        tv_content = findViewById(R.id.detail_content);
+        tv_last_time = findViewById(R.id.last_time);
         TaskService taskService = TaskService.INSTANCE.getTaskService(this);
         Map<String, String> map = taskService.get(position);
         tv_title.setText(map.get("title"));
         tv_content.setText(map.get("content"));
-
+        tv_last_time.setText("提醒时间 " + map.get("last_time"));
     }
 }

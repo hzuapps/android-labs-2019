@@ -11,7 +11,6 @@ import java.net.URL;
 
 public class JsonService {
 
-
     public JSONObject getHomeJson(){
         JSONObject jsonObject = null;
         try {

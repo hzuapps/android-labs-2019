@@ -1,6 +1,8 @@
 package edu.hzuapps.androidlabs.soft1714080902223;
 
 import android.content.Intent;
+import android.provider.AlarmClock;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         mDetailBtn = findViewById(R.id.home_ibtn);
         mDetailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
