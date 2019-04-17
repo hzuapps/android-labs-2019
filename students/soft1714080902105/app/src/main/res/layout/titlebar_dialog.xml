@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="70dp"
+                                             android:background="#11B7F3">
+
+    <ImageButton
+        android:id="@+id/id_titlebar_back"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="#0000"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:onClick="onBack"
+        app:srcCompat="@drawable/ic_titlebar_cancel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/id_titlebar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="页面标题"
+        android:textColor="#eee"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/id_titlebar_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:background="#0000"
+        android:padding="10dp"
+        android:onClick="onOK"
+        android:text="完成"
+        android:textColor="#e6e6e6"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
