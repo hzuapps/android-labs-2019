@@ -143,9 +143,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar, menu);
+        return true;
+    }
 
-
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.add_courses:
+                Intent intent = new Intent(MainActivity.this, AddCourseActivity.class);
+                startActivityForResult(intent, 0);
+                break;
+            case R.id.menu_about:
+                Intent intent1 = new Intent(this, AboutActivity.class);
+                startActivity(intent1);
+                break;
+        }
+        return true;
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
