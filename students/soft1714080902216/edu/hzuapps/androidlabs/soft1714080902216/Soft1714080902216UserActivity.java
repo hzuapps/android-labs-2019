@@ -61,6 +61,7 @@ public class Soft1714080902216UserActivity extends AppCompatActivity {
                         return;
                     }else if(psw.equals(spPsw)){
                         Toast.makeText(Soft1714080902216UserActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+
                         saveLoginStatus(true, userName);
                         Intent data=new Intent();
                         data.putExtra("isLogin",true);
