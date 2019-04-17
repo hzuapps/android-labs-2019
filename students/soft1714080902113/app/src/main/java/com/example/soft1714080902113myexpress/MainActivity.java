@@ -7,8 +7,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -17,17 +21,23 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.List;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity{
 
     private EditText toFindPackage;
-
+    private TextView expressText;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActionBar actionBar=getSupportActionBar();
+        sendRequestWithOkHttp();
         if(actionBar!=null){
             actionBar.hide();
         }
@@ -38,7 +48,39 @@ public class MainActivity extends AppCompatActivity  {
             toFindPackage.setText(inputText);
             toFindPackage.setSelection(inputText.length());
         }
+
     }
+
+    private void sendRequestWithOkHttp(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    OkHttpClient client=new OkHttpClient();
+                    Request request=new Request.Builder()
+                            .url("https://raw.githubusercontent.com/342663636/android-labs-2019/master/students/soft1714080902113/myData.json")
+                            .build();
+                    Response response=client.newCall(request).execute();
+                    String responseData=response.body().string();
+                    parseJSONWithGSON(responseData);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+    private void parseJSONWithGSON(String jsonData){
+        Gson gson=new Gson();
+        List<expresses> myList=gson.fromJson(jsonData,new TypeToken<List<expresses>>(){}.getType());
+        expressText=findViewById(R.id.expressinfo);
+        String info="";
+        for (expresses s:myList){
+            info=info+"快递信息：\n快递单号："+s.getId()+"\n快递公司："+s.getCompany()+"\n收件地址："+s.getAddress()+"\n联系电话："+s.getPhone()+"\n收件人姓名："+s.getName()+"\n\n";
+        }
+        expressText.setText(info);
+    }
+
     @Override
     protected void onDestroy(){
         super.onDestroy();
@@ -88,5 +130,7 @@ public class MainActivity extends AppCompatActivity  {
         }
         return content.toString();
     }
+
+
 }
 
