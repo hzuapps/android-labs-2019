@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PlayActivity"></activity>
         <activity
             android:name=".Soft1714080902420Activity"
             android:label="@string/app_name">
