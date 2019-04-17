@@ -45,7 +45,7 @@ public class No4Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_no4);
         json= (TextView) findViewById(R.id.json);
-        
+
 
 
         new Thread(){
