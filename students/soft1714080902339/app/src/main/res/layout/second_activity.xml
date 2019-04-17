@@ -46,8 +46,17 @@
 
         android:text="记录生词" />
 
+    <Button
+        android:id="@+id/button_savePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#808080"
+        android:text="获取印象单词图片" />
 
-
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="272dp" />
 
     <!--
         <EditText
