@@ -57,9 +57,20 @@
         android:id="@+id/button3"
         android:layout_width="130dp"
         android:layout_height="55dp"
-        android:layout_marginLeft="130dp"
+        android:layout_marginLeft="45dp"
         android:layout_marginTop="470dp"
         android:text="玩家信息"
+        android:textSize="23sp"
+
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="470dp"
+        android:text="添加图片"
         android:textSize="23sp"
 
         tools:ignore="MissingConstraints" />
