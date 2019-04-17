@@ -85,5 +85,27 @@
         android:text="@string/query_button" />
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:text="@string/query_view"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        />
+
+
+    <TextView
+        android:background="@color/white"
+        android:textSize="20sp"
+        android:id="@+id/query_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

@@ -1,0 +1,13 @@
+﻿[{
+	"Dormitory":"18栋",
+	"Dno":"a408",
+	"ElectricQuantity":"300度"
+}, {
+	"Dormitory":"17栋",
+	"Dno":"a407",
+	"ElectricQuantity":"200度"
+}, {
+	"Dormitory":"16栋",
+	"Dno":"a406",
+	"ElectricQuantity":"100度"
+}]
