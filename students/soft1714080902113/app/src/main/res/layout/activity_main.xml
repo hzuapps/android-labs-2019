@@ -14,6 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="搜索查询运单号"/>
+    <TextView
+        android:id="@+id/expressinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
     <com.example.soft1714080902113myexpress.menuLayout
         android:layout_width="match_parent"
