@@ -1,7 +1,6 @@
 package edu.hzuapps.androidlabs.soft1714080902204;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +27,7 @@ public class Soft1714080902204Activity_Second extends AppCompatActivity {
         btnOpen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Soft1714080902204Activity_Second.this,Soft1714080902204Activity_third.class));
+                startActivity(new Intent(Soft1714080902204Activity_Second.this,Soft1714080902204Activity_four.class));
 
             }
         });
