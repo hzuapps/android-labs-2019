@@ -16,7 +16,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Com1714080901140 extends AppCompatActivity {
+public class Com1714080901140Activity extends AppCompatActivity {
 
     protected static final int CHANGE_UI=1;
     protected static final int ERROR=2;
@@ -29,7 +29,7 @@ public class Com1714080901140 extends AppCompatActivity {
                 Bitmap bitmap=(Bitmap)msg.obj;
                 tupian.setImageBitmap(bitmap);
             }else if(msg.what==ERROR){
-                Toast.makeText(Com1714080901140.this,"显示图片出错",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Com1714080901140Activity.this,"显示图片出错",Toast.LENGTH_SHORT).show();
             }
         };
     };

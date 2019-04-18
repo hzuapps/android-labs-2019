@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Com1714080901140">
+    tools:context=".Com1714080901140Activity">
 
     <ImageView
         android:layout_width="match_parent"
