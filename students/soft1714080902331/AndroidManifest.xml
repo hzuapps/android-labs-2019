@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.soft1714080902331">
+    package="edu.hzuapps.androidlabs.soft1714080902331"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+
+    <!-- 写sd卡权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 这个可写可不写
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <!-- 调取摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -9,19 +19,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
-            android:name="edu.hzuapps.androidlabs.soft1714080902331.Soft1714080902331Activity2"
-            android:label="@string/title_activity_soft17140809023312"
+            android:name=".Soft1714080902331Activity4"
+            android:label="@string/title_activity_soft17140809023314"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
         <activity
-            android:name="edu.hzuapps.androidlabs.soft1714080902331.Soft1714080902331Activity3"
+            android:name=".Soft1714080902331Activity2"
+            android:label="@string/title_activity_soft17140809023312"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Soft1714080902331Activity3"
             android:label="@string/title_activity_soft17140809023313"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name="edu.hzuapps.androidlabs.soft1714080902331.Soft1714080902331Activity"
+            android:name=".Soft1714080902331Activity"
             android:label="@string/title_activity_soft1714080902331"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -30,11 +41,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+
+            android:name="android.support.v4.content.FileProvider"
+
+            android:authorities="edu.hzuapps.androidlabs.soft1714080902331.fileprovider"
+
+            android:exported="false"
+
+            android:grantUriPermissions="true">
+
+            <meta-data
+
+                android:name="android.support.FILE_PROVIDER_PATHS"
+
+                android:resource="@xml/file_paths">
+            </meta-data>
+
+        </provider>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
 </manifest>
