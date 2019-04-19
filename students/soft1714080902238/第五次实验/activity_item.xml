@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.Soft1714080902238.ItemActivity">
+
+    <LinearLayout
+        android:id="@+id/bt01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="菜单"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bt02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt01"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:text="点击图片加入购物车"
+            android:textSize="35dp" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="4"
+        android:layout_marginLeft="12dp"
+        android:orientation="horizontal"
+        android:id="@+id/gridLayout"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/bt02"
+        android:layout_centerHorizontal="true">
+
+    </GridLayout>
+
+
+
+    <Button
+
+        android:id="@+id/menu1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_columnSpan="2"
+        android:layout_column="0"
+        android:layout_rowSpan="2"
+        android:drawableBottom="@drawable/rou1"
+        android:onClick="Click1"
+        android:textSize="30dp"
+        android:layout_below="@+id/bt02"
+        android:layout_toStartOf="@+id/gridLayout" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_rowSpan="2"
+        android:text="    烤肉10串 ￥30"
+        android:textSize="20dp"
+        android:layout_below="@+id/menu1"
+        android:layout_alignStart="@+id/menu1" />
+
+    <Button
+        android:id="@+id/menu2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_columnSpan="2"
+
+        android:layout_rowSpan="2"
+        android:drawableBottom="@drawable/rou2"
+        android:onClick="Click"
+        android:textSize="30dp"
+        android:layout_below="@+id/bt02"
+        android:layout_alignEnd="@+id/bt02" />
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_rowSpan="2"
+        android:text=" 小龙虾20只 ￥30"
+        android:textSize="20dp"
+        android:layout_above="@+id/menu3"
+        android:layout_alignStart="@+id/menu2" />
+
+
+    <Button
+
+        android:id="@+id/menu3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:layout_columnSpan="2"
+
+        android:layout_rowSpan="2"
+        android:drawableBottom="@drawable/rou3"
+        android:onClick="Click"
+        android:textSize="30dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/t1"
+        android:layout_alignStart="@+id/t1" />
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_rowSpan="2"
+        android:text="  卤鸭肉 ￥20"
+        android:textSize="20dp"
+        android:layout_below="@+id/menu3"
+        android:layout_alignStart="@+id/menu3"
+        android:layout_marginStart="20dp" />
+    <Button
+        android:id="@+id/menu4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_columnSpan="2"
+
+        android:layout_rowSpan="2"
+        android:drawableBottom="@drawable/rou4"
+        android:onClick="Click()"
+        android:textSize="30dp"
+        android:layout_alignBaseline="@+id/menu3"
+        android:layout_alignBottom="@+id/menu3"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:id="@+id/t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_rowSpan="2"
+        android:text="    大闸蟹 ￥50"
+        android:textSize="20dp"
+        android:layout_below="@+id/menu4"
+        android:layout_alignStart="@+id/menu4" />
+</RelativeLayout>
+
