@@ -19,7 +19,7 @@ public class carActivity extends Activity {
         setContentView(R.layout.activity_car);
     }
     protected void Click1(View view){
-        Intent intent = new Intent(this,displayActivity.class);
+        Intent intent = new Intent(this,DisplayActivity.class);
 
         startActivity(intent);
     }
