@@ -30,4 +30,50 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/xure"
+        android:textSize="15sp"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="180dp"
+        android:text="@string/tianjb"
+        android:textSize="15sp"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="270dp"
+        android:text="@string/dianzi"
+        android:textSize="15sp"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="360dp"
+        android:text="@string/shiyan"
+        android:textSize="15sp"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="450dp"
+        android:text="@string/yinyue"
+        android:textSize="15sp"
+        tools:ignore="DuplicateIds" />
+
 </android.support.design.widget.CoordinatorLayout>

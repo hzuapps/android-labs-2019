@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">First activity</string>
-    <string name="hello">点击下一关页面</string>
-    <string name="title_activity_second">SecondActivity</string>
+    <string name="app_name">空课室</string>
+    <string name="m">星期一</string>
+    <string name="s">星期二</string>
+    <string name="w">星期三</string>
+    <string name="t">星期四</string>
+    <string name="f">星期五</string>
+    <string name="xure">旭日楼</string>
+    <string name="dianzi">电子楼</string>
+    <string name="tianjb">田家炳楼</string>
+    <string name="yinyue">音乐楼</string>
+    <string name="shiyan">实验楼</string>
+    <string name="title_activity_second">教学楼</string>
 </resources>
