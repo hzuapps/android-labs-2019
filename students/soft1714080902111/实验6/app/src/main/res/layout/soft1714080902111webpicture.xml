@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tp04"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="请输入图片路径"
+        android:id="@+id/et_path"
+        />
+
+    <Button
+        android:id="@+id/bt_get_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取图片"
+        android:onClick="getImage"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/et_path"
+        />
+
+    <Button
+        android:id="@+id/bt_set_wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置壁纸"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:enabled="false"
+        android:layout_below="@id/et_path"
+        />
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_get_image" />
+
+
+
+</RelativeLayout>
