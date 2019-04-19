@@ -1,69 +1,94 @@
 package edu.hzuapps.androidlabs.com1713071002108;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+
 
 public class Com1713071002108Activity extends AppCompatActivity {
+    private LinearLayout linear;
+    private String url_image="http://pic.rmb.bdstatic.com/cb55d8f340941b564316217a41850617.jpeg";
+    @SuppressLint("HandlerLeak")
+    private Handler handler=new Handler()
+    {
+        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 0:
+                    Bitmap bmp=(Bitmap)msg.obj;
+                    linear.setBackground(new BitmapDrawable(bmp));
+                    break;
+            }
+        };
+    };
 
-    private EditText et_info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_1713071002108_activity);
-        et_info = (EditText) findViewById(R.id.et_info);
-        Button btn_read = (Button) findViewById(R.id.btn_read);
-        Button btn_save = (Button) findViewById(R.id.btn_save);
-        btn_read.setOnClickListener(new ButtonListener());
-        btn_save.setOnClickListener(new ButtonListener());
+        linear=findViewById(R.id.linear);
+        TextView changeText = findViewById(R.id.text_background);
+        Button b = findViewById(R.id.createButton);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Com1713071002108Activity.this,Com1713071002108Activity2.class);
+                startActivity(intent);
+            }
+        });
+        changeText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Bitmap bmp = getImage(url_image);
+                        Message msg = new Message();
+                        msg.what = 0;
+                        msg.obj = bmp;
+                        handler.sendMessage(msg);
+                    }
+                }).start();
+            }
+        });
+
     }
 
-    private class ButtonListener implements View.OnClickListener {
-        @SuppressLint({"WrongConstant", "ShowToast"})
-        public void onClick(View v){
-            switch (v.getId()){
-                case R.id.btn_save:
-                    String saveinfo=et_info.getText().toString().trim();
-                    FileOutputStream fos;
-                    try{
-                        fos=openFileOutput("data.txt", Context.MODE_APPEND);
-                        fos.write(saveinfo.getBytes());
-                        fos.close();
-                    }catch (Exception e){
-                        e.printStackTrace();
+    private Bitmap getImage(String url_image) {
+        Bitmap bmp = null;
+        try {
+            URL Myurl = new URL(url_image);
+            HttpURLConnection conn = (HttpURLConnection) Myurl.openConnection();
+            conn.setConnectTimeout(8000);
+            conn.setDoInput(true);
+            conn.setUseCaches(false);
+            conn.connect();
+            InputStream is = conn.getInputStream();
+            bmp = BitmapFactory.decodeStream(is);
+            is.close();
+        } catch (Exception e) {
+            e.printStackTrace();
 
-                    }
-                    Toast.makeText(Com1713071002108Activity.this,"日期保存成功",0).show();
-                    break;
-                case R.id.btn_read:
-                    String content="";
-
-                    try{
-                        FileInputStream fis=openFileInput("data.txt");
-                        byte[] buffer=new byte[fis.available()];
-                        fis.read(buffer);
-                        content=new String(buffer);
-                        fis.close();
-                    }catch (Exception e){
-
-                        e.printStackTrace();
-
-                    }
-                    Toast.makeText(Com1713071002108Activity.this,"查询日期的信息是："+content,0).show();
-                    break;
-                default:
-                    break;
             }
+        return bmp;
+
     }
 
 }
-
-    }

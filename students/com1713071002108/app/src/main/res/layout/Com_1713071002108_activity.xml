@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bizhi"
-    tools:context=".Com1713071002108Activity">
+    android:background="#fffff0"
+    android:id="@+id/linear"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/cc"
-        android:textSize="20sp"
-        android:layout_alignParentStart="true" />
-    <EditText
-        android:id="@+id/et_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:ems="10"
-        android:layout_alignParentStart="true">
-        <requestFocus />
-    </EditText>
-    <Button
-        android:id="@+id/btn_read"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/et_info"
-        android:layout_below="@id/et_info"
-        android:text="查询日期"
-        tools:ignore="HardcodedText"
-        android:layout_alignEnd="@+id/et_info" />
+    <RelativeLayout
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp">
 
-    <Button
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/createButton"
+            android:dividerHeight="1dp" />
 
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/et_info"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:text="@string/bc1" />
-</RelativeLayout>
+
+        <Button
+            android:id="@+id/createButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:text="@string/filesave"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignBottom="@+id/createButton"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/createButton"
+            android:text="@string/text_change"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_toEndOf="@+id/createButton" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
