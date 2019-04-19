@@ -23,8 +23,9 @@
             style="@style/MenuTabText"
             android:text="聊天"
             android:drawableLeft="@drawable/tab_ties"/>
-        <TextView
+        <Button
             style="@style/MenuTabText"
+            android:id="@+id/dianji"
             android:text="图片"
             android:drawableLeft="@drawable/tab_pics" />
         <TextView
