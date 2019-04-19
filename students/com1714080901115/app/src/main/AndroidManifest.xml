@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="edu.hzuapps.androidlabs.com1714080901115">
+    package="edu.hzuapps.androidlabs.com1714080901115"
+    >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="andorid.permission.MONUN_UNMOUNT_FILESYSTEMS"/>
 
     <application
         android:allowBackup="true"
@@ -13,6 +17,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".Com1714080901115Activity2">
     </activity>
+
         <activity android:name=".Com1714080901115Activity3">
         </activity>
         <activity
