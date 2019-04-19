@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.hzuapps.androidlabs.Soft1714080902238.itemActivity">
+    tools:context="edu.hzuapps.androidlabs.Soft1714080902238.ItemActivity">
 
     <LinearLayout
         android:id="@+id/bt01"
