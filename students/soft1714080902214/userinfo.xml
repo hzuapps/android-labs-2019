@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<u>
+    <user id="1">
+        <name>Tom</name>
+        <score>100</score>
+    </user>
+    <user id="2">
+        <name>Jerry</name>
+        <score>101</score>
+    </user>
+    <user id="3">
+        <name>Paike</name>
+        <score>102</score>
+    </user>
+</u>
