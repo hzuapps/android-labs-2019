@@ -1,58 +1,25 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-
-    android:orientation="vertical"
-
-    tools:context=".Main3Activity" >
-
-
-
-    <ImageView
-
-        android:id="@+id/iv"
-
-        android:layout_width="fill_parent"
-
-        android:layout_height="fill_parent"
-
-        android:layout_weight="1" />
-
-
-
-    <EditText
-
-        android:id="@+id/et_path"
-
-        android:layout_width="fill_parent"
-
+    tools:context=".Main3Activity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:hint="请输入图片路径"
-
-        android:text="http://b.hiphotos.baidu.com/image/w%3D310/sign=a439f5b24510b912bfc1f0fff3fdfcb5/83025aafa40f4bfb92c52c5d014f78f0f73618a5.jpg"
-
-        android:maxLines="1" />
-
-
-
+        android:id="@+id/et_path"/>
     <Button
-
-        android:layout_width="fill_parent"
-
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:onClick="click"
-
-        android:text="浏览" />
-
-
-
+        android:id="@+id/bu"
+        android:text="浏览"
+        tools:ignore="Constraints"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="160dp"/>/>
 </LinearLayout>
-
+</android.support.constraint.ConstraintLayout>
 
