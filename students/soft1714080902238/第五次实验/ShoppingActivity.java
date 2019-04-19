@@ -8,7 +8,7 @@ import android.view.View;
 import lun.com.myapplication.R;
 
 
-public class shoppingActivity extends AppCompatActivity {
+public class ShoppingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,7 @@ public class shoppingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shopping);
     }
     protected void Click1(View view){
-        Intent intent = new Intent(this,carActivity.class);
+        Intent intent = new Intent(this,CarActivity.class);
         startActivity(intent);
     }
 }
