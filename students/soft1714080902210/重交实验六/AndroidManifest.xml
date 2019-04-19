@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1714080902210Activity_change"></activity>
+        <activity android:name=".Soft1714080902210Activity_Change"></activity>
         <activity android:name=".Soft1714080902210Activity_Check" />
         <activity android:name=".Soft1714080902210Activity_New" />
         <activity android:name=".Soft1714080902210Activity_Second" />
