@@ -9,7 +9,7 @@ import java.io.FileOutputStream;
 
 import lun.com.myapplication.R;
 
-public class itemActivity extends Activity {
+public class ItemActivity extends Activity {
     private static final String TAG = "itemActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class itemActivity extends Activity {
         setContentView(R.layout.activity_item);
     }
     protected void Click1(View view){
-        Intent intent = new Intent(this,shoppingActivity.class);
+        Intent intent = new Intent(this,ShoppingActivity.class);
         String fileName="shopping.txt";
         String item="烤肉 10串";
         FileOutputStream fos;
