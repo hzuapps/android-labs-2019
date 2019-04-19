@@ -10,7 +10,7 @@ import com.master.permissionhelper.PermissionHelper;
 
 import lun.com.myapplication.R;
 
-public class downPicActivity extends AppCompatActivity {
+public class DownPicActivity extends AppCompatActivity {
 
     private View btn;
     private View img;
@@ -23,14 +23,15 @@ public class downPicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_down_pic);
 
         bindID();
-        permissionHelper = new PermissionHelper(downPicActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+        permissionHelper = new PermissionHelper(DownPicActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
         permissionHelper.request(new PermissionHelper.PermissionCallback() {
             @Override
             public void onPermissionGranted() {
                 btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        DownLoad task=new DownLoad(downPicActivity.this, btn, img);
+                        DownLoad task=new DownLoad(DownPicActivity
+                                                   .this, btn, img);
 
                         task.execute(filename, "5222.jpg");
 
@@ -68,3 +69,4 @@ public class downPicActivity extends AppCompatActivity {
         }
     }
 }
+
