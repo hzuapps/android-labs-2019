@@ -1,13 +1,3 @@
 {
-  "name": "Tom",
-  "age": 19,
-  "isBoy": true,
-  "numbers": [1, 2, 3],
-  "courses": [{
-    "name": "Android",
-    "teacher": "Mr. Zeng"
-  }, {
-    "name": "Web",
-    "teacher": "ÔøÀÏÊ¦"
-  }]
+  "name": "Tom"
 }
