@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:hint="请输入要查询照片名称"
+                android:paddingLeft="8dp"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                />
+
+            <Button
+                android:id="@+id/button_find"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6495ED"
+                android:text="搜索"
+                android:textStyle="bold"
+                android:textSize="23dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/tp01_01"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/img2"
+                />
+            <ImageButton
+                android:id="@+id/tp01_02"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/img3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/tp02_01"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/shidu"/>
+
+            <ImageView
+                android:id="@+id/tp02_02"
+                android:layout_width="130dp"
+                android:layout_height="130dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="操作记录："
+            android:textStyle="bold"
+            android:textColor="#8B7765"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textview_history"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#8B7765"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button_xiazai01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="下载" />
+
+                <EditText
+                    android:id="@+id/edit_wangzhi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入下载图片的网址"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
