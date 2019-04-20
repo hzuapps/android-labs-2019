@@ -1,0 +1,14 @@
+<xml>
+<courses>
+        <!-- 第1个学生 -->
+        <cous id="001">
+            <name>Chinese</name>
+            <time>monday</time>
+        </cous>
+        <!-- 第2个学生 -->
+        <cous id="002">
+            <name>English</name>
+            <time>friday</time>
+        </cous>
+    </courses>
+</xml>
