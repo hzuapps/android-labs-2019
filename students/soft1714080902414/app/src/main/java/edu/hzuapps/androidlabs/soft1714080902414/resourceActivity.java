@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class resource extends AppCompatActivity implements View.OnClickListener{
+public class resourceActivity extends AppCompatActivity implements View.OnClickListener{
 
         private Button button;
         @Override
@@ -18,7 +18,7 @@ public class resource extends AppCompatActivity implements View.OnClickListener{
         }
         @Override
         public void onClick(View v) {
-            Intent intent =new Intent(resource.this,wordtest.class);
+            Intent intent =new Intent(resourceActivity.this, wordtestActivity.class);
             startActivity(intent);
         }
     }

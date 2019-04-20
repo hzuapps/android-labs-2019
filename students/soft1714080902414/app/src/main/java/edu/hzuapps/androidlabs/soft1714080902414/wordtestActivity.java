@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class wordtest extends AppCompatActivity {
+public class wordtestActivity extends AppCompatActivity {
 
     private Button button;
     private Button button1;
@@ -28,10 +28,10 @@ public class wordtest extends AppCompatActivity {
             switch (v.getId())
             {
 
-                case R.id.button:   Intent intent1 =new Intent(wordtest.this,wordtestanswer.class);
+                case R.id.button:   Intent intent1 =new Intent(wordtestActivity.this, wordtestanswerActivity.class);
                                         startActivity(intent1);break;
 
-                case R.id.button1:   Intent intent =new Intent(wordtest.this,Soft1714080902424Activity.class);
+                case R.id.button1:   Intent intent =new Intent(wordtestActivity.this,Soft1714080902424Activity.class);
                                         startActivity(intent);break;
             }
 

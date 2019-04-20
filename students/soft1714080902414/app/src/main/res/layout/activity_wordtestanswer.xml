@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/bj"
-    tools:context=".wordtestanswer">
+    tools:context=".wordtestanswerActivity">
 
     <TextView
         android:id="@+id/textView"

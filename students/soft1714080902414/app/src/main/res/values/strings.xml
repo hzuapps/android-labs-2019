@@ -2,6 +2,10 @@
     <string name="app_name">word</string>
     <string name="huan">欢迎来到背单词app</string>
     <string name="jr">进入</string>
+    <string name="jc">检查网络</string>
+    <string name="xt">下载图片</string>
+    <string name="xst">显示图片</string>
+    <string name="xbj">图片背单词</string>
     <string name="dc">单词测试</string>
     <string name="rs">认识</string>
     <string name="brs">不认识</string>
