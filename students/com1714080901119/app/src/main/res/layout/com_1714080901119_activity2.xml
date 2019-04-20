@@ -29,29 +29,39 @@
         android:textSize="30dp"
         android:layout_marginLeft="50dp"
         android:id="@+id/e1"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="207dp"
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/b1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="150dp"
+            android:layout_marginTop="20dp"
             android:background="#FF7256"
-            android:text="保存"
-            android:id="@+id/b1"/>
+            android:text="保存" />
+
+        <TextView
+            android:id="@+id/cai2"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="点击进入下一个页面" />
+
         <Button
+            android:id="@+id/b2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
             android:background="#FF7256"
-            android:text="读取"
-            android:id="@+id/b2"/>
+            android:text="读取" />
 
     </LinearLayout>
 </LinearLayout>
