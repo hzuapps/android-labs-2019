@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <star>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E7%99%BD%E7%BE%8A.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E7%99%BD%E7%BE%8A.jpg</icon>
     <title>白羊座</title>
     <content>03.12-04.19</content>
     <desc>特点：热情活力</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E9%87%91%E7%89%9B.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E9%87%91%E7%89%9B.jpg</icon>
     <title>金牛座</title>
     <content>04.20-05.20</content>
     <desc>特点：稳健固执</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E5%8F%8C%E5%AD%90.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%8F%8C%E5%AD%90.jpg</icon>
     <title>双子座</title>
     <content>05.21-06.21</content>
     <desc>特点：花心多变</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E5%B7%A8%E8%9F%B9.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%B7%A8%E8%9F%B9.jpg</icon>
     <title>巨蟹座</title>
     <content>06.22-07.22</content>
     <desc>特点：敏感柔情</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E7%8B%AE%E5%AD%90.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E7%8B%AE%E5%AD%90.jpg</icon>
     <title>狮子座</title>
     <content>07.23-08.22</content>
     <desc>特点：骄傲威严</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E5%A4%84%E5%A5%B3.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%A4%84%E5%A5%B3.jpg</icon>
     <title>处女座</title>
     <content>08.23-09.22</content>
     <desc>特点：完美理性</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E5%A4%A9%E7%A7%A4.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%A4%A9%E7%A7%A4.jpg</icon>
     <title>天秤座</title>
     <content>09.23-10.23</content>
     <desc>特点：公平和谐</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E5%A4%A9%E8%9D%8E.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%A4%A9%E8%9D%8E.jpg</icon>
     <title>天蝎座</title>
     <content>10.24-11.22</content>
     <desc>特点：神秘敏锐</desc>
   </starInfo>
 <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E5%B0%84%E6%89%8B.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%B0%84%E6%89%8B.jpg</icon>
     <title>射手座</title>
     <content>11.23-12.21</content>
     <desc>特点：自由乐观</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E6%91%A9%E7%BE%AF.jpg</icon>
+    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E6%91%A9%E7%BE%AF.jpg?raw=true</icon>
     <title>摩羯座</title>
     <content>12.22-01.19</content>
     <desc>特点：执著现实</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E6%B0%B4%E7%93%B6.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E6%B0%B4%E7%93%B6.jpg</icon>
     <title>水瓶座</title>
     <content>01.20-02.18</content>
     <desc>特点：自由博爱</desc>
   </starInfo>
   <starInfo>
-    <icon>https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E5%8F%8C%E9%B1%BC.jpg</icon>
+    <icon>https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%8F%8C%E9%B1%BC.jpg</icon>
     <title>双鱼座</title>
     <content>02.19-03.20</content>
     <desc>特点：浪漫梦幻</desc>
