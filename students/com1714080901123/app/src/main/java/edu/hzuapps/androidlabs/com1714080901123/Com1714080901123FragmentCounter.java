@@ -412,8 +412,10 @@ public class Com1714080901123FragmentCounter extends Fragment {
     @Override
     public void onResume() {
         ///*
-        if (requestState==0 && resultState==0)
+        if (requestState==0 && resultState==0) {
             updateCounterView();
+            Toast.makeText(context, "加载成功", Toast.LENGTH_SHORT).show();
+        }
         else if(requestState==1 && resultState==1){
             weaponID = selectState;
             updateCounterView();
