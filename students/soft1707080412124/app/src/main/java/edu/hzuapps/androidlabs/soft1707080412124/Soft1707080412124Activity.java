@@ -1,7 +1,6 @@
 package edu.hzuapps.androidlabs.soft1707080412124;
 
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,9 +9,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import static java.security.AccessController.getContext;
+
 
 public class Soft1707080412124Activity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,11 @@ public class Soft1707080412124Activity extends AppCompatActivity {
             }
         });
 
+        if(!ConnectionUtil.isConn(getApplicationContext())){
+            ConnectionUtil.setNetworkMethod(Soft1707080412124Activity.this);
+        }
+
     }
 
 }
+
