@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/qianse"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902120.Soft1714080902120NetCheckActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击检测网络连接状态"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="70px"/>
+    <Button
+        android:id="@+id/testNetwrkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="检测网络"
+        android:textSize="70px"
+        android:textColor="@color/colorPrimaryDark"/>
+</RelativeLayout>
