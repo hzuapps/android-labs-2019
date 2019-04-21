@@ -4,18 +4,18 @@
 		<playerName>ku</playerName>
 		<describe>强攻流金双</describe>
 		<weaponID>1</weaponID>
-		<abilityID11>1</abilityID11>
+		<abilityID11>2</abilityID11>
 		<abilityID12>2</abilityID12>
-		<abilityID13>3</abilityID13>
-		<abilityID14>4</abilityID14>
-		<abilityID21>3</abilityID21>
-		<abilityID22>3</abilityID22>
-		<abilityID23>3</abilityID23>
-		<abilityID24>3</abilityID24>
-		<abilityID31>4</abilityID31>
-		<abilityID32>4</abilityID32>
-		<abilityID33>4</abilityID33>
-		<abilityID34>4</abilityID34>
+		<abilityID13>2</abilityID13>
+		<abilityID14>2</abilityID14>
+		<abilityID21>1</abilityID21>
+		<abilityID22>1</abilityID22>
+		<abilityID23>1</abilityID23>
+		<abilityID24>1</abilityID24>
+		<abilityID31>3</abilityID31>
+		<abilityID32>3</abilityID32>
+		<abilityID33>3</abilityID33>
+		<abilityID34>3</abilityID34>
 	</ConfigInfo>
 	
 	<ConfigInfo>
@@ -30,9 +30,9 @@
 		<abilityID22>3</abilityID22>
 		<abilityID23>3</abilityID23>
 		<abilityID24>3</abilityID24>
-		<abilityID31>4</abilityID31>
-		<abilityID32>4</abilityID32>
-		<abilityID33>4</abilityID33>
-		<abilityID34>4</abilityID34>
+		<abilityID31>1</abilityID31>
+		<abilityID32>1</abilityID32>
+		<abilityID33>1</abilityID33>
+		<abilityID34>1</abilityID34>
 	</ConfigInfo>
 </GearConfig>
