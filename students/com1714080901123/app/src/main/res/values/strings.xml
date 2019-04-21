@@ -67,7 +67,10 @@
     <string name="counter_save_config_2">存为 配置2</string>
     <string name="counter_save_config_3">存为 配置3</string>
     <string name="counter_save_config_4">存为 配置4</string>
+    <string name="counter_load_others_config">加载其他玩家的配置</string>
     <string name="counter_count">计算</string>
+
+    <string name="url_gear_config_xml">https://raw.githubusercontent.com/ZedCxs/android-labs-2019/master/students/com1714080901123/GearConfig.xml</string>
 
     <!-- news -->
     <string name="home_gameupdate_4_5_0">[NGA] 4.5.0补丁更新 武器调整相关 [中文翻译]</string>

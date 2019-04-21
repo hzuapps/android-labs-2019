@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <ImageView
+        android:id="@+id/imageView_config_item_weapon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/load_fail" />
+
+    <TextView
+        android:id="@+id/textView_config_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/imageView_config_item_weapon"
+        android:text="玩家名字"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/textView_config_item_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:maxLength="30"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/imageView_config_item_weapon"
+        android:text="我是描述"
+        android:textColor="#333333"/>
+
+</RelativeLayout>

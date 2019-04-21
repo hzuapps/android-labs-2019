@@ -342,15 +342,15 @@
                 app:layout_constraintTop_toTopOf="@id/button_config_1" />
 
             <Button
-            android:id="@+id/button_config_3"
-            style="@style/counter_text_name_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginLeft="14dp"
-            android:text="@string/counter_config_3"
-            app:layout_constraintStart_toEndOf="@id/button_config_2"
-            app:layout_constraintTop_toTopOf="@id/button_config_2" />
+                android:id="@+id/button_config_3"
+                style="@style/counter_text_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:text="@string/counter_config_3"
+                app:layout_constraintStart_toEndOf="@id/button_config_2"
+                app:layout_constraintTop_toTopOf="@id/button_config_2" />
 
             <Button
                 android:id="@+id/button_config_4"
@@ -408,22 +408,21 @@
                 app:layout_constraintTop_toTopOf="@id/button_save_config_3" />
 
             <Button
-                android:id="@+id/button_count"
+                android:id="@+id/button_load_others_config"
                 style="@style/counter_text_name_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="160dp"
-                android:layout_marginLeft="160dp"
-                android:text="@string/counter_count"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:text="@string/counter_load_others_config"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/button_save_config_1" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                app:layout_constraintTop_toBottomOf="@id/button_count"
                 app:layout_constraintStart_toStartOf="parent"
-                /><!-- 放一个空白view，用来防止scrollview最底部被菜单挡住 -->
+                app:layout_constraintTop_toBottomOf="@id/button_load_others_config" /><!-- 放一个空白view，用来防止scrollview最底部被菜单挡住 -->
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </FrameLayout>
