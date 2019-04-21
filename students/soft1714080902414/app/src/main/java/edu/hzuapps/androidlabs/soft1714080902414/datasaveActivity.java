@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class datasaveActivity extends AppCompatActivity implements View.OnClickListener {
+public class DatasaveActivity extends AppCompatActivity implements View.OnClickListener {
     private Button button1;
     private Button button2;
     private EditText editText1;
@@ -42,7 +42,7 @@ public class datasaveActivity extends AppCompatActivity implements View.OnClickL
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Toast.makeText( datasaveActivity.this,"数据保存成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText( DatasaveActivity.this,"数据保存成功",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.bt2:   String content="";
                 try {
@@ -56,7 +56,7 @@ public class datasaveActivity extends AppCompatActivity implements View.OnClickL
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Toast.makeText(datasaveActivity.this,"保存的数据为"+content,Toast.LENGTH_SHORT).show();
+                Toast.makeText(DatasaveActivity.this,"保存的数据为"+content,Toast.LENGTH_SHORT).show();
                 break;
         }
     }
