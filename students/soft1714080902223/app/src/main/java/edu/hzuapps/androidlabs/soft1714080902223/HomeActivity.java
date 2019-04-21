@@ -17,6 +17,7 @@ import org.json.JSONObject;
 import edu.hzuapps.androidlabs.listview.HomeListAdapter;
 import edu.hzuapps.androidlabs.model.Task;
 import edu.hzuapps.androidlabs.presenter.JsonService;
+import edu.hzuapps.androidlabs.presenter.NetworkService;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -55,25 +56,28 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-
-        //创建一个新线程异步获取json数据
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                JSONObject jsonObject = new JsonService().getHomeJson();
-                tv = findViewById(R.id.bottom_text);
-                try {
-                    String text = jsonObject.getString("author") + "  "
-                            + jsonObject.getString("code");
-                    tv.setText(text);
-                }catch (JSONException e){
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-
+        //判断是否有网
+        if(NetworkService.isNetworkAvailable(this)) {
+            //若有网，创建一个新线程异步获取json数据
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        JSONObject jsonObject = new JsonService().getHomeJson();
+                        tv = findViewById(R.id.bottom_text);
+                        if(jsonObject == null){
+                            tv.setText("获取网络数据异常");
+                        }
+                        try {
+                            String text = jsonObject.getString("author") + "  "
+                                    + jsonObject.getString("code");
+                            tv.setText(text);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+        }
     }
-
 
 }
 

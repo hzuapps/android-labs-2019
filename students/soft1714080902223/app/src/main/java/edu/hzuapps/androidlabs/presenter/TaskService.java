@@ -1,7 +1,5 @@
 package edu.hzuapps.androidlabs.presenter;
 
-import android.content.Context;
-
 import android.util.ArrayMap;
 import android.widget.TextView;
 
@@ -14,6 +12,8 @@ import java.util.Map;
 import edu.hzuapps.androidlabs.dao.TaskDao;
 import edu.hzuapps.androidlabs.listview.HomeListAdapter;
 import edu.hzuapps.androidlabs.model.Task;
+import edu.hzuapps.androidlabs.soft1714080902223.HomeActivity;
+import edu.hzuapps.androidlabs.soft1714080902223.MyApplication;
 import edu.hzuapps.androidlabs.soft1714080902223.R;
 
 
@@ -28,31 +28,29 @@ public enum  TaskService {
     private final String CREATE_TIME_PATTERN = TaskDao.CREATE_TIME_PATTERN;
 
     private TaskDao taskDao;
-    //单例保证taskList的使用，而不用每次都去数据库,节约开销
+    //作为整个app的taskList
     private List<Task> taskList;
     private HomeListAdapter homeListAdapter;
 
     private TaskService(){
+        //将app的上下文传给taskDao
+        taskDao = new TaskDao(MyApplication.getContext());
         taskList = new ArrayList<>();
     }
     /**
      * TaskService的初始化函数，需要上下文时进行修改
-     * @param context
      * @return
      */
-    public TaskService getTaskService(Context context){
-        INSTANCE.taskDao = new TaskDao(context);
+    public TaskService getTaskService(){
         return INSTANCE;
     }
 
     /**
      * TaskService的初始化函数，需要上下文跟设配器时进行修改
-     * @param context
      * @param homeListAdapter
      * @return
      */
-    public TaskService getTaskService(Context context, HomeListAdapter homeListAdapter){
-        INSTANCE.taskDao = new TaskDao(context);
+    public TaskService setHomeListAdapter(HomeListAdapter homeListAdapter){
         INSTANCE.homeListAdapter = homeListAdapter;
         return INSTANCE;
     }
@@ -241,7 +239,6 @@ public enum  TaskService {
         }
         return result;
     }
-
 
 
 }

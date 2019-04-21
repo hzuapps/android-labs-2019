@@ -1,6 +1,7 @@
 package edu.hzuapps.androidlabs.soft1714080902223;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -38,25 +39,41 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //标题栏为空时，提示并焦聚（暂未处理空白字符）
-                if(title.getText().length() == 0){
-                    Toast toast = Toast.makeText(EditActivity.this, "请输入标题", Toast.LENGTH_SHORT);
-                    int[] location = new int[2];
-                    title.getLocationInWindow(location);
-                    toast.setGravity(Gravity.TOP, location[0], location[1]);
-                    toast.show();
+                if(title.getText().toString().trim().length() == 0){
+                    //Toast toast = Toast.makeText(EditActivity.this, "请输入标题", Toast.LENGTH_SHORT);
+                    new AlertDialog.Builder(EditActivity.this)
+                            .setTitle("提示")
+                            .setMessage("标题不能为空")
+                            .setIcon(R.drawable.ic_error_black_24dp)
+                            .setPositiveButton("确定", null)
+                            .setNegativeButton("取消", null)
+                            .show();
+
+//                    int[] location = new int[2];
+//                    title.getLocationInWindow(location);
+//                    toast.setGravity(Gravity.TOP, location[0], location[1]);
+//                    toast.show();
                     title.requestFocus();
                 }
                 //正文为空时，提示并焦聚（暂未处理空白字符）
-                else if(content.getText().length() == 0) {
-                    Toast toast = Toast.makeText(EditActivity.this, "请输入正文内容", Toast.LENGTH_SHORT);
-                    int[] location = new int[2];
-                    content.getLocationInWindow(location);
-                    toast.setGravity(Gravity.TOP, location[0], location[1]);
-                    toast.show();
+                else if(content.getText().toString().trim().length() == 0) {
+                    //Toast toast = Toast.makeText(EditActivity.this, "请输入正文内容", Toast.LENGTH_SHORT);
+                    new AlertDialog.Builder(EditActivity.this)
+                            .setTitle("提示")
+                            .setMessage("正文不能为空")
+                            .setIcon(R.drawable.ic_error_black_24dp)
+                            .setPositiveButton("确定", null)
+                            .setNegativeButton("取消", null)
+                            .show();
+//                    int[] location = new int[2];
+//                    content.getLocationInWindow(location);
+
+//                    toast.setGravity(Gravity.TOP, location[0], location[1]);
+//                    toast.show();
                     content.requestFocus();
                 }
                 else{
-                    TaskService taskService = TaskService.INSTANCE.getTaskService(EditActivity.this);
+                    TaskService taskService = TaskService.INSTANCE.getTaskService();
                     String titleStr = title.getText().toString();
                     String contentStr = content.getText().toString();
                     String timeStr = time.getText().toString();

@@ -59,7 +59,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format("[title: %s, content:%s, last_time:%s, create_time:%s]",
-                getTitle(), getContent(), getLastTime(), getCreateTime());
+        return String.format("[title: %s, content:%s, last_time:%s, create_time:%s， finish: %d]",
+                getTitle(), getContent(), getLastTime(), getCreateTime(), getFinish());
     }
 }

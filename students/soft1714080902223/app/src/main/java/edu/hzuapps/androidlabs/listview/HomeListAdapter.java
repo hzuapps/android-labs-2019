@@ -12,11 +12,13 @@ import java.util.List;
 
 import edu.hzuapps.androidlabs.model.Task;
 import edu.hzuapps.androidlabs.presenter.TaskService;
+import edu.hzuapps.androidlabs.soft1714080902223.HomeActivity;
 import edu.hzuapps.androidlabs.soft1714080902223.R;
 
 public class HomeListAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mLayoutInflater;
+    //考虑到内存占用，不将此层与model分离，而使用其引用
     //由于引用传递，又由于TaskService是单例，tasks赋值一次后便作为TaskService中list的的观察者
     private List<Task> tasks;
     private TaskService taskService;
@@ -24,7 +26,8 @@ public class HomeListAdapter extends BaseAdapter {
     public HomeListAdapter(Context context){
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
-        taskService = TaskService.INSTANCE.getTaskService(mContext, this);
+        taskService = TaskService.INSTANCE.getTaskService();
+        taskService.setHomeListAdapter(this);
         tasks = taskService.getAllList();
     }
 

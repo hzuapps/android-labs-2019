@@ -66,7 +66,7 @@ public class DetailActivity extends AppCompatActivity {
         tv_title = findViewById(R.id.detail_title);
         tv_content = findViewById(R.id.detail_content);
         tv_last_time = findViewById(R.id.last_time);
-        TaskService taskService = TaskService.INSTANCE.getTaskService(this);
+        TaskService taskService = TaskService.INSTANCE.getTaskService();
         Map<String, String> map = taskService.get(position);
         tv_title.setText(map.get("title"));
         tv_content.setText(map.get("content"));
