@@ -1,10 +1,12 @@
 package edu.hzuapps.androidlabs.com1714080901119;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.FileInputStream;
@@ -19,6 +21,13 @@ public class Com1714080901119Activity2 extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.com_1714080901119_activity2);
             setContentView(R.layout.com_1714080901119_activity2);
+            TextView denglu = findViewById(R.id.cai2);
+            denglu.setOnClickListener (new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(Com1714080901119Activity2.this,Com1714080901119Activity3.class));
+                }
+            });
             b1=(Button) findViewById(R.id.b1);
             b2=(Button) findViewById(R.id.b2);
             e1=(EditText) findViewById(R.id.e1);
@@ -55,6 +64,7 @@ public class Com1714080901119Activity2 extends AppCompatActivity {
                 }
             });
         }
+
     }
 
 
