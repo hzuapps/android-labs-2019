@@ -37,6 +37,8 @@
     <string name="view_02">性别</string>
     <string name="view_03">学号</string>
     <string name="button_01">退出账号</string>
+    <string name="view_04">男</string>
+    <string name="view_05">17软一</string>
 
 
     <!--查询-->
