@@ -1,0 +1,74 @@
+[
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E7%99%BD%E7%BE%8A.jpg",
+                    "title": "白羊座",
+                    "content": "03.12-04.19",
+                    "desc": "特点：热情活力"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E9%87%91%E7%89%9B.jpg",
+                    "title": "金牛座",
+                    "content": "04.20-05.20",
+                    "desc": "特点：稳健固执"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%8F%8C%E5%AD%90.jpg",
+                    "title": "双子座",
+                    "content": "05.21-06.21",
+                    "desc": "特点：花心多变"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%B7%A8%E8%9F%B9.jpg",
+                    "title": "巨蟹座",
+                    "content": "06.22-07.22",
+                    "desc": "特点：敏感柔情"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E7%8B%AE%E5%AD%90.jpg",
+                    "title": "狮子座",
+                    "content": "07.23-08.22",
+                    "desc": "特点：骄傲威严"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%A4%84%E5%A5%B3.jpg",
+                    "title": "处女座",
+                    "content": "08.23-09.22",
+                    "desc": "特点：完美理性"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%A4%A9%E7%A7%A4.jpg",
+                    "title": "天秤座",
+                    "content": "09.23-10.23",
+                    "desc": "特点：公平和谐"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%A4%A9%E8%9D%8E.jpg",
+                    "title": "天蝎座",
+                    "content": "10.24-11.22",
+                    "desc": "特点：神秘敏锐"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%B0%84%E6%89%8B.jpg",
+                    "title": "射手座",
+                    "content": "11.23-12.21",
+                    "desc": "特点：自由乐观"
+          },
+                    {
+                    "icon": "https://github.com/LSevern/android-labs-2019/blob/master/students/soft1714080902439/%E6%91%A9%E7%BE%AF.jpg?raw=true",
+                    "title": "摩羯座",
+                    "content": "12.22-01.19",
+                    "desc": "特点：执著现实"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E6%B0%B4%E7%93%B6.jpg",
+                    "title": "水瓶座",
+                    "content": "01.20-02.18",
+                    "desc": "特点：自由博爱"
+          },
+                    {
+                    "icon": "https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/%E5%8F%8C%E9%B1%BC.jpg",
+                    "title": "双鱼座",
+                    "content": "02.19-03.20",
+                    "desc": "特点：浪漫梦幻"
+          }
+]
