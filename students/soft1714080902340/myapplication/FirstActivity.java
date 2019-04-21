@@ -38,6 +38,10 @@ public class FirstActivity extends AppCompatActivity {
                         Intent intent=new Intent(FirstActivity.this,LoginActivity.class);
                         startActivity(intent);
                 break;
+            case R.id.statistics_item:
+                        Intent intent1=new Intent(FirstActivity.this,ThreeActivity.class);
+                        startActivity(intent1);
+                 break;
             case R.id.add_item:
                 Toast.makeText(this,"You clicked Add",Toast.LENGTH_SHORT).show();
                 break;
