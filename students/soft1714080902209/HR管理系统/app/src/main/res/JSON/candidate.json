@@ -1,0 +1,19 @@
+
+    {
+        "name":"ZhangSan",
+        "age":"1997",
+        "sex":"male",
+        "tel":"13800138000"
+    },
+    {
+        "name":"LiSi",
+        "age":"1998",
+        "sex":"female",
+        "tel":"13800138001"
+    },
+    {
+        "name":"WangWu",
+        "age":"1999",
+        "sex":"male",
+        "tel":"13800138002"
+    }
