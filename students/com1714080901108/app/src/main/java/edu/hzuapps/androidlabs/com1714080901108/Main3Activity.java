@@ -16,7 +16,8 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        Button button=(Button) findViewById(R.id.button5);
+        Button button5 = (Button) findViewById(R.id.button5);
+        Button button3 = (Button) findViewById(R.id.button3);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -27,13 +28,20 @@ public class Main3Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        button.setOnClickListener(new View.OnClickListener() {
+        button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Main3Activity.this,SaveActivity.class);
+                Intent intent = new Intent(Main3Activity.this, SaveActivity.class);
                 startActivity(intent);
             }
         });
-    }
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main3Activity.this, Json2Activity.class);
+                startActivity(intent);
+            }
+        });
 
+    }
 }
