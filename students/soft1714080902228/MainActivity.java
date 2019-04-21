@@ -1,74 +1,100 @@
 package edu.hzuapps.androidlabs.soft1714080902228;
 
-import android.annotation.SuppressLint;
-import android.app.Notification;
-import android.app.SearchManager;
-import android.content.Context;
-import android.support.v4.os.CancellationSignal;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.wifi.aware.DiscoverySession;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-
-    private EditText et_info;
-    private Button btn_save;
-    private Button btn_read;
-
+    protected static final int CHANGE_UI=1;
+    protected static final int ERROR=2;
+    private EditText et_path;
+    private ImageView iv;
+    //主线程创建消息处理器
+    private Handler handler=new Handler(){
+    public void handleMessage(android.os.Message msg){
+        if(msg.what==CHANGE_UI){
+            Bitmap bitmap=(Bitmap) msg.obj;
+            iv.setImageBitmap(bitmap);
+        }else if (msg.what==ERROR){
+            Toast.makeText(MainActivity.this,"显示图片错误",0).show();
+        }
+    };
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //获取布局文件中的控件
-        EditText et_info = (EditText) findViewById(R.id.et_info);
-        Button btn_read = (Button) findViewById(R.id.btn_read);
-        Button btn_save = (Button) findViewById(R.id.btn_save);
+        et_path=(EditText)findViewById(R.id.et_path);
+        iv=(ImageView)findViewById(R.id.iv);
     }
 
-    //定义button按钮的点击事件
-    private abstract class ButtonListener implements CancellationSignal.OnCancelListener {
-        @SuppressLint("WrongConstant")
-        public void onClick(View v) throws IOException {
-            switch (v.getId()) {
-                case R.id.btn_save:
-                    String saveinfo = et_info.getText().toString().trim();
-                    FileOutputStream fos;
-                    try {
-                        //保存数据
-                        fos = openFileOutput("data.txt", Context.MODE_APPEND);
-                        fos.write(saveinfo.getBytes());
-                        fos.close();
-                    } catch (Exception e) {
+
+    public void click(View view) {
+        final String path=et_path.getText().toString().trim();
+        if (TextUtils.isEmpty(path)){
+            Toast.makeText(MainActivity.this, "图片路径不能为空", 0).show();
+        }else {
+            //子线程请求网络,Android 4.0以后 访问网络不能放在主线程中
+            new Thread(){
+                private HttpURLConnection conn;
+                private Bitmap bitmap;
+                public void run(){
+                    //链接服务器get请求,获取图片
+                    try{
+                        //创建URL对象
+                        URL url=new URL(path);
+                        //根据url发送http的请求
+                        conn=(HttpURLConnection)url.openConnection();
+                        //设置请求的方式
+                        conn.setRequestMethod("GET");
+                        //设置超时时间
+                        conn.setConnectTimeout(5000);
+                        //设置请求头User-Agent浏览器的版本
+                        conn.setRequestProperty("User-Agent","Mozilla/4.0(compatible;MSIE 6.0;Windows NT 5.1;"+"SV1;.NET4.0C;.NET4.0E;.NET CLR 2.0.50727;"+".NET CLR 3.0.4506.2152;.NET CLR 3.5.30729;Shuame)");
+                        //得到服务器返回的响应码
+                        int code=conn.getResponseCode();
+                        //请求网络成功后返回码是200
+                        if (code==200){
+                            //获取输入流
+                            InputStream is=conn.getInputStream();
+                            //将流转换成Bitmap对象
+                            bitmap= BitmapFactory.decodeStream(is);
+                            //TODO:告诉主线程一个消息：帮我更改界面。内容：bitmap
+                            Message msg=new Message();
+                            msg.what=CHANGE_UI;
+                            msg.obj=bitmap;
+                            handler.sendMessage(msg);
+                        }else{
+                            //返回码不是200，请求服务器失败
+                            Message msg=new Message();
+                            msg.what=ERROR;
+                            handler.sendMessage(msg);
+                        }
+                    }catch (Exception e){
                         e.printStackTrace();
+                        Message msg=new Message();
+                        msg.what=ERROR;
+                        handler.sendMessage(msg);
                     }
-                    Toast.makeText(MainActivity.this,"数据保存成功",0).show();
-                    break;
-                case R.id.btn_read:
-                    String content = "";
-                    try {
-                        //获取保存的数据
-                        FileInputStream fis = openFileInput("data.txt");
-                        byte[] buffer = new byte[fis.available()];
-                        fis.read(buffer);
-                        content = new String(buffer);
-                        fis.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    Toast.makeText(MainActivity.this, "保存的数据是：" + content, 0).show();
-                    break;
-                default:
-                    break;
-            }
+                };
+            }.start();
         }
     }
 }
+
+
+
+
