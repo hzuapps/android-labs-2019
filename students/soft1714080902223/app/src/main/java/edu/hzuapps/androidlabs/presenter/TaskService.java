@@ -12,7 +12,6 @@ import java.util.Map;
 import edu.hzuapps.androidlabs.dao.TaskDao;
 import edu.hzuapps.androidlabs.listview.HomeListAdapter;
 import edu.hzuapps.androidlabs.model.Task;
-import edu.hzuapps.androidlabs.soft1714080902223.HomeActivity;
 import edu.hzuapps.androidlabs.soft1714080902223.MyApplication;
 import edu.hzuapps.androidlabs.soft1714080902223.R;
 

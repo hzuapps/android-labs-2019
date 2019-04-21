@@ -1,7 +1,5 @@
 package edu.hzuapps.androidlabs.presenter;
 
-import android.content.Context;
-
 import org.json.JSONObject;
 
 import java.io.BufferedReader;

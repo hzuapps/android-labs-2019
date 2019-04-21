@@ -1,8 +1,6 @@
 package edu.hzuapps.androidlabs.soft1714080902223;
 
 import android.content.Intent;
-import android.provider.AlarmClock;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -56,28 +54,45 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        tv = findViewById(R.id.bottom_text);
         //判断是否有网
         if(NetworkService.isNetworkAvailable(this)) {
-            //若有网，创建一个新线程异步获取json数据
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        JSONObject jsonObject = new JsonService().getHomeJson();
-                        tv = findViewById(R.id.bottom_text);
-                        if(jsonObject == null){
-                            tv.setText("获取网络数据异常");
-                        }
-                        try {
-                            String text = jsonObject.getString("author") + "  "
-                                    + jsonObject.getString("code");
-                            tv.setText(text);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }).start();
+            setJson();
         }
+
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //如果有网络，且json数据为空重新获取json，不给出alert影响用户体验
+        if(NetworkService.isNetworkAvailable(this, false)){
+            if(tv.getText().toString().equals("")){
+                setJson();
+            }
+        }
+
+    }
+
+    void setJson(){
+        //创建一个新线程异步获取json数据并显示
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                JSONObject jsonObject = new JsonService().getHomeJson();
+                if(jsonObject == null){
+                    tv.setText("获取网络数据异常");
+                    return;
+                }
+                try {
+                    String text = jsonObject.getString("author") + "  "
+                            + jsonObject.getString("code");
+                    tv.setText(text);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
 }
 

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,11 +47,6 @@ public class EditActivity extends AppCompatActivity {
                             .setPositiveButton("确定", null)
                             .setNegativeButton("取消", null)
                             .show();
-
-//                    int[] location = new int[2];
-//                    title.getLocationInWindow(location);
-//                    toast.setGravity(Gravity.TOP, location[0], location[1]);
-//                    toast.show();
                     title.requestFocus();
                 }
                 //正文为空时，提示并焦聚（暂未处理空白字符）
@@ -65,11 +59,6 @@ public class EditActivity extends AppCompatActivity {
                             .setPositiveButton("确定", null)
                             .setNegativeButton("取消", null)
                             .show();
-//                    int[] location = new int[2];
-//                    content.getLocationInWindow(location);
-
-//                    toast.setGravity(Gravity.TOP, location[0], location[1]);
-//                    toast.show();
                     content.requestFocus();
                 }
                 else{
