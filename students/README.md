@@ -1,1 +1,8 @@
-这里是所有同学的实验结果。请创建并检查自己的学号目录。
+#357 #第六次实验 #在线下载图片实现本地换肤
+初始时的界面
+
+![image](https://github.com/Starry02/android-labs-2019/blob/master/students/soft1714080902440/app/src/main/res/screenshot/1.PNG)
+
+换肤后的界面
+
+![image](https://github.com/Starry02/android-labs-2019/blob/master/students/soft1714080902440/app/src/main/res/screenshot/2.PNG)
