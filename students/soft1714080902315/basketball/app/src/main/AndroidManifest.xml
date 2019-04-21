@@ -22,7 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Aty2Activity"></activity>
+        <activity android:name=".Aty2Activity" />
+        <activity android:name=".StorageActivity" />
+        <activity android:name=".pictureActivity"></activity>
     </application>
+
+    <uses-permission
+        android:name="android.permission.INTERNET"/>
 
 </manifest>
