@@ -17,4 +17,11 @@ public class Com1714080901240Activity_02 extends AppCompatActivity {
         Intent intent3 = new Intent(this,Com1714080901240Activity_03.class);
         startActivity(intent3);
     }
+    public void click04(View view){
+        //创建一个Intent对象，开启下一个activity
+        Intent intent4 = new Intent(this,Com1714080901240Activity_04.class);
+        startActivity(intent4);
+    }
+
+
 }

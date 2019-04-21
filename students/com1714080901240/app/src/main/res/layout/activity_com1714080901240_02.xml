@@ -13,7 +13,8 @@
             android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:text="加载本地歌曲" />
+            android:text="蓝牙启动"
+            android:onClick="click04"/>
 
         <Button
             android:id="@+id/button8"
