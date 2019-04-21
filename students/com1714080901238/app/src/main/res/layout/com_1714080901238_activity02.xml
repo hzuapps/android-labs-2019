@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +46,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <android.support.design.widget.TextInputEditText
+                    <EditText
+                        android:id="@+id/et_info1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="输入一笔消费" />
@@ -58,10 +60,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.design.widget.TextInputEditText
+            <EditText
+                android:id="@+id/et_info2"
                 android:layout_width="match_parent"
                 android:layout_height="76dp"
                 android:hint="输入一笔消费" />
         </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="money"
+            android:text="保存"/>
+        <Button
+            android:id="@+id/btn_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="money"
+            android:text="读取"/>
+
+
     </LinearLayout>
 </LinearLayout>
