@@ -19,15 +19,23 @@
         <activity
             android:name="edu.hzuapps.androidlabs.soft1714080902440.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902440.Main3Activity">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902440.Main3Activity">
+
+        </activity>
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902440.Soft1714080902440Activity03"></activity>
     </application>
+    <!-- 访问网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 文件读取的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 向SD卡中创建或者删除的权限。 -->
+    <uses-permission android:name="andorid.permission.MONUN_UNMOUNT_FILESYSTEMS"/>
 
 </manifest>
