@@ -51,10 +51,10 @@ public class Soft1714080902120ImageSaveActivity extends Activity {
                 if (null != bitmap) {
                     try {
                         setWallpaper(bitmap);
-                        Toast.makeText(Soft1714080902120ImageSaveActivity.this, "壁纸设置成功", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Soft1714080902120ImageSaveActivity.this, "设置成功", Toast.LENGTH_LONG).show();
                     } catch (IOException e) {
                         e.printStackTrace();
-                        Toast.makeText(Soft1714080902120ImageSaveActivity.this, "壁纸设置失败", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Soft1714080902120ImageSaveActivity.this, "设置失败", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -65,9 +65,6 @@ public class Soft1714080902120ImageSaveActivity extends Activity {
 
     class DownloadImage extends AsyncTask<String, Void, Object> {
 
-        /**
-         * 执行耗时操作前执行
-         */
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -77,11 +74,6 @@ public class Soft1714080902120ImageSaveActivity extends Activity {
             progressDialog.show();
         }
 
-        /**
-         * 执行耗时操作
-         * @param strings
-         * @return
-         */
         @Override
         protected Object doInBackground(String... strings) {
             try {
@@ -97,10 +89,6 @@ public class Soft1714080902120ImageSaveActivity extends Activity {
                 // 设置请求方式
                 httpURLConnection.setRequestMethod("GET");
 
-                /**
-                 * 注意：⚠️ 不要肤浅的任务 打开连接对象 设置连接时长 设置请求方式 就向服务器发送Http请求了
-                 *          是要执行httpURLConnection.getResponseCode()才会向服务器发送Http请求
-                 */
                 if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     // 得到服务器返回过来的流对象
                     InputStream inputStream = httpURLConnection.getInputStream();
@@ -114,19 +102,11 @@ public class Soft1714080902120ImageSaveActivity extends Activity {
             return null;
         }
 
-        /**
-         * 耗时执行过程中 更新进度条刻度操作
-         * @param values
-         */
         @Override
         protected void onProgressUpdate(Void... values) {
             super.onProgressUpdate(values);
         }
 
-        /**
-         * 耗时操作执行完成，用于更新UI
-         * @param o
-         */
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
@@ -149,7 +129,7 @@ public class Soft1714080902120ImageSaveActivity extends Activity {
                 }, 2000);
             } else { //失败
                 bt_set_wallpaper.setEnabled(false);
-                Toast.makeText(Soft1714080902120ImageSaveActivity.this, "下载失败,请检查原因", Toast.LENGTH_LONG).show();
+                Toast.makeText(Soft1714080902120ImageSaveActivity.this, "下载失败", Toast.LENGTH_LONG).show();
                 // 关闭进度条
                 progressDialog.dismiss();
             }
