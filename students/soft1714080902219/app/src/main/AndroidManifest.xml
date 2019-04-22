@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="edu.hzuapps.androidlabs.Soft1714080902219">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+        tools:ignore="ProtectedPermissions"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
@@ -8,6 +19,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <provider
+
+            android:name="android.support.v4.content.FileProvider"
+
+            android:authorities="applicationId.fileprovider"
+
+            android:exported="false"
+
+            android:grantUriPermissions="true">
+
+            <meta-data
+
+                android:name="android.support.FILE_PROVIDER_PATHS"
+
+                android:resource="@xml/file_paths"/>
+
+        </provider>
+
         <activity android:name=".Soft1714080902219Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,9 +45,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Soft1714080902219Activity2" />
-        <activity android:name=".Soft1714080902219Activity3"></activity>
+        <activity android:name=".Soft1714080902219Activity3" />
+        <activity android:name=".Soft1714080902219TakephotoActivity"></activity>
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

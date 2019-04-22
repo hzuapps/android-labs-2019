@@ -1,5 +1,6 @@
 package edu.hzuapps.androidlabs.Soft1714080902219;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.os.StrictMode;
@@ -47,7 +48,7 @@ public class Soft1714080902219Activity3 extends FragmentActivity implements View
     public void getDataByNet(){
 
         try {
-            String url_s = "https://raw.githubusercontent.com/wanshanghong/liulangzhe/master/myjson.json"; //我的阿里云的url:http://47.103.6.223:8080/liulangzhe-manager-web/myjson.json
+            String url_s = "https://raw.githubusercontent.com/wanshanghong/liulangzhe/master/myjson.json"; //raw得到的url:https://raw.githubusercontent.com/wanshanghong/liulangzhe/master/myjson.json
             URL url = new URL(url_s);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setConnectTimeout(500000);
@@ -154,9 +155,9 @@ public class Soft1714080902219Activity3 extends FragmentActivity implements View
 
         Log.d("mylog","Soft1714080902219Activity3;运行");
         fManager = getSupportFragmentManager();
-
         initViews();
         setChioceItem(0);
+
     }
     //完成组件的初始化
 
@@ -224,9 +225,14 @@ public class Soft1714080902219Activity3 extends FragmentActivity implements View
                     // 如果fg1为空，则创建一个并添加到界面上
                     fragment2 = new Soft1714080902219Fragment2();
                     transaction.add(R.id.main_content, fragment2);
+
                 } else {
                     // 如果MessageFragment不为空，则直接将它显示出来
                     transaction.show(fragment2);
+                    StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
+                    Log.d("mylog","Soft1714080902219Fragment2onCreateView;运行");
+                    listView =this.findViewById(R.id.listview);
+                    getDataByNet();
                 }
                 break;
             case 2:
@@ -240,10 +246,8 @@ public class Soft1714080902219Activity3 extends FragmentActivity implements View
                 } else {
                     // 如果MessageFragment不为空，则直接将它显示出来
                     transaction.show(fragment3);
-                    StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
-                    Log.d("mylog","Soft1714080902219Fragment2onCreateView;运行");
-                    listView =this.findViewById(R.id.listview);
-                    getDataByNet();
+
+
                 }
                 break;
         }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context=".Soft1714080902219TakephotoActivity">
+
+    <Button
+
+        android:id="@+id/bt1"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:text="获取相册中的照片"/>
+
+    <Button
+
+        android:id="@+id/bt2"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:text="调用相机"/>
+
+    <ImageView
+
+        android:src="@mipmap/ic_launcher"
+
+        android:layout_marginTop="20dp"
+
+        android:layout_gravity="center"
+
+        android:id="@+id/iv"
+
+        android:layout_width="100dp"
+
+        android:layout_height="100dp"/>
+
+</LinearLayout >
