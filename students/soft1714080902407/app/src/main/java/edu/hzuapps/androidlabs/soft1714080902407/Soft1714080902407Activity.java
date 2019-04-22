@@ -1,7 +1,10 @@
 package edu.hzuapps.androidlabs.soft1714080902407;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +27,6 @@ public class Soft1714080902407Activity extends Activity{
     private  List<Message> list;
     private MessageDao dao;
     private EditText msgET;
-    private Button msgBT;
     private MyAdapter adapter;
     private ListView msgLV;
 
@@ -36,6 +38,10 @@ public class Soft1714080902407Activity extends Activity{
         list=dao.queryAll();
         adapter=new MyAdapter();
         msgLV.setAdapter(adapter);
+        boolean conn = ConnectionUtil.isConn(Soft1714080902407Activity.this);
+        if (!conn) {
+            ConnectionUtil.setNetworkMethod(Soft1714080902407Activity.this);
+        }
     }
 
     private void initView(){
