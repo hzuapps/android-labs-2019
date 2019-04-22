@@ -55,6 +55,7 @@
                 android:layout_width="188dp"
                 android:layout_height="266dp"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border"
                 android:src="@drawable/amiibo_inkling_girl"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/blankView_amiibo" />
@@ -66,6 +67,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border"
                 android:src="@drawable/gear_headgear_squid_hairclip"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image_amiibo" />
@@ -90,6 +92,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border"
                 android:src="@drawable/gear_clothing_school_uniform"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_headgear" />
@@ -114,6 +117,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border"
                 android:src="@drawable/gear_shoes_school_shoes"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_clothing" />
@@ -138,6 +142,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:src="@drawable/ability_swim_speed_up"
+                android:background="@drawable/bg_border"
                 app:layout_constraintStart_toEndOf="@+id/image_headgear"
                 app:layout_constraintTop_toTopOf="@+id/image_headgear" />
             <ImageView
@@ -147,6 +152,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:src="@drawable/ability_ink_recovery_up"
+                android:background="@drawable/bg_border"
                 app:layout_constraintStart_toEndOf="@+id/image_clothing"
                 app:layout_constraintTop_toTopOf="@+id/image_clothing" />
 
@@ -157,6 +163,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:src="@drawable/ability_ink_saver_sub"
+                android:background="@drawable/bg_border"
                 app:layout_constraintStart_toEndOf="@+id/image_shoes"
                 app:layout_constraintTop_toTopOf="@+id/image_shoes" />
 
@@ -196,8 +203,19 @@
                 app:layout_constraintStart_toEndOf="@+id/image_ability_shoes"
                 app:layout_constraintTop_toTopOf="@+id/image_ability_shoes" />
 
+            <Button
+                android:id="@+id/button_amiibo_share_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="分享amiibo照片"
+                android:textAllCaps="false"
+                android:background="@drawable/shape_amiibo_share_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_shoes" />
+
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
-
 
 </android.support.design.widget.CoordinatorLayout>

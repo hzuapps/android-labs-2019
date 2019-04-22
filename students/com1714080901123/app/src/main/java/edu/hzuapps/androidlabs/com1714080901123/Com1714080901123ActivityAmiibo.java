@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Com1714080901123ActivityAmiibo extends AppCompatActivity {
+
+    Com1714080901123ClassDrawableID drawableID = new Com1714080901123ClassDrawableID();
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +43,21 @@ public class Com1714080901123ActivityAmiibo extends AppCompatActivity {
         TextView textView_Clothing_ability = (TextView)findViewById(R.id.text_amiibo_clothing_ability);
         TextView textView_Shoes_ability = (TextView)findViewById(R.id.text_amiibo_shoes_ability);
 
+        Button button = (Button)findViewById(R.id.button_amiibo_share_photo);
+
         Intent intent = this.getIntent();
-        String msg = intent.getStringExtra("imgButton");    //获取前一个Activity传过来的值，以决定应该显示的图片和文字
-        if(msg.equals("imgButton01")) {
-            textView.setText(R.string.name_inkling_girl);
-            imageView.setImageResource(R.drawable.amiibo_inkling_girl);
-            imageView_Headgear.setImageResource(R.drawable.gear_headgear_squid_hairclip);
-            textView_Headgear.setText(R.string.gear_headgear_squid_hairclip);
-            imageView_Clothing.setImageResource(R.drawable.gear_clothing_school_uniform);
-            textView_Clothing.setText(R.string.gear_clothing_school_uniform);
-            imageView_Shoes.setImageResource(R.drawable.gear_shoes_school_shoes);
-            textView_Shoes.setText(R.string.gear_shoes_school_shoes);
+        i = intent.getIntExtra("imgButton", 0);    //获取前一个Activity传过来的值，以决定应该显示的图片和文字
+
+        textView.setText(drawableID.getAmiiboName(i));
+        imageView.setImageResource(drawableID.getAmiibo(i));
+        imageView_Headgear.setImageResource(drawableID.getHeadGear(i));
+        textView_Headgear.setText(drawableID.getHeadGearName(i));
+        imageView_Clothing.setImageResource(drawableID.getClothing(i));
+        textView_Clothing.setText(drawableID.getClothingName(i));
+        imageView_Shoes.setImageResource(drawableID.getShoes(i));
+        textView_Shoes.setText(drawableID.getShoesName(i));
+
+        if(i==0) {
             imageView_Headgear_ability.setImageResource(R.drawable.ability_swim_speed_up);
             imageView_Clothing_ability.setImageResource(R.drawable.ability_ink_recovery_up);
             imageView_Shoes_ability.setImageResource(R.drawable.ability_ink_saver_sub);
@@ -57,15 +65,7 @@ public class Com1714080901123ActivityAmiibo extends AppCompatActivity {
             textView_Clothing_ability.setText(R.string.ability_ink_recovery_up);
             textView_Shoes_ability.setText(R.string.ability_ink_saver_sub);
         }
-        else if(msg.equals("imgButton02")) {
-            textView.setText(R.string.name_inkling_boy);
-            imageView.setImageResource(R.drawable.amiibo_inkling_boy);
-            imageView_Headgear.setImageResource(R.drawable.gear_headgear_samurai_helmet);
-            textView_Headgear.setText(R.string.gear_headgear_samurai_helmet);
-            imageView_Clothing.setImageResource(R.drawable.gear_clothing_samurai_jacket);
-            textView_Clothing.setText(R.string.gear_clothing_samurai_jacket);
-            imageView_Shoes.setImageResource(R.drawable.gear_shoes_samurai_shoes);
-            textView_Shoes.setText(R.string.gear_shoes_samurai_shoes);
+        else if(i==1) {
             imageView_Headgear_ability.setImageResource(R.drawable.ability_special_charge_up);
             imageView_Clothing_ability.setImageResource(R.drawable.ability_quick_super_jump);
             imageView_Shoes_ability.setImageResource(R.drawable.ability_special_power_up);
@@ -73,5 +73,14 @@ public class Com1714080901123ActivityAmiibo extends AppCompatActivity {
             textView_Clothing_ability.setText(R.string.ability_quick_super_jump);
             textView_Shoes_ability.setText(R.string.ability_special_power_up);
         }
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Com1714080901123ActivityAmiibo.this, Com1714080901123ActivityAmiiboSharePhoto.class);
+                intent.putExtra("amiibo",i);
+                startActivity(intent);
+            }
+        });
     }
 }

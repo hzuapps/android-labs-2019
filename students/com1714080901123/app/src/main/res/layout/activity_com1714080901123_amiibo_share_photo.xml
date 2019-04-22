@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Com1714080901123ActivityAmiiboSharePhoto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_amiibo_share_photo"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:navigationIcon="@drawable/back"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/textView_amiibo_share_bar"
+                android:layout_width="268dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/name_inkling_girl"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="#dddddd"
+                android:textSize="40sp" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <Button
+        android:id="@+id/button_amiibo_share_photo_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="20dp"
+        android:text="拍照"
+        android:background="@drawable/shape_amiibo_share_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <Button
+        android:id="@+id/button_amiibo_share_photo_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="选择相册照片"
+        android:background="@drawable/shape_amiibo_share_button"
+        app:layout_constraintStart_toEndOf="@+id/button_amiibo_share_photo_camera"
+        app:layout_constraintTop_toTopOf="@+id/button_amiibo_share_photo_camera" />
+
+    <Button
+        android:id="@+id/button_amiibo_share_photo_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="上传"
+        android:background="@drawable/shape_amiibo_share_button"
+        app:layout_constraintStart_toEndOf="@+id/button_amiibo_share_photo_album"
+        app:layout_constraintTop_toTopOf="@+id/button_amiibo_share_photo_album" />
+
+    <ImageView
+        android:id="@+id/imageView_amiibo_share_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_amiibo_share_photo_album" />
+
+
+</android.support.constraint.ConstraintLayout>
