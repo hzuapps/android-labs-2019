@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">File_save</string>
+    <string name="app_name">word</string>
+    <string name="huan">欢迎来到背单词app</string>
+    <string name="jr">进入</string>
+    <string name="jc">检查网络</string>
+    <string name="xt">下载图片</string>
+    <string name="xst">显示图片</string>
+    <string name="xbj">图片背单词</string>
+    <string name="dc">单词测试</string>
+    <string name="rs">认识</string>
+    <string name="brs">不认识</string>
+    <string name="zz">这都不认识，请看一下解释</string>
+    <string name="aa">n. 应用；申请；应用程序；敷用；（对事物、学习等）投入</string>
+    <string name="bb"> 短语</string>
+    <string name="cc">Computer Application [计] 计算机应用 ; 计算机运用 ; 电脑应用</string>
+    <string name="dd">clinical application 临床应用 ; 前突畸形 ; 临床运用 ; 应用</string>
+    <string name="ee"> divisional application 分案申请 ; 分割案 ; 申请案 ; 分案声请</string>
 </resources>
