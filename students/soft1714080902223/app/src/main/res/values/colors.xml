@@ -5,4 +5,7 @@
     <color name="colorBtnPress">#CD3700</color>
     <color name="colorBackground">#FEFEFE</color>
     <color name="colorTimeText">#989886</color>
+    <color name="colorFinalStatus">#05D032</color>
+    <color name="colorUnFinalStatus">#FFD700</color>
+    <color name="colorRed">#F60E0E</color>
 </resources>

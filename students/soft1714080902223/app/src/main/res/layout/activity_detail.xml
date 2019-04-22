@@ -28,18 +28,54 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:id="@+id/detail_body"
+                android:id="@+id/detail_content"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:textSize="20sp"
-                android:text="aaaa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n aaa"
+                android:minLines="14"
                 />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="25dp"
+                android:id="@+id/last_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/colorBackground"
+                android:background="@color/colorTimeText"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:background="@color/colorAccent"
+                    android:id="@+id/btn_edit"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:text="编辑"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBackground"
+                    />
+                <Button
+                    android:background="@color/colorRed"
+                    android:id="@+id/btn_delete"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:text="删除"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBackground"
+                    />
             </LinearLayout>
+            </LinearLayout>
+
         </ScrollView>
 
         <ImageButton
