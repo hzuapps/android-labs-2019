@@ -5,19 +5,21 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/send_request"
+        android:id="@+id/take_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send Request" />
+        android:text="Take Photo" />
 
-    <ScrollView
+    <Button
+        android:id="@+id/chosse_from_album"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:text="Choose From Album" />
 
-        <TextView
-            android:id="@+id/response_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical" />
 
 </LinearLayout>
