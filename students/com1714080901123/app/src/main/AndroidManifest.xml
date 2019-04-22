@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/><!-- 兼容老版本：声明访问SD卡权限 -->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Com1714080901123ActivitySelectPlayersConfig"></activity>
+        <activity android:name=".Com1714080901123ActivityAmiiboSharePhoto"></activity>
+        <activity android:name=".Com1714080901123ActivitySelectPlayersConfig" />
         <activity
             android:name=".Com1714080901123ActivitySelectAbility"
             android:label="@string/title_activity_com1714080901123_select_ability"
@@ -39,8 +42,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <uses-library android:name="org.apache.http.legacy" android:required="false" />
-        <!-- 上一行代码：java.lang.NoClassDefFoundError: Failed resolution of: Lorg/apache/http/conn/scheme/SchemeRegistry; -->
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:authorities="com.example.cameraalbumtest.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/><!-- 用来指定Uri的共享路径 -->
+        </provider>
     </application>
 
 </manifest>
