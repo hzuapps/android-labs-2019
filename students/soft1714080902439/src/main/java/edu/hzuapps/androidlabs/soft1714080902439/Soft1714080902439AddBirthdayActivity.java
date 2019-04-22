@@ -15,11 +15,11 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.soft171408092439.R;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import edu.huzapps.androidlabs.soft1714080902439.R;
 
 public class Soft1714080902439AddBirthdayActivity extends AppCompatActivity {
 
@@ -71,7 +71,7 @@ public class Soft1714080902439AddBirthdayActivity extends AppCompatActivity {
         });
 
         db=openOrCreateDatabase("birthday.db",MODE_PRIVATE,null);
-        db.execSQL("create table birthinfo(_id integer primary key autoincrement,name text,yinyang text,date text)");
+        db.execSQL("create table if not exists birthinfo(_id integer primary key autoincrement,name text,yinyang text,date text)");
         set_birth.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

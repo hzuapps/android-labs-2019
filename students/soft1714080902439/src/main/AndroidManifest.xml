@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.soft171408092439">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    package="edu.huzapps.androidlabs.soft1714080902439">
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="1714080902439-生日管家"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439AddBirthdayActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439ImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +26,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439AddBirthdayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <activity android:name="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439ConstellationActivity"></activity>
+    </application>
 </manifest>

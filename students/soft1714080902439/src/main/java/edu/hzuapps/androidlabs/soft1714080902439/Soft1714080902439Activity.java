@@ -5,22 +5,25 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
-
-import com.example.soft171408092439.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import edu.huzapps.androidlabs.soft1714080902439.R;
 
 
 public class Soft1714080902439Activity extends AppCompatActivity {
@@ -29,9 +32,11 @@ public class Soft1714080902439Activity extends AppCompatActivity {
     SimpleAdapter adapter;
     SQLiteDatabase db;
     private ImageButton button;
+    private ImageButton constellationButton;
     //private EditText time;
     private TextView textView;
     private CalendarView calendarView;
+
     //获取时间
     //SimpleDateFormat formatter=new SimpleDateFormat("yyyy年MM月dd日");
     //Date currentDate=new Date(System.currentTimeMillis());
@@ -39,17 +44,28 @@ public class Soft1714080902439Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1714080902439_activity);
+
         button = (ImageButton) findViewById(R.id.add_button);
+        constellationButton=(ImageButton) findViewById(R.id.constellation_button);
         //time=(EditText) findViewById(R.id.time);
         textView = (TextView) findViewById(R.id.text);
         calendarView=(CalendarView) findViewById(R.id.calendarView);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast button=Toast.makeText(edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439Activity.this,"",Toast.LENGTH_SHORT);
+                Toast button1=Toast.makeText(edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439Activity.this,"记生日",Toast.LENGTH_SHORT);
                 Intent intent=new Intent(edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439Activity.this,edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439AddBirthdayActivity.class);
                 startActivity(intent);
-                //button.show();
+                button1.show();
+            }
+        });
+        constellationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast button2=Toast.makeText(edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439Activity.this,"查看星座", Toast.LENGTH_SHORT);
+                Intent intent=new Intent(Soft1714080902439Activity.this,Soft1714080902439ConstellationActivity.class);
+                startActivity(intent);
+                button2.show();
             }
         });
         inti();

@@ -10,4 +10,7 @@
     <color name="whitesmoke">#F5F5F5</color>
     <color name="lightgray">#D3D3D3</color>
     <color name="darkgray">#A9A9A9</color>
+    <color name="a">#7a08fa</color>
+    <color name="b">#a82ffc</color>
+    <color name="c">#c264fe</color>
 </resources>
