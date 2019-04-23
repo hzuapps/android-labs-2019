@@ -18,7 +18,7 @@ public class Soft1714080902129Activity2 extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902129Activity2.this,Soft1714080902129Activity.class);
+                Intent intent = new Intent(Soft1714080902129Activity2.this, Soft1714080902129Activity.class);
                 startActivity(intent);
             }
         });
@@ -28,7 +28,7 @@ public class Soft1714080902129Activity2 extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        System.out.println("onStarting¡­¡­");
+        System.out.println("onStartingï¿½ï¿½ï¿½ï¿½");
     }
 
     @Override
