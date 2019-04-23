@@ -18,10 +18,12 @@ public class Soft1714080902216MainActivity extends AppCompatActivity {
         ImageButton User= (ImageButton) findViewById(R.id.imageButton);
         Button Data=(Button) findViewById(R.id.button2);
         Button Watch=(Button) findViewById(R.id.button3);
+        Button Loca=(Button)findViewById(R.id.button4);
         Record.setOnClickListener(new MyButton());
         User.setOnClickListener(new MyButton());
         Data.setOnClickListener(new MyButton());
         Watch.setOnClickListener(new MyButton());
+        Loca.setOnClickListener(new MyButton());
     }
 
     private class MyButton implements View.OnClickListener
@@ -46,6 +48,10 @@ public class Soft1714080902216MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button3:
                     intent=new Intent(Soft1714080902216MainActivity.this,Soft1714080902216JsonActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button4:
+                    intent=new Intent(Soft1714080902216MainActivity.this,Soft1714080902216LocationActivity.class);
                     startActivity(intent);
                     break;
             }
