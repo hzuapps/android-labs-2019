@@ -31,7 +31,7 @@ public class WordtestActivity extends AppCompatActivity {
                 case R.id.button:   Intent intent1 =new Intent(WordtestActivity.this, WordtestanswerActivity.class);
                                         startActivity(intent1);break;
 
-                case R.id.button1:   Intent intent =new Intent(WordtestActivity.this,Soft1714080902424Activity.class);
+                case R.id.button1:   Intent intent =new Intent(WordtestActivity.this, Soft1714080902414Activity.class);
                                         startActivity(intent);break;
             }
 
