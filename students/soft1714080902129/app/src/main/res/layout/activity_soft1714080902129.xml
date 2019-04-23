@@ -1,40 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context="edu.hzuapps.androidlabs.soft1714080902129.electricitypaymentsystem.Soft1714080902129Activity">
+    android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/background">
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="15dp">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
 
-      <ImageView
-          android:layout_width="30dp"
-          android:layout_height="30dp"
-          android:layout_marginLeft="50dp" />
 
-      <TextView
-          android:id="@+id/title"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_centerInParent="true"
-          android:textSize="16sp"
-          android:textStyle="bold" />
-
-      <ImageView
-          android:layout_width="30dp"
-          android:layout_height="30dp"
-          android:layout_alignParentRight="true"
-          android:layout_marginRight="50dp" />
-
-      <CalendarView
-          android:id="@+id/calendar"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:layout_marginTop="10dp" />
-   </RelativeLayout>
+        <CalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </RelativeLayout>
 </LinearLayout>
