@@ -33,8 +33,15 @@
         android:layout_width="400dp"
         android:layout_height="200dp"
         android:layout_margin="1dp"
+        android:background="#969699"
         android:id="@+id/text_result"/>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_s"
+        android:text="摇一摇即开启提醒"
+        android:gravity="center"
+        android:textSize="40sp"/>
 
 </LinearLayout>
 </LinearLayout>
