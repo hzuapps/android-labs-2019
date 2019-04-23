@@ -72,12 +72,13 @@
 
                 <EditText
                     android:id="@+id/pwd"
+                    android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="40dp"
                     android:layout_weight="1"
-                    android:hint="账号"
+                    android:hint="密码"
                     android:textSize="20dp" />
 
             </LinearLayout>
