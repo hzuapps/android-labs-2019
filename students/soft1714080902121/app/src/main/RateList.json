@@ -3,8 +3,8 @@
 	{
 		"name": "美元",
 		"abbr": "USD",
-		"CNYtoItself": 0.1490,
-		"toCNY": 6.7131
+		"CNYtoItself": 0.1488,
+		"toCNY": 6.7223
 	},
 	{
 		"name": "日元",
@@ -33,8 +33,8 @@
 	{
 		"name": "港币",
 		"abbr": "HKD",
-		"CNYtoItself": 1.1692,
-		"toCNY": 0.8553
+		"CNYtoItself": 1.1672,
+		"toCNY": 0.8567
 	},
 	{
 		"name": "澳币",

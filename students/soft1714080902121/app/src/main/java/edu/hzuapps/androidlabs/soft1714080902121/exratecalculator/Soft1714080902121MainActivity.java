@@ -1,7 +1,15 @@
 package edu.hzuapps.androidlabs.soft1714080902121.exratecalculator;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -24,15 +32,20 @@ public class Soft1714080902121MainActivity extends AppCompatActivity implements 
 
     private String strRateList;
     private RequestQueue queue;
+    private boolean isUpdated;
+    private NetWorkReceiver netWorkReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        queue = Volley.newRequestQueue(Soft1714080902121MainActivity.this);
-        getRateListJson(queue);
-        Toast.makeText(Soft1714080902121MainActivity.this,"正在获取汇率表",Toast.LENGTH_SHORT).show();
+        Toast.makeText(Soft1714080902121MainActivity.this, "正在更新汇率表", Toast.LENGTH_SHORT).show();
+        isUpdated = false;
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+        netWorkReceiver = new NetWorkReceiver();
+        registerReceiver(netWorkReceiver, intentFilter);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -69,10 +82,9 @@ public class Soft1714080902121MainActivity extends AppCompatActivity implements 
     }
 
     @Override
-    public void onClick(View view)
-    {
-        switch(view.getId()) {
-            case R.id.btnRateListAct:{
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnRateListAct: {
                 Intent intent = new Intent(Soft1714080902121MainActivity.this, Soft1714080902121RateListActivity.class);
                 intent.putExtra("strRateList", strRateList);
                 startActivity(intent);
@@ -80,8 +92,47 @@ public class Soft1714080902121MainActivity extends AppCompatActivity implements 
             }
         }
     }
-    private void getRateListJson(RequestQueue queue)
-    {
+
+    @Override
+    protected  void onDestroy() {
+        unregisterReceiver(netWorkReceiver);
+        super.onDestroy();
+    }
+
+    public class NetWorkReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent){
+            ConnectivityManager connectivityManager = (ConnectivityManager) context.getApplicationContext().getSystemService(CONNECTIVITY_SERVICE);
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+            if (networkInfo != null && networkInfo.isAvailable()) {
+                queue = Volley.newRequestQueue(context);
+                getRateListJson(queue);
+                isUpdated = true;
+            } else if(isUpdated == false) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+                builder.setTitle("网络不可用");
+                builder.setMessage("检测到网络未连接，无法更新汇率表。");
+                builder.setPositiveButton("设置", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                    }
+                });
+                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        strRateList = getResources().getString(R.string.localRateList);
+                        Toast.makeText(Soft1714080902121MainActivity.this, "已使用本地的汇率。", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.show();
+            }
+        }
+    }
+
+    private void getRateListJson(RequestQueue queue) {
         String url = "https://raw.githubusercontent.com/VOEZ21/android-labs-2019/master/students/soft1714080902121/app/src/main/RateList.json";
         JsonObjectRequest ratelist = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -92,8 +143,7 @@ public class Soft1714080902121MainActivity extends AppCompatActivity implements 
                     String[] r2 = getResources().getStringArray(R.array.r2);
                     String t1 = "";
                     String t2 = "";
-                    for(int i = 0; i < currencies.length(); i++)
-                    {
+                    for (int i = 0; i < currencies.length(); i++) {
                         JSONObject currency = currencies.getJSONObject(i);
                         String name = currency.getString("name");
                         String abbr = currency.getString("abbr");
@@ -106,7 +156,7 @@ public class Soft1714080902121MainActivity extends AppCompatActivity implements 
                         t2 += r2[i];
                     }
                     setRateList(t1 + '\n' + t2);
-                    Toast.makeText(Soft1714080902121MainActivity.this,"获取成功",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Soft1714080902121MainActivity.this, "更新成功。", Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -120,8 +170,7 @@ public class Soft1714080902121MainActivity extends AppCompatActivity implements 
         queue.add(ratelist);
     }
 
-    private void setRateList(String str)
-    {
+    private void setRateList(String str) {
         strRateList = str;
     }
 }
