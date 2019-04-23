@@ -20,6 +20,7 @@ public class CarinfoActivity extends AppCompatActivity {
     private Button  btn_collect;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
