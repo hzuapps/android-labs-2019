@@ -15,19 +15,20 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
-public class Soft1714080902121RateListActivity extends AppCompatActivity{
+public class Soft1714080902121RateListActivity extends AppCompatActivity {
 
     private File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
-    private File txtFile = new File(dir,"RateList.txt");
+    private File txtFile = new File(dir, "RateList.txt");
     private String strRateList;
     private TextView txtRateList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ratelist);
 
         Intent intent = getIntent();
-        strRateList= (String) intent.getStringExtra("strRateList");
+        strRateList = (String) intent.getStringExtra("strRateList");
         txtRateList = (TextView) findViewById(R.id.txtRateList);
         txtRateList.setText(strRateList);
 
@@ -44,7 +45,7 @@ public class Soft1714080902121RateListActivity extends AppCompatActivity{
     }
 
     public void onClick(View view) {
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.btnCreateText: {
                 Write();
                 Toast.makeText(Soft1714080902121RateListActivity.this, "在" + dir + "生成" + txtFile.getName(), Toast.LENGTH_SHORT).show();
@@ -53,8 +54,7 @@ public class Soft1714080902121RateListActivity extends AppCompatActivity{
         }
     }
 
-    private void Write()
-    {
+    private void Write() {
         String RateList = strRateList;
         try {
             if (!txtFile.exists()) {
