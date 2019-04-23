@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Soft171408092439</string>
     <string name="button">添加生日</string>
+    <string name="serverurl">https://raw.githubusercontent.com/LSevern/android-labs-2019/master/students/soft1714080902439/StarInfo.xml</string>
 </resources>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439Activity">
 
     <LinearLayout
+        android:id="@+id/calendar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -18,26 +20,69 @@
             android:minDate="01/01/1950"
             android:unfocusedMonthDateColor="@color/colorBlack"
             android:weekNumberColor="@color/colorBlack" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendar"
+        android:orientation="horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp">
         <TextView
             android:id="@+id/desc_text"
-            android:layout_width="match_parent"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:text="添加生日"
             android:textAlignment="center"
             android:textColorLink="@android:color/background_dark"
             android:textSize="20dp" />
-
-        <ImageButton
+        <TextView
+            android:id="@+id/constellation"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:text="星座"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginLeft="55dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text2"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp">
+         <ImageButton
             android:id="@+id/add_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_gravity="center|center_horizontal"
+            android:layout_gravity="left"
             android:adjustViewBounds="false"
             android:contentDescription="@string/button"
             android:cropToPadding="false"
             android:scaleType="fitXY"
             app:srcCompat="@android:drawable/ic_menu_add" />
+        <ImageButton
+            android:id="@+id/constellation_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/button"
+            android:cropToPadding="false"
+            android:layout_gravity="right"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/star_big_on"
+            android:layout_marginLeft="50dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/recent_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/button">
         <TextView
             android:id="@+id/haved_birth"
             android:layout_width="match_parent"
@@ -45,10 +90,10 @@
             android:text="最近的生日"
             android:textSize="18dp" />
     </LinearLayout>
-
     <ListView
         android:id="@+id/birthLV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/add_button"></ListView>
-</LinearLayout>
+        android:layout_below="@id/recent_birth">
+    </ListView>
+</RelativeLayout>

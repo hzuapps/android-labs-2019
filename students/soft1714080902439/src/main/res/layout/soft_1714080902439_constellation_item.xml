@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dip">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="95dip"
+        android:layout_height="95dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/constellation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="10dip"
+        android:layout_toRightOf="@id/imageView"
+        android:text="星座名"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/a"
+        android:textSize="20dip"/>
+    <TextView
+        android:id="@+id/constellation_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/constellation_title"
+        android:layout_toRightOf="@id/imageView"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:text="星座时间"
+        android:maxLength="16"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/b"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/constellation_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageView"
+        android:layout_below="@id/constellation_time"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:text="星座特征"
+        android:maxLength="16"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/b"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

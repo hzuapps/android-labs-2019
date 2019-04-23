@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.soft171408092439.R;
+import edu.huzapps.androidlabs.soft1714080902439.R;
+
 
 public class Soft1714080902439ImageActivity extends AppCompatActivity{
     private TextView textView;
