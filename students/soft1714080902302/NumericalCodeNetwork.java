@@ -6,9 +6,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.soft1714080902302.Controller.ConnectionNet;
 import com.example.soft1714080902302.R;
 
 import java.io.InputStream;
@@ -18,6 +21,7 @@ import java.net.URL;
 public class NumericalCodeNetwork extends AppCompatActivity {
     protected static final int CHANGE_UI=1;
     protected static final int ERROR=2;
+
     private ImageView iv;
     //主线程创建消息处理器
     private Handler handler = new Handler(){
@@ -30,12 +34,18 @@ public class NumericalCodeNetwork extends AppCompatActivity {
             }
         };
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numerical_code_network);
         //获取图片存放位置
         iv = (ImageView) findViewById(R.id.iv);
+        //判断网络
+        boolean conn = ConnectionNet.isConn(NumericalCodeNetwork.this);
+        if (!conn) {
+            ConnectionNet.setNetworkMethod(NumericalCodeNetwork.this);
+        }
     }
     //网络图片
     public void click(View view){
