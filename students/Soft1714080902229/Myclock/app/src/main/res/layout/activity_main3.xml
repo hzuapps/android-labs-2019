@@ -1,64 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".Main3Activity">
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
 
-
-    <TextView
-        android:id="@+id/textView1"
+    <TimePicker
+        android:id="@+id/timePicker1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:textSize="20dp"
-        android:text="请输入闹钟铃响时刻："
-        android:textColor="#000000"
-
-        />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:ems="10"
-        android:id="@+id/et_info"/>
-    <requestFocus/>
+        android:layout_height="wrap_content" />
     <Button
-        android:id="@+id/btn_read"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@id/et_info"
-        android:layout_below="@id/et_info"
-        android:text="读取"
-        />
-
-
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/et_info"
-        android:text="储存" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="214dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/et_info"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="50dp"
-        android:text="返回" />
-
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="设置闹钟" />
 
 </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
