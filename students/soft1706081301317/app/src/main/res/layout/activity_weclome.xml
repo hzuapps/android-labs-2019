@@ -16,29 +16,23 @@
                     android:text="Weclome Back"
                     android:textAlignment="center"
                     android:textAllCaps="true"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#EE7600"
                     android:textSize="50dp" />
                 <TextView
                     android:id="@+id/showUserName"
                     android:layout_weight="1"
                     android:textAlignment="center"
                     android:textAllCaps="true"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#EE7600"
                     android:textSize="50dp"
                     />
-                <TextView
-                    android:layout_weight="0.1"
-                    android:text="R U Ready?"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#FFFFFF"
-                    android:textSize="50dp" />
+
                 <Button
                     android:id="@+id/Go"
                     android:layout_weight="0.1"
-                    android:text="GO!"
+                    android:text="WRITE"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#EE7600"
                     android:textSize="35dp"
                     android:textAllCaps="true"/>
         </TableLayout>
