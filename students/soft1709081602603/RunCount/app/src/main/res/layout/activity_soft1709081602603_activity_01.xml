@@ -20,23 +20,33 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="点击进入“我的主页”"
+        android:layout_alignRight="@drawable/picture"
+        android:text="我的主页"
         android:layout_below="@+id/textview_01"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:layout_below="@+id/textview_01"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="点击进入“设置页面”"
-        android:layout_below="@id/button1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:text="点击进入“位置查询”"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
     <TextView
         android:id="@+id/textview_02"
