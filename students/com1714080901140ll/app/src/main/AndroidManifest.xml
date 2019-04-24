@@ -16,10 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShakeActivity" />
-        <activity android:name=".ShakeListener" />
-        <activity android:name=".Utils"></activity>
+        <activity android:name=".ShakeActivity"></activity>
+        <activity android:name=".Utils" ></activity>
+        <activity android:name=".ShakeListener"></activity>
     </application>
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.hardware.sensor.accelerometer"/>
 </manifest>
