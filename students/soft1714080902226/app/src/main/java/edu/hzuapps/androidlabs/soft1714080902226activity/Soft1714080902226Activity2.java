@@ -26,7 +26,9 @@ public class Soft1714080902226Activity2 extends AppCompatActivity {
     private Button btn_read;
     private  Button  btn_save;
 
-    private Button button2;
+    private Button tupianbutton;
+    private Button shezhibutton;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,13 +52,30 @@ public class Soft1714080902226Activity2 extends AppCompatActivity {
         btn_save.setOnClickListener(new ButtonListener());
         btn_read.setOnClickListener(new ButtonListener());
 
+        boolean conn = ConnectionUtil.isConn(Soft1714080902226Activity2.this);
+        //如果没有网络
+        if (!conn) {
+            //调用网络工具类中的方法，跳转到设置网络的界面
+            ConnectionUtil.setNetworkMethod(Soft1714080902226Activity2.this);
+        } else {//有的话就做自己的操作
+        }
 
-        button2 = (Button) findViewById(R.id.dianji);
-        button2.setOnClickListener(new View.OnClickListener() {
+
+        tupianbutton = (Button) findViewById(R.id.tupian);
+        tupianbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(edu.hzuapps.androidlabs.soft1714080902226activity.Soft1714080902226Activity2.this, Soft1714080902226Activity3.class);
+                startActivity(intent);
+            }
+        });
+        shezhibutton = (Button) findViewById(R.id.shezhi);
+        shezhibutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(edu.hzuapps.androidlabs.soft1714080902226activity.Soft1714080902226Activity2.this, Soft1714080902226Activity4.class);
                 startActivity(intent);
             }
         });
