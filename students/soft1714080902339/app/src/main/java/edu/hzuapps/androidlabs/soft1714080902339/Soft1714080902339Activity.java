@@ -32,6 +32,10 @@ public class Soft1714080902339Activity extends AppCompatActivity {
             }
         });
 
+        if(!ConnectionUtil.isConn(getApplicationContext())){
+            ConnectionUtil.setNetworkMethod(Soft1714080902339Activity.this);
+        }
+
 
     }
 
