@@ -37,6 +37,24 @@ private Handler handler=new Handler()
             }
         };
     };
+    private Bitmap getImage(String url_image) {
+        Bitmap bmp = null;
+        try {
+            URL Myurl = new URL(url_image);
+            HttpURLConnection conn = (HttpURLConnection) Myurl.openConnection();
+            conn.setConnectTimeout(6000);
+            conn.setDoInput(true);
+            conn.setUseCaches(false);
+            conn.connect();
+            InputStream is = conn.getInputStream();
+            bmp = BitmapFactory.decodeStream(is);
+            is.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return bmp;
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,22 +88,5 @@ private Handler handler=new Handler()
 
     }
 
-    private Bitmap getImage(String url_image) {
-        Bitmap bmp = null;
-        try {
-            URL Myurl = new URL(url_image);
-            HttpURLConnection conn = (HttpURLConnection) Myurl.openConnection();
-            conn.setConnectTimeout(6000);
-            conn.setDoInput(true);
-            conn.setUseCaches(false);
-            conn.connect();
-            InputStream is = conn.getInputStream();
-            bmp = BitmapFactory.decodeStream(is);
-            is.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return bmp;
 
-    }
 }
