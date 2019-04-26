@@ -31,7 +31,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:text="@string/filesave"
+            android:text="@string/file_save"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/createButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera"
             android:textSize="20sp" />
 
         <TextView
