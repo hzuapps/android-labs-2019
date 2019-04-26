@@ -1,5 +1,4 @@
 package edu.hzuapps.androidlabs.com1713071002108;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,12 +18,13 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
+import edu.hzuapps.androidlabs.com1713071002108.R;
 
 public class Com1713071002108Activity extends AppCompatActivity {
     private LinearLayout linear;
+    private TextView changeText;
+    private Button b;
     private String url_image="http://pic.rmb.bdstatic.com/cb55d8f340941b564316217a41850617.jpeg";
-    @SuppressLint("HandlerLeak")
     private Handler handler=new Handler()
     {
         @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -37,15 +37,32 @@ public class Com1713071002108Activity extends AppCompatActivity {
             }
         };
     };
+    private Bitmap getImage(String url_image) {
+        Bitmap bmp = null;
+        try {
+            URL Myurl = new URL(url_image);
+            HttpURLConnection conn = (HttpURLConnection) Myurl.openConnection();
+            conn.setConnectTimeout(6000);
+            conn.setDoInput(true);
+            conn.setUseCaches(false);
+            conn.connect();
+            InputStream is = conn.getInputStream();
+            bmp = BitmapFactory.decodeStream(is);
+            is.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return bmp;
 
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_1713071002108_activity);
         linear=findViewById(R.id.linear);
-        TextView changeText = findViewById(R.id.text_background);
-        Button b = findViewById(R.id.createButton);
+        changeText=findViewById(R.id.text_background);
+        b=findViewById(R.id.createButton);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,25 +87,4 @@ public class Com1713071002108Activity extends AppCompatActivity {
         });
 
     }
-
-    private Bitmap getImage(String url_image) {
-        Bitmap bmp = null;
-        try {
-            URL Myurl = new URL(url_image);
-            HttpURLConnection conn = (HttpURLConnection) Myurl.openConnection();
-            conn.setConnectTimeout(8000);
-            conn.setDoInput(true);
-            conn.setUseCaches(false);
-            conn.connect();
-            InputStream is = conn.getInputStream();
-            bmp = BitmapFactory.decodeStream(is);
-            is.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-
-            }
-        return bmp;
-
-    }
-
 }

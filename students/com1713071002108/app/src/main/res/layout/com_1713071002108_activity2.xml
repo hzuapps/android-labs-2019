@@ -1,23 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bizhi"
+    android:layout_width="match_parent"
     android:orientation="vertical"
-    tools:context=".Com1713071002108Activity2">
-
+    android:background="#fffff0"
+    >
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headLayout"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="@string/edit_title_text"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:ignore="UselessParent">
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
 
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
+            android:id="@+id/edit_title_lay_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/生日界面" />
-    </LinearLayout>
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/edit_title_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_tile"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_hint"
+                    android:textSize="15sp"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/edit_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_title_lay_lay"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:hint="@string/edit_body_hint"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_above="@+id/button_takephoto"
+            android:layout_below="@+id/edit_body"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:background="#fffff0"
+            android:text="@string/button_back"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="1dp"
+            android:background="#fffff0"
+            android:text="@string/button_save"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button_takephoto"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignLeft="@+id/button_save"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="70dp"
+            android:background="#fffff0"
+            android:text="@string/button_takephoto"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+    </RelativeLayout>
 </LinearLayout>

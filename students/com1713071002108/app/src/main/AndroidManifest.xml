@@ -9,8 +9,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">   <activity android:name="edu.hzuapps.androidlabs.com1713071002108.Com1713071002108Activity2"
-        android:label="@string/filesave">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">   <activity android:name="edu.hzuapps.androidlabs.com1713071002108.Com1713071002108Activity2"
+        android:label="@style/AppTheme">
     </activity>
         <activity android:name="edu.hzuapps.androidlabs.com1713071002108.Com1713071002108Activity">
             <intent-filter>
@@ -19,13 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 </manifest>
