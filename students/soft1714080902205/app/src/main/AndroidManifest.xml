@@ -4,6 +4,11 @@
     <!-- 添加网络访问权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 声明访问sd卡权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 声明照相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".getimage.ImageShow"></activity>
+        <activity android:name=".person.HeadActivity"></activity>
+        <activity android:name=".photo.PhoneActivity" />
+        <activity android:name=".bookstore.BookWebActivity" />
+        <activity android:name=".note.Write_Main" />
+        <activity android:name=".note.AddNoteActivity" />
+        <activity android:name=".note.UpdateOrReadActivity" />
+        <activity android:name=".getimage.ImageShow" />
         <activity android:name=".booksinfo.BookMian" />
         <activity android:name=".NewActivity" />
         <activity android:name=".Soft1714080902205Activity_bottom" />
@@ -36,7 +47,16 @@
         </activity> <!-- 应用自身bug，添加解决 -->
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false" />
+            android:required="false" /> <!-- 注册照相机功能相关内容 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="edu.hzuapps.androidlabs.soft1714080902205.person.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>
