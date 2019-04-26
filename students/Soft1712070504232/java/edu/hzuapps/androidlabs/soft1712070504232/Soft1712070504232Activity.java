@@ -1,5 +1,6 @@
 package edu.hzuapps.androidlabs.soft1712070504232;
 
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -14,14 +15,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 
 import static android.widget.Toast.LENGTH_SHORT;
@@ -35,6 +33,7 @@ public class Soft1712070504232Activity extends Activity {
     protected static final int ERROR = 2;
     private EditText et_path;
     private ImageView iv;
+
     private Handler handler = new Handler(){
         public void handleMessage(android.os.Message msg){
           if(msg.what == CHANGE_UI){
@@ -50,11 +49,11 @@ public class Soft1712070504232Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1712070504232_activity);
-        et_path = (EditText)findViewById(R.id.et_path);
-        iv = (ImageView)findViewById(R.id.iv);
-        button = (Button)findViewById(R.id.button1);
-        et_info = (EditText)findViewById(R.id.et_info);
-        btn_save = (Button)findViewById(R.id.btn_save);
+        et_path = (EditText) findViewById(R.id.et_path);
+        iv = (ImageView) findViewById(R.id.iv);
+        button = (Button) findViewById(R.id.button1);
+        et_info = (EditText) findViewById(R.id.et_info);
+        btn_save = (Button) findViewById(R.id.btn_save);
         btn_read = (Button) findViewById(R.id.btn_read);
 
         btn_save.setOnClickListener(new ButtonListener());
@@ -68,6 +67,15 @@ public class Soft1712070504232Activity extends Activity {
             }
         });
 
+        Button take_photo = (Button) findViewById(R.id.take_photo);
+        take_photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction("android.media.action.IMAGE_CAPTURE");
+                startActivity(intent);
+            }
+        });
     }
     public void click(View view){
         final String path = et_path.getText().toString().trim();
