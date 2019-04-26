@@ -2,6 +2,7 @@ package edu.hzuapps.androidlabs.com1714080901108;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class SaveActivity extends AppCompatActivity {
     private EditText et_info2;
     private Button btn_save;
     private Button btn_read;
+    private Button btn_loadphoto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +27,10 @@ public class SaveActivity extends AppCompatActivity {
         et_info2=(EditText) findViewById(R.id.et_info2);
         btn_save=(Button) findViewById(R.id.btn_save);
         btn_read=(Button) findViewById(R.id.btn_read);
+        btn_loadphoto=(Button) findViewById(R.id.btn_loadphoto);
         btn_save.setOnClickListener(new ButtonListener());
         btn_read.setOnClickListener(new ButtonListener());
+        btn_loadphoto.setOnClickListener(new ButtonListener());
     }
     private class ButtonListener implements View.OnClickListener {
         @SuppressLint("WrongConstant")
@@ -61,8 +65,14 @@ public class SaveActivity extends AppCompatActivity {
                     }
                     Toast.makeText(SaveActivity.this,"保存的数据是："+content,0).show();
                     break;
+                case R.id.btn_loadphoto:
+                {
+                    Intent intent = new Intent(SaveActivity.this, TakephotoActivity.class);
+                    startActivity(intent);
+                }
                 default:
                     break;
+
             }
         }
     }

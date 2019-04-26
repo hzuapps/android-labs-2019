@@ -18,4 +18,8 @@
     </string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_main4">Main4Activity</string>
+    <string name="choose_photo" >从本机选择</string>>
+    <string name="take_photo" >拍一张</string>>
+
 </resources>

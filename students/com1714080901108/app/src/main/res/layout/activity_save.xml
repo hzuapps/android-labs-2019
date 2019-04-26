@@ -13,20 +13,25 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="31dp"
         android:text="请输入相关信息："
         android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="72dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="104dp"
+        android:layout_marginBottom="89dp"
         android:text="姓名："
         android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,22 +41,40 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
+        android:layout_marginTop="104dp"
         android:ems="10"
         app:layout_constraintEnd_toEndOf="@+id/et_info2"
         app:layout_constraintStart_toStartOf="@+id/et_info2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="72dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="188dp"
         android:text="账号："
         android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_info2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_loadphoto"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="132dp"
+        android:text="头像："
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_read"
+        app:layout_constraintEnd_toStartOf="@+id/btn_loadphoto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/et_info2"
@@ -61,9 +84,10 @@
         android:layout_alignParentLeft="true"
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_info" />
 
     <Button
         android:id="@+id/btn_read"
@@ -71,8 +95,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_info"
         android:layout_alignRight="@+id/et_info"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
         android:text="读取信息"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_save"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,10 +107,24 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_info"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginRight="81dp"
+        android:layout_marginBottom="188dp"
         android:text="保存信息"
-        app:layout_constraintStart_toEndOf="@+id/btn_read"
-        app:layout_constraintTop_toBottomOf="@+id/et_info2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_loadphoto"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginRight="224dp"
+        android:layout_marginBottom="95dp"
+        android:text="点击上传"
+        app:layout_constraintBottom_toTopOf="@+id/btn_read"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
 </android.support.constraint.ConstraintLayout>
