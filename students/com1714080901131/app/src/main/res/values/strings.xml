@@ -8,4 +8,5 @@
     <string name="button_back">返回</string>
     <string name="button_save">保存</string>
     <string name="text_change">更改背景图片</string>
+    <string name="button_takephoto">拍照</string>
 </resources>
