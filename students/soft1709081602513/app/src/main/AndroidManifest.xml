@@ -3,7 +3,21 @@
     package="edu.hzuapps.androidlabs.soft1709081602513"
     android:versionCode="1"
     android:versionName="1.0">
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />//请求获取获取External存储的权限。
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--//请求获取获取External存储的权限。-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--//获取网络权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--//获取相机权限-->
+    <uses-feature android:name="android.hardware.camera"  android:required="false"/>
+    <!--//检查相机，若无相机也没事，此程序不是必须-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--//获取音频权限，上面有获取外部储存权限了-->
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,16 +25,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1709081602513Activity"></activity>
-        <activity android:name=".StartActivity" />
+        <activity android:name=".Soft1709081602513Activity" />
+        <activity android:name=".StartActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:authorities="soft1709081602513.cameraalbumtest,fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                />
+        </provider>
+
     </application>
 
 </manifest>
