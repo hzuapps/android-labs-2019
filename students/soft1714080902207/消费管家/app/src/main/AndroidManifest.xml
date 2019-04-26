@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="edu.hzuapps.androidlabs.soft1714080902207">
 
     <application
@@ -9,15 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".consumer_Housekeeper1_1714080902207">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
-            android:name=".consumer_Housekeeper_1714080902207"
+            android:name=".Soft_1714080902207_SecondActivity"
             android:label="@string/title_activity_consumer__housekeeper_1714080902207"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -26,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Soft_1714080902207_MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
