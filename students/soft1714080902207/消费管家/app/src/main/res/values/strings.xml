@@ -1,16 +1,15 @@
 <resources>
     <string name="app_name">soft1714080902207</string>
     <string name="title_activity_consumer__housekeeper_1714080902207">
+soft_1714080902207_MainActivity
 
-        consumer_Housekeeper_1714080902207
     </string>
     <string-array name="set">
-        <item>我的总余额：999</item>
-        <item>支付宝余额：999</item>
-        <item>微信余额：999</item>
-        <item>今日消费金额：999</item>
-        <item>本月消费金额：999</item>
+        <item>我的总消费金额：</item>
+
 
 
     </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

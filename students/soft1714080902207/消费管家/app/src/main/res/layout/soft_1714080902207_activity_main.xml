@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@mipmap/boot"
-    tools:context=".consumer_Housekeeper1_1714080902207">
+
+    tools:context=".Soft_1714080902207_MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -77,10 +78,10 @@
         android:text="明细查询"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -116,6 +117,7 @@
         app:layout_constraintVertical_bias="0.125" />
 
     <Button
+
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -123,43 +125,31 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="save"
         android:text="确认"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.541"
+        tools:ignore="OnClick" />
 
-    <TextView
-        android:id="@+id/tvShowDialog"
-        android:layout_width="83dp"
-        android:layout_height="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+    <Button
+
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="日期选择"
-
-
+        android:text="查询"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
-
-    <TextClock
-        android:id="@+id/tvShow"
-        android:layout_width="229dp"
-        android:layout_height="36dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="214dp" />
+        app:layout_constraintVertical_bias="0.541" />
 
 
 </android.support.constraint.ConstraintLayout>
