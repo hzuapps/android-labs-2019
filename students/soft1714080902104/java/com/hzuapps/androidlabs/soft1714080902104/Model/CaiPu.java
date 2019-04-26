@@ -2,9 +2,10 @@ package com.example.menu.Model;
 
 import android.graphics.Bitmap;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class CaiPu {
+public class CaiPu{
 
     private String title;
     private String imtro;

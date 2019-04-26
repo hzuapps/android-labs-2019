@@ -39,7 +39,6 @@ import static android.provider.Telephony.Mms.Part.FILENAME;
 public class CPSelect extends AppCompatActivity {
 
     private List<CaiPu>caiPuList=new ArrayList<>();
-    private StringBuilder stringBuilder=new StringBuilder("");
 
     private TextView cp_caiming_text;
     private ImageView cp_image;
@@ -54,7 +53,8 @@ public class CPSelect extends AppCompatActivity {
         cp_caiming_text=(TextView)findViewById(R.id.cp_caiming_text);
         cp_cailiao_text=(TextView)findViewById(R.id.cp_cailiao_text);
         cp_jianjieneirong_text=(TextView)findViewById(R.id.cp_jianjieneirong_text);
-        getDatasync();
+        caiPuList=((DataApplication)getApplication()).GetDataList();
+        setDatasync();
     }
 
     private void saveTextIntoInternalStorage(String text) {
@@ -126,48 +126,11 @@ public class CPSelect extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),text.toString(),Toast.LENGTH_SHORT).show();
     }
 
-    public void getDatasync(){
-        OkHttpUtils
-                .post()
-                .url("http://apis.juhe.cn/cook/index")
-                .addParams("key","ec094bb8c7cd8ad35114c5fa0c81d678")
-                .addParams("cid","10")
-                .addParams("rn","30")
-                .build()
-                .execute(new StringCallback() {
-                    @Override
-                    public void onError(Call call, Exception e, int id) {
-                        Toast.makeText(getApplicationContext(),"失败",Toast.LENGTH_SHORT).show();
-                    }
+    public void setDatasync(){
 
-                    @Override
-                    public void onResponse(String response, int id) {
-                        try{
-                            JSONObject jsonObject=new JSONObject(response);
-                            JSONObject jsonObject1=jsonObject.getJSONObject("result");
-                            JSONArray jsonArray=jsonObject1.getJSONArray("data");
-
-                            for(int i=0;i<30;i++){
-                                CaiPu caiPu=new CaiPu();
-                                JSONObject jsonObject2=jsonArray.getJSONObject(i);
-                                caiPu.setTitle(jsonObject2.getString("title"));
-                                caiPu.setImtro(jsonObject2.getString("imtro"));
-                                caiPu.setIngredients(jsonObject2.getString("ingredients"));
-                                caiPu.setBurden(jsonObject2.getString("burden"));
-                                JSONArray jsonArray1=jsonObject2.getJSONArray("albums");
-                                caiPu.setAlbum(jsonArray1.getString(0));
-                                caiPuList.add(caiPu);
-                            }
-                            cp_caiming_text.setText(caiPuList.get(0).getTitle());
-                            cp_cailiao_text.setText(caiPuList.get(0).getBurden());
-                            cp_jianjieneirong_text.setText(caiPuList.get(0).getImtro());
-                            Glide.with(getApplicationContext()).load(caiPuList.get(0).getAlbum()).into(cp_image);
-                            //saveTextIntoInternalStorage(jsonArray.toString());
-                        }catch (Exception e)
-                        {
-                            e.printStackTrace();
-                        }
-                    }
-                });
+        cp_caiming_text.setText(caiPuList.get(0).getTitle());
+        cp_cailiao_text.setText(caiPuList.get(0).getBurden());
+        cp_jianjieneirong_text.setText(caiPuList.get(0).getImtro());
+        Glide.with(getApplicationContext()).load(caiPuList.get(0).getAlbum()).into(cp_image);
     }
 }
