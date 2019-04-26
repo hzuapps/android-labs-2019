@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ImageActivity"
-    android:name="android.permission.INTERNET">
+    tools:context=".PhotoActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +20,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_image" />
+    <include layout="@layout/content_photo" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -31,27 +30,30 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-
-    <EditText
-        android:id="@+id/et_path"
-        android:layout_width="fill_parent"
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <ImageView
+            android:id="@+id/main_image"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:hint="请输入拼图所选图片路径:"
-        android:singleLine="true"
-        android:textSize="20dp" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
-        android:onClick="myclick"
-        android:text="添加图片"
-        android:textSize="25dp" />
-    <ImageView
-        android:id="@+id/iv"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1000" />
-
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="50dp"
+            android:id="@+id/main_camera"
+            android:text="拍照"/>
+        <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="50dp"
+            android:text="退出"
+            android:id="@+id/main_quit"/>
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
