@@ -15,7 +15,7 @@ import lun.com.myapplication.R;
 public class pic extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.soft1714080902238activity);
+        setContentView(R.layout.Soft1714080902238activity);
         Log.i("Activity02", "onCreate()");
     }
     protected void onStart() {
