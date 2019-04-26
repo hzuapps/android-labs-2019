@@ -62,7 +62,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ImageActivity$ImageActivity" />
         <provider
-            android:authorities="soft1714080902133.cameraalbumtest,fileprovider"
+            android:authorities="soft1714080902431.cameraalbumtest,fileprovider"
             android:name="android.support.v4.content.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
