@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:gravity="center"
-            android:text="点我玩"
+            android:text="进入树洞"
             android:textColor="#CC3399"
             android:textSize="70dp"
             android:textStyle="bold" />
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:gravity="center"
-            android:text="玩前须知"
+            android:text="树洞是什么"
             android:textColor="#CC3399"
             android:textSize="70dp"
             android:textStyle="bold" />

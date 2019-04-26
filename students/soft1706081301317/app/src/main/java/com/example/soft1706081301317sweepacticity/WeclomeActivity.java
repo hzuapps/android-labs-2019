@@ -1,9 +1,12 @@
 package com.example.soft1706081301317sweepacticity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -27,6 +30,14 @@ public class WeclomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weclome);
         getJson();
+        Button button = findViewById(R.id.Go);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WeclomeActivity.this,WriteActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     public void getJson() {
         new Thread() {
