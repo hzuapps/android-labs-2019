@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,7 +28,6 @@ public class Com1714080901115Activity extends AppCompatActivity {
     public static final int TAKE_PHOTO = 1;
     public static final int CHOOSE_PHOTO = 2;
     private Button mTakePhoto, mChoosePhoto;
-    private ImageView picture;
     private Uri imageUri;
 
     @Override
@@ -37,7 +37,6 @@ public class Com1714080901115Activity extends AppCompatActivity {
 
         mTakePhoto = (Button) findViewById(R.id.btn_take_photo);
         mChoosePhoto = (Button) findViewById(R.id.choose_from_album);
-        picture = (ImageView) findViewById(R.id.picture);
 
         mTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,7 +104,7 @@ public class Com1714080901115Activity extends AppCompatActivity {
                 if (resultCode == RESULT_OK) {
                     try {
                         Bitmap bm = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
-                        picture.setImageBitmap(bm);
+                        getWindow().getDecorView().setBackgroundDrawable(new BitmapDrawable(bm));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -114,7 +113,7 @@ public class Com1714080901115Activity extends AppCompatActivity {
                 break;
             case CHOOSE_PHOTO:
                 if (resultCode == RESULT_OK) {
-                        handleImageOnKitKat(data);
+                    handleImageOnKitKat(data);
                 }
             default:
                 break;
@@ -143,7 +142,7 @@ public class Com1714080901115Activity extends AppCompatActivity {
     private void displayImage(String imagePath) {
         if (imagePath != null) {
             Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
-            picture.setImageBitmap(bitmap);
+            getWindow().getDecorView().setBackgroundDrawable(new BitmapDrawable(bitmap));
         } else {
             Toast.makeText(this, "failed to get image", Toast.LENGTH_SHORT).show();
         }
@@ -151,7 +150,7 @@ public class Com1714080901115Activity extends AppCompatActivity {
 
     @TargetApi(19)
     private void handleImageOnKitKat(Intent data) {
-        String imagePath = null;
+      String imagePath = null;
         Uri uri = data.getData();
         if (DocumentsContract.isDocumentUri(this, uri)) {
             String docID = DocumentsContract.getDocumentId(uri);
@@ -173,4 +172,5 @@ public class Com1714080901115Activity extends AppCompatActivity {
         }
         displayImage(imagePath);
     }
+
 }
