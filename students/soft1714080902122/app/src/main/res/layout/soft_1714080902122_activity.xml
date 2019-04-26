@@ -2,11 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/aaa"
     android:orientation="vertical"
+    android:background="@drawable/aaa"
     android:gravity="center"
     tools:context=".Soft1714080902122Activity"
+
     >
+
     <TextView
         android:id="@+id/news_item_content_text_view"
         android:layout_width="wrap_content"
@@ -15,6 +17,8 @@
         android:textSize="60dp"
         android:layout_margin="20dp"
         />
+
+
 
     <Button
 
@@ -26,7 +30,7 @@
         />
 
     <Button
-        android:id="@+id/button_2"
+        android:id="@+id/button_fruit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="水果类" />
