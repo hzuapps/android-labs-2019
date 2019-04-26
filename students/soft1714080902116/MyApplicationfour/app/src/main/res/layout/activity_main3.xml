@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main3Activity">
@@ -9,7 +10,33 @@
         android:id="@+id/send_request"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send Request" />
+        android:text="分析存在的动漫人物" />
+
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调用照相机" />
+
+
+    <Button
+        android:id="@+id/choose_from_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看相册动漫照片" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,4 +49,5 @@
 
 
     </ScrollView>
-</RelativeLayout>
+
+</LinearLayout>
