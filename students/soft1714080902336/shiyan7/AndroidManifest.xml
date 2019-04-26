@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:networkSecurityConfig="@xml/network_security_config"
+    package="edu.hzuapps.androidlabs.soft1714080902336">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Soft1714080902336Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity">
+
+        </activity>
+        <activity android:name=".ScienceActivity">
+
+        </activity>
+        <activity android:name=".ArtActivity">
+
+        </activity>
+        <activity android:name=".LifeActivity">
+
+        </activity>
+        <activity android:name=".TvActivity">
+
+        </activity>
+        <activity android:name=".MusicActivity">
+
+        </activity>
+        <activity android:name=".CartoonActivity">
+
+        </activity>
+        <activity android:name=".FriendActivity">
+
+        </activity>
+        <activity android:name=".AddActivity">
+
+        </activity>
+        <activity android:name=".Art_Test01_Activity">
+
+        </activity>
+        <activity android:name=".ChoosefriendActivity">
+
+        </activity>
+        <activity android:name=".Tv_Test01_Activity">
+
+        </activity>
+
+        <service android:name=".MusicServer">
+
+        </service>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>
