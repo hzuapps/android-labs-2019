@@ -3,7 +3,9 @@
     package="edu.hzuapps.androidlabs.soft1714080902226activity">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -21,9 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Soft1714080902226Activity2" />
-        <activity android:name=".Soft1714080902226Activity3"></activity>
-
+        <activity android:name=".Soft1714080902226Activity3" />
+        <activity android:name=".Soft1714080902226Activity4"></activity>
     </application>
-
 
 </manifest>
