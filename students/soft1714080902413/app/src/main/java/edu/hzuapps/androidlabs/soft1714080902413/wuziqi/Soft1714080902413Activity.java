@@ -29,13 +29,13 @@ public class Soft1714080902413Activity extends AppCompatActivity implements View
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_start:
-                Intent sta_intent=new Intent(Soft1714080902413Activity.this,Soft1714080902413Activity4.class);
+                Intent sta_intent=new Intent(Soft1714080902413Activity.this, Soft1714080902413startgame.class);
                 startActivity(sta_intent);break;
             case R.id.btn_text:
-                Intent text_intent=new Intent(Soft1714080902413Activity.this,Soft1714080902413Activity3.class);
+                Intent text_intent=new Intent(Soft1714080902413Activity.this, Soft1714080902413rule.class);
                 startActivity(text_intent);break;
             case R.id.btn_record:
-                Intent rec_intent=new Intent(Soft1714080902413Activity.this,Soft1714080902413Activity2.class);
+                Intent rec_intent=new Intent(Soft1714080902413Activity.this, Soft1714080902413record.class);
                 startActivity(rec_intent);break;
             case R.id.btn_gamer:
                 Intent gamer_intent=new Intent(Soft1714080902413Activity.this,Soft1714080902413Activity5.class);

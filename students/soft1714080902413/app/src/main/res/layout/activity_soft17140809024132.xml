@@ -6,7 +6,7 @@
     android:background="@drawable/background"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Soft1714080902413Activity2">
+    tools:context=".Soft1714080902413record">
 
     <TextView
         android:id="@+id/textView3"

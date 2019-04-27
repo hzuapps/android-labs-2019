@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/timg2"
-    tools:context=".Soft1714080902413Activity4">
+    tools:context=".Soft1714080902413startgame">
+
+
 
 </android.support.constraint.ConstraintLayout>
