@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">MyLibrary</string>
     <string name="edit_message">请输入书名</string>
+    <string name="button_home">首页</string>
     <string name="button_send">查询</string>
-    <string name="button_send_2">推荐</string>
-    <string name="button_send_3">我的</string>
+    <string name="button_book">推荐</string>
+    <string name="button_user">我的</string>
     <string name="title_activity_new_main">NewMainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
