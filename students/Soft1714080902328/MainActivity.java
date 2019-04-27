@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        if(!ConnectionUtil.isConn(getApplicationContext())){
+            ConnectionUtil.setNetworkMethod(MainActivity.this);
+        }
+
     }
 
 }
