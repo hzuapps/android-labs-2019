@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">备忘录</string>
+    <string name="app_name">重要日子显示器</string>
     <string name="create_button_name">+\n新建</string>
-    <string name="text_tile">主题：</string>
-    <string name="edit_hint">主题内容</string>
-    <string name="edit_body_hint">请输入内容..</string>
-    <string name="edit_title_text">新建备忘录</string>
+    <string name="text_tile">日期：</string>
+    <string name="edit_hint">发生事件</string>
+    <string name="edit_body_hint">请输入事件..</string>
+    <string name="edit_title_text">新建</string>
     <string name="button_back">返回</string>
     <string name="button_save">保存</string>
     <string name="text_change">更改背景图片</string>
