@@ -1,5 +1,6 @@
 package com.example.administrator.pic;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,15 +36,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void init()
     {
-        List<Integer> images = new ArrayList<>();
-        images.add(R.drawable.a);
-        images.add(R.drawable.b);
-        images.add(R.drawable.c);
-        images.add(R.drawable.d);
-        images.add(R.drawable.e);
+        String[] images={"file://"+Environment.getExternalStorageDirectory().getPath()+"/a.jpg",
+"file://"+Environment.getExternalStorageDirectory().getPath()+"/b.jpg",
+"file://"+Environment.getExternalStorageDirectory().getPath()+"/c.jpg",
+"file://"+Environment.getExternalStorageDirectory().getPath()+"/d.jpg",
+"file://"+Environment.getExternalStorageDirectory().getPath()+"/e.jpg"
+
+};
+
         final Banner banner = (Banner) findViewById(R.id.banner);
-        banner.setImageLoader(new GlideImageLoader());//ÂõæÁâáÂä†ËΩΩÂô®
-        banner.setImages(images);//ÂõæÁâáÈõÜÂêà
+        banner.setImageLoader(new GlideImageLoader());//Õº∆¨º”‘ÿ∆˜
+        banner.setImages(images);//Õº∆¨ºØ∫œ
         banner.start();
         Button Button = (Button) findViewById(R.id.button_id);
         Button.setOnClickListener(new View.OnClickListener()
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 banner.stopAutoPlay();
-                Toast.makeText(MainActivity.this, "ÂÅúÊ≠¢", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Õ£÷π", Toast.LENGTH_SHORT).show();
             }
         });
         Button Button2 = (Button) findViewById(R.id.button_sb);
@@ -62,10 +65,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 banner.startAutoPlay();
-                Toast.makeText(MainActivity.this, "Âä®Ëµ∑Êù•", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "∂Ø∆¿¥", Toast.LENGTH_SHORT).show();
             }
         });
+        Button Button_skip =(Button) findViewById(R.id.Skip_activity);
+                    Button_skip.setOnClickListener(
+                            new View.OnClickListener()
+                    {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        startActivity(new Intent(MainActivity.this,new_activity.class));
+                    }
+                }
+        );
+
     }
 }
-
-
