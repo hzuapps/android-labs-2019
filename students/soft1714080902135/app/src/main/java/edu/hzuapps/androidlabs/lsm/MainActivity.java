@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     }catch(Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(MainActivity.this,"保存的数据是："+content,0).show();
+                    Toast.makeText(MainActivity.this,"保存的数据是：姓名:李华;年龄:18岁;性别:男;症状:重感冒;n排号:35号;备注："+content+";",0).show();
                     break;
                 default:break;
             }
