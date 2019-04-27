@@ -47,10 +47,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/aodi_info"
+            android:id="@+id/aodi1_info"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:drawableTop="@drawable/aodi" />
+            android:drawableTop="@drawable/aodi1" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,14 +69,14 @@
             android:id="@+id/car_info"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="车型：奥迪A款"
+            android:text="车型：奥迪B款"
             android:textSize="25dp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="价格：50W"
+            android:text="价格：70W"
             android:textSize="25dp" />
 
     </LinearLayout>
