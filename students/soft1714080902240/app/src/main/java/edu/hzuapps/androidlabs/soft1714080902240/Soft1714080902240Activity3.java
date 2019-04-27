@@ -1,20 +1,16 @@
 package edu.hzuapps.androidlabs.soft1714080902240;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class Soft1714080902240Activity3 extends AppCompatActivity {
@@ -28,6 +24,14 @@ public class Soft1714080902240Activity3 extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soft17140809022403);
+
+        boolean conn = ConnectionUtil.isConn(Soft1714080902240Activity3.this);
+        //Èç¹ûÃ»ÓĞÍøÂç
+        if (!conn) {
+            //Ìø×ªµ½ÉèÖÃÍøÂçµÄ½çÃæ
+            ConnectionUtil.setNetworkMethod(Soft1714080902240Activity3.this);
+        } else {
+        }
 
 
         edittext = (TextView) findViewById(R.id.danci);
@@ -46,7 +50,7 @@ public class Soft1714080902240Activity3 extends AppCompatActivity {
     }
 
     private void saveTextIntoInternalStorage(String text) {
-        // è·å–å†…éƒ¨å­˜å‚¨ç›®å½•
+        // »ñÈ¡ÄÚ²¿´æ´¢Ä¿Â¼
                 File dir = this.getFilesDir();
         //        //File dir = getCacheDir();
 
@@ -67,7 +71,7 @@ public class Soft1714080902240Activity3 extends AppCompatActivity {
     //        e.printStackTrace();
     //   }
 
-        if (file.exists()) { // åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+        if (file.exists()) { // ÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ
             Log.i(TAG, file.getAbsolutePath());
             Log.i(TAG, file.length() + ""); // bytes*1024=kb *1024 MB
             Log.i(TAG, file.isFile() + "");
@@ -79,13 +83,13 @@ public class Soft1714080902240Activity3 extends AppCompatActivity {
             file.getTotalSpace();
         }
 
-        FileOutputStream fos = null;  // å­—èŠ‚æµ  | char | cn : gbk 2 bytes, utf8 3 bytes
+        FileOutputStream fos = null;  // ×Ö½ÚÁ÷  | char | cn : gbk 2 bytes, utf8 3 bytes
 
-        try { // ä½¿ç”¨APIæ‰“å¼€è¾“å‡ºæµ
+        try { // Ê¹ÓÃAPI´ò¿ªÊä³öÁ÷
             fos = openFileOutput(FILENAME, MODE_PRIVATE);
             //FileOutputStream fos = new FileOutputStream(file);
-            fos.write(text.getBytes()); // å†™å…¥å†…å®¹
-            fos.close(); // å…³é—­æµ
+            fos.write(text.getBytes()); // Ğ´ÈëÄÚÈİ
+            fos.close(); // ¹Ø±ÕÁ÷
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -98,7 +102,7 @@ public class Soft1714080902240Activity3 extends AppCompatActivity {
             }
         }
 
-        Toast.makeText(Soft1714080902240Activity3.this,"ä¿å­˜æˆåŠŸ", 0).show();
+        Toast.makeText(Soft1714080902240Activity3.this,"±£´æ³É¹¦", 0).show();
     }
 
 
