@@ -13,8 +13,7 @@ import android.widget.Toast;
 public class SettingsActivity extends AppCompatActivity{
     private EditText mName;
     private Button mSave;
-//    private String TAG="SettingsActivity";
-//    private SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -11,6 +11,7 @@
     android:text="设置"
     android:textSize="50dp"
     />
+
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -22,6 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
+    <Button
+        android:id="@+id/config_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置背景"/>
     <Button
         android:id="@+id/config_save"
         android:layout_width="match_parent"

@@ -15,8 +15,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
+
 
 public class Soft1709081602513Activity extends AppCompatActivity {
 
@@ -38,7 +37,7 @@ public class Soft1709081602513Activity extends AppCompatActivity {
             public void run() {
                 try {
                     String url_user = "https://raw.githubusercontent.com/1085852964/android-labs-2019/master/announce.json"; //获取json文件
-//                    String urlcode =URLEncoder.encode(url_user,"Unicode");
+
                     URL url = new URL(url_user);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setConnectTimeout(5000);
@@ -51,7 +50,7 @@ public class Soft1709081602513Activity extends AppCompatActivity {
                         String inputLine;
                         StringBuffer resultData = new StringBuffer();
                         while ((inputLine = buffer.readLine()) != null) {
-                            inputLine= new String(inputLine.getBytes(), "UTF-8"); //设置UTF-8编码
+                            inputLine= new String(inputLine.getBytes(), "UTF-8"); //设置utf-8编码
                             resultData.append(inputLine);
                         }
 
