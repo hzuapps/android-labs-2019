@@ -9,20 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="edu.hzuapps.androidlabs.com1714080901120.Com1714080901120Activity2"
-            android:label="@string/title_activity_com1714080901120"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name="edu.hzuapps.androidlabs.com1714080901120.Com1714080901120Activity"
-            android:label="@string/title_activity_com1714080901120"
-            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".Com1714080901120Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+        </activity>
     </application>
 
 </manifest>

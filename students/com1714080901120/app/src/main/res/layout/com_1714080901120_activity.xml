@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_34"
-    tools:context="edu.hzuapps.androidlabs.com1714080901120.Com1714080901120Activity">
+    tools:context=".Com1714080901120Activity">
+
     <TextView
-        android:id="@+id/birthday_text"
-        android:layout_width="0dp"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:gravity="center_horizontal"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/date_text"
-        android:layout_width="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="请输入您要存储的生日信息："
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/title_activity_com1714080901120"
-        android:textColor="@android:color/red"
-        android:textSize="67dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:ems="10">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="348dp"
-        android:layout_height="336dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginRight="67dp"
-        android:layout_marginBottom="60dp"
-        android:text="@string/title_activity_com17140809011202"
-        app:layout_constraintBottom_toTopOf="@+id/birthday_text"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <requestFocus />
+    </EditText>
 
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/et_info"
+        android:layout_below="@id/et_info"
+        android:text="读取生日信息" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/et_info"
+        android:text="保存生日信息" />
+
+    </RelativeLayout>
