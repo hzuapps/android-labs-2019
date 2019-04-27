@@ -1,17 +1,12 @@
 package edu.hzuapps.androidlabs.soft1714080902240;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -38,11 +33,7 @@ public class Soft1714080902240Activity3 extends AppCompatActivity {
         edittext = (TextView) findViewById(R.id.danci);
         Button button = (Button) findViewById(R.id.btn_save);
         button.setOnClickListener(new MyonclickListener());
-
     }
-
-
-
 
     private class MyonclickListener implements View.OnClickListener {
         @Override
@@ -73,7 +64,6 @@ public class Soft1714080902240Activity3 extends AppCompatActivity {
                 file.canRead();
                 file.canWrite();
                 file.canExecute();
-
                 file.getFreeSpace();
                 file.getTotalSpace();
         }
@@ -96,8 +86,6 @@ public class Soft1714080902240Activity3 extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
         Toast.makeText(Soft1714080902240Activity3.this,"保存成功", 0).show();
     }
-
 }
