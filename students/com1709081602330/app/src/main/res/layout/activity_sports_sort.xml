@@ -27,5 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="网球"/>
+    <EditText
+        android:id="@+id/edit_add_sort"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="165dp"
+        android:hint="添加分类"
+
+        />
 
 </LinearLayout>
