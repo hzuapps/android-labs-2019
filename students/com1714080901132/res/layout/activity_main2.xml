@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="edu.hzuapps.androidlabs.com1714080901132.Main2Activity">
+     >
+
+        <ImageView
+            android:layout_weight="1000"
+            android:id="@+id/iv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <EditText
+            android:id="@+id/et_path"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入图片路径"
+            android:singleLine="true"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click"
+            android:text="浏览" />
+
+    </LinearLayout>
+
