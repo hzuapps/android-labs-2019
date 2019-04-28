@@ -32,4 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, SelfActivity.class);
         startActivity(intent);
     }
+    public void onClick5(View v) {
+        Intent intent = new Intent(MainActivity.this, PhotoActivity.class);
+        startActivity(intent);
+    }
 }
