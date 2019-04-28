@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
     //星期几
     private RelativeLayout day;
 
+
     //SQLite Helper类
     private DatabaseHelper databaseHelper = new DatabaseHelper
             (this, "database.db", null, 1);
 
     int currentCoursesNumber = 0;
     int maxCoursesNumber = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
 
         //从数据库读取数据
         loadData();
+        boolean conn = ConnectionUtil.isConn(MainActivity.this);
+        //如果没有网络
+        if (!conn) {
+            //跳转到设置网络的界面
+            ConnectionUtil.setNetworkMethod(MainActivity.this);
+        } else {
+        }
     }
 
     //从数据库加载数据
@@ -156,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, AddCourseActivity.class);
                 startActivityForResult(intent, 0);
                 break;
-            case R.id.menu_about:
+            case R.id.menu_download:
                 Intent intent1 = new Intent(this, AboutActivity.class);
                 startActivity(intent1);
                 break;
