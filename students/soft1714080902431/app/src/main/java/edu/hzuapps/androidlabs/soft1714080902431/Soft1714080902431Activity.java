@@ -65,18 +65,10 @@ public class Soft1714080902431Activity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902431Activity.this, ImageActivity.class);
+                Intent intent = new Intent(Soft1714080902431Activity.this, PhotoActivity.class);
                 startActivity(intent);
             }
         });
-        /*imageView = (ImageView) findViewById(R.id.imageView);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902431Activity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });*/
 
     }
 
