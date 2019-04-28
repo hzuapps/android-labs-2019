@@ -30,5 +30,9 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        if (!ConnectionNetwork.isConn(getApplicationContext())) {
+            ConnectionNetwork.setNetworkMethod(SecondActivity.this);
+        }
     }
 }
