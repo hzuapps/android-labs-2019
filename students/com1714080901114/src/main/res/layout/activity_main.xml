@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="#E45A87"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/miku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:onClick="ShowToast"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#6275DF"
+        android:paddingLeft="30dp"
+        android:paddingTop="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/kaka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_1"
+            android:text="进入板块选择"
+            android:textColor="#D85B85"
+            android:textSize="50sp"
+
+            />
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:paddingTop="10dp">
+        <EditText
+            android:id="@+id/second"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:hint="登陆日期"
+            android:maxLines="1"
+            android:textColorHint="#822688"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存"
+                android:textSize="30sp"
+                android:background="@drawable/btn_2"
+                android:textColor="#D85B85"
+                />
+            <Button
+                android:layout_marginLeft="20dp"
+                android:id="@+id/reads"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="上次登录日期"
+                android:textSize="30sp"
+                android:background="@drawable/btn_2"
+                android:textColor="#D85B85"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
