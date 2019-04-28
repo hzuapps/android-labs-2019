@@ -34,19 +34,20 @@
             android:text="歌曲列表" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/pre_btn"
             android:layout_width="66dp"
             android:layout_height="wrap_content"
             android:text="上一首" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/play_btn"
             android:layout_width="71dp"
             android:layout_height="wrap_content"
+            android:onClick="play_stop"
             android:text="暂停" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/next_btn"
             android:layout_width="69dp"
             android:layout_height="wrap_content"
             android:text="下一首" />
