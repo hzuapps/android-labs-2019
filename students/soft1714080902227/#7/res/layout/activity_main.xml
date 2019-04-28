@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_button"
+        android:orientation="vertical">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--
+        <ImageButton
+            android:layout_weight="1"
+            android:id="@+id/weixin1"
+            android:background="@null"
+            android:src="@drawable/weixin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/weixin2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/weixin" />
+        <ImageButton
+            android:layout_weight="1"
+            android:id="@+id/weixin3"
+            android:background="@null"
+            android:src="@drawable/weixin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:layout_weight="1"
+            android:id="@+id/weixin4"
+            android:background="@null"
+            android:src="@drawable/weixin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+            -->
+        <Button
+            android:id="@+id/weixin1"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:text="所有图片" />
+
+        <Button
+            android:id="@+id/weixin2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:text="相册"/>
+
+        <Button
+            android:id="@+id/weixin3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:text="查找图片"
+            />
+
+        <Button
+            android:id="@+id/weixin4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:text="打开相机"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
