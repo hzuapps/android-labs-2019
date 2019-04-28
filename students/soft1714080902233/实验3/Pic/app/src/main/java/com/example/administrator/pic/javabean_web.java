@@ -3,7 +3,7 @@ package com.example.administrator.pic;
 /**
  * Created by Administrator on 2019/4/19 0019.
  */
-public class javabean_web {
+public class javabean_web {//gson对应要求的javabean
     private String csdn_id;
     private String http;
     private String emotion;
