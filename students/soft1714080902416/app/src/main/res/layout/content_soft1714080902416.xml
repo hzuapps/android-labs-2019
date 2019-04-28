@@ -33,5 +33,12 @@
         android:layout_height="wrap_content"
         android:text="浏览历史账单"/>
 
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拍照记录账单证据"/>
+
+
 
 </LinearLayout>

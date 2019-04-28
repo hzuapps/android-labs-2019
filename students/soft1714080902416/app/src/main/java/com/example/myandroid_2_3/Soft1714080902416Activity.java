@@ -6,10 +6,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.logging.Logger;
+
 public class Soft1714080902416Activity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +23,14 @@ public class Soft1714080902416Activity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        /*FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         Button button = findViewById(R.id.button);
         View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -54,8 +58,21 @@ public class Soft1714080902416Activity extends AppCompatActivity {
                 startActivity(intent2);
             }
         };
+
+        Button camera=findViewById(R.id.camera);
+        View.OnClickListener onClickListener3=new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent3 = new Intent(Soft1714080902416Activity.this,CameraActivity.class);
+                startActivity(intent3);
+
+            }
+        };
+
+
         button.setOnClickListener(onClickListener);
         button1.setOnClickListener(onClickListener1);
         button2.setOnClickListener(onClickListener2);
+        camera.setOnClickListener(onClickListener3);
     }
 }
