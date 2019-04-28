@@ -11,22 +11,26 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.menu.CPSelect;
 import com.example.menu.CXSelect;
+import com.example.menu.Model.CaiPu;
 import com.example.menu.R;
 import com.example.menu.Soft1714080902104Activity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
     private Context context;
 
-    private List<Integer> data;
 
-    public RecyclerViewAdapter(Context context, List<Integer> data) {
+    private List<CaiPu>caiPuList=new ArrayList<>();
+
+    public RecyclerViewAdapter(Context context, List<CaiPu> data) {
         this.context = context;
-        this.data = data;
+        this.caiPuList = data;
     }
 
     @Override
@@ -37,8 +41,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.imageView.setImageResource(R.drawable.cp);
-        holder.textView.setText("测试");
+
+        Glide.with(context).load(caiPuList.get(position).getAlbum()).into(holder.imageView);
+        holder.textView.setText(caiPuList.get(position).getTitle());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +55,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return this.data.size();
+        return this.caiPuList.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
