@@ -14,9 +14,7 @@
         android:layout_marginTop="200dp"
         android:text="@string/title"
         android:textColor="@color/colorWhite"
-        android:textSize="30sp"
-        android:drawableLeft="@drawable/ic_launcher_foreground"
-        android:drawableStart="@drawable/ic_launcher_foreground" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/start_game"
@@ -43,5 +41,18 @@
         android:layout_marginRight="32dp"
         android:background="@color/colorBlue"
         android:text="@string/rank_list" />
+
+    <Button
+        android:id="@+id/country_list"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/rank_list"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/colorBlue"
+        android:text="@string/country_list" />
 
 </RelativeLayout>

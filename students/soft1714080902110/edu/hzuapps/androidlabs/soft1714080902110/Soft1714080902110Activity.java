@@ -22,6 +22,7 @@ public class Soft1714080902110Activity extends AppCompatActivity {
 
         Button start_game = findViewById(R.id.start_game);
         Button rank_list = findViewById(R.id.rank_list);
+        Button country_list = findViewById(R.id.country_list);
 
         start_game.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +36,14 @@ public class Soft1714080902110Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent rank_list = new Intent(Soft1714080902110Activity.this, RankList.class);
                 startActivity(rank_list);
+            }
+        });
+
+        country_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent country_list = new Intent(Soft1714080902110Activity.this, CountryList.class);
+                startActivity(country_list);
             }
         });
     }
