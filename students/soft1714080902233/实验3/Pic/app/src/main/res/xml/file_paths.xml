@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
-    <root-path name="DCIM/Camera" />
+    <root-path name="DCIM/Camera" /><--!file provider必须要的文件路径-->
 </paths>
