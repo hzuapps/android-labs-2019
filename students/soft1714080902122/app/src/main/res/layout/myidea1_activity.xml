@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2.红枣，枸杞，益母草" />
+            android:text="2.康乃馨" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,8 +40,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="红枣与枸杞补血气功效，益母草活血，出油起痘多，痛经严重，就需要红枣枸杞补起来!温水冲泡，
-            喝两周人气色就上来了!姨妈也没那么痛了!月经过多不宜服!" />
+            android:text="具有改善血液循环、促进新陈代谢、排除体内毒素、
+            调节女性内分泌的功效，味道芬芳，有助驱除心烦气躁。" />
 
 
         <Button
