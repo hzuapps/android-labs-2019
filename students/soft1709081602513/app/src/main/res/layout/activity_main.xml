@@ -7,7 +7,7 @@
     android:background="@drawable/background"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="80dp"
+    android:padding="60dp"
 
     tools:context=".MainActivity">
 
@@ -20,10 +20,16 @@
     <!--app:layout_constraintRight_toRightOf="parent"-->
     <!--app:layout_constraintTop_toTopOf="parent" />-->
 
-    <!--到时候直接换带字的图,图片还没弄好，现在是随便乱弄的图-->
-
+    <!--&lt;!&ndash;到时候直接换带字的图,图片还没弄好，现在是随便乱弄的图&ndash;&gt;-->
 
     <!--/>-->
+    <ImageButton
+        android:id="@+id/btn_start"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/startbutton"
+        android:scaleType="fitStart" />
+
     <TextView
         android:id="@+id/textview_01"
         android:layout_width="260dp"
@@ -34,14 +40,6 @@
         android:textAlignment="center"
         android:textColor="@color/design_default_color_primary"
         android:textSize="35dp"
-        />
-
-    <ImageButton
-        android:id="@+id/btn_start"
-        android:layout_width="207dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/startbutton"
-        android:scaleType="fitStart"
         />
 
     <Button
