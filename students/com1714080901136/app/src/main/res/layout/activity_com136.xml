@@ -8,76 +8,98 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65059dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
-
     </android.support.design.widget.AppBarLayout>
-
     <include layout="@layout/content_com136" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="58dp"
-        android:background="#D0D0D0"
-       >
+        android:background="#D0D0D0">
 
         <LinearLayout
             android:id="@+id/l11"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#D0D0D0"
-            android:orientation="horizontal"
-            >
-        <Button
-            android:id="@+id/b11"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textColor="@color/colorPrimary"
-            android:onClick="fanhui"
-            android:text="返回" />
+            android:layout_marginTop="500dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/b11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="fanhui"
+
+                android:text="返回"
+
+                android:textSize="25dp" />
+
             <Button
                 android:id="@+id/b12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
                 android:layout_marginLeft="180dp"
-                android:textColor="@color/colorPrimary"
                 android:onClick="tianjia"
-                android:text="添加" />
+                android:text="添加"
+
+                android:textSize="25dp" />
         </LinearLayout>
+
+
         <LinearLayout
-            android:id="@+id/l12"
+            android:id="@+id/l2"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_below="@+id/l11"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_below="@id/iv"
+            android:background="#D0D0D0"
+            android:orientation="horizontal">
 
-            android:orientation="horizontal"
+            <Button
+                android:id="@+id/b3"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:onClick="photograph"
+                android:text="拍照获取"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
 
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            >
+            <Button
+                android:id="@+id/b4"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:onClick="chose"
+                android:text="从相册中获取"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp" />
+
         </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/iv"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp" />
+
+
     </RelativeLayout>
-
-
-
 
 </android.support.design.widget.CoordinatorLayout>
