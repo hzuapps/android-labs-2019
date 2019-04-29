@@ -6,6 +6,7 @@
     android:id="@+id/linear"
     android:orientation="vertical">
 
+
     <RelativeLayout
         android:id="@+id/textView"
         android:layout_width="match_parent"

@@ -1,5 +1,7 @@
+
 <resources>
     <string name="app_name">生日管家</string>
     <string name="bg_change">更换背景</string>
     <string name="file_save">生日存储</string>
 </resources>
+
