@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">生日管家</string>
     <string name="text_change">更改背景图片</string>
-    <string name="filesave">生日存储 </string>
+    <string name="file_save">生日存储 </string>
+    <string name="camera">拍摄手写卡片祝福</string>
 </resources>
