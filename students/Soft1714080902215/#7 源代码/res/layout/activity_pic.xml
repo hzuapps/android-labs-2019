@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pic">
+
+    <LinearLayout
+        android:id="@+id/regist_biaoti01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="用户："
+            android:textSize="20dp"/>
+        <!--
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入第一题的题目"
+            android:textSize="14dp"/>
+            -->
+        <!--
+    <RadioGroup
+        android:id="@+id/radioGroup01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regist_biaoti01"
+        android:layout_marginLeft="30dp"
+        android:contentDescription="选项"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radio001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="回答是当今皇上的">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/radio002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回答皇上的">
+        </RadioButton>
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回界面"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="274dp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/textview_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="Click"
+        tools:ignore="OnClick"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp" />
+        -->
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/regist_biaoti02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/regist_biaoti01"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="欢迎您进入调查统计系统"
+        android:textSize="30dp"/>
+        <!--
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入第二题的题目"
+        android:textSize="14dp"/>
+        -->
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="8"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/regist_biaoti02"
+        android:orientation="horizontal">
+        <Button android:id="@+id/button03"
+                 android:text="问卷调查"
+                 android:layout_columnSpan="2"
+                 android:layout_rowSpan="4"
+                 android:layout_gravity="fill"/>
+        <Button android:id="@+id/button04"
+            android:text="发帖提问"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2" />
+        <Button android:id="@+id/pic_comment"
+            android:text="照片点评"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2" />
+        <Button android:text="报名表设计"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2"/>
+        <Button android:text="股票市场"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2"/>
+        <Button android:text="无课表收集"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2"/>
+        <Button android:text="考试模拟题"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/regist_biaoti00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="500dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回登陆界面"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="274dp"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/textview_00"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="Click"
+            tools:ignore="OnClick"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </LinearLayout>
+</RelativeLayout>
