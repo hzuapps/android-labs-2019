@@ -10,12 +10,32 @@
     tools:context="com.example.myapplication.myapplication02.ThirdActivity">
 
 
-    <ListView
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1000"
+        android:id="@+id/iv"
+        android:layout_alignRight="@+id/et_path"
+        android:layout_alignEnd="@+id/et_path" />
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="118dp" />
+        android:singleLine="true"
+        android:hint="请输入图片途径"
+        android:id="@+id/et_path"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="查看"
+        android:id="@+id/button"
+        android:layout_alignBottom="@+id/iv"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 
