@@ -38,6 +38,7 @@ public class Com1714080901120Activity extends AppCompatActivity {
         };
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
