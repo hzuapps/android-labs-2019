@@ -20,6 +20,7 @@
         <activity android:name=".Soft1509081602625Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,5 +29,7 @@
             android:name=".MyCollectionActivity"
             android:label="@string/title_activity_my_collection"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".CarinfobActivity"></activity>
     </application>
+
 </manifest>

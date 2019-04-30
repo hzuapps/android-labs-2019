@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">Soft1509081602625Activity</string>
-    <string name="title_activity_soft1509081602625">Soft1509081602625Activity</string>
+    <string name="app_name">Soft1509081602625Activity查车App</string>
+    <string name="title_activity_my_collection">MyCollectionActivity</string>
+    <string name="title_activity_start">Start</string>
 </resources>
