@@ -16,11 +16,57 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="1000dp">
+            <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    >
 
+                <TextView
+                    android:paddingLeft="110dp"
+                    android:id="@+id/best"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="40dp"
+                    android:text="本周最佳"/>
+                <ImageView
+                    android:id="@+id/firstgame"
+                    android:layout_weight="1000"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/best"/>
+
+
+                <Button
+                    android:onClick="click"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="更新"
+                    android:background="@drawable/btn_3"
+                    android:textColor="#4FA5D3"
+                    android:layout_toRightOf="@+id/firstupdate"
+                    android:layout_below="@+id/firstgame"
+                    />
+                    <EditText
+                        android:id="@+id/firstupdate"
+                        android:layout_width="320dp"
+                        android:layout_height="50dp"
+                        android:hint="请输入图片"
+                        android:singleLine="true"
+                        android:layout_below="@+id/firstgame"/>
+            </RelativeLayout>
+
+            </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/first"
                 android:layout_width="match_parent"
-                android:layout_height="400dp">
+                android:layout_height="400dp"
+                android:layout_below="@+id/top"
+                >
 
 
                 <RelativeLayout
