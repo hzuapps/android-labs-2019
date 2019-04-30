@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edus.hzuapp.androidlabs.soft1714080902134.Soft1714080902134ChargeActivity">
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="待充值号码"/>
+
+   <LinearLayout
+       android:layout_marginTop="50dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <Button
+           android:layout_weight="1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="10.0元"/>
+       <Button
+           android:layout_weight="1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="30.0元"/>
+       <Button
+           android:layout_weight="1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="50.0元"/>
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100.0元"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150.0元"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200.0元"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
