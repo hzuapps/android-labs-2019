@@ -32,8 +32,10 @@ public class Com1714080901141MainActivity extends Com1714080901141BaseActivity {
                     replaceFragment(new Com1714080901141FragmentStudy());
                     return true;
                 case R.id.navigation_third:
+                    replaceFragment(new Com1714080901141FragmentCommunication());
                     return true;
                 case R.id.navigation_forth:
+                    replaceFragment(new Com1714080901141FragmentPhotoRecord());
                     return true;
             }
             return false;
