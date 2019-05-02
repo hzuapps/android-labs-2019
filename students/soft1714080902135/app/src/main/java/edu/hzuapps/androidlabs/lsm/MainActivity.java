@@ -26,59 +26,77 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
-public class MainActivity extends AppCompatActivity {
-
-    //    @Override
-//    protected void onCreate(@Nullable Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.oneclick_registration_activity);
-//    }
-    private EditText et_info;
-    private Button btn_sava;
-    private Button btn_read;
+public class MainActivity extends Activity {
+    protected static final int CHANGE_UI=1;
+    protected static final int ERROR =2;
+    private EditText et_path;
+    private ImageView iv;
+    //主线程创建消息处理器
+    private Handler handler=new Handler(){
+        public void handleMessage(android.os.Message msg){
+            if(msg.what==CHANGE_UI){
+                Bitmap bitmap=(Bitmap) msg.obj;
+                iv.setImageBitmap(bitmap);
+            }else if(msg.what==ERROR){
+                Toast.makeText(MainActivity.this,"显示图片错误",0).show();
+            }
+        }
+    };
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //获取布局文件的控件
-        et_info=(EditText)findViewById(R.id.et_info);
-        btn_sava=(Button)findViewById(R.id.btn_save);
-        btn_read=(Button)findViewById(R.id.btn_read);
-        btn_sava.setOnClickListener(new ButtonListener());
-        btn_read.setOnClickListener(new ButtonListener());
+        et_path=(EditText)findViewById(R.id.et_path);
+        iv=(ImageView) findViewById(R.id.iv);
     }
-    //定义Button按钮的点击事件
-    private class ButtonListener implements View.OnClickListener{
-        public void onClick(View V){
-            switch(V.getId()){
-                case R.id.btn_save:
-                    String saveinfo = et_info.getText().toString().trim();
-                    FileOutputStream fos;
-                    try {
-                        //保存数据
-                        fos = openFileOutput("data.txt", Context.MODE_APPEND);
-                        fos.write(saveinfo.getBytes());
-                        fos.close();
+    public void click(View view){
+        final String path=et_path.getText().toString().trim();
+        if(TextUtils.isEmpty(path)){
+            Toast.makeText(this,"图片路径不能为空",0).show();
+        }else{
+            //子线程请求网络
+            new Thread(){
+                private HttpURLConnection conn;
+                private Bitmap bitmap;
+                public void run(){
+                    //连接服务器get请求，获取图片
+                    try{
+                        //创建URL对象
+                        URL url = new URL(path);
+                        //根据url发送http请求
+                        conn = (HttpURLConnection) url.openConnection();
+                        //设置请求的方式
+                        conn.setRequestMethod("GET");
+                        //设置超时时间
+                        conn.setConnectTimeout(5000);
+                        //设置请求头User-Agent浏览器的版本
+                        conn.setRequestProperty("User-Agent","Mizilla/4.0 (compatible;MSIE 6.0;Windows NT 5.1;"+"SV1;.NET4.0C;.NET4.0E;.NET CLR 2.0.50727;"+".NET CLR 3.0.4506.2152;.NET CLR 3.5.30729;Shuame)");
+                        //得到服务器返回的响应码
+                        int code = conn.getResponseCode();
+                        //请求网络成功后返回码是200
+                        if(code==200) {
+                            //获取输入流
+                            InputStream is = conn.getInputStream();
+                            //将流转换成Bitmap对象
+                            bitmap = BitmapFactory.decodeStream(is);
+                            //TODO:告诉主线程一个消息：帮我更改界面。内容：bitmap
+                            Message msg = new Message();
+                            msg.what = CHANGE_UI;
+                            msg.obj = bitmap;
+                            handler.sendMessage(msg);
+                        }else{
+                            //返回码不是200，请求服务器失联
+                            Message msg=new Message();
+                            msg.what=ERROR;
+                            handler.sendMessage(msg);
+                        }
                     }catch (Exception e){
                         e.printStackTrace();
+                        Message msg=new Message();
+                        msg.what=ERROR;
+                        handler.sendMessage(msg);
                     }
-                    Toast.makeText(MainActivity.this,"数据保存成功", 0).show();
-                    break;
-                case R.id.btn_read:
-                    String content="";
-                    try{
-                        //获取保存的数据
-                        FileInputStream fis=openFileInput("data.txt");
-                        byte[] buffer=new byte[fis.available()];
-                        fis.read(buffer);
-                        content = new String(buffer);
-                        fis.close();
-                    }catch(Exception e){
-                        e.printStackTrace();
-                    }
-                    Toast.makeText(MainActivity.this,"保存的数据是：姓名:李华;年龄:18岁;性别:男;症状:重感冒;n排号:35号;备注："+content+";",0).show();
-                    break;
-                default:break;
-            }
+                };
+            }.start();
         }
     }
 }
