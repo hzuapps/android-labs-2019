@@ -120,17 +120,18 @@
             android:gravity="bottom">
 
             <Button
+                android:id="@+id/download_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="加载背景图片" />
+
+            <Button
                 android:id="@+id/take_photos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="使用相机拍照"
                 android:layout_gravity="end"/>
 
-            <Button
-                android:id="@+id/download_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="加载背景图片" />
 
             <Button
                 android:id="@+id/choose_image"

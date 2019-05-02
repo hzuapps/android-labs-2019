@@ -220,8 +220,8 @@ public class Activity_Login extends AppCompatActivity {
             @Override
             public void run() {
                 layout.setBackground(new BitmapDrawable(getResources(), bitmap));
+
             }
         });
     }
-
 }
