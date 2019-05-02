@@ -1,12 +1,18 @@
 package edu.hzuapps.androidlabs.soft1714080902435;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,8 +32,19 @@ public class Soft1714080902435Activity extends AppCompatActivity implements View
     private EditText et1;
     private ImageView image1;
     private Bitmap bitmap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Configuration mConfiguration = this.getResources().getConfiguration(); //获取设置的配置信息
+        int ori = mConfiguration.orientation; //获取屏幕方向
+        if (ori == mConfiguration.ORIENTATION_LANDSCAPE) {
+            Toast toastCenter = Toast.makeText(getApplicationContext(), "为了您更好的游戏体验，请将手机竖屏显示", Toast.LENGTH_LONG);
+            toastCenter.setGravity(Gravity.CENTER, 0, 0);
+            toastCenter.show();
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//强制为竖屏
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soft1714080902435);
         bt1 = (Button) findViewById(R.id.bt1);
