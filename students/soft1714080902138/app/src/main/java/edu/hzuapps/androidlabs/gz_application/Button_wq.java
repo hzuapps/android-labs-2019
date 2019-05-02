@@ -1,13 +1,13 @@
-package edu.hzuapps.androidlabs.myapplication138;
+package edu.hzuapps.androidlabs.gz_application;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Button4 extends AppCompatActivity {
+public class Button_wq extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_button4);
+        setContentView(R.layout.activity_button_wq);
     }
 }

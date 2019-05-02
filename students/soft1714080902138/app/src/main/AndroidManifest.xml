@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.myapplication138">
+    package="edu.hzuapps.androidlabs.gz_application">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,21 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Button6" />
-        <activity android:name=".Button5" />
-        <activity android:name=".Button4" />
-        <activity android:name=".Button3" />
-        <activity android:name=".Button1" />
-        <activity android:name=".Button2" />
-
-        <activity android:name=".Soft1714080902138Activity">
+        <activity android:name=".sendRequest"></activity>
+        <activity android:name=".Soft1714080902138Activity" />
+        <activity android:name=".Button_wq" />
+        <activity android:name=".Button_hy" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
