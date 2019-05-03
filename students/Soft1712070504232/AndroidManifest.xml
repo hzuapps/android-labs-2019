@@ -10,12 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="edu.hzuapps.androidlabs.soft1712070504232.Soft1712070504232Activity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.media.action.IMAGE_CAPTURE"/>
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name="edu.hzuapps.androidlabs.soft1712070504232.Soft1712070504232Activity2">
+        </activity>
 
-</manifest> 
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.hardware.sensor.accelerometer"/>
+</manifest>
