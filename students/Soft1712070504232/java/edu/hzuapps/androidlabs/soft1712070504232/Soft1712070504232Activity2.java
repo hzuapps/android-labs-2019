@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-
 public class Soft1712070504232Activity2 extends Activity{
     ShakeListener mShakeListener = null;
     Vibrator mVibrator;
@@ -26,7 +25,6 @@ public class Soft1712070504232Activity2 extends Activity{
         mImgUp = (RelativeLayout) findViewById(R.id.shakeImgUp);
         mImgDn = (RelativeLayout)findViewById(R.id.shakeImgDown);
     }
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -48,7 +46,6 @@ public class Soft1712070504232Activity2 extends Activity{
             }
         });
     }
-
     @Override
     protected void onPause() {
         super.onPause();

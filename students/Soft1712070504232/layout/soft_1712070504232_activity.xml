@@ -35,24 +35,25 @@
 
     <Button
         android:id="@+id/button1"
-        android:drawablePadding="1dp"
-        android:text="点击获取验证码"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:drawablePadding="1dp"
+        android:text="点击获取验证码"
+        app:layout_constraintBottom_toBottomOf="@+id/et_info"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.899"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
-
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toEndOf="@+id/et_info"
+        app:layout_constraintTop_toTopOf="@+id/et_info"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/et_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="157dp"
+        android:layout_height="41dp"
         android:layout_marginStart="92dp"
         android:layout_marginLeft="92dp"
         android:layout_marginTop="24dp"
@@ -66,15 +67,15 @@
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="保存信息"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/et_info"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_info"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.298" />
 
     <Button
         android:id="@+id/btn_read"
@@ -87,7 +88,7 @@
         android:text="读取信息"
         app:layout_constraintBottom_toBottomOf="@+id/btn_save"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.259"
         app:layout_constraintStart_toEndOf="@+id/btn_save"
         app:layout_constraintTop_toTopOf="@+id/btn_save"
         app:layout_constraintVertical_bias="0.0" />
@@ -103,6 +104,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
 
     <EditText
         android:id="@+id/et_path"
@@ -120,7 +122,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_info" />
-
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
@@ -138,9 +139,31 @@
         android:layout_marginStart="160dp"
         android:layout_marginLeft="160dp"
         android:layout_marginTop="44dp"
-        android:text="拍照"
+        android:text="拍照验证"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/Verification_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="请输入获取的验证码"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="@+id/et_info"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/et_info"
+        app:layout_constraintTop_toBottomOf="@+id/et_info" />
+
+    <Button
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="Verify"
+        android:text="点击验证身份"
+        app:layout_constraintEnd_toEndOf="@+id/button1"
+        app:layout_constraintStart_toStartOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
