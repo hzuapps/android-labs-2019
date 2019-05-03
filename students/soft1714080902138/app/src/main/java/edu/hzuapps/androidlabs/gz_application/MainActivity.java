@@ -2,6 +2,12 @@ package edu.hzuapps.androidlabs.gz_application;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
+import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -19,7 +26,9 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,10 +43,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText edit;
 
+    public static  final int TAKE_PHOTO=1;
+
+    private ImageView picture;
+
+    private Uri imageUri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         edit = (EditText) findViewById(R.id.edit);
         String inputText = load();
         if (!TextUtils.isEmpty(inputText)) {
@@ -73,7 +88,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button sendRequest = (Button) findViewById(R.id.send_request);
         sendRequest.setOnClickListener(this);
 
+        //实验7
+        Button takePhoto=(Button) findViewById(R.id.take_photo);
+        picture=(ImageView)findViewById(R.id.picture);
+        takePhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                File outputImage=new File(getExternalCacheDir(),
+                        "output_image.jpg");
+                try{
+                    if (outputImage.exists()){
+                        outputImage.delete();
+                    }
+                    outputImage.createNewFile();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+                if(Build.VERSION.SDK_INT>=24){
+                    imageUri= FileProvider.getUriForFile(MainActivity.this,
+                            "edu.hzuapps.androidlabs.gz_application.fileprovider",outputImage);
+                }else{
+                    imageUri= Uri.fromFile(outputImage);
+                }
+                Intent intent=new Intent("android.media.action.IMAGE_CAPTURE");
+                intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
+                startActivityForResult(intent,TAKE_PHOTO);
+            }
+        });
+    }
 
+
+    @Override
+    protected void onActivityResult(int requestCode,int resultCode,Intent data){
+        switch(requestCode){
+            case TAKE_PHOTO:
+                if(resultCode==RESULT_OK){
+                    try{
+                        Bitmap bitmap= BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+                        picture.setImageBitmap(bitmap);
+                    }catch(FileNotFoundException e){
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            default:
+                break;
+        }
     }
 
         //文件存储

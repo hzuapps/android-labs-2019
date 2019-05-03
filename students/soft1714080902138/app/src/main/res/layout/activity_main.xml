@@ -78,6 +78,21 @@
             tools:layout_editor_absoluteX="59dp"
             tools:layout_editor_absoluteY="327dp" />
 
+        //实验7：相机
+        <Button
+            android:id="@+id/take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="记录工作表现" />
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+
     </LinearLayout>
 
 
