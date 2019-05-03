@@ -19,7 +19,9 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".ResultActivity"></activity>
         <activity android:name=".FileStorageActivity"></activity>
+        <activity android:name=".OpenActivity"></activity>
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

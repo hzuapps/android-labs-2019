@@ -9,21 +9,33 @@
     <TextView
         android:id="@+id/textview_01"
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
+        android:layout_height="450dp"
         android:drawableTop="@drawable/a2"
-        android:text="@string/xhr"
         android:layout_marginTop="-20dp"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="415dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_01"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginStart="-10dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="0dp"
         android:text="@string/anniu" />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button3"
+        android:text="@string/data" />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button4"
+        android:text="网络图片" />
 
 </RelativeLayout>

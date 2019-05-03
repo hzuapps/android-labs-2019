@@ -17,17 +17,22 @@ tools:context=".FileStorageActivity">
         android:id="@+id/read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText"
         android:layout_below="@+id/editText"
-        android:text="读取信息"/>
+        android:layout_alignRight="@+id/editText"
+        android:layout_marginTop="-1dp"
+        android:text="读取信息" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-10dp"
         android:ems="10">
-        <requestFocus/>
+
+        <requestFocus />
     </EditText>
     <TextView
         android:id="@+id/textView"

@@ -1,4 +1,5 @@
 package edu.hzuapps.androidlabs.soft1709081602231;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         jiandao = findViewById(R.id.jiandao);
         bu = findViewById(R.id.bu);
         choose = findViewById(R.id.choose);
+
         choose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

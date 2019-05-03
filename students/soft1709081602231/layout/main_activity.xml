@@ -4,35 +4,35 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="MainActivity">
+    tools:context=".MainActivity">
 
     <RadioGroup
-        android:id="@+id/caiquan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    android:id="@+id/caiquan"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/shitou"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/a5"
             android:checked="true"
-            android:text="石头" />
+            android:drawableTop="@drawable/a5"
+            android:text="            石头" />
 
         <RadioButton
             android:id="@+id/jiandao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/a3"
-            android:text="剪刀" />
+            android:text="            剪刀" />
 
         <RadioButton
             android:id="@+id/bu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/a4"
-            android:text="布" />
+            android:text="            布" />
     </RadioGroup>
 
     <Button
@@ -40,4 +40,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="出拳" />
+
 </LinearLayout>
