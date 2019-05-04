@@ -35,6 +35,12 @@
             android:text="@string/file_save"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/createButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/text_background"
@@ -44,7 +50,7 @@
             android:layout_alignBottom="@+id/createButton"
             android:layout_centerInParent="true"
             android:layout_toRightOf="@+id/createButton"
-            android:text="@string/bg_change"
+            android:text="@string/text_change"
             android:textColor="@color/colorPrimary"
             android:textSize="15sp" />
 

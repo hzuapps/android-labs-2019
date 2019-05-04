@@ -45,11 +45,11 @@ public class Com1714080901120Activity extends AppCompatActivity {
         setContentView(R.layout.com_1714080901120_activity);
         linear = findViewById(R.id.linear);
         changeText = findViewById(R.id.text_background);
-        b = findViewById(R.id.createButton);
+        b = findViewById(R.id.createButton2);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Com1714080901120Activity.this, Com1714080901120Activity2.class);
+                Intent intent = new Intent(Com1714080901120Activity.this, Com1714080901120Activity3.class);
                 startActivity(intent);
             }
         });
