@@ -13,6 +13,7 @@ public class Soft1709081602231Activity extends AppCompatActivity {
     private Button button3;
     private Button button4;
     private Button button5;
+    private Button button6;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,6 +49,17 @@ public class Soft1709081602231Activity extends AppCompatActivity {
                 Intent b = new Intent(Soft1709081602231Activity.this,OpenActivity.class);
 
                 startActivity(b);
+
+            }
+        });
+        button6=findViewById(R.id.button6);
+        button6.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent c = new Intent(Soft1709081602231Activity.this,OrientationActivity.class);
+
+                startActivity(c);
 
             }
         });

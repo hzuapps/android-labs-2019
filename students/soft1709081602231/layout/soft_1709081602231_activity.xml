@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/textview_01"
         android:layout_width="wrap_content"
-        android:layout_height="450dp"
+        android:layout_height="400dp"
         android:drawableTop="@drawable/a2"
         android:layout_marginTop="-20dp"
         tools:ignore="MissingConstraints" />
@@ -37,5 +37,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button4"
         android:text="网络图片" />
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button5"
+        android:text="屏幕方向" />
 
 </RelativeLayout>
