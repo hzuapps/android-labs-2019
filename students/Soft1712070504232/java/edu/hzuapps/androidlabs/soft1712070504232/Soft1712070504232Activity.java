@@ -156,4 +156,8 @@ public class Soft1712070504232Activity extends Activity {
             }
         }
     }
+    public void Verify(View v){
+        Toast.makeText(Soft1712070504232Activity.this,"验证成功！",LENGTH_SHORT).show();
+    }
+
 }
