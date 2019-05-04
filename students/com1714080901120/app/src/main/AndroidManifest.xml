@@ -11,6 +11,10 @@
         android:theme="@style/AppTheme">
 
         <activity
+            android:name=".Com1714080901120Activity3"
+            android:label="@string/camera"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Com1714080901120Activity2"
             android:label="@string/file_save"></activity>
         <activity android:name=".Com1714080901120Activity">
