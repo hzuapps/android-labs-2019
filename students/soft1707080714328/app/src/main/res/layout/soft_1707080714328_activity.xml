@@ -15,6 +15,19 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
+        <ImageButton
+            android:id="@+id/ibtn_skip"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/skip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:padding="0dp"
+            android:layout_width="50dp"
+            android:layout_height="30dp" />
+
         <TextView
             android:textStyle="bold"
             android:gravity="bottom"
@@ -44,6 +57,7 @@
         android:layout_height="0dp">
 
         <Button
+            android:onClick="btn_zhuce"
             android:textColor="@android:color/white"
             android:layout_marginBottom="30dp"
             android:layout_above="@+id/zhuce"
@@ -52,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
+            android:onClick="btn_denglu"
             android:textColor="#ff3333"
             android:id="@id/zhuce"
             android:background="@drawable/bg_transparent"

@@ -1,18 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="androidlabs.hzuapps.ezu.soft1707080714328.Soft1707080714328Activity_First">
-
-    <TextView
-        android:textSize="25dp"
-        android:text="这是跳过后的界面"
-        android:textColor="@android:color/holo_red_light"
+    android:orientation="vertical"
+    tools:context="androidlabs.hzuapps.ezu.soft1707080714328.Soft1707080714328Activity_First"
+    android:background="@drawable/wodebeijing"
+    android:weightSum="1">
+<!--orientation属性是定义局内控件排列方式,水平排列:horizontal,垂直排列:vertical-->
+    <RelativeLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</RelativeLayout>
+        android:layout_height="90dp">
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:src="@drawable/qiandao"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="0dp"
+            android:layout_width="50dp"
+            android:layout_height="30dp" />
+        <!--scaleType属性是设置图片居中后等比例放大缩小-->
+        <TextView
+            android:textStyle="bold"
+            android:gravity="top|left"
+            android:text="我的"
+            android:textSize="20dp"
+            android:textColor="#eeeeee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+<!--gravity是定义位置的属性,可以用|来联合使用属性值,如top|left就是顶部靠左-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_whiteframe">
+        <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="An币"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="优惠券"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>-->
+        <!--上面注释的代码是用线性布局进行两个button控件同行显示的方法-->
+        <Button
+            android:id="@+id/anbi"
+            android:gravity="center"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="An币"
+            android:layout_width="182dp"
+            android:layout_height="80dp" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/anbi"
+            android:layout_width="1dip"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#eeeeee" />
+        <!--设置一条竖的分割线-->
+
+        <Button
+            android:layout_toRightOf="@+id/anbi"
+            android:gravity="center"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="优惠券"
+            android:layout_width="182dp"
+            android:layout_height="80dp"
+            android:id="@+id/button" />
+        <!--toRigt0f属性是将控件放置于id控件的右边-->
+        <Button
+            android:padding="10dp"
+            android:id="@+id/zhifuguanli"
+            android:layout_below="@+id/anbi"
+            android:gravity="center|left"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="支付管理"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <!--layout_below属性是将控件放置于id控件的下面-->
+        <Button
+            android:padding="10dp"
+            android:id="@+id/zuixinyouhui"
+            android:layout_below="@+id/zhifuguanli"
+            android:gravity="center|left"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="最新优惠"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <Button
+            android:padding="10dp"
+            android:id="@+id/saomazhifu"
+            android:layout_below="@+id/zuixinyouhui"
+            android:gravity="center|left"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="扫码支付"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_whiteframe">
+        <Button
+            android:padding="10dp"
+            android:id="@+id/shoucang"
+            android:gravity="center|left"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="收藏"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <Button
+            android:padding="10dp"
+            android:layout_below="@+id/shoucang"
+            android:gravity="center|left"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="设置"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:layout_alignParentBottom="true"/>
+        <!--预留底部导航栏位置-->
+
+    </RelativeLayout>
+</LinearLayout>
+
