@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="edu.hzuapps.androidlabs.Soft1714080902238.DisplayActivity">
+
+<LinearLayout
+    android:id="@+id/bt01"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:ignore="MissingConstraints"
+    android:layout_alignStart="@+id/bt02"
+    android:layout_alignParentTop="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="订餐"
+        android:textSize="20dp"/>
+
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/bt02"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/bt01"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="22dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:ignore="MissingConstraints"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_gravity="center_horizontal"
+        android:text="选择类别"
+        android:textSize="40dp" />
+
+</LinearLayout>
+
+<GridLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="4"
+    android:layout_marginLeft="12dp"
+    android:orientation="horizontal"
+    android:id="@+id/gridLayout"
+    android:layout_below="@+id/bt02"
+    android:layout_alignParentStart="true">
+    <Button
+        android:id="@+id/menu1"
+        android:layout_width="186dp"
+        android:layout_height="138dp"
+        android:layout_columnSpan="2"
+
+        android:layout_rowSpan="4"
+        android:text="肉类荤食"
+        android:onClick="Click"
+        android:textSize="30dp"
+        android:layout_below="@+id/bt02"
+        android:layout_alignStart="@+id/menu4" />
+
+    <Button
+        android:id="@+id/menu2"
+        android:layout_width="186dp"
+        android:layout_height="138dp"
+        android:layout_columnSpan="2"
+
+
+        android:layout_rowSpan="4"
+        android:text="烧烤炸鸡"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignParentEnd="true"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/menu3"
+        android:layout_width="186dp"
+        android:layout_height="138dp"
+        android:layout_columnSpan="2"
+
+        android:layout_rowSpan="4"
+        android:text="面食粥点"
+        android:textSize="30dp"
+        android:layout_below="@+id/menu2"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:id="@+id/menu4"
+        android:layout_width="186dp"
+        android:layout_height="138dp"
+        android:layout_columnSpan="2"
+
+        android:layout_rowSpan="4"
+        android:text="地方菜系"
+        android:textSize="30dp"
+        android:layout_below="@+id/menu1"
+        android:layout_toStartOf="@+id/menu2" />
+    <Button
+        android:id="@+id/menu5"
+        android:layout_width="186dp"
+        android:layout_height="138dp"
+        android:layout_columnSpan="2"
+
+        android:layout_rowSpan="4"
+        android:text="点心甜品"
+        android:textSize="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:id="@+id/menu6"
+        android:layout_width="186dp"
+        android:layout_height="138dp"
+        android:layout_columnSpan="2"
+
+        android:layout_rowSpan="4"
+        android:text="果蔬饮品"
+        android:textSize="30dp"
+        android:layout_alignStart="@+id/menu4" />
+</GridLayout>
+
+
+
+
+</RelativeLayout>
+
