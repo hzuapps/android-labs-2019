@@ -5,23 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="cn.itcast.imageview.myproject.MainActivity">
+    tools:context="cn.itcast.filesave.text.MainActivity">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <EditText
+           android:id="@+id/et_path"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="请输入视频文件路径"
+           android:text="/sdcard/oppo.mp4"
+           android:layout_toLeftOf="@+id/bt_play"/>
+       <ImageView
+           android:id="@+id/bt_play"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:src="@android:drawable/ic_media_play"/>
+   </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bt_play"
+        android:background="#000000">
+        <VideoView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    <ImageView
-        android:layout_weight="1000"
-        android:id="@+id/iv"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
-    <EditText
-        android:singleLine="true"
-        android:id="@+id/et_path"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="请输入图片路径"/>
-    <Button
-        android:onClick="click"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="浏览"/>
-
-</LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
