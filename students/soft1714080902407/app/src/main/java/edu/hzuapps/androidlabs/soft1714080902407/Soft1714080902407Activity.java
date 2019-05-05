@@ -1,86 +1,87 @@
 package edu.hzuapps.androidlabs.soft1714080902407;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.app.Activity;
+import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
-public class Soft1714080902407Activity extends Activity{
+public class Soft1714080902407Activity extends Activity {
+    private ListView listView;
+    private EditText editText;
+    private Button button;
+    private List<Message> list=  new ArrayList<>();
+    private ChatAdapter adapter;
+    private MessageDao messageDao;
 
-
-    public void onClick(View view){
-        Intent intent = new Intent(Soft1714080902407Activity.this,Detail_Activity.class);
-        startActivity(intent);
-    }
-
-    private  List<Message> list;
-    private MessageDao dao;
-    private EditText msgET;
-    private MyAdapter adapter;
-    private ListView msgLV;
-
-    protected void onCreate(Bundle savedInstanceState){
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1714080902407_activity);
-        initView();
-        dao=new MessageDao(this);
-        list=dao.queryAll();
-        adapter=new MyAdapter();
-        msgLV.setAdapter(adapter);
-        boolean conn = ConnectionUtil.isConn(Soft1714080902407Activity.this);
-        if (!conn) {
-            ConnectionUtil.setNetworkMethod(Soft1714080902407Activity.this);
-        }
+
+        listView=(ListView)findViewById(R.id.listview);
+        editText=(EditText)findViewById(R.id.edittext_input);
+        button=(Button)findViewById(R.id.button_send);
+
+        adapter=new ChatAdapter(list,this);
+        messageDao=new MessageDao(this);
+        list=messageDao.queryAll();
+        listView.setAdapter(adapter);
+
+
+        adapter.setList(list);
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (TextUtils.isEmpty(editText.getText().toString())) {
+                    Toast.makeText(Soft1714080902407Activity.this, "发送内容不能为空", 0).show();
+                    return;
+                }
+                Message message=new Message();
+                message.setMsg(editText.getText().toString());
+                message.setTime(time());
+                message.setSend(true);
+                messageDao.insert(message);
+                list.add(message);
+/*
+                Message receive_message = new Message();
+                receive_message.setSend(false);
+                messageDao.insert(receive_message);
+                list.add(receive_message);//测试接收信息
+*/
+                adapter.setList(list);
+                adapter.notifyDataSetChanged();
+                listView.setSelection(list.size()-1);
+                editText.setText("");
+            }
+        });
     }
 
-    private void initView(){
-        msgLV=(ListView)findViewById(R.id.Listview);
-        msgET=(EditText)findViewById(R.id.input_text);
+    public static String time(){
+        SimpleDateFormat dff = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        dff.setTimeZone(TimeZone.getTimeZone("GMT+08"));
+        String ee = dff.format(new Date());
+        return ee;
     }
 
-    public void add(View v){
-        String msg=msgET.getText().toString().trim();
-        Message m=new Message(msg);
-        dao.insert(m);
-        list.add(m);
-        adapter.notifyDataSetChanged();
-        msgLV.setSelection(msgLV.getCount()-1);
-        msgET.setText("");
-    }
-
-    private class MyAdapter extends BaseAdapter{
-        public int getCount(){
-            return list.size();
-        }
-
-        public Object getItem(int position) {
-             return list.get(position);
-        }
-
-        public long getItemId(int position){
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parents) {
-            View item=convertView!=null?convertView:View.inflate(getApplicationContext(),R.layout.item,null);
-            TextView msgTV=(TextView)item.findViewById(R.id.edittext);
-            final Message a=list.get(position);
-            msgTV.setText(a.getMsg());
-            return item;
+    public void onClick(View view) {
+        if (view.getId() == R.id.chat_image) {
+            Intent intent = new Intent(Soft1714080902407Activity.this,Detail_Activity.class);
+            startActivity(intent);
         }
     }
-
 
 }

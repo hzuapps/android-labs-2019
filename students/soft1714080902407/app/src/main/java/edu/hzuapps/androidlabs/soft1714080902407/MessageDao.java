@@ -9,30 +9,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MessageDao {
-    private MyHelper myHelper;
+    private SQLiteHelper sqLiteHelper;
+
     public MessageDao(Context context){
-        myHelper=new MyHelper(context);
+        sqLiteHelper=new SQLiteHelper(context);
     }
+
     public void insert(Message message){
-        SQLiteDatabase db=myHelper.getWritableDatabase();
-        ContentValues values=new ContentValues();
-        values.put("msg",message.getMsg());
-        long id=db.insert("message",null,values);
+        SQLiteDatabase sqLiteDatabase=sqLiteHelper.getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("msg",message.getMsg());
+        contentValues.put("time",message.getTime());
+        contentValues.put("send",message.getSend());
+        long id=sqLiteDatabase.insert("message",null,contentValues);
         message.setId(id);
-        db.close();
+        sqLiteDatabase.close();
     }
 
     public List<Message> queryAll(){
-        SQLiteDatabase db=myHelper.getReadableDatabase();
-        Cursor cursor=db.query("message",null,null,null,null,null,null);
-        List<Message>list=new ArrayList<Message>();
-        while(cursor.moveToNext()){
-            long id= cursor.getLong(cursor.getColumnIndex("_id"));
-            String msg= cursor.getString(1);
-            list.add(new Message(id,msg));
+        SQLiteDatabase sqLiteDatabase=sqLiteHelper.getReadableDatabase();
+        Cursor cursor=sqLiteDatabase.query("message",null,null,null,null,null,null);
+        List<Message> list=new ArrayList<Message>();
+        while (cursor.moveToNext()){
+            long id=cursor.getLong(cursor.getColumnIndex("id"));
+            String msg=cursor.getString(1);
+            String time=cursor.getString(2);
+            int type=cursor.getInt(3);
+            boolean send;
+            if(type==1)
+            {
+                send=true;
+            }
+            else send=false;
+            list.add(new Message(id,msg,time,send));
         }
         cursor.close();
-        db.close();
+        sqLiteDatabase.close();
         return list;
     }
 }
