@@ -26,6 +26,27 @@
         android:layout_width="wrap_content"
         android:src = "@drawable/img_1"
         />
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1000" />
+
+    <EditText
+        android:id="@+id/et_path"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入赛程表路径"
+        android:text=""
+        android:singleLine="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="加载赛程表" />
+
+
 
 
 </TableLayout>
