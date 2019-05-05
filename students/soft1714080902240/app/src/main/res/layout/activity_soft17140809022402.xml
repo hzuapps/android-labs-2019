@@ -7,11 +7,44 @@
     tools:context="edu.hzuapps.androidlabs.soft1714080902240.Soft1714080902240Activity2">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/firstread"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp"></LinearLayout>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:orientation="vertical">
+        <TextView
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How to be a good learner"
+            android:textSize="30dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/duanluo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To be a good learner, we should have good habits and ways of learning."
+            android:textSize="25dp"
+            android:gravity="left"
+            />
+        <TextView
+            android:id="@+id/duanluo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We need to get ready for our lessons before class and always listen carefully in class. After class, we must go over the lessons and finish our homework on time. It’s good to study in groups and help each other. We should do more reading in our free time. If we have any problems, we’d better ask others for help. As a student, working hard is important, but don’t forget to do sports and keep healthy."
+            android:textSize="25dp"
+            android:gravity="left"
+            />
+        <TextView
+            android:id="@+id/duanluo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I think all above is helpful to us to be a good learner."
+            android:textSize="25dp"
+            android:gravity="left"
+            />
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -20,12 +53,10 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="点击输入今天练习的单词"
+            android:text="点击输入今天练习的单词或文章"
             tools:layout_editor_absoluteX="116dp"
             tools:layout_editor_absoluteY="590dp"
             android:layout_marginTop="550dp"
             />
     </RelativeLayout>
-
-
 </android.support.constraint.ConstraintLayout>
