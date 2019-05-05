@@ -1,16 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#111"
+    android:orientation="vertical"
     tools:context="edu.hzuapps.androidlabs.soft1714080902439.Soft1714080902439PresentActivity">
+    <!--顶部-->
+    <RelativeLayout
+        android:id="@+id/shake_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/dimgray"
+        android:gravity="center_vertical">
+        <!--返回-->
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@android:drawable/ic_input_delete"
+            android:onClick="shake_back"/>
+        <!--摇一摇-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="摇一摇抽奖"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"/>
+        <!--点击实现的摇一摇-->
+        <ImageButton
+            android:layout_width="67dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@android:drawable/ic_menu_always_landscape_portrait"
+            android:onClick="linshi"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--摇一摇中心图片-->
+        <ImageView
+            android:id="@+id/shakeBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/gg1" />
+        <!--图片-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/shakeImgUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+                <!--摇一摇上部图片-->
+                <ImageView
+                    android:id="@+id/top_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:src="@drawable/shake_top"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/shakeImgDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+
+                android:orientation="vertical">
+                <!--摇一摇下部图片-->
+                <ImageView
+                    android:id="@+id/bottom_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:src="@drawable/shake_bottom"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
 
-    <!--连接到GuaGua卡实现效果-->
-    <edu.hzuapps.androidlabs.soft1714080902439.GuaGua
-        android:id="@+id/guaguaView"
-        android:layout_width="300dp"
-        android:layout_height="287dp"
-        android:layout_centerInParent="true" />
-</RelativeLayout>
+</LinearLayout>
