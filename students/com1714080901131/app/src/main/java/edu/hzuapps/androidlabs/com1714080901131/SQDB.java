@@ -5,14 +5,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQDB extends SQLiteOpenHelper {
-    public final static String TABLE_NAME = "record";
+    public final static String TABLE_NAME = "Record";
 
-    public final static String RECORD_ID = "_id";
-    public final static String RECORD_TITLE = "title_name";
-    public final static String RECORD_BODY = "text_body";
+    public final static String RECORD_ID = "id";
+    public final static String RECORD_TITLE = "titleName";
+    public final static String RECORD_BODY = "textBody";
     public SQDB(Context context)
     {
-        super(context,"record",null,3);
+        super(context,"Record",null,3);
     }
 
     @Override

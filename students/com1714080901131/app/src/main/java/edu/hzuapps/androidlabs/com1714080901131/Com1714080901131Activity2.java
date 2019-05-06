@@ -18,6 +18,7 @@ import android.widget.ImageView;
 public class Com1714080901131Activity2 extends AppCompatActivity{
     SQDB mydb=new SQDB(this);
     private Button takephoto;
+    private Button backButton;
     private ImageView imageView;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private void dispatchTakePictureIntent() {
@@ -41,6 +42,13 @@ public class Com1714080901131Activity2 extends AppCompatActivity{
         Button buttonSave=findViewById(R.id.button_save);
         final EditText editTitle=findViewById(R.id.edit_title);
         final EditText editBody=findViewById(R.id.edit_body);
+        backButton=findViewById(R.id.button_back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentStart();
+            }
+        });
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

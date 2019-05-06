@@ -2,6 +2,8 @@ package edu.hzuapps.androidlabs.com1714080901131;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -11,19 +13,29 @@ import android.os.Message;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.InputStream;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Com1714080901131Activity extends AppCompatActivity {
 private LinearLayout linear;
+private ArrayList<Record> recordArrayList;
 private TextView changeText;
 private Button b;
+SQDB myDB;
+private ListView myListView;
 private String url_image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555160992873&di=d1414fd286331f6cec589f7da0d8a8b9&imgtype=0&src=http%3A%2F%2Fimg18.3lian.com%2Fd%2Ffile%2F201704%2F10%2Fae2c6607bb5c12c371f8e042de1832a6.jpg";
 private Handler handler=new Handler()
     {
@@ -61,6 +73,7 @@ private Handler handler=new Handler()
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_1714080901131_activity);
         linear=findViewById(R.id.linear);
+        myListView=findViewById(R.id.list_view);
         changeText=findViewById(R.id.text_background);
         b=findViewById(R.id.createButton);
         b.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +99,61 @@ private Handler handler=new Handler()
             }
         });
 
+        //显示备忘录代码
+        myDB =new SQDB(this);
+        SQLiteDatabase db = myDB.getReadableDatabase();
+        recordArrayList=new ArrayList<>();
+        Cursor cursor=db.rawQuery("select * from Record",null);
+        while(cursor.moveToNext()) {
+            String id = cursor.getString(cursor.getColumnIndex("id"));
+            String titleName = cursor.getString(cursor.getColumnIndex("titleName"));
+            String textBody = cursor.getString(cursor.getColumnIndex("textBody"));
+            Record record = new Record(id,titleName, textBody);
+            recordArrayList.add(record);
+        }
+        myListView.setAdapter(new BaseAdapter() {
+            @Override
+            public int getCount() {
+                return recordArrayList.size();
+            }
+
+            @Override
+            public Object getItem(int position) {
+                return null;
+            }
+
+            @Override
+            public long getItemId(int position) {
+                return 0;
+            }
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view;
+                if(convertView==null)
+                {
+                    LayoutInflater inflater=Com1714080901131Activity.this.getLayoutInflater();
+                    view=inflater.inflate(R.layout.com_1714080901131_activity3,null);
+                }
+                else
+                {
+                    view=convertView;
+                }
+                Record record=recordArrayList.get(position);
+                TextView id=(TextView)view.findViewById(R.id.list_item_id);
+                TextView titleName=(TextView)view.findViewById(R.id.list_item_title);
+                TextView textBody=(TextView)view.findViewById(R.id.list_item_body);
+                id.setText(record.getId());
+                titleName.setText(record.getTitleName());
+                textBody.setText(record.getTextBody());
+                return view;
+            }
+        });
+
+
     }
 
 
 }
+
+
