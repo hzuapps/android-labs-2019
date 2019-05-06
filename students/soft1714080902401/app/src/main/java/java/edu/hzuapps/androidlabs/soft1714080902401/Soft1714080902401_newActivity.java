@@ -11,7 +11,7 @@ public class Soft1714080902401_newActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_soft_1714080902401_new);
+        setContentView(R.layout.activity_soft1714080902401_new);
 
         Button Save = (Button) findViewById(R.id.save);
         Save.setOnClickListener(new View.OnClickListener() {
