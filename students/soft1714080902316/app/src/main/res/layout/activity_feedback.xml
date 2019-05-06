@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".soft1714080902316.Feedback">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/first_background"
+        android:text="⬅"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBackground"
+        />
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/first_background"
+        android:text=" 意见反馈"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/first_background"
+        android:text="\n    作者：DengXF\n\n    联系邮箱：374526876@qq.com\n\n    欢迎反馈！"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
