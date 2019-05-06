@@ -4,32 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Com1714080901133Activity">
+    tools:context="edu.hzuapps.androidlabs.com1714080901133.Com1714080901133Activity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="368dp"
         android:layout_height="551dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
-
-        <Button
-            android:id="@+id/take_photo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="拍照" />
-
-        <Button
-            android:id="@+id/choose_photo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="选择照片" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="-12dp">
 
         <ImageView
-            android:id="@+id/picture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
+            android:id="@+id/hzu"
+            android:layout_width="match_parent"
 
+            android:layout_height="384dp"
+            android:layout_marginTop="-34dp"
+            android:contentDescription="ture"
+            android:drawablePadding="1dp"
+            android:src="@drawable/hzxy" />
+
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
