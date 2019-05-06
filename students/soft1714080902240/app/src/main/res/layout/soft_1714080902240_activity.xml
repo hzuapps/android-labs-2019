@@ -25,16 +25,16 @@
 
 
     <Button
-        android:text="加载网络图片"
+        android:text="加载英语文章"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:id="@+id/button" />
 
-    <edu.hzuapps.androidlabs.soft1714080902240.MyImageView
+<!--    <edu.hzuapps.androidlabs.soft1714080902240.MyImageView
         android:id="@+id/image_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" />-->
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
