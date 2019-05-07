@@ -23,12 +23,6 @@
     <!--&lt;!&ndash;到时候直接换带字的图,图片还没弄好，现在是随便乱弄的图&ndash;&gt;-->
 
     <!--/>-->
-    <ImageButton
-        android:id="@+id/btn_start"
-        android:layout_width="207dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/startbutton"
-        android:scaleType="fitStart" />
 
     <TextView
         android:id="@+id/textview_01"
@@ -41,6 +35,14 @@
         android:textColor="@color/design_default_color_primary"
         android:textSize="35dp"
         />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:background="@drawable/setting"
+        android:text="开始游戏"
+        android:textSize="30dp"/>
 
     <Button
         android:id="@+id/btn_setting"

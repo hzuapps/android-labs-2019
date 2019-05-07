@@ -9,12 +9,7 @@
     <!--//请求获取获取External存储的权限。-->
     <uses-permission android:name="android.permission.INTERNET"/>
     <!--//获取网络权限-->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!--//获取相机权限-->
-    <uses-feature android:name="android.hardware.camera"  android:required="false"/>
-    <!--//检查相机，若无相机也没事，此程序不是必须-->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <!--//获取音频权限，上面有获取外部储存权限了-->
+
 
 
 
@@ -27,7 +22,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Soft1709081602513Activity" />
         <activity android:name=".StartActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>        <!--隐藏标题栏-->
+
         <activity android:name=".SettingsActivity" />
         <activity android:name=".MainActivity">
 
@@ -38,16 +35,6 @@
             </intent-filter>
         </activity>
 
-        <provider
-            android:authorities="soft1709081602513.cameraalbumtest,fileprovider"
-            android:name="android.support.v4.content.FileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"
-                />
-        </provider>
 
     </application>
 
