@@ -11,13 +11,15 @@ public class Soft1714080902401_01Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_soft_1714080902401_01);
+        setContentView(R.layout.activity_soft1714080902401_01);
+
+
 
         Button NewD = (Button) findViewById(R.id.newD);
         NewD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Soft1714080902401_01Activity.this, Soft1714080902401_FileStoreActivity.class);
+                Intent intent = new Intent(Soft1714080902401_01Activity.this, Soft1714080902401_newActivity.class);
                 startActivity(intent);
             }
         });

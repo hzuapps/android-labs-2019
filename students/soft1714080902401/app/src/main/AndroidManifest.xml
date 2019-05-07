@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/ic_launcher_appico"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1714080902401_newActivity"></activity>
+        <activity android:name=".Soft1714080902401_FileStoreActivity"></activity>
         <activity android:name=".Soft1714080902401_01Activity" />
         <activity android:name=".Soft1714080902401Activity">
             <intent-filter>
