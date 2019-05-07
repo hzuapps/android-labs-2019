@@ -7,107 +7,186 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import android.app.Activity;
+import android.Manifest;
+import android.annotation.TargetApi;
+import android.content.ContentUris;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.text.TextUtils;
-import android.widget.EditText;
+import android.provider.DocumentsContract;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
-
-
+import android.widget.Toast;
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
     private Button select_sort;
-    protected static final int CHANGE_UI = 1;
-    protected static final int ERROR = 2;
-    private EditText et_path;
-    private ImageView iv;
-    // 主线程创建消息处理器
-    private Handler handler = new Handler(){
-        public void handleMessage(android.os.Message msg) {
-            if(msg.what == CHANGE_UI){
-                Bitmap bitmap = (Bitmap) msg.obj;
-                iv.setImageBitmap(bitmap);
-            }else if(msg.what == ERROR){
-                Toast.makeText(MainActivity.this, "显示图片错误", 0).show();
-            }
-        };
-    };
+    public static final int TAKE_PHOTO = 1;
+    public static final int CHOOSE_PHOTO = 2;
+    private Button mTakePhoto, mChoosePhoto;
+    private Uri imageUri;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button select_sort = (Button) findViewById(R.id.select_sort);
-        et_path = (EditText) findViewById(R.id.et_path);
-        iv = (ImageView) findViewById(R.id.iv);
-        select_sort.setOnClickListener(new View.OnClickListener() {
+        Button select_sort =  (Button) findViewById(R.id.select_sort);
+        select_sort.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Sports_sort.class);
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this,Sports_sort.class);
                 startActivity(intent);
             }
         });
-    }
-        public void click (View view){
-            final String path = et_path.getText().toString().trim();
-            if (TextUtils.isEmpty(path)) {
-                Toast.makeText(this, "图片路径不能为空", 0).show();
-            } else {
-                //子线程请求网络,Android4.0以后访问网络不能放在主线程中
-                new Thread() {
-                    public void run() {
-                        // 连接服务器 get 请求 获取图片.
-                        try {
-                            URL url = new URL(path);       //创建URL对象
-                            // 根据url 发送 http的请求.
-                            HttpURLConnection conn = (HttpURLConnection) url
-                                    .openConnection();
-                            // 设置请求的方式
-                            conn.setRequestMethod("GET");
-                            //设置超时时间
-                            conn.setConnectTimeout(5000);
-                            //设置请求头 User-Agent浏览器的版本
-                            conn.setRequestProperty(
-                                    "User-Agent",
-                                    "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; " +
-                                            "SV1; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; " +
-                                            ".NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; Shuame)");
-                            // 得到服务器返回的响应码
-                            int code = conn.getResponseCode();
-                            //请求网络成功后返回码是200
-                            if (code == 200) {
-                                //获取输入流
-                                InputStream is = conn.getInputStream();
-                                //将流转换成Bitmap对象
-                                Bitmap bitmap = BitmapFactory.decodeStream(is);
-                                //iv.setImageBitmap(bitmap);
-                                //TODO: 告诉主线程一个消息:帮我更改界面。内容:bitmap
-                                Message msg = new Message();
-                                msg.what = CHANGE_UI;
-                                msg.obj = bitmap;
-                                handler.sendMessage(msg);
-                            } else {
-                                //返回码不是200  请求服务器失败
-                                Message msg = new Message();
-                                msg.what = ERROR;
-                                handler.sendMessage(msg);
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                            Message msg = new Message();
-                            msg.what = ERROR;
-                            handler.sendMessage(msg);
-                        }
+        mTakePhoto = (Button) findViewById(R.id.btn_take_photo);
+        mChoosePhoto = (Button) findViewById(R.id.choose_from_album);
+
+        mTakePhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                File outputImage = new File(getExternalCacheDir(), "output_image.jpg");
+                try {
+                    if (outputImage.exists()) {
+                        outputImage.delete();
                     }
-                }.start();
-            }
-        }
+                    outputImage.createNewFile();
 
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                if (Build.VERSION.SDK_INT >= 24) {
+                    imageUri = FileProvider.getUriForFile(MainActivity.this,
+                            "edu.hzuapps.androidlabs.com1709081602330.fileprovider", outputImage);
+                } else {
+                    imageUri = Uri.fromFile(outputImage);
+                }
+
+                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                startActivityForResult(intent, TAKE_PHOTO);
+            }
+        });
+
+        mChoosePhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                } else {
+                    openAlbum();
+                }
+            }
+        });
+    }
+    private void openAlbum() {
+        Intent intent = new Intent("android.intent.action.GET_CONTENT");
+        intent.setType("image/*");
+        startActivityForResult(intent, CHOOSE_PHOTO);
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case 1:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    openAlbum();
+                } else {
+                    Toast.makeText(this, "you denied the permission", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case TAKE_PHOTO:
+                if (resultCode == RESULT_OK) {
+                    try {
+                        Bitmap bm = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+                        getWindow().getDecorView().setBackgroundDrawable(new BitmapDrawable(bm));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                break;
+            case CHOOSE_PHOTO:
+                if (resultCode == RESULT_OK) {
+                    handleImageOnKitKat(data);
+                }
+            default:
+                break;
+        }
+    }
+
+    private void handleImageBeforeKitKat(Intent data) {
+        Uri uri = data.getData();
+        String imagePath = getImagePath(uri, null);
+        displayImage(imagePath);
+    }
+
+
+    private String getImagePath(Uri uri, String selection) {
+        String path = null;
+        Cursor cursor = getContentResolver().query(uri, null, selection, null, null);
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+            }
+            cursor.close();
+        }
+        return path;
+    }
+
+    private void displayImage(String imagePath) {
+        if (imagePath != null) {
+            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+            getWindow().getDecorView().setBackgroundDrawable(new BitmapDrawable(bitmap));
+        } else {
+            Toast.makeText(this, "failed to get image", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @TargetApi(19)
+    private void handleImageOnKitKat(Intent data) {
+        String imagePath = null;
+        Uri uri = data.getData();
+        if (DocumentsContract.isDocumentUri(this, uri)) {
+            String docID = DocumentsContract.getDocumentId(uri);
+            if ("com.android.providers.media.documents".equals(uri.getAuthority())) {
+                String id = docID.split(":")[1];
+                String selection = MediaStore.Images.Media._ID + "=" + id;
+                imagePath = getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+            } else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())) {
+                Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(docID));
+
+                imagePath = getImagePath(contentUri, null);
+
+            }
+
+        } else if ("content".equalsIgnoreCase(uri.getScheme())) {
+            imagePath = getImagePath(uri, null);
+        } else if ("file".equalsIgnoreCase(uri.getScheme())) {
+            imagePath = uri.getPath();
+        }
+        displayImage(imagePath);
+    }
+
+
+}
