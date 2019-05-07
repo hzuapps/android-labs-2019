@@ -16,6 +16,7 @@ public class Soft1714080902323Activity2 extends Activity {
     private EditText xuehao;
     private EditText name;
     private Button enter;
+    private Button camera;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -32,7 +33,16 @@ public class Soft1714080902323Activity2 extends Activity {
                 passData();
             }
         });
+        camera= (Button) findViewById(R.id.camera);
+        camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902323Activity2.this, Soft1714080902323Activity6.class);
+                startActivity(intent);
+            }
+        });
     }
+
     public void passData(){
         Intent intent=new Intent(this,Soft1714080902323Activity3.class);
         intent.putExtra("name",name.getText().toString().trim());

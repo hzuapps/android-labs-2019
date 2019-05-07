@@ -5,10 +5,8 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dip"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         >
     </LinearLayout>
 
@@ -18,11 +16,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
         android:text="学生信息管理页面"
+        android:clickable="true"
         android:textColor="#005522"
         android:textSize="40dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/xinxibiao"
+        android:clickable="true"
         android:layout_marginTop="150dp"
         android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
@@ -33,7 +33,7 @@
         tools:ignore="DuplicateIds" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/chengjibiao"
         android:layout_marginTop="300dp"
         android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
@@ -43,13 +43,15 @@
         android:text="学生成绩表" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/kechengbiao"
+        android:clickable="true"
         android:layout_marginTop="450dp"
         android:layout_width="wrap_content"
+
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:textColor="#005522"
         android:textSize="25dp"
-        android:text="学生课程表表" />
+        android:text="学生课程表" />
 
 </RelativeLayout>

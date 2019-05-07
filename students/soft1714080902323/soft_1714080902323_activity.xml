@@ -2,20 +2,25 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
     <TextView
 
         android:id="@+id/textview_01"
-
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
 
-        android:layout_height="675dp"
-
-        android:layout_centerHorizontal="true"
+        android:layout_height="244dp"
+        android:clickable="true"
 
         android:drawableTop="@drawable/hello"
         android:text="点击图片进入学生信息管理页面"
-        tools:layout_editor_absoluteX="0dp" />
+        android:textColor="#005522"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="215dp"
+        tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>
 
 

@@ -33,8 +33,6 @@ public class Soft1714080902323Activity5  extends Activity {
         editText = (EditText) findViewById(R.id.editId);
         imageView = (ImageView) findViewById(R.id.imgId);
         handler = new Handler(){
-
-
             public void handleMessage(Message msg) {
                 switch (msg.what) {
                     case REQUEST_SUCCESS:

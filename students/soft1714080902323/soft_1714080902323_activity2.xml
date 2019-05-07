@@ -106,7 +106,15 @@
         android:textColor="#005522"
         android:text="添加学生"
         android:textSize="25dp"/>
-
+    <Button
+        android:layout_marginTop="570dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#005522"
+        android:text="添加学生照片"
+        android:textSize="25dp"/>
     <TableLayout
         android:id="@+id/table1"
         android:layout_width="fill_parent"
