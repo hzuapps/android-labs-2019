@@ -6,23 +6,40 @@
     android:background="@color/colorBackground"
     android:orientation="vertical"
     tools:context=".soft1714080902316.Soft1714080902316">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextClock
+            android:id="@+id/textclock1"
+            android:format24Hour="HH:mm"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/first_background"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/textcolor"
+            android:gravity="center"
+            />
+        <TextClock
+            android:id="@+id/textclock2"
+            android:format24Hour="yyyy-MM-dd"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/first_background"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/textcolor"
+            android:gravity="center"
+            />
+    </LinearLayout>
     <TextView
         android:id="@+id/textview_01"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/first_background"
-        android:text="@string/time"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:textColor="@color/textcolor"
-        android:gravity="center"
-        />
-    <TextView
-        android:id="@+id/textview_02"
         android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_height="350dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_gravity="center"
@@ -30,7 +47,7 @@
         android:text="此处显示已写日记的概述。\n 2019/3/28 \n ... \n 2019/3/27 \n ..."
         />
     <TextView
-        android:id="@+id/textview_03"
+        android:id="@+id/textview_02"
         android:layout_width="60dp"
         android:layout_height="30dp"
         android:layout_marginLeft="30dp"
