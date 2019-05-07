@@ -2,25 +2,47 @@ package edu.hzuapps.androidlabs.soft1714080902207;
 
 import android.content.Intent;
 
+import android.graphics.Bitmap;
+
+import android.os.Handler;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.io.FileOutputStream;
-import java.io.IOException;
+
+
 
 public class Soft_1714080902207_MainActivity extends AppCompatActivity {
     private EditText editText2;
+    private Button showImage;
     private Button button4;
     private Button button2;
     private Button button3;
+    private ImageView imageView2;
 
+    private final int SHOW_IMAGE=1;
+    String pathString="http://pic46.nipic.com/20140813/10153265_103918805357_2.jpg";
+    Bitmap bitmap;
+    Handler h=new Handler() {
+        public void handleMessage(android.os.Message msg) {
+
+            switch (msg.what) {
+                case SHOW_IMAGE:
+                    Bitmap bitmap = (Bitmap) msg.obj;
+                    imageView2.setImageBitmap(bitmap);
+                    break;
+                default:
+                    break; }};};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +67,16 @@ public class Soft_1714080902207_MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
     }
 
-    private class ButtonListener implements View.OnClickListener {
 
 
+
+
+               private class ButtonListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
@@ -85,24 +112,6 @@ public class Soft_1714080902207_MainActivity extends AppCompatActivity {
 
                 default:
             }
-
-
-
-
-
-
-
-
-
-    /*@Override
-    public void onClick(View v) {
-        switch (v.getId())
-        {
-            case R.id.button2:
-                Toast.makeText(Soft_1714080902207_MainActivity.this,"本次消费记录成功",Toast.LENGTH_SHORT).show();
-        }
-    }
-*/
         }
     }
 }
