@@ -2,6 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.basketball">
 
+    <!-- 授予该程序录制声音的权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 授予该程序使用摄像头的权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 授予使用外部存储器的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,10 +39,9 @@
         </activity>
         <activity android:name=".Aty2Activity" />
         <activity android:name=".StorageActivity" />
-        <activity android:name=".pictureActivity"></activity>
+        <activity android:name=".pictureActivity" />
+        <activity android:name=".cameraActivity" />
+        <activity android:name=".MovieRecorder"></activity>
     </application>
-
-    <uses-permission
-        android:name="android.permission.INTERNET"/>
 
 </manifest>
