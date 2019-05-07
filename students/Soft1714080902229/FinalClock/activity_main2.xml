@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+    <TextView
+        android:onClick="Click"
+        android:id="@+id/textview_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:drawableBottom="@drawable/index1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="4"
+        android:rowCount="6"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_row="3"
+            android:layout_columnSpan="4"
+            android:text="创建一个一次性闹钟"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="637dp"
+            android:background="@drawable/biankuang"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_row="3"
+            android:layout_columnSpan="4"
+            android:text="创建一个重复性闹钟闹钟"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="637dp"
+            android:background="@drawable/biankuang"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_row="3"
+            android:layout_columnSpan="4"
+            android:text="下载背景"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="637dp"
+            android:background="@drawable/biankuang"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_columnSpan="4"
+            android:text="返回"
+            android:layout_gravity="center"
+            />
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>
