@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.myfirstapp">
+    package="edu.hzuapps.androidlabs.soft1714080902122">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902122.Soft1714080902122Activity">
+        <activity android:name=".FruitActivity" />
+        <activity android:name=".myidea1" />
+        <activity android:name=".Soft1714080902122Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
