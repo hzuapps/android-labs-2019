@@ -156,17 +156,65 @@
             android:layout_height="40dp" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <Button
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageButton
+            android:id="@+id/wenti"
+            android:padding="5dp"
+            android:src="@drawable/wenti_0"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#ffffff"
-            android:layout_alignParentBottom="true"/>
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:src="@drawable/gushi_0"
+            android:id="@+id/gushi"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:src="@drawable/zixuan_0"
+            android:id="@+id/zixuan"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:src="@drawable/xiaoxi_0"
+            android:id="@+id/xiaoxi"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:src="@drawable/wo_1"
+            android:id="@+id/wo"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
         <!--预留底部导航栏位置-->
 
-    </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>
 

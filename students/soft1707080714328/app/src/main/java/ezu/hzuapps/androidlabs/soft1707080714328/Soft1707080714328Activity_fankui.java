@@ -36,7 +36,7 @@ public class Soft1707080714328Activity_fankui extends AppCompatActivity implemen
     }
 
     private void intUI() {
-     //设置监听者对象
+        //设置监听者对象
         fanhui.setOnClickListener(this);
         wancheng.setOnClickListener(this);
     }
@@ -50,11 +50,11 @@ public class Soft1707080714328Activity_fankui extends AppCompatActivity implemen
                 startActivity(intent);
                 break;
             case R.id.btn_wancheng:
-                HandlerWanchengEvent(v);
+                handlerWanchengEvent(v);
         }
     }
 
-    private void HandlerWanchengEvent(View v) {
+    private void handlerWanchengEvent(View v) {
         //获取反馈内容
         String fankuiText = fankui.getText().toString();
 
