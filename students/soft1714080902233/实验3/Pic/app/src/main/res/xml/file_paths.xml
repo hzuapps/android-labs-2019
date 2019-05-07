@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <root-path name="DCIM/Camera" /><--!file provider必须要的文件路径，而且要是内部存储，之前写的external path狂爆空指针-->
+</paths>
