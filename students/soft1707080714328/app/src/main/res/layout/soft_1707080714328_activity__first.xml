@@ -61,7 +61,7 @@
     </LinearLayout>-->
         <!--上面注释的代码是用线性布局进行两个button控件同行显示的方法-->
         <Button
-            android:id="@+id/anbi"
+            android:id="@+id/btn_anbi"
             android:gravity="center"
             android:background="#00000000"
             android:textSize="15dp"
@@ -71,7 +71,7 @@
 
         <View
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/anbi"
+            android:layout_toRightOf="@+id/btn_anbi"
             android:layout_width="1dip"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
@@ -79,7 +79,7 @@
         <!--设置一条竖的分割线-->
 
         <Button
-            android:layout_toRightOf="@+id/anbi"
+            android:layout_toRightOf="@+id/btn_anbi"
             android:gravity="center"
             android:background="#00000000"
             android:textSize="15dp"
@@ -90,8 +90,8 @@
         <!--toRigt0f属性是将控件放置于id控件的右边-->
         <Button
             android:padding="10dp"
-            android:id="@+id/zhifuguanli"
-            android:layout_below="@+id/anbi"
+            android:id="@+id/btn_zhifuguanli"
+            android:layout_below="@+id/btn_anbi"
             android:gravity="center|left"
             android:background="#00000000"
             android:textSize="15dp"
@@ -101,8 +101,8 @@
         <!--layout_below属性是将控件放置于id控件的下面-->
         <Button
             android:padding="10dp"
-            android:id="@+id/zuixinyouhui"
-            android:layout_below="@+id/zhifuguanli"
+            android:id="@+id/btn_zuixinyouhui"
+            android:layout_below="@+id/btn_zhifuguanli"
             android:gravity="center|left"
             android:background="#00000000"
             android:textSize="15dp"
@@ -111,8 +111,8 @@
             android:layout_height="40dp" />
         <Button
             android:padding="10dp"
-            android:id="@+id/saomazhifu"
-            android:layout_below="@+id/zuixinyouhui"
+            android:id="@+id/btn_saomazhifu"
+            android:layout_below="@+id/btn_zuixinyouhui"
             android:gravity="center|left"
             android:background="#00000000"
             android:textSize="15dp"
@@ -124,11 +124,11 @@
     <RelativeLayout
         android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="120dp"
         android:background="@drawable/bg_whiteframe">
         <Button
             android:padding="10dp"
-            android:id="@+id/shoucang"
+            android:id="@+id/btn_shoucang"
             android:gravity="center|left"
             android:background="#00000000"
             android:textSize="15dp"
@@ -136,8 +136,18 @@
             android:layout_width="match_parent"
             android:layout_height="40dp" />
         <Button
+            android:id="@+id/btn_fankui"
             android:padding="10dp"
-            android:layout_below="@+id/shoucang"
+            android:layout_below="@+id/btn_shoucang"
+            android:gravity="center|left"
+            android:background="#00000000"
+            android:textSize="15dp"
+            android:text="反馈"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <Button
+            android:padding="10dp"
+            android:layout_below="@+id/btn_fankui"
             android:gravity="center|left"
             android:background="#00000000"
             android:textSize="15dp"
