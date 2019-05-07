@@ -1,6 +1,8 @@
 package edu.hzuapps.androidlabs.soft1714080902331;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -28,18 +30,20 @@ public class Soft1714080902331Activity2 extends AppCompatActivity {
     private EditText record;
     private Button button1;
     private Button button2;
-    private  String imageUrl ="https://tu.jiuwa.net/pic/20180120/1516420470729055.gif";
+    private String imageUrl = "https://tu.jiuwa.net/pic/20180120/1516420470729055.gif";
     private ImageView mood;
     private Button getmood;
     private Handler handle = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 0:
-                    Bitmap bmp=(Bitmap)msg.obj;
+                    Bitmap bmp = (Bitmap) msg.obj;
                     mood.setImageBitmap(bmp);
                     break;
             }
-        };
+        }
+
+        ;
     };
 
     @Override
@@ -57,7 +61,7 @@ public class Soft1714080902331Activity2 extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.button2);
         button1.setOnClickListener(new ButtonListener());
         button2.setOnClickListener(new ButtonListener());
-        getmood=(Button)findViewById(R.id.getmood);
+        getmood = (Button) findViewById(R.id.getmood);
         mood = (ImageView) findViewById(R.id.mood);
         getmood.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +82,7 @@ public class Soft1714080902331Activity2 extends AppCompatActivity {
             }
         });
     }
+
     private Bitmap getURLimage(String imageUrl) {
         Bitmap bmp = null;
         try {
@@ -98,8 +103,8 @@ public class Soft1714080902331Activity2 extends AppCompatActivity {
 
     }
 
-
     private class ButtonListener implements View.OnClickListener {
+        @SuppressLint("WrongConstant")
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.button1:
@@ -131,8 +136,11 @@ public class Soft1714080902331Activity2 extends AppCompatActivity {
                     break;
             }
         }
+
     }
+
+
+
+
 }
-
-
 
