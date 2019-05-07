@@ -19,10 +19,12 @@ public class inquiryActivity extends AppCompatActivity {
     private Button btn_save;
     private Button btn_read;
     private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inquiry);
+
         //获取布局文件中的控件
         et_info=(EditText) findViewById(R.id.et_info);
         btn_save=(Button) findViewById(R.id.btn_save);

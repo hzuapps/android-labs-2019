@@ -8,8 +8,7 @@ import android.widget.Button;
 
 import edu.hzuapps.androidlabs.Soft1714080902109.R;
 
-public class layout extends AppCompatActivity {
-
+public class layoutActivity extends AppCompatActivity {
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +18,19 @@ public class layout extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(layout.this, inquiryActivity.class);
+                Intent intent = new Intent(layoutActivity.this, inquiryActivity.class);
                 startActivity(intent);
+
             }
         });
-    }
-}
+        button = (Button) findViewById(R.id.button4);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(layoutActivity.this, SearchActivity.class);
+                startActivity(intent);
+
+            }
+        });
+    }}
+
