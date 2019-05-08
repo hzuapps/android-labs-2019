@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-//1
+
 public class MainActivity extends AppCompatActivity {
 
     private Button test_btn=null;
