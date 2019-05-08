@@ -21,7 +21,8 @@ import java.net.URL;
 public class Com1712070504104Activity extends AppCompatActivity {
     private LinearLayout linear;
     private TextView changeText;
-    private Button b;
+    private Button b1;
+    private Button b2;
     private String url_image="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1555679919&di=1245c0e9ffc7b91abeffa4d9f4b90b1a&src=http://b-ssl.duitang.com/uploads/item/201807/01/20180701121509_luutw.jpg";
     private Handler handler=new Handler()
     {
@@ -42,12 +43,24 @@ public class Com1712070504104Activity extends AppCompatActivity {
         setContentView(R.layout.com_1712070504104_activity);
         linear=findViewById(R.id.linear);
         changeText=findViewById(R.id.text_background);
-        b=findViewById(R.id.createButton2);
-        b.setOnClickListener(new View.OnClickListener() {
+        b1=findViewById(R.id.createButton);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                {
+                    Intent intent2= new Intent(Com1712070504104Activity.this,Com1712070504104Activity2.class);
+                    startActivity(intent2);
+                }
+            }
+        });
+                b2=findViewById(R.id.createButton2);
+        b2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Com1712070504104Activity.this,Com1712070504104Activity3.class);
                 startActivity(intent);
+
+
             }
         });
 

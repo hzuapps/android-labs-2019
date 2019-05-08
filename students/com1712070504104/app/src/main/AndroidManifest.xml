@@ -19,10 +19,10 @@
         <activity
             android:name=".Com1712070504104Activity3"
             android:label="@string/camera"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Com1712070504104Activity2"
-            android:label="@string/file_save"></activity>
+            android:label="@string/file_save" />
         <activity android:name=".Com1712070504104Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
