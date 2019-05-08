@@ -1,19 +1,15 @@
-package cn.itcast.filesave.text;
+package com.example.pubgshow;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+public class Main4Activity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity {
- private EditText et_info;
+   private EditText et_info;
     private Button btn_save;
     private Button btn_read;
     protected  void onCreat(Bundle savedInstanceState){
@@ -38,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(MainActivity.this,"鏁版嵁淇濆瓨鎴愬姛",0).show();
+                    Toast.makeText(MainActivity.this,"数据保存成功",0).show();
                     break;
                 case R.id.btn_read:
                     String content="";
@@ -51,11 +47,12 @@ public class MainActivity extends AppCompatActivity {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(MainActivity.this,"淇濆瓨鐨勬暟鎹槸:"+content,0).show();
+                    Toast.makeText(MainActivity.this,"保存的数据是:"+content,0).show();
                     break;
                 default:
                     break;
             }
         }
     }
+
 }
