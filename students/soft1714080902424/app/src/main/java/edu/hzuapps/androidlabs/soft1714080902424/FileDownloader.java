@@ -21,7 +21,6 @@ public class FileDownloader {
     public static final String TAG = FileDownloader.class.getSimpleName();
     public static final int MAX_SIZE = 8192;
 
-    // 记录当前下载的URL
     private Set<String> mUrlsInProgress = new HashSet<>();
     private OnImageDownloadListener mImageDownloadListener;
 
@@ -43,7 +42,6 @@ public class FileDownloader {
             return;
         }
 
-        // 启动异步线程下载图片
         new AsyncTask<Void, Integer, Bitmap>() {
             private String error;
 
@@ -70,10 +68,10 @@ public class FileDownloader {
                 HttpURLConnection connection = null;
                 InputStream is = null;
                 ByteArrayOutputStream out = null;
-                try { // 创建连接
+                try {
                     connection = (HttpURLConnection) new URL(imageUrl).openConnection();
                     if (displayProgress) {
-                        connection.connect(); // 建立连接
+                        connection.connect();
                         final int length = connection.getContentLength();
                         if (length <= 0) {
                             error = "URL不正确!";
@@ -131,13 +129,11 @@ public class FileDownloader {
         }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
-
-    // 将下载的文件保存到磁盘中
     public interface OnBitmapSaveListener {
         void onBitmapSaved();
         void onBitmapSaveError(String error);
     }
-    // 声明为静态方式,直接使用.
+
     public static void writeToDisk(@NonNull final File imageFile, @NonNull final Bitmap image,
                                    @NonNull final OnBitmapSaveListener listener,
                                    @NonNull final Bitmap.CompressFormat format, boolean shouldOverwrite) {

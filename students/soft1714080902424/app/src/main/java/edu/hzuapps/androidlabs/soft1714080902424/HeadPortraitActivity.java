@@ -1,6 +1,7 @@
 package edu.hzuapps.androidlabs.soft1714080902424;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -29,6 +30,7 @@ public class HeadPortraitActivity extends AppCompatActivity implements View.OnCl
     private Button CheckButton;
     private Button DownloadImageButton;
     private Button ShowImageButton;
+    private Button NextButton;
     private TextView NetworkText;
     private ImageView imageView;
 
@@ -36,9 +38,8 @@ public class HeadPortraitActivity extends AppCompatActivity implements View.OnCl
 
     private FileDownloader FileDownloader;
 
-    // App的内部存储目录
     private File PrivateRootDir;
-    // “images”子目录
+
     private File ImagesDir;
 
     @Override
@@ -51,13 +52,21 @@ public class HeadPortraitActivity extends AppCompatActivity implements View.OnCl
         ShowImageButton = (Button) findViewById(R.id.button_show_photo);
         NetworkText = (TextView) findViewById(R.id.textView_network);
         imageView = (ImageView) findViewById(R.id.imageview_show_photo);
+        NextButton = findViewById(R.id.button_next);
         CheckButton.setOnClickListener(this);
         DownloadImageButton.setOnClickListener(this);
         ShowImageButton.setOnClickListener(this);
 
-        // 获取内部存储目录: files
+        NextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HeadPortraitActivity.this, ChatActivity.class);
+                startActivity(intent);
+            }
+        });
+
         PrivateRootDir = getFilesDir();
-        // 获取内部存储子目录: files/images
+
         ImagesDir = new File(PrivateRootDir, "images");
     }
 
