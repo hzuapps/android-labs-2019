@@ -40,6 +40,5 @@
             android:text="3.All fall down"
             android:textSize="28dp" />
 
-
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
