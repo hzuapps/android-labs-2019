@@ -1,4 +1,4 @@
-package edu.androidlabs.thirdtest;
+﻿package edu.androidlabs.thirdtest;
 
 
 import android.content.Context;
@@ -14,7 +14,6 @@ import java.io.FileOutputStream;
 
 
 public class MainActivity extends AppCompatActivity{
-
 
     private Button listbtn = null, stopbtn = null;
     private TextView etinfo;

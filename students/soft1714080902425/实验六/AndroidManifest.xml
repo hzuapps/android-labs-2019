@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MusicList1"></activity>
 
+
         <service
             android:name=".MusicPlayerService"
             android:enabled="true"
