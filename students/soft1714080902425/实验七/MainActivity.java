@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.io.FileOutputStream;
 
-
 public class MainActivity extends AppCompatActivity {
 
     private Button mCheckButton;
