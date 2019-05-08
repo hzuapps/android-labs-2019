@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/time_back"
+    android:orientation="vertical"
+    tools:context="edu.hzuapps.androidlabs.soft1714080902421.StartStudyActivity">
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/background_light"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <edu.hzuapps.androidlabs.soft1714080902421.AlarmView
+                    android:id="@+id/tabClock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+                    <ListView
+                        android:id="@+id/lvListAlarm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" >
+                    </ListView>
+                    <Button
+                        android:id="@+id/btnAddAlarm"
+                        android:layout_width="127dp"
+                        android:layout_height="131dp"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.5"
+                        android:background="@drawable/button_circle"
+                        android:text="添加闹钟"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </edu.hzuapps.androidlabs.soft1714080902421.AlarmView>
+
+
+                <edu.hzuapps.androidlabs.soft1714080902421.TimerView
+                    android:id = "@+id/tabTimer"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:orientation = "vertical">
+
+                    <LinearLayout
+                        android:orientation = "horizontal"
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content">
+
+                        <EditText
+                            android:id = "@+id/etHour"
+                            android:inputType = "number"
+                            android:textAppearance = "?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/background_light"
+                            android:layout_width = "0dp"
+                            android:layout_height = "wrap_content"
+                            android:layout_weight = "1"
+                            android:singleLine = "true"/>
+
+                        <TextView
+                            android:textAppearance = "?android:attr/textAppearanceLarge"
+                            android:layout_width = "wrap_content"
+                            android:layout_height = "wrap_content"
+                            android:text = ":"
+                            android:textColor="@android:color/background_light"/>
+
+                        <EditText
+                            android:id = "@+id/etMinute"
+                            android:inputType = "number"
+                            android:textAppearance = "?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/background_light"
+                            android:layout_width = "0dp"
+                            android:layout_height = "wrap_content"
+                            android:layout_weight = "1"
+                            android:singleLine = "true"/>
+
+                        <TextView
+                            android:textAppearance = "?android:attr/textAppearanceLarge"
+                            android:layout_width = "wrap_content"
+                            android:layout_height = "wrap_content"
+                            android:text = ":"
+                            android:textColor="@android:color/background_light"/>
+
+                        <EditText
+                            android:id = "@+id/etSecond"
+                            android:inputType = "number"
+                            android:textAppearance = "?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/background_light"
+                            android:layout_width = "0dp"
+                            android:layout_height = "wrap_content"
+                            android:layout_weight = "1"
+                            android:singleLine = "true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id = "@+id/llBtnGroup"
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content"
+                        android:orientation = "horizontal">
+
+                        <Button
+                            android:id = "@+id/btnStart"
+                            android:layout_width="127dp"
+                            android:layout_height="131dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="130dp"
+                            android:alpha="0.5"
+                            android:background="@drawable/button_circle"
+                            android:text="开始学习"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="18dp"
+                            android:textStyle="bold"/>
+
+                        <Button
+                            android:id = "@+id/btnPause"
+                            android:layout_width="127dp"
+                            android:layout_height="131dp"
+                            android:layout_marginLeft="120dp"
+                            android:layout_marginTop="100dp"
+                            android:alpha="0.5"
+                            android:background="@drawable/button_circle"
+                            android:text="停止学习"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id = "@+id/btnResume"
+                            android:layout_width="127dp"
+                            android:layout_height="131dp"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginTop="180dp"
+                            android:alpha="0.5"
+                            android:background="@drawable/button_circle"
+                            android:text="继续学习"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id = "@+id/btnReset"
+                            android:layout_width="127dp"
+                            android:layout_height="131dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="260dp"
+                            android:alpha="0.5"
+                            android:background="@drawable/button_circle"
+                            android:text="重置时间"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </edu.hzuapps.androidlabs.soft1714080902421.TimerView>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</FrameLayout>

@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tree_plant"
     tools:context="edu.hzuapps.androidlabs.soft1714080902421.TreePlantActivity">
 
+
     <ImageView
-        android:id="@+id/iv_1"
-        android:layout_width="match_parent"
-        android:layout_height="721dp"
-        android:layout_marginTop="10dp"
-        android:background="#f99999"
-        android:scaleType="centerCrop"
-        android:src="@drawable/treeplant" />
-</RelativeLayout>
+        android:id="@+id/imageView"
+        android:layout_width="360dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="25dp"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/btn_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/button_long"
+        android:text="梭梭树"
+        android:alpha="0.3"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/button_long"
+        android:text="胡杨"
+        android:alpha="0.3"
+        android:textStyle="bold" />
+
+
+</FrameLayout>
