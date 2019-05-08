@@ -1,4 +1,4 @@
-package edu.androidlabs.thirdtest;
+﻿package edu.androidlabs.thirdtest;
 
 
 import android.content.Context;
@@ -126,4 +126,5 @@ public class MainActivity extends AppCompatActivity {
         mNetworkText.setTextColor(mConnected ? Color.RED : Color.BLUE);
         mNetworkText.setText(mConnected ? "网络正常 (" +types + ")" : "网络未连接!");
     }
+
 }
