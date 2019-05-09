@@ -14,12 +14,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button  mBtnSetting;
-    private ImageButton mBtnStart;
+    private Button mBtnStart;
     private TextView xiaView;
-    //圆图片
-    private TextView circleimageview;
-    //路径
-    private Uri uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Initname();
+    }
+
     //初始化用户名
     public void Initname(){
         SharedPreferences pref=getSharedPreferences("config",MODE_PRIVATE);
