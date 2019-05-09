@@ -16,10 +16,15 @@
         android:drawableBottom="@drawable/zhangdan" />
 
     <Button
+        android:id="@+id/shujuku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进入数据库记账"/>
+    <Button
         android:id="@+id/button1"
         android:layout_width="116dp"
         android:layout_height="wrap_content"
-        android:text="新建账单" />
+        android:text="进入日记唠叨" />
 
     <Button
         android:id="@+id/button"
