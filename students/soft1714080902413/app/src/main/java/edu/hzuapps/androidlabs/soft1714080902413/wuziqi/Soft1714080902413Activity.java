@@ -38,10 +38,10 @@ public class Soft1714080902413Activity extends AppCompatActivity implements View
                 Intent rec_intent=new Intent(Soft1714080902413Activity.this, Soft1714080902413record.class);
                 startActivity(rec_intent);break;
             case R.id.btn_gamer:
-                Intent gamer_intent=new Intent(Soft1714080902413Activity.this,Soft1714080902413Activity5.class);
+                Intent gamer_intent=new Intent(Soft1714080902413Activity.this, Soft1714080902413gamername.class);
                 startActivity(gamer_intent);break;
             case R.id.btn_egg:
-                Intent egg_intent=new Intent(Soft1714080902413Activity.this,Soft1714080902413Activity6.class);
+                Intent egg_intent=new Intent(Soft1714080902413Activity.this, Soft1714080902413network.class);
                 startActivity(egg_intent);break;
         }
     }

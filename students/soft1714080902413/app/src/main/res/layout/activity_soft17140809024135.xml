@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="@drawable/background"
-    tools:context=".Soft1714080902413Activity5">
+    tools:context=".Soft1714080902413gamername">
 
     <TextView
         android:id="@+id/textView1"

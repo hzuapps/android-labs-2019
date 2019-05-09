@@ -4,18 +4,26 @@ import android.content.DialogInterface;
 import android.app.AlertDialog;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Soft1714080902413startgame extends AppCompatActivity {
+
+    GobangView gbv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soft17140809024134);
+
+        gbv = (GobangView)this.findViewById(R.id.gobangview);
+        gbv.setTextView((TextView)this.findViewById(R.id.text));
 
         Configuration mConfiguration = this.getResources().getConfiguration(); //获取设置的配置信息
         int ori = mConfiguration.orientation; //获取屏幕方向

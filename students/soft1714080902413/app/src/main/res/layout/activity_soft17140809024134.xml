@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/timg2"
+
     tools:context=".Soft1714080902413startgame">
 
+    <edu.hzuapps.androidlabs.soft1714080902413.wuziqi.GobangView
+        android:id="@+id/gobangview"
+        tileSize="24"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:text="aaaaa" />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="hahahhaha"
+            android:textColor="#ffff0000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</FrameLayout>
