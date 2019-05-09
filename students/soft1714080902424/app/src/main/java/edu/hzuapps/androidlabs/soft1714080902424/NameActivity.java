@@ -20,7 +20,7 @@ public class NameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name);
-        //获取布局文件中的控件
+
         et_info=(EditText) findViewById(R.id.et_info);
         button_save=(Button) findViewById(R.id.button_save);
         button_read=(Button) findViewById(R.id.button_read);
@@ -43,7 +43,6 @@ public class NameActivity extends AppCompatActivity {
                     String saveinfo=et_info.getText().toString().trim();
                     FileOutputStream fos;
                     try {
-                        //保存数据
                         fos=openFileOutput("data.txt", Context.MODE_APPEND);
                         fos.write(saveinfo.getBytes());
                         fos.close();
@@ -55,7 +54,6 @@ public class NameActivity extends AppCompatActivity {
                 case R.id.button_read:
                     String content="";
                     try {
-                        //获得保存的数据
                         FileInputStream fis=openFileInput("data.txt");
                         byte[] buffer=new byte[fis.available()];
                         fis.read(buffer);
