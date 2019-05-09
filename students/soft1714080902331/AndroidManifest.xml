@@ -7,8 +7,8 @@
 
     <!-- 写sd卡权限-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 这个可写可不写
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <!-- 这个可写可不写-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 调取摄像头权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -19,10 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Soft1714080902331Activity4"
-            android:label="@string/title_activity_soft17140809023314"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity
             android:name=".Soft1714080902331Activity2"
             android:label="@string/title_activity_soft17140809023312"

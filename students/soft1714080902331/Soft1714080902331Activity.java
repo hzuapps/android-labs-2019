@@ -19,18 +19,12 @@ public class Soft1714080902331Activity extends AppCompatActivity {
                 startActivity(new Intent(Soft1714080902331Activity.this,Soft1714080902331Activity2.class));
             }
         });
+
         ImageView btnOpen2 = (ImageView) findViewById(R.id.imageButton2);
         btnOpen2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Soft1714080902331Activity.this,Soft1714080902331Activity3.class));
-            }
-        });
-        ImageView btnOpen3 = (ImageView) findViewById(R.id.imageButton3);
-        btnOpen3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Soft1714080902331Activity.this,Soft1714080902331Activity4.class));
             }
         });
     }
