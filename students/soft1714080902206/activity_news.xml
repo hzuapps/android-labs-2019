@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.exampler.mynews.NewsVM"/>
+        <variable
+            name="adapter"
+            type="com.exampler.mynews.NewsAdapter"/>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_view"
+            app:uri="@{vm.imageId}"
+            android:scaleType="fitCenter"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <TextView
+                android:id="@+id/title_text_view"
+                android:text="@{vm.title}"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:id="@+id/time_text_view"
+                android:text="@{vm.time}"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:gravity="right"
+                android:textSize="8dp"
+                android:textColor="#555"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
