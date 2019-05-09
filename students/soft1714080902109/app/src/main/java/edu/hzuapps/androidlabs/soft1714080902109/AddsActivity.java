@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import edu.hzuapps.androidlabs.Soft1714080902109.R;
 
-public class AddActivity extends AppCompatActivity {
+public class AddsActivity extends AppCompatActivity {
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class AddActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddActivity.this, InquiryActivity.class);
+                Intent intent = new Intent(AddsActivity.this, InquirysActivity.class);
                 startActivity(intent);
 
             }

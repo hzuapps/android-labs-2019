@@ -17,9 +17,9 @@
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.LocationActivity"></activity>
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.LayoutActivity" />
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.SearchActivity" />
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.InquiryActivity" />
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.InquirysActivity" />
         <activity
-            android:name="edu.hzuapps.androidlabs.soft1714080902109.AddActivity"
+            android:name="edu.hzuapps.androidlabs.soft1714080902109.AddsActivity"
             android:exported="true" />
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.Soft1714080902109Activity">
             <intent-filter>

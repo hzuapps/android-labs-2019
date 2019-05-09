@@ -18,7 +18,7 @@ public class LayoutActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LayoutActivity.this, InquiryActivity.class);
+                Intent intent = new Intent(LayoutActivity.this, InquirysActivity.class);
                 startActivity(intent);
 
             }

@@ -13,7 +13,7 @@ import java.io.FileOutputStream;
 
 import edu.hzuapps.androidlabs.Soft1714080902109.R;
 
-public class InquiryActivity extends AppCompatActivity {
+public class InquirysActivity extends AppCompatActivity {
     private EditText et_info;
     private Button btn_save;
     private Button btn_read;
@@ -46,7 +46,7 @@ public class InquiryActivity extends AppCompatActivity {
                     }   catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(InquiryActivity.this,"数据保存成功",0).show();
+                    Toast.makeText(InquirysActivity.this,"数据保存成功",0).show();
                     break;
                 case R.id.btn_read:
                     String content="";
@@ -60,7 +60,7 @@ public class InquiryActivity extends AppCompatActivity {
                     }  catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(InquiryActivity.this,"保存的数据是："+content,0).show();
+                    Toast.makeText(InquirysActivity.this,"保存的数据是："+content,0).show();
                     break;
                     default:
                         break;
