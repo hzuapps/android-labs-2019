@@ -4,5 +4,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.hzuapps.androidlabs.soft1714080902109.addActivity">
+    tools:context="edu.hzuapps.androidlabs.soft1714080902109.AddActivity">
 </android.support.constraint.ConstraintLayout>

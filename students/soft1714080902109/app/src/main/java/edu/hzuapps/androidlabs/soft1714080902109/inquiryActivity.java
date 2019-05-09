@@ -1,7 +1,6 @@
 package edu.hzuapps.androidlabs.soft1714080902109;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +13,7 @@ import java.io.FileOutputStream;
 
 import edu.hzuapps.androidlabs.Soft1714080902109.R;
 
-public class inquiryActivity extends AppCompatActivity {
+public class InquiryActivity extends AppCompatActivity {
     private EditText et_info;
     private Button btn_save;
     private Button btn_read;
@@ -47,7 +46,7 @@ public class inquiryActivity extends AppCompatActivity {
                     }   catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(inquiryActivity.this,"数据保存成功",0).show();
+                    Toast.makeText(InquiryActivity.this,"数据保存成功",0).show();
                     break;
                 case R.id.btn_read:
                     String content="";
@@ -61,7 +60,7 @@ public class inquiryActivity extends AppCompatActivity {
                     }  catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(inquiryActivity.this,"保存的数据是："+content,0).show();
+                    Toast.makeText(InquiryActivity.this,"保存的数据是："+content,0).show();
                     break;
                     default:
                         break;

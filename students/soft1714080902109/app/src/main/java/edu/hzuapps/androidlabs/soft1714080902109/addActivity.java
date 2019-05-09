@@ -5,11 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import edu.hzuapps.androidlabs.Soft1714080902109.R;
 
-public class addActivity extends AppCompatActivity {
+public class AddActivity extends AppCompatActivity {
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +18,7 @@ public class addActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(addActivity.this, inquiryActivity.class);
+                Intent intent = new Intent(AddActivity.this, InquiryActivity.class);
                 startActivity(intent);
 
             }
