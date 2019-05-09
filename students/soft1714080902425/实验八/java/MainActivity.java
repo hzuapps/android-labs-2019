@@ -1,9 +1,10 @@
-﻿package edu.androidlabs.thirdtest;
+package edu.androidlabs.thirdtest;
 
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -14,14 +15,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.io.FileOutputStream;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private Button mCheckButton;
-    private Button listbtn = null, stopbtn = null;
+    private Button listbtn = null;
     private TextView etinfo;
     private Button but2;
     private boolean mConnected;
     private TextView mNetworkText;
+    private Button start=null;
+    private Button pause=null;
+    private Button stop=null;
+    private TextView state=null;
+    private MediaPlayer mp3;
+    private Boolean flag=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +37,98 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listbtn = (Button) findViewById(R.id.musicList);
         listbtn.setOnClickListener(new MainActivity.MyButtonListener1());
-        stopbtn = (Button) findViewById(R.id.stop);
-        stopbtn.setOnClickListener(new ButtonListener());
+        start=(Button) super.findViewById(R.id.start);
+        start.setOnClickListener(new ButtonListener());
         etinfo = (TextView) findViewById(R.id.edit);
         but2 = (Button) findViewById(R.id.download);
         but2.setOnClickListener(new MainActivity.MyButtonListener2());
         mNetworkText = (TextView) findViewById(R.id.text_network);
         mCheckButton = (Button) findViewById(R.id.button_check);
         mCheckButton.setOnClickListener(new MainActivity.MyButtonListener3());
+        pause=(Button) findViewById(R.id.pause);
+        stop=(Button) findViewById(R.id.stop);
+        state=(TextView) findViewById(R.id.state);
+        start.setOnClickListener(new MainActivity.OnClickListenerStart());
+        pause.setOnClickListener(new MainActivity.OnClickListenerPause());
+        stop.setOnClickListener(new MainActivity.OnClickListenerStop());
+        mp3= new MediaPlayer();
+        mp3 = MediaPlayer.create(MainActivity.this,R.raw.a);
+    }
+
+    private class OnClickListenerStart implements View.OnClickListener {
+        @Override
+        public void onClick(View v)
+        {
+            try
+            {
+                if (mp3!=null)
+                {
+                    mp3.stop();
+                }
+                mp3.prepare();
+                mp3.start();
+                state.setText("正在播放");
+            } catch (Exception e)
+            {
+                state.setText(e.toString());
+                e.printStackTrace();
+            }
+        }
+    }
+    private class OnClickListenerPause implements View.OnClickListener{
+        @Override
+        public void onClick(View v)
+        {
+            try
+            {
+                if (flag==false)
+                {
+                    mp3.pause();
+                    flag=true;
+                    state.setText("已暂停，再次点击继续");
+                }
+                else if(flag==true){
+                    mp3.start();
+                    flag=false;
+                    state.setText("正在播放");
+                }
+            } catch (Exception e)
+            {
+                state.setText(e.toString());
+                e.printStackTrace();
+            }
+        }
+    }
+    //停止播放
+    private class OnClickListenerStop implements View.OnClickListener{
+        @Override
+        public void onClick(View v)
+        {
+            try
+            {
+                if (mp3!=null)
+                {
+                    mp3.stop();
+                    state.setText("已停止");
+                }
+            } catch (Exception e)
+            {
+                state.setText(e.toString());
+                e.printStackTrace();
+            }
+        }
+    }
+    //重写暂停状态事件
+    protected void onPause(){
+        try
+        {
+            mp3.release();
+        } catch (Exception e)
+        {
+            state.setText(e.toString());
+            e.printStackTrace();
+        }
+        super.onPause();
     }
 
     //跳转到音乐列表
@@ -47,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
 
     //保存数据
     private class ButtonListener implements View.OnClickListener {
@@ -125,5 +218,4 @@ public class MainActivity extends AppCompatActivity {
         mNetworkText.setTextColor(mConnected ? Color.RED : Color.BLUE);
         mNetworkText.setText(mConnected ? "网络正常 (" +types + ")" : "网络未连接!");
     }
-
 }

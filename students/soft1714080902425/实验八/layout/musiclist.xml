@@ -19,8 +19,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#86B2F4"
-            android:text="1.Maps"
-            android:textSize="28dp" />
+            android:text="1.相信自己"
+            android:textSize="28dp"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/list2"
@@ -28,17 +29,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#86B2F4"
-            android:text="2.Two as one"
-            android:textSize="28dp" />
+            android:text="2.Rage Your Dream"
+            android:textSize="28dp"
+            android:textAllCaps="false"/>
 
-        <Button
-            android:id="@+id/list3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#86B2F4"
-            android:text="3.All fall down"
-            android:textSize="28dp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

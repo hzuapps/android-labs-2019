@@ -14,3 +14,4 @@ public class Activity02 extends AppCompatActivity {
         setContentView(R.layout.activity02);
     }
 }
+

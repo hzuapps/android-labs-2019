@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,12 +11,10 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:background="#00BB64">
-
         <Button
             android:id="@+id/musicList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:background="#BB6666"
             android:text="音乐文件列表"
             android:textColor="#BB1155"
@@ -32,7 +30,6 @@
             android:layout_height="wrap_content"
             android:text="Rage your Dream"
             android:textSize="50dp"
-            android:layout_marginTop="10dp"
             android:background="#5C55BB"
            />
 
@@ -41,37 +38,50 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             >
-
-            <Button
-                android:id="@+id/btn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="上一首"
-                android:textSize="20dp"/>
-
             <Button
                 android:id="@+id/stop"
-                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="停止"
+                android:textSize="20dp"
+                />
+            <Button
+                android:id="@+id/start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="播放"
                 android:textSize="20dp"/>
-
             <Button
-                android:id="@+id/pre"
-                android:layout_marginLeft="20dp"
+                android:id="@+id/pause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="下一首"
-                android:textSize="20dp"/>
-        </LinearLayout>
+                android:text="暂停"
+                android:textSize="20dp"
+                />
 
+        </LinearLayout>
+        <Button
+            android:id="@+id/button_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检查网络"
+            android:textSize="20dp"/>
         <Button
             android:id="@+id/download"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="网上下载这首歌曲"
             android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/text_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
     </LinearLayout>
 
