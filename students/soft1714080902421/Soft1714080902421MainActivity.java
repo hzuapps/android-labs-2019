@@ -7,13 +7,13 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.Toast;
-
 
 @SuppressLint("Registered")
 public class Soft1714080902421MainActivity extends AppCompatActivity {
-    private ImageView imageView = null;
+    private EditText et_info;
+    private Button mBtnstartstudy = null;
     private Button mBtnImageView=null;
     private Button mBtnmytree=null;
     private Button mBtntreeplant=null;
@@ -25,6 +25,7 @@ public class Soft1714080902421MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mBtnstartstudy = findViewById(R.id.btn_startstudy);
         mBtnImageView = findViewById(R.id.btn_imageview);
         mBtnmytree = findViewById(R.id.btn_mytree);
         mBtntreeplant = findViewById(R.id.btn_treeplant);
@@ -32,10 +33,12 @@ public class Soft1714080902421MainActivity extends AppCompatActivity {
         mBtnsetting = findViewById(R.id.btn_setting);
         setOnClickListener();
         //根据id找到按钮
+
     }
 
     private void setOnClickListener(){
         OnClick onClick = new OnClick();
+        mBtnstartstudy.setOnClickListener(onClick);
         mBtnImageView.setOnClickListener(onClick);
         mBtnmytree.setOnClickListener(onClick);
         mBtntreeplant.setOnClickListener(onClick);
@@ -49,8 +52,11 @@ public class Soft1714080902421MainActivity extends AppCompatActivity {
         public void onClick(View v){
             Intent intent = null;
             switch (v.getId()){
+            case R.id.btn_startstudy:
+                intent = new Intent(Soft1714080902421MainActivity.this, StartStudyActivity.class);
+            break;
             case R.id.btn_imageview:
-                intent = new Intent(Soft1714080902421MainActivity.this, ImageViewActivity.class);
+                intent = new Intent(Soft1714080902421MainActivity.this, PlantTimeActivity.class);
             break;
             case R.id.btn_mytree:
                 intent = new Intent(Soft1714080902421MainActivity.this, MyTreeActivity.class);
@@ -59,11 +65,12 @@ public class Soft1714080902421MainActivity extends AppCompatActivity {
                 intent = new Intent(Soft1714080902421MainActivity.this, TreePlantActivity.class);
             break;
             case R.id.btn_totaltime:
-                 intent = new Intent(Soft1714080902421MainActivity.this, TotalTimeActivity.class);
+                 intent = new Intent(Soft1714080902421MainActivity.this, RelaxActivity.class);
             break;
             case R.id.btn_setting:
                   intent = new Intent(Soft1714080902421MainActivity.this, SettingActivity.class);
             break;
+
             }
             startActivity(intent);
              }
@@ -72,7 +79,7 @@ public class Soft1714080902421MainActivity extends AppCompatActivity {
     public boolean onTouchEvent(MotionEvent event){
         float x=event.getX();
         float y=event.getY();
-        Toast.makeText(this, "Good！",0).show();
+        Toast.makeText(this,"Have you studied today？！",Toast.LENGTH_SHORT).show();
         return super.onTouchEvent(event);
     }
 }

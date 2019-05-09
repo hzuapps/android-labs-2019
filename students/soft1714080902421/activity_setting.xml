@@ -16,7 +16,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="70dp"
         android:text="请输入种树成功回复："
-        android:textSize="22dp"
+        android:textSize="12dp"
         android:textStyle="bold" />
 
     <EditText
@@ -39,7 +39,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="120dp"
         android:text="请输入种树所需签到时间(min:21天)："
-        android:textSize="22dp"
+        android:textSize="12dp"
         android:textStyle="bold" />
 
     <EditText
@@ -61,7 +61,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
         android:text="请设置最少学习时间（/h）："
-        android:textSize="22dp"
+        android:textSize="12dp"
         android:textStyle="bold" />
 
     <EditText

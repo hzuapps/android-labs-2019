@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,39 +9,56 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="692dp"
+        android:layout_height="600dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="40dp">
 
         <Button
-            android:id="@+id/btn_imageview"
+            android:id="@+id/btn_startstudy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="240dp"
             android:alpha="0.4"
-            android:text="点击进行种树"
-            android:textColor="@color/colorPrimary"
+            android:background="@drawable/button_long"
+            android:text="开始学习"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btn_mytree"
+            android:id="@+id/btn_imageview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_imageview"
+            android:layout_below="@id/btn_startstudy"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_long"
             android:alpha="0.4"
-            android:text="查看我的森林"
-            android:textColor="@color/colorPrimary"
+            android:text="种树时间"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_treeplant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_mytree"
+            android:layout_below="@id/btn_imageview"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_long"
             android:alpha="0.4"
             android:text="查看可种树种"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_mytree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_treeplant"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_long"
+            android:alpha="0.4"
+            android:text="查看我的森林"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <Button
@@ -49,9 +66,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_treeplant"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_long"
             android:alpha="0.4"
-            android:text="查看已学习时间"
-            android:textColor="@color/colorPrimary"
+            android:text="休息时间"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <Button
@@ -59,6 +78,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_totaltime"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_long"
             android:alpha="0.4"
             android:text="查看个人设置"
             android:textColor="@color/colorPrimaryDark"
@@ -66,4 +88,4 @@
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

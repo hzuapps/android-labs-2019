@@ -14,12 +14,12 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 
 
-public class TotalTimeActivity extends AppCompatActivity {
+public class RelaxActivity extends AppCompatActivity {
     private LinearLayout layout;
     private SensorManager manager;
     private Sensor sensor;
     private int what = 0;
-//    获取震动服务对象
+    //    获取震动服务对象
     private Vibrator vibrator;
     Handler handler = new Handler(){
         @Override
@@ -39,7 +39,7 @@ public class TotalTimeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_total_time);
+        setContentView(R.layout.activity_relax);
         layout = (LinearLayout) findViewById(R.id.change_layout);
 //        1.获取传感器服务管理对象
         manager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -79,10 +79,10 @@ public class TotalTimeActivity extends AppCompatActivity {
         @Override
 
         public void onAccuracyChanged(Sensor sensor, int accuracy) {
-       }
+        }
     };
 
-//    4.注销传感器监听器
+    //    4.注销传感器监听器
     @Override
     protected void onPause() {
         super.onPause();

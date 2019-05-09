@@ -21,8 +21,8 @@ import android.widget.LinearLayout;
 
 import java.lang.ref.WeakReference;
 
-public class ImageViewActivity extends AppCompatActivity  implements SensorEventListener {
-    private static final String TAG = "ImageViewActivity";
+public class PlantTimeActivity extends AppCompatActivity  implements SensorEventListener {
+    private static final String TAG = "PlantTimeActivity";
     private static final int START_SHAKE = 0x1;
     private static final int AGAIN_SHAKE = 0x2;
     private static final int END_SHAKE = 0x3;
@@ -43,7 +43,7 @@ public class ImageViewActivity extends AppCompatActivity  implements SensorEvent
         super.onCreate(savedInstanceState);
         //设置只竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_image_view);
+        setContentView(R.layout.activity_plant_time);
         //初始化View
         initView();
         mHandler = new MyHandler(this);
@@ -132,10 +132,10 @@ public class ImageViewActivity extends AppCompatActivity  implements SensorEvent
     }
 
     private static class MyHandler extends Handler {
-        private WeakReference<ImageViewActivity> mReference;
-        private ImageViewActivity mActivity;
-        public MyHandler(ImageViewActivity activity) {
-            mReference = new WeakReference<ImageViewActivity>(activity);
+        private WeakReference<PlantTimeActivity> mReference;
+        private PlantTimeActivity mActivity;
+        public MyHandler(PlantTimeActivity activity) {
+            mReference = new WeakReference<PlantTimeActivity>(activity);
             if (mReference != null) {
                 mActivity = mReference.get();
             }
