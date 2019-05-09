@@ -24,6 +24,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.Map;
+import java.util.Random;
 
 import edu.huzapps.androidlabs.soft1714080902439.R;
 
@@ -35,6 +36,7 @@ public class Soft1714080902439PresentActivity extends AppCompatActivity {
     private SoundPool soundPool;
     private LinearLayout mImgUp;
     private LinearLayout mImgDn;
+    private ImageView shakeBg;
     private Map<Integer,Integer> loadSound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,15 @@ public class Soft1714080902439PresentActivity extends AppCompatActivity {
         //设置只竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.soft_1714080902439_present_activity);
+        shakeBg=(ImageView) findViewById(R.id.shakeBg);
+        int [] ImageArray=new int[]{R.drawable.gg1,R.drawable.gg2};
+        //random.nextInt(2);
+        Random random=new Random();
+        int randomImage=0;
+        for (int i=0;i<2;i++){
+            randomImage=random.nextInt(4);
+        }
+        shakeBg.setBackgroundResource(ImageArray[randomImage]);
         //初始化数据
         init();
         //调用工具类方法把assets目录下的声音存放在map中，返回一个HashMap
@@ -73,8 +84,8 @@ public class Soft1714080902439PresentActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         //摇一摇结束后播放map中存放的第二个声音
-                        soundPool.play(loadSound.get(1),(float) 1,(float) 1,0,0,(float) 1.0);
-                        Toast.makeText(getApplicationContext(),"失败",10).show();
+                        soundPool.play(loadSound.get(1),(float) 1,(float) 1,0,0,(float) 1.2);
+                        Toast.makeText(getApplicationContext(),"失败",Toast.LENGTH_SHORT).show();
                         mVibrator.cancel(); //震动关闭
                         mShakeListener.start(); //再次开始检测加速度传感器值
                     }
