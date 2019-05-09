@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#239"
+        android:layout_height="wrap_content"
+        android:background="#A6FFFF"
         android:orientation="vertical">
 
         <TextView
@@ -58,7 +58,7 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="50dp">
 
             <EditText
                 android:id="@+id/et_info2"
@@ -67,23 +67,37 @@
                 android:hint="输入一笔消费" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="#A6FFFF"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="192dp"
+            android:layout_height="86dp"
             android:onClick="money"
-            android:text="保存"/>
+            android:text="保存" />
+
         <Button
             android:id="@+id/btn_read"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="191dp"
+            android:layout_height="83dp"
             android:onClick="money"
-            android:text="读取"/>
+            android:text="读取" />
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button_tz"
+        android:background="#A6FFFF"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:onClick="money"
+        android:text="Button" />
+
+
 </LinearLayout>

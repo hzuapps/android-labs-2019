@@ -1,6 +1,7 @@
 package edu.hzuapps.androidlabs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,7 @@ import java.io.FileOutputStream;
 public class Com1714080901238Activity02 extends Activity {
     private Button btn_save;
     private Button btn_read;
+    private Button button_tz;
     private EditText et_info;
         @Override
     protected void onCreate( Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class Com1714080901238Activity02 extends Activity {
         super.onCreate(savedInstanceState);
             btn_save=(Button) findViewById(R.id.btn_save);
             btn_read=(Button) findViewById(R.id.btn_read);
+            button_tz=(Button) findViewById(R.id.button_tz) ;
             et_info=(EditText) findViewById(R.id.et_info1);
     }
     public void money(View view){
@@ -58,6 +61,10 @@ public class Com1714080901238Activity02 extends Activity {
                 }
                 Toast.makeText(Com1714080901238Activity02.this,"保存的数据是:"+content,Toast.LENGTH_SHORT).show();
                 break;
+                case R.id.button_tz:
+                        Intent intent = new Intent(Com1714080901238Activity02.this,Com1714080901238Activity03.class);
+                        startActivity(intent);
+
             default: break;
         }
     }

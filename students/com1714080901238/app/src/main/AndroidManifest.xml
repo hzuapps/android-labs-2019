@@ -3,6 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="edu.hzuapps.androidlabs">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.hardware.sensor.accelerometer" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,6 +32,7 @@
         </activity>
         <activity android:name=".Com1714080901238Activity02"
             android:exported="true"/>
+        <activity android:name=".Com1714080901238Activity03"
+            android:exported="true"/>
     </application>
-
 </manifest>
