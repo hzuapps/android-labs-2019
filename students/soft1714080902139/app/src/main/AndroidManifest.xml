@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.soft1714080902313">
+    package="edu.hzu.android.soft1714080902139">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,19 +10,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Second_Activity"></activity>
-        <activity android:name=".image_album_show" />
-        <activity android:name=".Activity2" />
-        <activity android:name=".Activity1" />
-        <activity android:name=".Soft1714080902313Activity4" />
-        <activity android:name=".Soft1714080902313Activity3" />
-        <activity android:name=".Soft1714080902313Activity2" />
-        <activity android:name=".Soft1714080902313Activity">
+
+        <activity android:name="edu.hzu.android.soft1714080902139.Soft1714080902139Activity2"
+            android:label="我的">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="edu.hzu.android.soft1714080902139.Soft1714080902139Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Activity03"
+            android:label="修改信息">
+
+        </activity>
+        <activity android:name=".Activity_01"
+            android:label="决战平安京">
+
+        </activity>
+        <activity android:name=".Activity_02"
+            android:label="阴阳师">
+
+        </activity>
+        <activity android:name=".Notice_01"
+            android:label="公告1">
+
+        </activity>
+        <activity android:name=".Notice_02"
+            android:label="公告2">
+
         </activity>
     </application>
 
