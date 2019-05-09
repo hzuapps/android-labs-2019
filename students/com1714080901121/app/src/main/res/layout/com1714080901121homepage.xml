@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green"
+    tools:context=".Com1714080901121FirstActivity" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="198dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="103dp"
+        android:text="运动健身打卡系统"
+        android:textColor="#000000"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="288dp"
+        android:layout_height="102dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="167dp"
+        android:text="请输入您要打卡的时间："
+        android:textColor="#000000"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="143dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/et_info"
+        android:layout_alignRight="@+id/et_info"
+        android:layout_marginTop="77dp"
+        android:layout_marginRight="17dp"
+        android:background="@drawable/blue"
+        android:onClick="read"
+        android:text="读取信息"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="67dp"
+        android:layout_below="@+id/et_info"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="219dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/blue"
+        android:text="保存信息"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="146dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="-49dp"
+        android:ems="10">
+
+        <requestFocus />
+    </EditText>
+</RelativeLayout>
