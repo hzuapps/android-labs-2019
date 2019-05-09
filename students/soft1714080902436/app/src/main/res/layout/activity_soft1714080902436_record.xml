@@ -9,26 +9,23 @@
     tools:context=".Soft1714080902436RecordActivity">
 
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="@string/hint6"
-        android:textColor="@color/colorAccent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="696dp" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:orientation="vertical">
 
-        <SearchView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <ScrollView
@@ -39,97 +36,118 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_height="375dp"
+                android:gravity="center"
+                android:text="@string/hint3"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="107dp" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:background="@drawable/p4"
-                    android:gravity="center"
-                    android:text="@string/hint3"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView5"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="107dp" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:text="@string/hint4"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintVertical_bias="0.071"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="107dp" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:gravity="center"
-                    android:text="@string/hint4"
-                    android:background="@drawable/p4"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5"
-                    app:layout_constraintVertical_bias="0.071"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="107dp" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:text="@string/hint5"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.36"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="107dp" />
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:gravity="center"
-                    android:text="@string/hint5"
-                    android:background="@drawable/p4"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.36"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="107dp" />
-            </LinearLayout>
-
+            <TextView
+                android:id="@+id/transmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.36"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="107dp" />
         </LinearLayout>
-
     </ScrollView>
-
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:orientation="vertical">
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/button2"
+        android:layout_weight="2.5"
+        android:orientation="horizontal">
+
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:clickable="true"
-            app:backgroundTint="@color/colorPrimaryDark"
-            app:srcCompat="@android:drawable/ic_input_add" />
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="广场" />
+
+                <Button
+                    android:id="@+id/RecordButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="添加记录"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+                <Button
+                    android:id="@+id/ShareButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:text="分享" />
+
+                <Button
+                    android:id="@+id/PersonButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:text="个人中心" />
+            </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -4,31 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/p1"
     tools:context=".Soft1714080902436Activity"
     android:orientation="vertical">
 
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="819dp"
         android:layout_weight="1">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/iv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1000"
-                android:alpha="0.4"
-                android:scaleType="fitXY" />
-
-        </LinearLayout>
+            android:layout_weight="1000"
+            android:alpha="0.4"
+            android:scaleType="fitXY" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,7 +34,7 @@
                 tools:ignore="MissingConstraints" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="583dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
@@ -76,6 +67,7 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/gobutton1" />
+
             </LinearLayout>
         </LinearLayout>
 

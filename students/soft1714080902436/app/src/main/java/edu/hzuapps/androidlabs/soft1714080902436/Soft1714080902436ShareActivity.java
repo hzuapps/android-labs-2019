@@ -3,9 +3,11 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.location.LocationManager;
 import android.os.Message;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +23,8 @@ import com.amap.api.location.AMapLocationListener;
 
 
 public class Soft1714080902436ShareActivity extends AppCompatActivity implements AMapLocationListener {
+
+
     private AMapLocationClient locationClient = null;
     private AMapLocationClientOption locationOption = null;
     private TextView textView;
@@ -63,7 +67,6 @@ public class Soft1714080902436ShareActivity extends AppCompatActivity implements
     Handler mHandler =
             new Handler() {
         public void dispatchMessage(android.os.Message msg) {
-            AMapLocation location;
             switch (msg.what) {
                 //定位完成
                 case FINISH:
@@ -73,7 +76,7 @@ public class Soft1714080902436ShareActivity extends AppCompatActivity implements
                         //国家+省+市+区+兴趣点
                         result=loc.getCountry() + loc.getProvince() + loc.getCity()  +  loc.getPoiName() + "\n";
                         Toast.makeText(Soft1714080902436ShareActivity.this, "定位成功", Toast.LENGTH_LONG).show();
-                        textView.setText( result + "\n" );
+                        textView.setText( result );
                     } catch (Exception e) {
                         Toast.makeText(Soft1714080902436ShareActivity.this, "定位失败", Toast.LENGTH_LONG).show();
                     }
@@ -105,5 +108,6 @@ public class Soft1714080902436ShareActivity extends AppCompatActivity implements
             Toast.makeText(Soft1714080902436ShareActivity.this, "定位失败", Toast.LENGTH_LONG).show();
         }
     }
+
 }
 

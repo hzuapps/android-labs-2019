@@ -3,6 +3,7 @@ package edu.hzuapps.androidlabs.soft1714080902436;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
@@ -16,9 +17,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+
+import static java.lang.System.in;
 
 public class Soft1714080902436Activity extends AppCompatActivity {
 
@@ -39,37 +45,6 @@ public class Soft1714080902436Activity extends AppCompatActivity {
         }
     };
 
-
-//插入记录
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.soft_1714080902436_activity);
-        iv = (ImageView) findViewById(R.id.iv);
-        Button gobutton1 = (Button) findViewById(R.id.gobutton1);
-        gobutton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText edit_message1;
-                edit_message1 = (EditText) findViewById(R.id.edit_message1);
-                String edit_message2 = edit_message1.getText().toString();
-                    TextView tv=(TextView)findViewById(R.id.textView6);
-                    String cn=edit_message1.getText().toString();
-                    tv.setText(cn);
-                Intent intent1 = new Intent(Soft1714080902436Activity.this, Soft1714080902436ConfirmActivity.class);
-                intent1.putExtra("transmit", edit_message2);
-                startActivity(intent1);
-            }
-        });
-        Button gobutton2 = (Button) findViewById(R.id.gobutton2);
-        gobutton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-    }
-
     //获取图片
     public void click(View view) {
         final String image_url = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555611714842&di=65e5d5c3eed503da94408e5fad2b3e25&imgtype=0&src=http%3A%2F%2Fwww.xz7.com%2Fup%2F2017-7%2F15010491818447462.JPEG";
@@ -77,13 +52,13 @@ public class Soft1714080902436Activity extends AppCompatActivity {
             Toast.makeText(this, "图片路径不能为空", Toast.LENGTH_SHORT).show();
         } else {
             //子线程请求网络，Android 4.0以后访问网络不能放在主线程中
-            new Thread() {
-                private HttpURLConnection conn;
-                private Bitmap bitmap;
-
+            new Thread(new Runnable() {
+                @Override
                 public void run() {
                     //连接服务器get请求，获取图片
                     try {
+                        HttpURLConnection conn;
+                        Bitmap bitmap;
                         //创建URL对象
                         URL url = new URL(image_url);
                         //根据url发送http的请求
@@ -94,6 +69,7 @@ public class Soft1714080902436Activity extends AppCompatActivity {
                         conn.setConnectTimeout(5000);
                         //设置请求头User-Agent浏览器的版本
                         conn.setRequestProperty("User-Agent", "Mozilla/4.0(compatible;MSIE 6.0;Windows NT 5.1;" + "SV1;.NET4.0C;.NET4.0E;.NET CLR 2.0.50727;" + ".NET CLR 3.0.4506.2152;.NET CLR 3.5.30729;Shuame)");
+                        conn.setDoInput(true);  //设置可以获取输入流
                         //得到服务器返回的响应码
                         int code = conn.getResponseCode();
                         //请求网络成功后返回码是200
@@ -120,9 +96,39 @@ public class Soft1714080902436Activity extends AppCompatActivity {
                         handler.sendMessage(msg);
                     }
                 }
-            }.start();
+            }).start();
         }
     }
+
+
+    //插入记录
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.soft_1714080902436_activity);
+        iv = (ImageView) findViewById(R.id.iv);
+        Button gobutton1 = (Button) findViewById(R.id.gobutton1);
+        gobutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText edit_message1;
+                edit_message1 = (EditText) findViewById(R.id.edit_message1);
+                String edit_message2 = edit_message1.getText().toString();
+
+                Intent intent1 = new Intent(Soft1714080902436Activity.this, Soft1714080902436RecordActivity.class);
+                intent1.putExtra("transmit", edit_message2);
+                startActivity(intent1);
+            }
+        });
+        Button gobutton2 = (Button) findViewById(R.id.gobutton2);
+        gobutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
 }
 
 

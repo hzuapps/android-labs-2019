@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Soft1714080902436ShareActivity"></activity>
-
+        <activity android:name=".Soft1714080902436Activity" />
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="ad3d6065b68527dcf1e694e70351b8a2" >
@@ -29,7 +29,6 @@
         <!-- 定位需要的服务 -->
         <service android:name="com.amap.api.location.APSService" >
         </service>
-        <activity android:name=".Soft1714080902436Activity" />
         <activity android:name=".Soft1714080902436ConfirmActivity" />
         <activity android:name=".Soft1714080902436RecordActivity">
             <intent-filter>
