@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AISHOP</string>
+    <string name="title_activity_show">商品分类</string>
+    <string name="title_activity_book">书籍种类</string>
+    <string name="title_activity_detail">商品详情</string>
+    <string name="title_activity_personal">个人中心</string>
+</resources>
