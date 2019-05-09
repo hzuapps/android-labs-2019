@@ -8,78 +8,68 @@
     tools:context=".Main3Activity"
     tools:showIn="@layout/activity_main3">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="203dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="家教管理系统"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/img_list2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginBottom="37dp"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
         android:orientation="vertical"
-        android:text="新增家教管理员"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/frameLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="359dp"
-        android:layout_height="514dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginBottom="46dp"
+        android:text="新增家教成员"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    </FrameLayout>
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/img_list2"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/timg"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="381dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="56dp"
-        android:text="随着科技的发展和信息技术的日益普及,很多家长抱着望子成龙的心态,不遗余力的为孩子找合适的家教,而很多在校大学教师也希望通过当家教增加一点经济收入,基于这一点家教服务系统将给学校提供更好的管理系统,使学生更加了解教师,也通过这个系统使学校对于教师方便管理,满足几方面的要求. 实现家教学校管理者对家教个人信息、职业情况、工作时间，工资结算地方便有效地管理。"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="389dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="20dp"
+        android:text="         随着科技的发展和信息技术的普及,很多家长抱着望子成龙的心态,不遗余力的为孩子找合适的家教,而很多在校大学教师也希望通过当家教增加一点经济收入,基于这一点家教服务系统将给学校提供更好的管理系统,使学生更加了解教师,也通过这个系统使学校对于教师方便管理,满足几方面的要求. 实现家教学校管理者对家教个人信息、职业情况、工作时间，工资结算地方便有效地管理。"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_list2" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="162dp"
+        android:layout_width="154dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="14dp"
         android:orientation="vertical"
-        android:text="跳转JSON"
+        android:text="获取家教信息"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="186dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="219dp"
-        android:text="家教管理系统"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

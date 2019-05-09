@@ -82,7 +82,7 @@ public class Json2Activity extends AppCompatActivity {
                                           public void run() {
                                               try {
                                                   textview.setText("姓名："+ object.getString("name")+"\n"+"年龄："+object.getString("age")
-                                                                    +"\n"+"性别："+object.getString("isBoy")+"\n"+"号码："+object.getString("numbers")+
+                                                                    +"\n"+"是否男："+object.getString("isBoy")+"\n"+"号码："+object.getString("numbers")+
                                                                     "\n"+"课程："+object.getString("courses"));
 
                                               } catch (JSONException e) {

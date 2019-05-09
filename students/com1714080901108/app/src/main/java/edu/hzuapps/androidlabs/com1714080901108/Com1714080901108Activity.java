@@ -19,7 +19,7 @@ public class Com1714080901108Activity extends AppCompatActivity implements View.
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Com1714080901108Activity.this,SecondActivity.class);
+                Intent intent=new Intent(Com1714080901108Activity.this,Main3Activity.class);
                 startActivity(intent);
             }
         });
