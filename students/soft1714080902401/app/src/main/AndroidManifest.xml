@@ -19,5 +19,7 @@
             </intent-filter>
         </activity>
     </application>
+    <!--网络请求声明-->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
