@@ -1,4 +1,5 @@
 package edu.hzuapps.androidlabs.com1714080901115;
+
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.ContentUris;
@@ -10,7 +11,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -18,10 +18,11 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
+
 import java.io.File;
 
 public class Com1714080901115Activity extends AppCompatActivity {
@@ -34,7 +35,20 @@ public class Com1714080901115Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_1714080901115_activity);
-
+        Button self = findViewById(R.id.jump);
+        self.setOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Com1714080901115Activity.this,Com1714080901115Activity2.class));
+            }
+        });
+        Button self1 = findViewById(R.id.jump1);
+        self1.setOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Com1714080901115Activity.this,Com1714080901115Activity3.class));
+            }
+        });
         mTakePhoto = (Button) findViewById(R.id.btn_take_photo);
         mChoosePhoto = (Button) findViewById(R.id.choose_from_album);
 
@@ -150,7 +164,7 @@ public class Com1714080901115Activity extends AppCompatActivity {
 
     @TargetApi(19)
     private void handleImageOnKitKat(Intent data) {
-      String imagePath = null;
+        String imagePath = null;
         Uri uri = data.getData();
         if (DocumentsContract.isDocumentUri(this, uri)) {
             String docID = DocumentsContract.getDocumentId(uri);
@@ -172,5 +186,6 @@ public class Com1714080901115Activity extends AppCompatActivity {
         }
         displayImage(imagePath);
     }
+
 
 }
