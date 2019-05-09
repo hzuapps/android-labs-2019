@@ -8,42 +8,34 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="65059dp"
+        android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="wrap_content"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
     </android.support.design.widget.AppBarLayout>
     <include layout="@layout/content_com136" />
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="58dp"
         android:background="#D0D0D0">
-
         <LinearLayout
             android:id="@+id/l11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="500dp"
+            android:layout_marginTop="600dp"
             android:orientation="horizontal">
-
             <Button
                 android:id="@+id/b11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="fanhui"
-
                 android:text="返回"
-
                 android:textSize="25dp" />
-
             <Button
                 android:id="@+id/b12"
                 android:layout_width="wrap_content"
@@ -54,52 +46,57 @@
 
                 android:textSize="25dp" />
         </LinearLayout>
-
-
         <LinearLayout
             android:id="@+id/l2"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="30dp"
             android:layout_below="@id/iv"
             android:background="#D0D0D0"
             android:orientation="horizontal">
-
             <Button
                 android:id="@+id/b3"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:onClick="photograph"
+                android:orientation="horizontal"
                 android:text="拍照获取"
                 android:textColor="@color/colorPrimary"
-                android:textSize="15dp" />
-
+                android:textSize="7dp" />
             <Button
                 android:id="@+id/b4"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="200dp"
                 android:onClick="chose"
+                android:orientation="horizontal"
                 android:text="从相册中获取"
                 android:textColor="@color/colorPrimary"
-                android:textSize="15dp" />
-
+                android:textSize="7dp" />
         </LinearLayout>
-
         <ImageView
-
             android:id="@+id/iv"
             android:layout_width="400dp"
             android:layout_height="200dp"
-
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp" />
-
-
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="339dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="94dp"
+            android:gravity="center"
+            android:textColor="#4A90E2"
+            android:textSize="20sp"
+            app:layout_constraintVertical_bias="0.368" />
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
