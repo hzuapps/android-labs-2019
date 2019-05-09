@@ -1,7 +1,13 @@
 package edu.hzuapps.androidlabs.soft1714080902434;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +22,38 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import static android.content.Context.CONNECTIVITY_SERVICE;
+import static android.net.ConnectivityManager.TYPE_MOBILE;
+import static android.net.ConnectivityManager.TYPE_WIFI;
+
+
+class NetworkChangeReceiver extends BroadcastReceiver {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        ConnectivityManager connectionManager = (ConnectivityManager)context.getSystemService(CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectionManager.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isAvailable()) {
+            switch (networkInfo.getType()) {
+                case TYPE_MOBILE:
+                    Toast.makeText(context, "正在使用2G/3G/4G网络", Toast.LENGTH_SHORT).show();
+                    break;
+                case TYPE_WIFI:
+                    Toast.makeText(context, "正在使用wifi上网", Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            Toast.makeText(context, "当前无网络连接", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+
+
 public class EntryActivity extends AppCompatActivity {
+    private IntentFilter intentFilter;
+    private NetworkChangeReceiver networkChangeReceiver;
+
     protected static final int CHANGE_UI=1;
     protected static final int ERROR=2;
     private EditText et_path;
@@ -38,6 +75,15 @@ public class EntryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_entry);
         et_path=(EditText) findViewById(R.id.et_path);
         iv=(ImageView) findViewById(R.id.iv);
+
+        intentFilter = new IntentFilter();
+        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+        networkChangeReceiver = new NetworkChangeReceiver();
+        registerReceiver(networkChangeReceiver, intentFilter);
+    }
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(networkChangeReceiver);
     }
 
     public void click(View view){
