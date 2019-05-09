@@ -34,16 +34,20 @@
         android:id="@+id/text_network"
         android:layout_width="match_parent"
         android:layout_height="44dp"
+        android:textSize="25dp"
         android:background="#A6FFFF"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="85dp" />
+        android:text="网络状态未检测" />
 
     <ImageView
         android:id="@+id/text_result"
         android:layout_width="match_parent"
-        android:layout_height="384dp"
-        android:background="#A6FFFF"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="129dp" />
+        android:layout_height="wrap_content"
+        android:background="#A6FFFF"/>
+    <TextView
+        android:id="@+id/text_s"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=" 摇一摇显示余额 "
+        android:textSize="30dp"
+        android:background="#A6FFFF" />
 </LinearLayout>
