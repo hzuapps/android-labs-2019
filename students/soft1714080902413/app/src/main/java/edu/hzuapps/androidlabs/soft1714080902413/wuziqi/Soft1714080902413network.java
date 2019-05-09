@@ -19,9 +19,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-public class Soft1714080902413Activity6 extends AppCompatActivity implements View.OnClickListener {
+public class Soft1714080902413network extends AppCompatActivity implements View.OnClickListener {
 
-    public static final String TAG = Soft1714080902413Activity6.class.getSimpleName();
+    public static final String TAG = Soft1714080902413network.class.getSimpleName();
     public static final String IMAGE_URL_PREFIX = "https://raw.githubusercontent.com/jiyimilelu/android-labs-2019/master/students/soft1714080902413/app/src/main/res/drawable/";
     static String[] imageNames = {"timg.jpg"};
 
@@ -113,7 +113,7 @@ public class Soft1714080902413Activity6 extends AppCompatActivity implements Vie
         mFileDownloader = new Soft1714080902413Downloader(new Soft1714080902413Downloader.OnImageDownloadListener() {
             @Override
             public void onError(String error) {
-                Toast.makeText(Soft1714080902413Activity6.this, error, Toast.LENGTH_LONG).show();
+                Toast.makeText(Soft1714080902413network.this, error, Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -132,11 +132,11 @@ public class Soft1714080902413Activity6 extends AppCompatActivity implements Vie
                 Soft1714080902413Downloader.writeToDisk(imageFile, bitmap, new Soft1714080902413Downloader.OnBitmapSaveListener() {
                     @Override
                     public void onBitmapSaved() {
-                        Toast.makeText(Soft1714080902413Activity6.this, "文件已保存: " + imageFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(Soft1714080902413network.this, "文件已保存: " + imageFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
                     }
                     @Override
                     public void onBitmapSaveError(String error) {
-                        Toast.makeText(Soft1714080902413Activity6.this, error, Toast.LENGTH_LONG).show();
+                        Toast.makeText(Soft1714080902413network.this, error, Toast.LENGTH_LONG).show();
                     }
                 }, format, false);
             }

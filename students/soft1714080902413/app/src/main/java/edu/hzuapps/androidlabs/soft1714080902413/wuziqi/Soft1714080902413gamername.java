@@ -11,7 +11,7 @@ import android.widget.Toast;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-public class Soft1714080902413Activity5 extends AppCompatActivity {
+public class Soft1714080902413gamername extends AppCompatActivity {
 
     private EditText et_info;
     private Button btn_save;
@@ -41,7 +41,7 @@ public class Soft1714080902413Activity5 extends AppCompatActivity {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(Soft1714080902413Activity5.this,"数据保存成功",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Soft1714080902413gamername.this,"数据保存成功",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btn_read:
                     String content="";
@@ -55,7 +55,7 @@ public class Soft1714080902413Activity5 extends AppCompatActivity {
                     }catch(Exception e) {
                         e.printStackTrace();
                     }
-                    Toast.makeText(Soft1714080902413Activity5.this,"保存的数据是:"+content,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Soft1714080902413gamername.this,"保存的数据是:"+content,Toast.LENGTH_SHORT).show();
                     break;
                     default:
                         break;
