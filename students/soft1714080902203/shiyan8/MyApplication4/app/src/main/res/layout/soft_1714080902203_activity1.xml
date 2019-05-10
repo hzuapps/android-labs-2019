@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".Soft1714080902203Activity1">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +34,27 @@
         android:layout_marginTop="10dp">
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_info"
+        android:layout_alignRight="@+id/et_info"
+        android:background="#FFD700"
+        android:text="查看"
+        android:textColor="#454545" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_info"
+        android:layout_alignParentLeft="@+id/et_info"
+        android:background="#FFD700"
+        android:text="保存"
+        android:textColor="#454545" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
