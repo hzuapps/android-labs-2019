@@ -1,102 +1,96 @@
 package edu.hzuapps.androidlabs.lsm;
 
+
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Handler;
-import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
+import java.util.List;
 
 public class MainActivity extends Activity {
-    protected static final int CHANGE_UI=1;
-    protected static final int ERROR =2;
-    private EditText et_path;
-    private ImageView iv;
-    //主线程创建消息处理器
-    private Handler handler=new Handler(){
-        public void handleMessage(android.os.Message msg){
-            if(msg.what==CHANGE_UI){
-                Bitmap bitmap=(Bitmap) msg.obj;
-                iv.setImageBitmap(bitmap);
-            }else if(msg.what==ERROR){
-                Toast.makeText(MainActivity.this,"显示图片错误",0).show();
-            }
-        }
-    };
-    protected void onCreate(Bundle savedInstanceState){
+    private TextView positionTextView;
+    private LocationManager locationManager;
+    private String provider;
+    private Location location;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        et_path=(EditText)findViewById(R.id.et_path);
-        iv=(ImageView) findViewById(R.id.iv);
+        positionTextView = (TextView) findViewById(R.id.position_text_view);
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        //获取所有可用的位置提供器
+        List<String> providerList = locationManager.getProviders(true);
+        if (providerList.contains(LocationManager.GPS_PROVIDER)) {
+            provider = LocationManager.GPS_PROVIDER;
+        } else if (providerList.contains(LocationManager.NETWORK_PROVIDER)) {
+            provider = LocationManager.NETWORK_PROVIDER;
+        } else {
+            //当没有可用的位置提供器时，提示用户,并结束程序
+            Toast.makeText(this, "No Location Provider to use", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        try {
+            location = locationManager.getLastKnownLocation(provider);
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+        if (location != null) {
+            showLocation(location);
+        }
+
+        try {
+            //实时更新地理信息
+            locationManager.requestLocationUpdates(provider, 5000, 1, locationListener);
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+
     }
-    public void click(View view){
-        final String path=et_path.getText().toString().trim();
-        if(TextUtils.isEmpty(path)){
-            Toast.makeText(this,"图片路径不能为空",0).show();
-        }else{
-            //子线程请求网络
-            new Thread(){
-                private HttpURLConnection conn;
-                private Bitmap bitmap;
-                public void run(){
-                    //连接服务器get请求，获取图片
-                    try{
-                        //创建URL对象
-                        URL url = new URL(path);
-                        //根据url发送http请求
-                        conn = (HttpURLConnection) url.openConnection();
-                        //设置请求的方式
-                        conn.setRequestMethod("GET");
-                        //设置超时时间
-                        conn.setConnectTimeout(5000);
-                        //设置请求头User-Agent浏览器的版本
-                        conn.setRequestProperty("User-Agent","Mizilla/4.0 (compatible;MSIE 6.0;Windows NT 5.1;"+"SV1;.NET4.0C;.NET4.0E;.NET CLR 2.0.50727;"+".NET CLR 3.0.4506.2152;.NET CLR 3.5.30729;Shuame)");
-                        //得到服务器返回的响应码
-                        int code = conn.getResponseCode();
-                        //请求网络成功后返回码是200
-                        if(code==200) {
-                            //获取输入流
-                            InputStream is = conn.getInputStream();
-                            //将流转换成Bitmap对象
-                            bitmap = BitmapFactory.decodeStream(is);
-                            //TODO:告诉主线程一个消息：帮我更改界面。内容：bitmap
-                            Message msg = new Message();
-                            msg.what = CHANGE_UI;
-                            msg.obj = bitmap;
-                            handler.sendMessage(msg);
-                        }else{
-                            //返回码不是200，请求服务器失联
-                            Message msg=new Message();
-                            msg.what=ERROR;
-                            handler.sendMessage(msg);
-                        }
-                    }catch (Exception e){
-                        e.printStackTrace();
-                        Message msg=new Message();
-                        msg.what=ERROR;
-                        handler.sendMessage(msg);
-                    }
-                };
-            }.start();
+
+    LocationListener locationListener = new LocationListener() {
+        @Override
+        public void onLocationChanged(Location location) {
+            showLocation(location);
+        }
+
+        @Override
+        public void onStatusChanged(String s, int i, Bundle bundle) {
+
+        }
+
+        @Override
+        public void onProviderEnabled(String s) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String s) {
+
+        }
+    };
+
+    //设置positionTextView的值并显示
+    private void showLocation(Location location) {
+        String currentPosition = "当前位置经纬度：("+location.getLatitude()+","+location.getLongitude()+")";
+        positionTextView.setText(currentPosition);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (locationManager != null) {
+            //关闭程序时将监听器移除
+            try {
+                locationManager.removeUpdates(locationListener);
+            } catch (SecurityException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
