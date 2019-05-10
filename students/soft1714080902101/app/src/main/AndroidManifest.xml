@@ -10,15 +10,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChatActivity"/>
-        <activity android:name=".ChattingActivity" />
-        <activity android:name=".ReadActivity" />
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".DownloadActivity" />
         <activity android:name=".Soft1714080902101Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,8 +26,7 @@
         </activity>
         <receiver android:name=".NetWorkStateReceiver">
             <intent-filter>
-                //检测网络变化的acton
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>

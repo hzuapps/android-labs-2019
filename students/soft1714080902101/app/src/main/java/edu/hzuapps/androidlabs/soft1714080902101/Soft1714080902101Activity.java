@@ -10,24 +10,37 @@ import android.widget.Button;
 
 public class Soft1714080902101Activity extends AppCompatActivity {
 
-    private Button myButton;
+    private Button myButton_ct1;
+    private Button myButton_chat;
+    private Button myButton_download;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.soft_1714080902101_activity);
 
-        myButton = (Button)findViewById(R.id.button1);
-        myButton.setOnClickListener(new View.OnClickListener() {
+        myButton_ct1 = (Button)findViewById(R.id.bt_ct1);
+        myButton_ct1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Soft1714080902101Activity.this,SecondActivity.class);
+                Intent intent = new Intent(Soft1714080902101Activity.this, ChatActivity.class);
                 startActivity(intent);
 
             }
         });
+
+        myButton_download = (Button)findViewById(R.id.bt_download);
+        myButton_download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902101Activity.this, DownloadActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
 
 
     }
