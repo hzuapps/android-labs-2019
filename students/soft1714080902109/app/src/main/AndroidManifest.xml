@@ -14,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.LocationActivity"></activity>
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.LayoutActivity" />
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.GpsActivity"></activity>
+        <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.LayoutsActivity" />
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.SearchActivity" />
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.InquirysActivity" />
         <activity

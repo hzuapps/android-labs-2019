@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import edu.hzuapps.androidlabs.Soft1714080902109.R;
 
-public class LayoutActivity extends AppCompatActivity {
+public class LayoutsActivity extends AppCompatActivity {
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class LayoutActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LayoutActivity.this, InquirysActivity.class);
+                Intent intent = new Intent(LayoutsActivity.this, InquirysActivity.class);
                 startActivity(intent);
 
             }
@@ -27,7 +27,7 @@ public class LayoutActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LayoutActivity.this, SearchActivity.class);
+                Intent intent = new Intent(LayoutsActivity.this, SearchActivity.class);
                 startActivity(intent);
 
             }
