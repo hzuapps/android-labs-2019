@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzu.android.chead">
+    package="edu.hzu.android.soft1714080902139">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +10,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name="edu.hzu.android.soft1714080902139.Soft1714080902139Activity2"
+            android:label="我的">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="edu.hzu.android.soft1714080902139.Soft1714080902139Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Activity03"
+            android:label="修改信息">
+
+        </activity>
+        <activity android:name=".Activity_01"
+            android:label="决战平安京">
+
+        </activity>
+        <activity android:name=".Activity_02"
+            android:label="阴阳师">
+
+        </activity>
+        <activity android:name=".Notice_01"
+            android:label="公告1">
+
+        </activity>
+        <activity android:name=".Notice_02"
+            android:label="公告2">
+
         </activity>
     </application>
 

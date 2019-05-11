@@ -1,4 +1,4 @@
-package edu.hzu.android.chead;
+package edu.hzu.android.soft1714080902139;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -13,10 +13,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.File;
 
-public class MainActivity extends AppCompatActivity {
+public class Soft1714080902139Activity2 extends AppCompatActivity {
+
     private ImageView mImage;
     private Button mAddImage;
     private Bitmap mBitmap;
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_soft17140809021392);
         initUI();
         initListeners();
     }
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
      * 显示修改图片的对话框
      */
     protected void showChoosePicDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(Soft1714080902139Activity2.this);
         builder.setTitle("添加图片");
         String[] items = { "选择本地照片", "拍照" };
         builder.setNegativeButton("取消", null);
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == MainActivity.RESULT_OK) {
+        if (resultCode == Soft1714080902139Activity2.RESULT_OK) {
             switch (requestCode) {
                 case TAKE_PICTURE:
                     cutImage(tempUri); // 对图片进行裁剪处理
@@ -134,5 +136,10 @@ public class MainActivity extends AppCompatActivity {
             //在这个地方可以写上上传该图片到服务器的代码，后期将单独写一篇这方面的博客，敬请期待...
         }
     }
-
+    public void ski02(View view){
+        Intent i = new Intent();
+        i.setClass(Soft1714080902139Activity2.this,Activity03.class);
+        startActivity(i);
+    }
+    /////////////还没到activity1的button
 }
