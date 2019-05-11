@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF68F"
+    android:orientation="vertical"
+    tools:context=".Soft1714080902203Activity1">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0.1dp"
+        android:background="#FFD700"
+        android:paddingLeft="20dp"
+        android:text="你的爱豆："
+        android:textColor="#454545"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/jcwu"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFE0"
+        android:gravity="left"
+        android:textColor="#454545"
+        android:text="金宰铉（Kim Jae hyun）,1994年7月15日出生于韩国首尔，韩国男歌手，男子乐队N.Flying鼓手。"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp">
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_info"
+        android:layout_alignRight="@+id/et_info"
+        android:background="#FFD700"
+        android:text="查看"
+        android:textColor="#454545" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_info"
+        android:layout_alignParentLeft="@+id/et_info"
+        android:background="#FFD700"
+        android:text="保存"
+        android:textColor="#454545" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFD700"
+        android:gravity="center"
+        android:text="获取网络图片"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/buttons"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFD700"
+        android:gravity="center"
+        android:text="跳转"
+        android:layout_alignParentBottom= "true"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
