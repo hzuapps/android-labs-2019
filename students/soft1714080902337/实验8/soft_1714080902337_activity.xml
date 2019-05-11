@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CDB79E"
+    android:paddingTop="12dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginBottom="30dp"
+        android:background="#FFFFE0"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/hua"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/hua" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/bb"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#218868"
+        android:gravity="center"
+        android:textColor="#454545"
+        android:text="欢迎进入诗歌世界"
+        android:textSize="20sp"
+        android:layout_alignParentBottom= "true"/>
+
+
+</LinearLayout>
