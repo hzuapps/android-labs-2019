@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="androidlabs.hzuapps.ezu.soft1707080714328.Soft1707080714328Activity_fankui">
+    tools:context="androidlabs.hzuapps.ezu.soft1707080714328.Soft1707080714328Activity_FanKui">
 
     <LinearLayout
 

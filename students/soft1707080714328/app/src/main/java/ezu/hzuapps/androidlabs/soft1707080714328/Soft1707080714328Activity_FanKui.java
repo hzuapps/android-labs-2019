@@ -1,8 +1,8 @@
 package androidlabs.hzuapps.ezu.soft1707080714328;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,12 +11,11 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+public class Soft1707080714328Activity_FanKui extends AppCompatActivity implements View.OnClickListener {
 
-public class Soft1707080714328Activity_fankui extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "Soft1707080714328Activity_fankui";
+    private static final String TAG = "Soft1707080714328Activity_FanKui";
     private EditText fankui;
     private ImageButton fanhui;
     private Button wancheng;
@@ -24,7 +23,7 @@ public class Soft1707080714328Activity_fankui extends AppCompatActivity implemen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.soft_1707080714328_activity_fankui);
+        setContentView(R.layout.soft_1707080714328_activity__fankui);
         intView();
         intUI();
     }
@@ -36,7 +35,7 @@ public class Soft1707080714328Activity_fankui extends AppCompatActivity implemen
     }
 
     private void intUI() {
-     //设置监听者对象
+        //设置监听者对象
         fanhui.setOnClickListener(this);
         wancheng.setOnClickListener(this);
     }
@@ -50,11 +49,11 @@ public class Soft1707080714328Activity_fankui extends AppCompatActivity implemen
                 startActivity(intent);
                 break;
             case R.id.btn_wancheng:
-                HandlerWanchengEvent(v);
+                handlerWanchengEvent(v);
         }
     }
 
-    private void HandlerWanchengEvent(View v) {
+    private void handlerWanchengEvent(View v) {
         //获取反馈内容
         String fankuiText = fankui.getText().toString();
 
@@ -72,6 +71,7 @@ public class Soft1707080714328Activity_fankui extends AppCompatActivity implemen
         startActivity(intent);
     }
 
+    @SuppressLint("LongLogTag")
     private void saveFankuiInfo(String fankuiText) {
         //查看日志,看是否能成功保存内容
         Log.d(TAG,"保存反馈内容...");
