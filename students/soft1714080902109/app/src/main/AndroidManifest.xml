@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.GpsActivity"></activity>
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.LayoutsActivity" />
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.SearchActivity" />
         <activity android:name="edu.hzuapps.androidlabs.soft1714080902109.InquirysActivity" />
