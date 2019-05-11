@@ -21,14 +21,14 @@ public class RankListSQLHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-            db.execSQL(CREATE_LIST);
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL(CREATE_LIST);
         db.execSQL(INSERT_DATA, new String[] {"张漆", "10"});
         db.execSQL(INSERT_DATA, new String[] {"张三", "60"});
         db.execSQL(INSERT_DATA, new String[] {"李四", "50"});
         db.execSQL(INSERT_DATA, new String[] {"王五", "91"});
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
 }

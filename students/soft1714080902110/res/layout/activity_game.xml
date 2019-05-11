@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/game"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorGreen"
     tools:context=".Game">
 
-    <TextView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/game_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"/>
+        android:background="@color/colorBlue"
+        android:paddingLeft="125dp"
+        app:title="@string/app_name" />
+
+    <TextView
+        android:id="@+id/sort"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/game_title"
+        android:background="#000000"/>
+
+    <ImageView
+        android:id="@+id/game_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sort"
+        android:layout_above="@id/submit">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="@string/submit"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"/>
 
 
 

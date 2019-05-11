@@ -20,7 +20,7 @@ public class RankList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rank_list);
 
-        sqlHelper = new RankListSQLHelper(this, "rank.db", null, 2);
+        sqlHelper = new RankListSQLHelper(this, "rank.db", null, 3);
 
         initPeople();
         PeopleAdapter adapter = new PeopleAdapter(RankList.this, R.layout.rank_item, peopleList);

@@ -17,8 +17,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static android.util.Config.LOGD;
-
 public class CountryList extends AppCompatActivity {
 
     private static final String TAG = "CountryList";
@@ -45,8 +43,10 @@ public class CountryList extends AppCompatActivity {
                             .url(URL)
                             .build();
                     Response response = client.newCall(request).execute();
-                    String responseData = response.body().string();
-                    showResponse(responseData);
+                    if (response.body() != null) {
+                        String responseData = response.body().string();
+                        showResponse(responseData);
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
