@@ -74,7 +74,7 @@ public class Soft1707080714328Activity_First extends AppCompatActivity implement
             ActivityCompat.requestPermissions(Soft1707080714328Activity_First.this, new String[]{Manifest.permission.CAMERA}, Constant.REQ_PERM_CAMERA);
             return;
         }
-        // 申请文件读写权限（部分朋友遇到相册选图需要读写权限的情况，这里一并写一下）
+        // 申请文件读写权限
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             // 申请权限
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
