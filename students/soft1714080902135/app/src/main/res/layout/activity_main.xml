@@ -1,40 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="731dp"
         android:orientation="vertical"
-        tools:context=".MainActivity">
-        <android.support.design.widget.TextInputEditText
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="报告查询" />
+            android:text="健康导航"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
         <ImageView
-            android:id="@+id/iv"
-            android:layout_width="wrap_content"
-            android:layout_height="400dp"
-            android:textAlignment="center"/>
-
-        <EditText
-            android:id="@+id/et_path"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="请输入查询验证码"
-            android:singleLine="true" />
-
-        <Button
             android:layout_width="match_parent"
-            android:layout_height="100px"
-            android:onClick="click"
-            android:text="获取检查报告"
-            android:textColor="@android:color/white"
-            android:background="@color/colorPrimary"
-            android:textAlignment="center"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="500pt"
+            android:maxHeight="200pt"
+            android:scaleType="fitCenter"
+            android:src="@drawable/yuyue" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90pt"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="184dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="148dp"-->
+                <!--android:text="照片" />-->
+                <ImageView
+                    android:layout_width="202dp"
+                    android:layout_height="50pt"
+                    android:layout_marginTop="10pt"
+                    android:layout_marginBottom="10pt"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="500pt"
+                    android:maxHeight="200pt"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/guahao" />
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="34dp"
+                    android:text="一键挂号"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="212dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="50pt"
+                    android:layout_marginTop="10pt"
+                    android:layout_marginBottom="10pt"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="500pt"
+                    android:maxHeight="200pt"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baogaochaxun" />
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="34dp"
+                    android:text="报告查询"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="常见科室"
+            android:textSize="8pt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10pt"
+            android:layout_marginTop="5pt"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10pt">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10pt"
+                android:text="内科" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10pt"
+                android:text="外科" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10pt"
+                android:text="妇科" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10pt"
+            android:layout_marginTop="5pt"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10pt">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10pt"
+                android:text="骨科" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10pt"
+                android:text="眼科" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10pt"
+                android:text="眼科" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/position_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2pt"
+            android:hint="附近推荐"
+            android:textSize="8pt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:layout_width="116dp"
+                android:layout_height="40pt"
+                android:layout_marginTop="5pt"
+                android:layout_marginBottom="10pt"
+                android:adjustViewBounds="true"
+                android:maxWidth="500pt"
+                android:maxHeight="200pt"
+                android:scaleType="fitCenter"
+                android:src="@drawable/yisheng" />
+
+            <LinearLayout
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2pt"
+                    android:text="医院名称：华康医院" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2pt"
+                    android:text="主治医生：李木子" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2pt"
+                    android:text="科室：眼科" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginTop="45dp"
+                android:background="#008577"
+                android:text="预约"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
