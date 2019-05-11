@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/bg4"
+tools:context="edu.hzuapps.androidlabs.soft1714080902124.Lock">
+
+<edu.hzuapps.androidlabs.soft1714080902124.LockNum
+    android:id="@+id/num_lock"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp">
+
+</edu.hzuapps.androidlabs.soft1714080902124.LockNum>
+</RelativeLayout>
