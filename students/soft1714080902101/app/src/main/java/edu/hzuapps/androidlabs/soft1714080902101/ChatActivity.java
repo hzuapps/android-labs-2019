@@ -1,9 +1,8 @@
-package edu.hzuapps.androidlabs.soft17140080902101;
-
+package edu.hzuapps.androidlabs.soft1714080902101;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +11,7 @@ import android.widget.Toast;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-public class ChattingActivity extends AppCompatActivity {
+public class ChatActivity extends AppCompatActivity {
 
     private Button btn_send;
     private Button btn_show;
@@ -21,7 +20,7 @@ public class ChattingActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chatting);
+        setContentView(R.layout.activity_chat);
 
         et_info=(EditText) findViewById(R.id.et_info);
         et_info_up=(EditText) findViewById(R.id.et_info_up);
@@ -47,7 +46,7 @@ public class ChattingActivity extends AppCompatActivity {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    Toast.makeText(ChattingActivity.this, "消息发送成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChatActivity.this, "消息发送成功", Toast.LENGTH_SHORT).show();
 
                     //获取
                     String content="";
@@ -81,3 +80,4 @@ public class ChattingActivity extends AppCompatActivity {
         }
     }
 }
+

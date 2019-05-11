@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReadActivity">
+    tools:context=".DownloadActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,5 +35,34 @@
 
 
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/bt_chat"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="700dp"
+                android:text="聊天"
+                android:background="#87CEFA"
+                android:textSize="15pt"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/bt_download"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="700dp"
+                android:layout_marginLeft="210dp"
+                android:text="下载"
+                android:background="#E6EAFA"
+                android:textSize="15pt"/>
+        </RelativeLayout>
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
