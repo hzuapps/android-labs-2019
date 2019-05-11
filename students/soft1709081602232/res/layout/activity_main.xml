@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity" android:background="@drawable/xuezhiquan">
-
+    android:layout_height="match_parent">
     <Button
-        android:id="@+id/button"
+        android:id="@+id/take_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="演员" />
-    <EditText
-        android:id="@+id/edit"
-        android:layout_width="match_parent"
+        android:text="Take photo"/>
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Type something here"
-        />
-</android.support.constraint.ConstraintLayout>
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
