@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="128dp"
         android:onClick="money"
-        android:text="Button" />
+        android:text="进入小程序" />
 
 
 </LinearLayout>

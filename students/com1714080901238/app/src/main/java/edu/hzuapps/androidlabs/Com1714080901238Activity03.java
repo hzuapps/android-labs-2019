@@ -33,6 +33,8 @@ import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import org.w3c.dom.Text;
+
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -47,15 +49,15 @@ import java.util.Set;
 public class Com1714080901238Activity03 extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = Com1714080901238Activity03.class.getSimpleName();
     public static final String IMAGE_URL_PREFIX = "http://p0.qhimg.com/t01893928db69d75161.png";
-    public static final String imageUri=" /data/user/0/edu.hzuapps.androi/files/images/t01893928db69d75161.png ";
+    public static final String imageUri="/data/user/0/edu.hzuapps.androidlabs/files/images/t01893928db69d75161.png";
 
     private Button mCheckButton;
     private Button mDownloadImageButton;
     private TextView mNetworkText;
     private ImageView mResultView;
     private TextView mShakeView;
-    int ringValue = 40;
-    boolean isOpen = false;
+    int ringValue = 20;
+
 
     private boolean mConnected;
 
@@ -74,7 +76,7 @@ public class Com1714080901238Activity03 extends AppCompatActivity implements Vie
         mDownloadImageButton = (Button) findViewById(R.id.button_download_image);
         mNetworkText = (TextView) findViewById(R.id.text_network);
         mResultView = (ImageView) findViewById(R.id.text_result);
-    //    mShakeView = (TextView) findViewById(R.id.text_s);
+        mShakeView = (TextView) findViewById(R.id.text_s);
 
         mCheckButton.setOnClickListener(this);
         mDownloadImageButton.setOnClickListener(this);
@@ -106,10 +108,10 @@ public class Com1714080901238Activity03 extends AppCompatActivity implements Vie
                 float z = sensorEvent.values[2];
 
                 if (Math.abs(x) + Math.abs(y) + Math.abs(z) >= ringValue) {
-                    if(isOpen) isOpen=false;
-                    else isOpen=true;
-                    if(isOpen)mShakeView.setText("摇动！！"+"\nX = "+x+"\nY = "+y+"\nZ = "+z+"\n提醒已开启");
-                    else mShakeView.setText("摇动！！"+"\nX = "+x+"\nY = "+y+"\nZ = "+z+"\n提醒已关闭");
+                    String string="您的余额为0...";
+                    mShakeView.setText(string);
+
+
                 }
             }
 
@@ -180,7 +182,7 @@ public class Com1714080901238Activity03 extends AppCompatActivity implements Vie
                     @Override
                     public void onBitmapSaved() {
                         Toast.makeText(Com1714080901238Activity03.this, "文件已保存: " + imageFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
-                        Log.d("is2", "run ! uri=" + imageFile.getPath());
+
                         mResultView.setImageURI(Uri.fromFile(imageFile));
                     }
 
