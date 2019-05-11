@@ -2,53 +2,121 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF"
 
-    android:orientation="vertical">
+   >
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1.菊花茶、柠檬" />
+            android:layout_height="fill_parent"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="祛痘痘闭口，败火消炎" />
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="柠檬含维C，有抗菌、提高免疫力;菊花提神醒脑，
-            疏风清热，肝火旺盛是长痘的主要原因，连续喝一周，红肿痘痘就消一-半!" />
+                <TextView
+                    android:layout_width="360dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:background="#bfe0d8" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="@drawable/flower" />
+
+                <LinearLayout
+                    android:layout_width="360dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="#bfe0d8"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1.菊花茶、柠檬"
+                            android:textColor="#555" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="祛痘痘闭口，败火消炎"
+                            android:textColor="#555" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="柠檬含维C，有抗菌、提高免疫力;菊花提神醒脑，
+                    疏风清热，肝火旺盛是长痘的主要原因，连续喝一周，红肿痘痘就消一-半!"
+                            android:textColor="#555" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2.康乃馨" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2.康乃馨"
+                            android:textColor="#555" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="暖宫补气血，解决宫寒痛经" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="补气血，解决宫寒"
+                            android:textColor="#555" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="具有改善血液循环、促进新陈代谢、排除体内毒素、
-            调节女性内分泌的功效，味道芬芳，有助驱除心烦气躁。" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="具有改善血液循环、促进新陈代谢、排除体内毒素、味道芬芳，有助驱除心烦气躁。"
+                            android:textColor="#555" />
 
 
-        <Button
-            android:id="@+id/button_5"
-            style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="点击跳转到收藏页面"
-            android:layout_gravity="center"/>
+                        <EditText
+                            android:id="@+id/et_info"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView1"
+                            android:layout_alignParentLeft="true"
+
+                            android:ems="10"
+                            android:hint="请输入您要收藏的内容">
+
+                                <requestFocus />
+                        </EditText>
+
+                        <Button
+                            android:id="@+id/btn_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/et_info"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="center"
+                            android:textSize="15dp"                           android:text="点击收藏" />
+
+                        <Button
+                            android:id="@+id/btn_read"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_below="@+id/et_info"
+                            android:layout_alignRight="@+id/et_info"
+                            android:text="查看收藏内容"
+                            android:textSize="15dp"
+                            android:layout_gravity="center"/>
+
+                </LinearLayout>
+        </LinearLayout>
 </LinearLayout>

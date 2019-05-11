@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">myfirstapp</string>
+    <string name="title_activity_record">RecordActivity</string>
 </resources>
