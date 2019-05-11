@@ -1,6 +1,8 @@
-package example.senior1104.student;
+package com.example.application1.student;
 
 import android.content.Context;
+import android.icu.util.ValueIterator;
+import android.provider.DocumentsContract;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
@@ -16,12 +18,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Created by shaofa on 2017/12/24.
- */
-
-public class StudentManager
-{
+public class StudentManager {
     File xmlFile;
     ArrayList<Student> students = new ArrayList<>();
 

@@ -5,16 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#eee"
+    android:orientation="horizontal"
     tools:context="example.senior0501.Soft1714080902105Activity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:padding="4dp"
-        android:orientation="vertical">
+        app:srcCompat="@drawable/carrier"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:padding="4dp">
 
         <TextView
             android:id="@+id/textView"
@@ -48,13 +56,5 @@
             android:text="舰载机： 歼15"
             android:textSize="18sp"/>
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="4dp"
-        app:srcCompat="@drawable/carrier"/>
 
 </LinearLayout>
