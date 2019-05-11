@@ -33,8 +33,6 @@ public class Com136Activity2 extends Activity {
     private Button clean;
     private Button save;
     private Button read;
-
-
     private EditText edit_1;
     private EditText edit_2;
     private EditText edit_3;
@@ -48,7 +46,6 @@ public class Com136Activity2 extends Activity {
        clean= findViewById(R.id.clean);
       save= findViewById(R.id.sava);
        read= findViewById(R.id.read);
-
         edit_1=findViewById(R.id.biaoti);
         edit_2=findViewById(R.id.riqi);
         edit_3=findViewById(R.id.beizhu);
@@ -57,7 +54,6 @@ public class Com136Activity2 extends Activity {
         save.setOnClickListener(new ButtonListener());
         clean.setOnClickListener(new ButtonListener());
         read.setOnClickListener(new ButtonListener());
-
     }
 private class ButtonListener implements View.OnClickListener{
     @SuppressLint("WrongConstant")
@@ -67,16 +63,14 @@ private class ButtonListener implements View.OnClickListener{
                 String biaoti = edit_1.getText().toString().trim();
                 String riqi = edit_2.getText().toString().trim();
                 String beizhu = edit_3.getText().toString().trim();
-                String sava_info="标题："+biaoti+"\n"+"日期："+riqi+"\n"+"备注:"+beizhu;
+                String sava_info="-------------------------------------------------"+"\n"+"标题："+biaoti+"\n"+"日期："+riqi+"\n"+"备注："+beizhu+"\n";
                 FileOutputStream fos;
                 try {
                     fos = openFileOutput("data.txt", Context.MODE_APPEND);
                     fos.write(sava_info.getBytes());
-
                     fos.close();
                 }catch(Exception e) {
                     e.printStackTrace();
-
                 }
                 Toast.makeText(Com136Activity2.this, "数据保存成功", 0).show();
             case R.id.read:
@@ -87,49 +81,39 @@ private class ButtonListener implements View.OnClickListener{
                     fis.read(buffer);
                     content = new String(buffer);
                     fis.close();
+                  Intent intent=new Intent(Com136Activity2.this,Com136Activity.class);
+                    intent.putExtra("data",content);
+                    startActivity(intent);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                Toast.makeText(Com136Activity2.this, "保存的数据是：" + content, 0).show();
                 break;
             default:
                 break;
             case R.id.clean:
-                Intent intent = new Intent(Com136Activity2.this,Com136Activity2.class);
-
-                startActivity(intent);
+                Intent intent1 = new Intent(Com136Activity2.this,Com136Activity2.class);
+                startActivity(intent1);
         }}
     }
     @SuppressLint("HandlerLeak")
     private Handler handler=new Handler()
     {
-
-
-
         @SuppressLint("WrongConstant")
         public void handleMessage(android.os.Message msg) {
-
             if(msg.what==1){
                 Bitmap bitmap=(Bitmap)msg.obj;
-
                 iv.setImageBitmap(bitmap);
             }else if(msg.what==ERROR){
-
             Toast.makeText(Com136Activity2.this,"显示配图错误",0).show();
             }
-        };
+        }
     };
-
-
     @SuppressLint("WrongConstant")
     public void liulan(View v) {
-
        final String path =et_path.getText().toString().trim();
-
      if(TextUtils.isEmpty(path)){
          Toast.makeText(this,"图片路径不能为空",0).show();
      }else {
-
          new Thread() {
              private HttpURLConnection conn;
              private Bitmap bitmap;
@@ -155,7 +139,6 @@ private class ButtonListener implements View.OnClickListener{
                          msg.what = ERROR;
                          handler.sendMessage(msg);
                      }
-
                  } catch (Exception e) {
                      e.printStackTrace();
                      Message msg = new Message();
@@ -163,14 +146,9 @@ private class ButtonListener implements View.OnClickListener{
                      handler.sendMessage(msg);
                  }
              }
-
-             ;
          }.start();
      }
-
-
     }
-
 }
 
 
