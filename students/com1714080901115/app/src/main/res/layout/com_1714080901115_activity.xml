@@ -17,4 +17,26 @@
         android:layout_height="wrap_content"
         android:text="从相册选择图片"/>
 
+    <Button
+        android:id="@+id/jump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="记录偶像历程"/>
+    <Button
+        android:id="@+id/jump1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从网上下载图片"/>
+
+    <ImageView
+        android:id="@+id/image_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        />
+
 </LinearLayout>
+
+
+
