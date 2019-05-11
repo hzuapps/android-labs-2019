@@ -1,14 +1,20 @@
 package com.example.myandroid_2_3;
 
 import android.annotation.SuppressLint;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.BaseTransientBottomBar;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CursorAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import java.io.FileInputStream;
@@ -17,28 +23,28 @@ import java.io.FileOutputStream;
 public class NewCreateActivity extends AppCompatActivity {
 
     private EditText et_info;
+    private Button btn_read;
     private Button btn_save;
-    private  Button btn_read;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newcreateactivity);
 
         //获取布局文件中的控件
-        et_info=(EditText) findViewById(R.id.et_info);
+        et_info = (EditText) findViewById(R.id.et_info);
         btn_read=(Button) findViewById(R.id.btn_read);
-        btn_save=(Button) findViewById(R.id.btn_save);
+        btn_save = (Button) findViewById(R.id.save);
+
         btn_save.setOnClickListener(new ButtonListener());
         btn_read.setOnClickListener(new ButtonListener());
     }
-    //定义Button按钮点击事件
+
 
     private class ButtonListener implements View.OnClickListener{
         @SuppressLint("WrongConstant")
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.btn_save:
+                case R.id.save:
                     String saveinfo=et_info.getText().toString().trim();
                     FileOutputStream fos;
                     try{

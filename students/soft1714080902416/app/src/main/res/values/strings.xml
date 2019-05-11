@@ -4,4 +4,5 @@
     <string name="title_activity_newcreate">新建帐单</string>
     <string name="title_activity_get_internet">GetInternetActivity</string>
     <string name="title_activity_camera">拍照</string>
+    <string name="title_activity_demo">数据库记账本</string>
 </resources>

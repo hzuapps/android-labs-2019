@@ -69,10 +69,21 @@ public class Soft1714080902416Activity extends AppCompatActivity {
             }
         };
 
+        Button shuju=(Button)findViewById(R.id.shujuku);
+        View.OnClickListener onClickListener4=new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent4 =new Intent(Soft1714080902416Activity.this,DemoActivity.class);
+                startActivity(intent4);
+            }
+        };
+
 
         button.setOnClickListener(onClickListener);
         button1.setOnClickListener(onClickListener1);
         button2.setOnClickListener(onClickListener2);
         camera.setOnClickListener(onClickListener3);
+        shuju.setOnClickListener(onClickListener4);
     }
 }
