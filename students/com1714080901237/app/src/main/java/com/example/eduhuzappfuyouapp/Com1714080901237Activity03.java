@@ -7,8 +7,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.media.Image;
-import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -72,13 +70,11 @@ public class Com1714080901237Activity03 extends AppCompatActivity implements Vie
        for (Sensor s : sensors) {
            System.out.println("Sensor == " + s.toString());
        }
-
         // 获取指定的某一个传感器
         Sensor type_accelerometer = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         if (type_accelerometer != null) {
             System.out.println("Sensor 获取指定的某一个传感器 " + type_accelerometer.toString());
         }
-
         // 注册传感器的监听器 （摇一摇）
         sm.registerListener(new SensorEventListener() {
             public void onSensorChanged(SensorEvent sensorEvent) {

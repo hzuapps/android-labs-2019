@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/ic_launcher_background"
     tools:context=".Com1714080901237Activity03">
 <LinearLayout
     android:layout_width="wrap_content"
@@ -30,10 +31,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/text_network"/>
     <ImageView
-        android:layout_width="400dp"
+        android:layout_width="320dp"
         android:layout_height="200dp"
         android:layout_margin="1dp"
-        android:background="#969699"
         android:id="@+id/text_result"/>
     <TextView
         android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
         android:id="@+id/text_s"
         android:text="摇一摇即开启提醒"
         android:gravity="center"
-        android:textSize="40sp"/>
+        android:textSize="20dp"/>
 
 </LinearLayout>
 </LinearLayout>
