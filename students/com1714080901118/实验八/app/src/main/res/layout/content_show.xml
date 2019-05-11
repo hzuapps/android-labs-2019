@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ShowActivity"
+    tools:showIn="@layout/activity_show">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="200dp"
+            android:text="图书类"
+            android:textSize="50dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="206dp"
+            tools:layout_editor_absoluteY="54dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文具类"
+            android:textSize="50dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginLeft="200dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="206dp"
+            tools:layout_editor_absoluteY="243dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="书包类"
+            android:textSize="50dp"
+            android:layout_marginTop="420dp"
+            android:layout_marginLeft="200dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="206dp"
+            tools:layout_editor_absoluteY="430dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新品准备中..."
+            android:layout_marginTop="550dp"
+
+            />
+        <ImageView
+            android:id="@+id/book"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.163"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/book"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/sb"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="388dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sb"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/wj"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="204dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wenju"
+            tools:ignore="MissingConstraints" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:layout_marginTop="540dp"
+            android:background="@color/colorAccent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="181dp"></View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:layout_marginTop="180dp"
+            android:background="@color/colorAccent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="549dp"></View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:layout_marginTop="360dp"
+            android:background="@color/colorAccent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="367dp"></View>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

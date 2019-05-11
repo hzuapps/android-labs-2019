@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".BookActivity"
+    android:background="@drawable/bj2"
+    tools:showIn="@layout/activity_book">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已上架："
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:text="未上架："
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="160dp"
+            android:text="月亮与六便士"
+            android:textSize="40dp"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="310dp"
+            android:text="追风筝的人"
+            android:textSize="40dp"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="500dp"
+            android:text="摆渡人"
+            android:textSize="40dp"
+            tools:ignore="MissingConstraints"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="220dp"
+            android:background="@color/blue"
+            tools:ignore="MissingConstraints"
+            ></View>
+
+        <ImageView
+            android:id="@+id/book1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/book1"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/book2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="272dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/book2"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/book3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="448dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/book3"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
