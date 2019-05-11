@@ -11,12 +11,12 @@ import android.widget.Toast;
 
 import com.example.myfirstapp.R;
 
-public class TitleLayout extends LinearLayout {
-    public TitleLayout(Context context, AttributeSet attrs){
+public class EditTitleLayout extends LinearLayout {
+    public EditTitleLayout(Context context, AttributeSet attrs){
         super(context,attrs);
-        LayoutInflater.from(context).inflate(R.layout.title,this);
-        Button titleBack = (Button) findViewById(R.id.title_back);
-        Button titleEdit = (Button) findViewById(R.id.edit_pass);
+        LayoutInflater.from(context).inflate(R.layout.edit_title,this);
+        Button titleBack = (Button) findViewById(R.id.title_cancel);
+        Button titleEdit = (Button) findViewById(R.id.title_save);
         titleBack.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

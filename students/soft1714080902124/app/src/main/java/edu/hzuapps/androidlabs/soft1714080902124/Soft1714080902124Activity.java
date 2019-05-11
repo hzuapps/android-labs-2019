@@ -22,6 +22,8 @@ public class Soft1714080902124Activity extends AppCompatActivity {
 
     private Button button;
     private Button button_search;
+//    private Button title_function;
+    private Button edit_pas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +34,13 @@ public class Soft1714080902124Activity extends AppCompatActivity {
             actionBar.hide();
         }
 
-        button = (Button) findViewById(R.id.button);         //编辑页面
+        button = (Button) findViewById(R.id.button);         //列表页面
         button_search = (Button) findViewById(R.id.search_btn); //搜索
+        edit_pas = (Button) findViewById(R.id.edit_pass);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Soft1714080902124Activity.this, EditTextActivity.class);
+                Intent i = new Intent(Soft1714080902124Activity.this, MyListView.class);
                 startActivity(i);
             }
         });
@@ -45,6 +48,22 @@ public class Soft1714080902124Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Soft1714080902124Activity.this, SearchActivity.class);
+                startActivity(i);
+            }
+        });
+
+//        title_function = (Button) findViewById(R.id.title_function);
+//        title_function.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Soft1714080902124Activity.this,Lock.class);
+//                startActivity(i);
+//            }
+//        });
+        edit_pas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Soft1714080902124Activity.this,AlertPassword.class);
                 startActivity(i);
             }
         });

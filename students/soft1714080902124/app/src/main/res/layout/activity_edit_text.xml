@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/background3">
 
-    <EditText
-        android:id="@+id/edit_text"
+    <edu.hzuapps.androidlabs.soft1714080902124.EditTitleLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Type something here"
-        android:maxLines="10" />
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#48D1CC"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -2,7 +2,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg1">
+    android:background="@drawable/start">
 
     <edu.hzuapps.androidlabs.soft1714080902124.TitleLayout
         android:layout_width="match_parent"
@@ -10,21 +10,18 @@
 
     <!--<include layout="@layout/title" />-->
 
-
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="编辑页面" />
+        android:text="查看笔记" />
     <Button
         android:id="@+id/search_btn"
         android:text="搜索页面"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-
-
-
 
 </LinearLayout>
