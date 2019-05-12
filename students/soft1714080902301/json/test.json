@@ -1,0 +1,16 @@
+﻿{
+"name": "test",
+"username": "123456",
+"id": "1",
+"zt": true,
+"sp": [
+	 {
+	"spname": "商品1",
+	"spprice": "价格1"
+	},
+	{
+	"spname": "商品2",
+	"spprice": "价格2"
+	}
+	]
+}
