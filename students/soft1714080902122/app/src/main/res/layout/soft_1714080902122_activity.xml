@@ -15,17 +15,21 @@
         android:layout_height="wrap_content"
         android:text="养生堂"
         android:textSize="60dp"
-        android:layout_margin="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#F2F2F2"
+        android:textStyle="bold"
         />
 
 
 
     <Button
-
+        android:layout_marginBottom="2dp"
+        android:textColor="#000"
         android:id="@+id/button_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="花茶类"
+        android:background="@drawable/corners2"
 
         />
 
@@ -33,20 +37,38 @@
         android:id="@+id/button_fruit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="水果类" />
+        android:text="水果类"
+        android:background="@drawable/corners2"
+        android:layout_margin="2dp"
+
+        android:textColor="#000"/>
 
     <Button
         android:id="@+id/button_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="蔬菜类" />
+        android:text="蔬菜类"
+        android:background="@drawable/corners2"
+        android:layout_margin="2dp"
+        android:textColor="#000"/>
 
     <Button
         android:id="@+id/button_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="五谷类"
+        android:background="@drawable/corners2"
+        android:layout_margin="2dp"
+        android:textColor="#000"
         />
-
+    <Button
+        android:id="@+id/button_5"
+        android:textColor="#000"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="记录我的日常养生"
+        android:layout_margin="2dp"
+        android:background="@drawable/corners2"
+        />
 </LinearLayout>
 

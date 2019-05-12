@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/record"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="记录养生日常"
+
+        android:textColor="#555"
+        android:textSize="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:padding="2dp"
+        android:layout_marginTop="100dp"
+        android:maxLines="3"
+        android:layout_gravity="center"
+        android:background="@drawable/b"
+        android:textColorHint="#555"
+        android:gravity="center"
+        android:hint="Type Someting Here"
+        android:textColor="#555"
+
+
+    />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="上传图片"
+        android:layout_marginTop="10dp"
+        android:id="@+id/choose_from_album"
+        android:layout_gravity="center"
+        android:background="@drawable/corners"
+        android:textColor="#fff"
+
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/picture"
+
+        />
+
+
+
+</LinearLayout>

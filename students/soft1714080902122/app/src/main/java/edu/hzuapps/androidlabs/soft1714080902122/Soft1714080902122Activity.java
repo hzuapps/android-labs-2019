@@ -61,11 +61,19 @@ public class Soft1714080902122Activity extends AppCompatActivity {
 
 
 
+        button = (Button) findViewById(R.id.button_5);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902122Activity.this, RecordActivity.class);
+                startActivity(intent);
+            }
+        });
 
          if(!isConn(getApplicationContext())){
-                setNetworkMethod(Soft1714080902122Activity.this);
-            }
-        }
+        setNetworkMethod(Soft1714080902122Activity.this);
+    }
+}
 
     public static boolean isConn(Context context){
         boolean bisConnFlag=false;

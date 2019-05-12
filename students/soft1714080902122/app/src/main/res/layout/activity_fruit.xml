@@ -2,41 +2,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/fruit"
+    android:background="#FFF"
     tools:context=".FruitActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
 
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="#bfe0d8"
+            />
+        <ImageView
+            android:layout_margin="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:background="@drawable/fruit"
+            android:layout_marginBottom="35dp"
+            />
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="#bfe0d8"
+            android:layout_gravity="center"
+            android:padding="20dp">
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textColor="#000"
-        android:text="芒果菠萝汁\n
-       大芒果半只或小芒果同等量，菠萝五片，绿色健康，美味可口，个人不喜欢添加水，就是要原汁原味。\n
 
+        android:background="#bfe0d8"
+        android:text="芒果菠萝汁\n
+       大芒果半只或小芒果同等量，菠萝五片，绿色健康，美味可口，个人不喜欢添加水，就是要原汁原味。
        口感:酸甜 " />
 
     <Button
         android:id="@+id/mgbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击查看图片" />
+        android:text="点击查看图片"
+        android:layout_gravity="center"/>
 
 
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        />
-    <TextView
-        android:textColor="#000"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="黄瓜苹果汁\n
-       瓜半根，苹果一个，一起放入原汁机榨好后倒入杯中即可。
-    有一股很清香的黄瓜的气味，个人很喜欢。\n
-    这两种搭配不仅美容还有助消化的功效。" />
+        android:layout_gravity="center"
 
+        />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
 

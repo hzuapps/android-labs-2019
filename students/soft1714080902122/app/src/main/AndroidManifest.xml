@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.hzuapps.androidlabs.soft1714080902122">
+    package="edu.hzuapps.androidlabs.soft1714080902122"
+
+    >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- authorities 和FileProvider.getUriForFile第二个参数一致 -->
+    <!-- name 使用自定义类 或者android.support.v4.content.FileProvider -->
+    <!-- grantUriPermissions  允许你有给其赋予临时访问权限的权力 -->
+    <!--<provider-->
+        <!--android:name=".provider"-->
+        <!--android:exported="false"-->
+        <!--android:grantUriPermissions="true">-->
+
+        <!--&lt;!&ndash; 指定uri共享路径   name 固定 &ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+            <!--android:resource="@xml/file_paths" />-->
+    <!--</provider>-->
+
 
     <application
+
+
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".RecordActivity"
+            android:label="@string/title_activity_record"></activity>
         <activity android:name=".FruitActivity" />
         <activity android:name=".myidea1" />
         <activity android:name=".Soft1714080902122Activity">
