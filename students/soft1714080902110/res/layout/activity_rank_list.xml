@@ -11,11 +11,13 @@
         android:id="@+id/rank_list_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="160dp"
-        android:paddingStart="160dp"
-        android:paddingEnd="160dp"
-        android:paddingRight="160dp"
+        android:paddingLeft="150dp"
         app:title="排行榜" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"/>
 
     <ListView
         android:id="@+id/rank_list"

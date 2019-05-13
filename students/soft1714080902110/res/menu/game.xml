@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Game">
+    <item
+        android:id="@+id/change_background"
+        android:icon="@drawable/ic_photo_camera_black_24dp"
+        app:showAsAction="always"
+        android:title="@string/change_background" />
+
+</menu>
