@@ -26,4 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="更换背景" />
+    <Button
+        android:id="@+id/take_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拍照"/>
 </LinearLayout>
