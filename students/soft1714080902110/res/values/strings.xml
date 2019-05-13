@@ -8,4 +8,5 @@
     <string name="rank_score_show">成绩：</string>
     <string name="change_background">改变背景</string>
     <string name="submit">确定</string>
+    <string name="gameOver">Game Over</string>
 </resources>

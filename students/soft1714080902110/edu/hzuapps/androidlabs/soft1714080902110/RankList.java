@@ -20,7 +20,7 @@ public class RankList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rank_list);
 
-        sqlHelper = new RankListSQLHelper(this, "rank.db", null, 3);
+        sqlHelper = new RankListSQLHelper(this, "rank.db", null, 1);
 
         initPeople();
         PeopleAdapter adapter = new PeopleAdapter(RankList.this, R.layout.rank_item, peopleList);
@@ -31,11 +31,11 @@ public class RankList extends AppCompatActivity {
     private void initPeople() {
         SQLiteDatabase db = sqlHelper.getWritableDatabase();
         Cursor cursor = db.query("rank", null, null,
-                null, null, null, "score");
+                null, null, null, "grade");
         if (cursor.moveToLast()) {
             do {
                 String name = cursor.getString(cursor.getColumnIndex("name"));
-                String score = cursor.getString(cursor.getColumnIndex("score"));
+                String score = cursor.getString(cursor.getColumnIndex("grade"));
                 People people = new People(name, score);
                 peopleList.add(people);
             } while (cursor.moveToPrevious());

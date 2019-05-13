@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorGreen"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Game">
 
     <android.support.v7.widget.Toolbar
@@ -18,20 +18,24 @@
         app:title="@string/app_name" />
 
     <TextView
-        android:id="@+id/sort"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/game_title"
-        android:background="#000000"/>
-
-    <ImageView
-        android:id="@+id/game_background"
-        android:layout_width="match_parent"
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sort"
-        android:layout_above="@id/submit">
+        android:layout_below="@id/game_title"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:text="请输入四个数字"
+        android:textSize="20sp"/>
 
-    </ImageView>
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_title"
+        android:layout_marginTop="250dp"
+        android:layout_centerInParent="true"
+        android:maxLength="4"
+        android:inputType="number"/>
 
     <Button
         android:id="@+id/submit"
@@ -39,7 +43,8 @@
         android:layout_height="80dp"
         android:text="@string/submit"
         android:background="@color/colorWhite"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:onClick="submit"/>
 
 
 

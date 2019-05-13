@@ -6,11 +6,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class RankListSQLHelper extends SQLiteOpenHelper {
 
-    private static final String INSERT_DATA = "insert into rank (name, score) values (?,?)";
+    private static final String INSERT_DATA = "insert into rank (name, grade) values (?,?)";
 
     private static final String CREATE_LIST = "create table rank (" +
-            "name varchar(20) primary key NOT NULL," +
-            "score integer NOT NULL)";
+            "id integer primary key AUTOINCREMENT," +
+            "name varchar(20) NOT NULL," +
+            "grade integer NOT NULL)";
 
     private Context mContext;
 
@@ -22,10 +23,6 @@ public class RankListSQLHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_LIST);
-        db.execSQL(INSERT_DATA, new String[] {"张漆", "10"});
-        db.execSQL(INSERT_DATA, new String[] {"张三", "60"});
-        db.execSQL(INSERT_DATA, new String[] {"李四", "50"});
-        db.execSQL(INSERT_DATA, new String[] {"王五", "91"});
     }
 
     @Override

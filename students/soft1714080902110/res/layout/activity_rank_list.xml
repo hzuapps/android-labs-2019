@@ -11,8 +11,8 @@
         android:id="@+id/rank_list_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="150dp"
-        app:title="排行榜" />
+        android:paddingLeft="145dp"
+        app:title="历史纪录" />
 
     <TextView
         android:layout_width="match_parent"
