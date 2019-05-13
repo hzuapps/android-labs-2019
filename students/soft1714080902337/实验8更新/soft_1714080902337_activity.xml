@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/yue"
+    android:paddingTop="12dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/deng2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:singleLine="false"
+        android:gravity="center"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="古人学问无遗力，少壮工夫老始成。\n纸上得来终觉浅，绝知此事要躬行。\n"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffff"
+        android:text="点击出现诗人"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:gravity="center" />
+    <Button
+        android:id="@+id/bb"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="进入诗歌世界"
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffff" />
+
+</LinearLayout>
