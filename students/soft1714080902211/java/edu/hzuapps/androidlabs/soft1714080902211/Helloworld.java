@@ -7,12 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class Soft1714080902211festival extends AppCompatActivity {
+public class Helloworld extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_soft1714080902211festival);
+        setContentView(R.layout.activity_helloworld);
     }
 
 }
