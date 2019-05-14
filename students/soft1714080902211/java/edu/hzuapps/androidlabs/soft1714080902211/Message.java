@@ -19,7 +19,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class Message extends AppCompatActivity {
     private static final String TAG = "Message";
-    
+    public Object what;
+
     private EditText et_info;
     private Button save;
     private Button read;

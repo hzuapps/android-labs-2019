@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/textview_01"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:drawableTop="@drawable/picture2"
         tools:text="@tools:sample/us_phones" />
 
@@ -16,20 +16,23 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hello world" />
+        android:text="查看图片" />
 
     <Button
         android:id="@+id/add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="添加节日(虚假的添加)"/>
+        android:text="添加节日(虚假的页面)"/>
 
     <Button
         android:id="@+id/in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="进入软件（真实界面）" />
+        android:text="进入软件（真实的页面）" />
 
-
-
+    <Button
+        android:id="@+id/helloworld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello world" />
 </LinearLayout>

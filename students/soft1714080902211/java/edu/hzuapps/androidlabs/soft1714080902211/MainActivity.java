@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Helloworld.class);
+                Intent intent = new Intent(MainActivity.this, Net.class);
                 startActivity(intent);
             }
         });
@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent3 = new Intent(MainActivity.this, Message.class);
                 startActivity(intent3);
+            }
+        });
+        Button helloworld =(Button) findViewById(R.id.helloworld);
+        helloworld.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent4 = new Intent(MainActivity.this, Helloworld.class);
+                startActivity(intent4);
             }
         });
     }

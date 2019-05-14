@@ -1,11 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    tools:context=".Message">
     <TextView
+        android:id="@+id/textview_01"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="please add festival"/>
+        android:layout_height="230dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="257dp"
+        android:drawableTop="@drawable/picture3"
+        tools:text="@tools:sample/us_phones" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/save"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_info"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:text="说了是个虚假的页面！" />_
+</RelativeLayout>
