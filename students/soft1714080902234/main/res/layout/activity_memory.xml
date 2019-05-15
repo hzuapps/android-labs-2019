@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Memory">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="133dp"
+        android:layout_marginTop="2dp"
+        android:text="锦鹏便签"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="0dp"
+        android:ems="30">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/textview_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:drawableTop="@drawable/picture1"
+        tools:text="@tools:sample/us_phones" />
+
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_info"
+        android:layout_alignRight="@+id/et_info"
+        android:layout_marginTop="1dp"
+        android:text="查看笔记" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_info"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="81dp"
+        android:layout_marginTop="0dp"
+        android:text="保存" />_
+</RelativeLayout>
