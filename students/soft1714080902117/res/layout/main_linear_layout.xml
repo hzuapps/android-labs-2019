@@ -35,6 +35,9 @@
             android:textSize="20sp"
             android:layout_centerInParent="true"
             android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_2_shape"
+
+
 
             />
     </RelativeLayout>

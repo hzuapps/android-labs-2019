@@ -60,6 +60,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,
     //初始化控件
     private void init(){
         createButton = findViewById(R.id.createButton);
+
+        View v = findViewById(R.id.content);//找到你要设透明背景的layout 的id
+        v.getBackground().setAlpha(40);//0~255透明度值
+
         createButton.setOnClickListener(this);
 
         myListView = findViewById(R.id.list_view);
@@ -250,5 +254,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,
         TextView timeView;
     }
 
+
 }
+
 
