@@ -37,8 +37,6 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/btn_2_shape"
 
-
-
             />
     </RelativeLayout>
 

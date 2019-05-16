@@ -61,8 +61,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,
     private void init(){
         createButton = findViewById(R.id.createButton);
 
-        View v = findViewById(R.id.content);//找到你要设透明背景的layout 的id
-        v.getBackground().setAlpha(40);//0~255透明度值
+        createButton.getBackground().setAlpha(110);
 
         createButton.setOnClickListener(this);
 
