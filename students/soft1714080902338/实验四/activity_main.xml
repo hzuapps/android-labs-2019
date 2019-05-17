@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/c"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/text2"
+            android:layout_width="47dp"
+            android:layout_height="57dp"
+            android:drawableTop="@drawable/b"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"/>
+
+    <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提醒"
+            android:onClick="click1"
+            app:layout_constraintLeft_toRightOf="@+id/text2"
+            tools:ignore="MissingConstraints,OnClick"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_marginLeft="8dp"/>
+
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加"
+            android:onClick="click2"
+            app:layout_constraintLeft_toRightOf="@+id/button1"
+            tools:ignore="MissingConstraints,OnClick"/>
+
+    <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑"
+            android:onClick="click3"
+            app:layout_constraintLeft_toRightOf="@+id/button2"
+            tools:ignore="MissingConstraints,OnClick"/>
+
+    <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:onClick="click4"
+            app:layout_constraintLeft_toRightOf="@+id/button3"
+            tools:ignore="MissingConstraints,OnClick"/>
+</android.support.constraint.ConstraintLayout>
