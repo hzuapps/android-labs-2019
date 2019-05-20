@@ -60,6 +60,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,
     //初始化控件
     private void init(){
         createButton = findViewById(R.id.createButton);
+
+        createButton.getBackground().setAlpha(110);
+
         createButton.setOnClickListener(this);
 
         myListView = findViewById(R.id.list_view);
@@ -250,5 +253,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,
         TextView timeView;
     }
 
+
 }
+
 
