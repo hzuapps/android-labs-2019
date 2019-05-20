@@ -3,9 +3,18 @@ package edu.hzuapps.androidlabs.soft1714080902305;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -28,11 +37,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
+import static android.net.ConnectivityManager.TYPE_WIFI;
+import static android.provider.ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE;
 
 /**
  * A login screen that offers login via email/password.
@@ -344,6 +356,35 @@ public class SecondActivity extends AppCompatActivity implements LoaderCallbacks
         protected void onCancelled() {
             mAuthTask = null;
             showProgress(false);
+        }
+    }
+
+    private boolean goToNetWork() {
+        // TODO Auto-generated method stub
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo info = connectivityManager.getActiveNetworkInfo();
+        if (info == null || !info.isAvailable()) {
+            new AlertDialog.Builder(this).setTitle("提醒：").setMessage("抱歉，目前无法连接网络。\n请检查您的手机网络连接！").setPositiveButton("打开网络设置", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // TODO Auto-generated method stub
+                    Intent intent = null;
+                    //判断手机系统的版本  即API大于10 就是3.0或以上版本
+                    if (android.os.Build.VERSION.SDK_INT > 10) {
+                        intent = new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS);
+                    } else {
+                        intent = new Intent();
+                        ComponentName component = new ComponentName("com.android.settings", "com.android.settings.WirelessSettings");
+                        intent.setComponent(component);
+                        intent.setAction("android.intent.action.VIEW");
+                    }
+                    startActivity(intent);
+                }
+            }).setNegativeButton("联知道了!", null).show();
+            return false;
+        } else {
+            //new AlertDialog.Builder(this).setMessage("网络正常可以使用").setPositiveButton("Ok", null).show();
+            return true;
         }
     }
 }
