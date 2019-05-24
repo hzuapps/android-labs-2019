@@ -22,7 +22,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import java.text.Format;
 import java.util.Date;
 
 import fun.zzti.memoire.database.MyDB;
@@ -184,7 +183,7 @@ public class EditActivity extends BaseActivity implements View.OnClickListener,
      * 返回主界面
      */
     void intentStart(){
-        Intent intent = new Intent(EditActivity.this,MainActivity.class);
+        Intent intent = new Intent(EditActivity.this, soft_1714080902117_homeactivity.class);
         startActivity(intent);
         this.finish();
     }

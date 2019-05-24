@@ -12,7 +12,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -140,7 +139,7 @@ public class AmendActivity extends BaseActivity implements View.OnClickListener{
      * 返回主界面
      */
     void intentStart(){
-        Intent intent = new Intent(AmendActivity.this,MainActivity.class);
+        Intent intent = new Intent(AmendActivity.this, soft_1714080902117_homeactivity.class);
         startActivity(intent);
         this.finish();
     }
