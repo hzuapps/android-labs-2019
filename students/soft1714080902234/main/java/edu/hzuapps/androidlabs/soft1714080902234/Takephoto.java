@@ -17,7 +17,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -30,13 +29,9 @@ import java.io.IOException;
 public class Takephoto extends AppCompatActivity {
 
     private static final String TAG = "Takephoto";
-
     private static final int TAKE_PHOTO = 1;
-
     private static final int CHOOSE_PHOTO = 2;
-
     private ImageView picture;
-
     private Uri imageUri;
 
     @Override
@@ -49,7 +44,6 @@ public class Takephoto extends AppCompatActivity {
         takePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建 File 对象，用于存储拍照后的图片
                 File outputImage = new File(getExternalCacheDir(), "output_image.jpg");
                 try {
                     if (outputImage.exists()) {
@@ -64,11 +58,9 @@ public class Takephoto extends AppCompatActivity {
                 } else {
                     imageUri = Uri.fromFile(outputImage);
                 }
-                //启动相机程序
 
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-
                 startActivityForResult(intent, TAKE_PHOTO);
             }
         });
@@ -87,7 +79,7 @@ public class Takephoto extends AppCompatActivity {
     private void openAlbum() {
         Intent intent = new Intent("android.intent.action.GET_CONTENT");
         intent.setType("image/*");
-        startActivityForResult(intent, CHOOSE_PHOTO); //打开相册
+        startActivityForResult(intent, CHOOSE_PHOTO);
     }
 
     @Override
@@ -110,7 +102,6 @@ public class Takephoto extends AppCompatActivity {
             case TAKE_PHOTO:
                 if (resultCode == RESULT_OK) {
                     try {
-                        //将拍摄的照片显示出来
                         Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
                         picture.setImageBitmap(bitmap);
                     } catch (FileNotFoundException e) {
@@ -120,12 +111,9 @@ public class Takephoto extends AppCompatActivity {
                 break;
             case CHOOSE_PHOTO:
                 if (resultCode == RESULT_OK) {
-                    //判断手机系统版本号
                     if (Build.VERSION.SDK_INT >= 19) {
-                        //4.4 及以上系统石永红这个方法处理图片
                         handleImageOnKitKat(data);
                     } else {
-                        //4.4 以下系统使用这个该方法处理图片
                         handleImageBeforeKitKat(data);
                     }
                 }
@@ -140,7 +128,6 @@ public class Takephoto extends AppCompatActivity {
         Uri uri = data.getData();
         if (DocumentsContract.isDocumentUri(this, uri)) {
             String docId = DocumentsContract.getDocumentId(uri);
-            //如果是 document 类型的 Uri，那就取出 document id 进行处理
             if ("com.android.providers.media.documents".equals(uri.getAuthority())) {
                 String id = docId.split(":")[1];
                 String selection = MediaStore.Images.Media._ID + "=" + id;
@@ -150,13 +137,11 @@ public class Takephoto extends AppCompatActivity {
                 imagePath = getImagePath(contentUri, null);
             }
         } else if ("file".equalsIgnoreCase(uri.getScheme())) {
-            //如果是 content 类型的 Uri ，则使用普通方式处理
             imagePath = getImagePath(uri, null);
         } else if ("file".equalsIgnoreCase(uri.getScheme())) {
-            //如果是 file 类型的 Uri ，直接获取图片路径即可
             imagePath = uri.getPath();
         }
-        displayImage(imagePath);    //根据图片路径显示图片
+        displayImage(imagePath);
     }
 
     private void handleImageBeforeKitKat(Intent data) {
@@ -167,7 +152,6 @@ public class Takephoto extends AppCompatActivity {
 
     private String getImagePath(Uri uri, String selection) {
         String path = null;
-        //通过 Uri 和 selection 来获取真实的图片路径
         Cursor cursor = getContentResolver().query(uri, null, selection, null, null);
         if (cursor != null) {
             if (cursor.moveToFirst()) {
