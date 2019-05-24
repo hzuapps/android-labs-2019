@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bkground">
+
+
+    <Button
+        android:id="@+id/turn_to_list"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@mipmap/ic_arrow_down"/>
+
+            <TextView
+                android:id="@+id/music_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="你就不要想起我"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="324dp"
+        android:layout_height="429dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/img" />
+
+    <!--显示歌曲状态-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/MusicStatus"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal">
+
+        <!--显示当前进度-->
+        <TextView
+            android:id="@+id/MusicTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00" />
+
+        <SeekBar
+            android:layout_width="230sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/MusicSeekBar"
+            android:layout_weight="1"
+            android:max="100"
+            android:layout_toRightOf="@+id/MusicTime"/>
+
+        <!--显示总进度-->
+        <TextView
+            android:id="@+id/MusicTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:layout_toRightOf="@+id/MusicSeekBar"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BtnPre"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/seach_btn_pre"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/BtnPlayorPause"
+            android:layout_width="83dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/seach_btn_start"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/BtnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/seach_btn_next"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>
+
