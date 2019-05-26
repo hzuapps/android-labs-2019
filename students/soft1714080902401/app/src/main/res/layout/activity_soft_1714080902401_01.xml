@@ -95,5 +95,33 @@
 
         </LinearLayout>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/colorwhite">
+        <Button
+            android:id="@+id/Begin1"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="首页"
+            android:layout_width="0dp" />
+        <Button
+            android:id="@+id/Begin"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="浏览"
+            android:layout_width="0dp" />
+        <Button
+            android:id="@+id/Begin2"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="我"
+            android:layout_width="0dp" />
+    </LinearLayout>
 
 </LinearLayout>

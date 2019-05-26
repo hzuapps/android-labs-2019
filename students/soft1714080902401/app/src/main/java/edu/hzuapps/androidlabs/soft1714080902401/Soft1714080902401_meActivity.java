@@ -1,0 +1,275 @@
+package edu.hzuapps.androidlabs.soft1714080902401;
+
+import android.annotation.TargetApi;
+import android.content.ContentUris;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.StrictMode;
+import android.provider.DocumentsContract;
+import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Soft1714080902401_meActivity extends AppCompatActivity {
+
+    private static final File USER_ICON = new File(Environment.getExternalStorageDirectory(), "touxiang.jpg");
+    //请求识别码(分别为本地相册、相机、图片裁剪)
+    private static final int PHOTO_REQUEST = 1;
+    private static final int CAMERA_REQUEST = 2;
+    private static final int PHOTO_CLIP = 3;
+
+    private Button buttonLocal;
+    private Button buttonCamera;
+    private ImageView picture;
+    private Uri imageUri;
+
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        /*解决android 7.0以上版本 exposed beyond app through ClipData.Item.getUri()问题*/
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+        builder.detectFileUriExposure();
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_soft1714080902401_me);
+
+        Button begin = (Button) findViewById(R.id.Begin);
+        begin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                intent = new Intent(Soft1714080902401_meActivity.this, Soft1714080902401_01Activity.class);
+                startActivity(intent);
+            }
+        });
+        Button begin2 = (Button) findViewById(R.id.Begin2);
+        begin2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Soft1714080902401_meActivity.this, Soft1714080902401_meActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        picture = (ImageView) findViewById(R.id.imageView);
+        buttonLocal = (Button) findViewById(R.id.buttonLocalpic);
+        buttonCamera = (Button) findViewById(R.id.buttonCamerapic);
+
+        buttonLocal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  getPicFromLocal();
+                Intent intent = new Intent("android.intent.action.GET_CONTENT");
+                intent.setType("image/*");
+                /*
+                 * 打开相册
+                 * */
+                startActivityForResult(intent, PHOTO_REQUEST);
+            }
+        });
+
+        buttonCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // getPicFromCamera();
+                File outputImage = new File(Environment.getExternalStorageDirectory(),
+                        "output_image.jpg");
+                /*
+                 * 初始化图片
+                 * */
+                try {
+                    if (outputImage.exists()) {
+                        outputImage.delete();
+                    }
+                    outputImage.createNewFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                /*
+                 * 将File对象转成Uri对象
+                 * */
+                imageUri = Uri.fromFile(outputImage);
+                /*
+                 * 构建隐式Intent，指定图片输出地址
+                 * */
+                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                /*
+                 * 启动相机，并向下一个活动传递参数
+                 * */
+                startActivityForResult(intent, CAMERA_REQUEST);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            /*
+             * 拍照成功返回结果，跳转到裁剪
+             * */
+            case CAMERA_REQUEST:
+                if (resultCode == RESULT_OK) {
+                    Intent intent = new Intent("com.android.camera.action.CROP");
+                    intent.setDataAndType(imageUri, "image/*");
+                    intent.putExtra("scale", true);
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                    /*
+                     * 启动剪裁程序
+                     * */
+                    startActivityForResult(intent,PHOTO_CLIP);
+                }
+                break;
+            /*
+             * 裁剪结束，将.jpg解析成Bitmap显示出来
+             * */
+            case PHOTO_CLIP:
+                if (resultCode == RESULT_OK) {
+                    try {
+                        Bitmap bitmap = BitmapFactory.decodeStream(
+                                getContentResolver().openInputStream(imageUri));
+                        picture.setImageBitmap(bitmap); //显示剪裁后的图片
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            /*
+             * 判断版本，选择处理图片方式
+             * */
+            case PHOTO_REQUEST:
+                if (resultCode == RESULT_OK) {
+                    if (Build.VERSION.SDK_INT >= 19) {
+                        /*
+                         * 4.4及以上版本
+                         * */
+                        handleImageOnKitKat(data);
+                    } else {
+                        /*
+                         * 4.4以下版本
+                         * */
+                        handleImageBeforeKitKat(data);
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    /*
+     * 4.4以上版本需要封装Uri
+     * */
+    @TargetApi(19)
+    private void handleImageOnKitKat(Intent data) {
+        String imagePath = null;
+        /*
+         * 获取路径
+         * */
+        Uri uri = data.getData();
+        /*
+         *Document类型Uri对document id处理
+         * */
+        if (DocumentsContract.isDocumentUri(this, uri)) {
+            String docId = DocumentsContract.getDocumentId(uri);
+            /*
+             * 与Uri中Authority部分比较,media格式需进一步解析
+             * */
+            if ("com.android.providers.media.documents".equals(
+                    uri.getAuthority())) {
+                String id = docId.split(":")[1];
+                String selection = MediaStore.Images.Media._ID + "=" + id;
+                /*
+                 * 传入getImagePath获得真实路径
+                 * */
+                imagePath = getImagePath(
+                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+            } else if ("com.android.providers.downloads.documents".equals(
+                    uri.getAuthority())) {
+                /*
+                 * downloads格式获得路径
+                 * */
+                Uri contentUri = ContentUris.withAppendedId(
+                        Uri.parse("content://downloads/public_downloads"),
+                        Long.valueOf(docId));
+                imagePath = getImagePath(contentUri, null);
+            }
+        } else if ("content".equalsIgnoreCase(uri.getScheme())) {
+            /*
+             * 普通处理
+             * */
+            imagePath = getImagePath(uri, null);
+        }
+        /*
+         * 图片显示
+         * */
+        displayImage(imagePath);
+    }
+
+    /*
+     * 4.4以下版本返回图片真实Uri，直接处理
+     * */
+    private void handleImageBeforeKitKat(Intent data) {
+        Uri uri = data.getData();
+        String imagePath = getImagePath(uri, null);
+        displayImage(imagePath);
+    }
+
+    /*
+     * 获取图片路径
+     * */
+    private String getImagePath(Uri uri, String selection) {
+        String path = null;
+        Cursor cursor = getContentResolver().query(uri, null, selection, null, null);
+        if (cursor != null) {
+            /*
+             * 定位第一行返回指定列名称
+             * */
+            if (cursor.moveToFirst()) {
+                path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+            }
+            /*
+             * 释放资源
+             * */
+            cursor.close();
+        }
+        return path;
+    }
+
+    /*
+     * 打印图片
+     * */
+    private void displayImage(String imagePath) {
+        if (imagePath != null) {
+            /*
+             * 将照片解析为Bitmap形式展现
+             * */
+            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+            picture.setImageBitmap(bitmap);
+        } else {
+            Toast.makeText(this, "failed to get image", Toast.LENGTH_SHORT).show();
+        }
+
+
+
+
+
+
+    }
+
+}
