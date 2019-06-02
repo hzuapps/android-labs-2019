@@ -1,5 +1,6 @@
 package edu.hzuapps.andriodlabs.myapplication;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
@@ -22,7 +23,7 @@ public class Main2Activity extends AppCompatActivity {
     protected static final int ERROR=2;
     private EditText firstupdates;
     private ImageView firstgames;
-
+    private ImageView dcry;
 
     @SuppressLint("HandlerLeak")
     private Handler handler=new Handler(){
@@ -47,9 +48,20 @@ public class Main2Activity extends AppCompatActivity {
 
         firstupdates=(EditText)findViewById(R.id.firstupdate);
         firstgames=(ImageView)findViewById(R.id.firstgame);
-
+        //dcry=(ImageView)findViewById(R.id.view1);
+        /*dcry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
+                startActivity(intent);
+            }
+        });*/
     }
 
+    public void onClick(View v) {
+        Intent intent = new Intent(Main2Activity.this, Main4Activity.class);
+        startActivity(intent);
+    }
 
     public void ShowToast(View view){
         Toast.makeText(this,"未有版主编辑",Toast.LENGTH_SHORT).show();

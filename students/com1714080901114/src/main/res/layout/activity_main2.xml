@@ -79,8 +79,8 @@
                         android:id="@+id/view1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:onClick="ShowToast"
-                        android:src="@drawable/timg" />
+                        android:src="@drawable/timg"
+                        android:onClick="onClick"/>
 
                 </RelativeLayout>
 
