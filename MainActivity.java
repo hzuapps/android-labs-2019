@@ -1,71 +1,34 @@
 package com.example.myapplication;
 
-import android.content.Context;
-
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import android.view.View;
-
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import android.view.WindowManager;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 
 
 public class MainActivity extends AppCompatActivity {
-    private EditText et_info;
-    private Button btn_save;
-    private Button btn_read;
 
+    private VideoView videoView;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // 获取布局文件中的控件
-        et_info = (EditText) findViewById(R.id.et_info);
-        btn_save = (Button) findViewById(R.id.btn_save);
-        btn_read = (Button) findViewById(R.id.btn_read);
-        btn_save.setOnClickListener(new ButtonListener());
-        btn_save.setOnClickListener(new ButtonListener());
-        btn_read.setOnClickListener(new ButtonListener());
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);   //全屏
+
+        play_mp4();
+
     }
 
-
-        private class ButtonListener implements View.OnClickListener {
-            public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.btn_save:
-                        String saveinfo = et_info.getText().toString().trim();
-                        FileOutputStream fos;
-                        try {
-                            fos = openFileOutput("data.txt", Context.MODE_APPEND);
-                            fos.write(saveinfo.getBytes());
-                            fos.close();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        Toast.makeText(MainActivity.this, "数据保存成功", 0).show();
-                        break;
-                    case R.id.btn_read:
-                        String content = "";
-                        try {
-                            FileInputStream fis = openFileInput("data.txt");
-                            byte[] buffer = new byte[fis.available()];
-                            fis.read(buffer);
-                            content = new String(buffer);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        Toast.makeText(MainActivity.this, "保存的数据是：" + content, 0)
-                                .show();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-    }
-
+    private void play_mp4(){
+        String videoUrl1 = "/storage/emulated/0/123.mp4";
+        Uri uri = Uri.parse( videoUrl1 );
+        videoView = (VideoView)this.findViewById(R.id.videoView );
+        videoView.setMediaController(new MediaController(this));
+        videoView.setVideoURI(uri);
+        videoView.start();
+    }}
