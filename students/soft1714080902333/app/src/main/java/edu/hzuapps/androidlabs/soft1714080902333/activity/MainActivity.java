@@ -1,9 +1,14 @@
 package edu.hzuapps.androidlabs.soft1714080902333.activity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.acker.simplezxing.activity.CaptureActivity;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -31,6 +37,8 @@ import edu.hzuapps.androidlabs.soft1714080902333.utils.HttpUtils;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final int REQ_CODE_PERMISSION = 0x1111;
 
     private ListView lv_news;
     private List<NewsInfo> newsInfos;
@@ -90,10 +98,6 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent();
-            intent.setClass(MainActivity.this, LocationActivity.class);
-            startActivity(intent);
-            MainActivity.this.finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -105,10 +109,17 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-            // 启动便签
+        if (id == R.id.nav_camera) {         // 启动二维码扫描
+            // 动态申请权限
+            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) !=
+                    PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(MainActivity.this,
+                        new String[] {Manifest.permission.CAMERA}, REQ_CODE_PERMISSION);
+            } else {
+                startCaptureActivityForResult();
+            }
+
+        } else if (id == R.id.nav_gallery) { // 启动便签
             Intent intent = new Intent();
             intent.setClass(MainActivity.this, StoreActivity.class);
             startActivity(intent);
@@ -128,17 +139,39 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case REQ_CODE_PERMISSION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // 同意权限申请
+                    startCaptureActivityForResult();
+                } else {
+                    // 不同意权限申请
+                    Toast.makeText(this, "相机权限为开启，无法使用二维码扫描功能", Toast.LENGTH_LONG).show();
+                }
+            }
+            break;
+        }
+    }
+
+    // 解析JSON文件
     private void fillData() {
         AsyncHttpClient client = new AsyncHttpClient();
+        // 获取JSON文件（存储在Tomcat上）
         client.get("http://10.60.223.30:8080/NewsInfo.json", new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 try {
                     String json = new String(responseBody, "utf-8");
                     newsInfos = HttpUtils.getNewsInfo(json);
+                    // 解析失败
                     if (newsInfos == null) {
                         Toast.makeText(MainActivity.this, "解析失败", Toast.LENGTH_LONG).show();
-                    } else {
+                    }
+                    // 解析成功
+                    else {
                         // 设置ListView内容
                         lv_news.setAdapter(new NewsAdapter(MainActivity.this, newsInfos));
                         // 设置点击事件
@@ -163,5 +196,22 @@ public class MainActivity extends AppCompatActivity
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
             }
         });
+    }
+
+    // 启动二维码扫描目标Activity
+    private void startCaptureActivityForResult() {
+        Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
+        Bundle bundle = new Bundle();
+
+        bundle.putBoolean(CaptureActivity.KEY_NEED_BEEP, CaptureActivity.VALUE_BEEP);
+        bundle.putBoolean(CaptureActivity.KEY_NEED_VIBRATION, CaptureActivity.VALUE_VIBRATION);
+        bundle.putBoolean(CaptureActivity.KEY_NEED_EXPOSURE, CaptureActivity.VALUE_NO_EXPOSURE);
+        bundle.putByte(CaptureActivity.KEY_FLASHLIGHT_MODE, CaptureActivity.VALUE_FLASHLIGHT_OFF);
+        bundle.putByte(CaptureActivity.KEY_ORIENTATION_MODE, CaptureActivity.VALUE_ORIENTATION_AUTO);
+        bundle.putBoolean(CaptureActivity.KEY_SCAN_AREA_FULL_SCREEN, CaptureActivity.VALUE_SCAN_AREA_FULL_SCREEN);
+        bundle.putBoolean(CaptureActivity.KEY_NEED_SCAN_HINT_TEXT, CaptureActivity.VALUE_SCAN_HINT_TEXT);
+
+        intent.putExtra(CaptureActivity.EXTRA_SETTING_BUNDLE, bundle);
+        startActivityForResult(intent, CaptureActivity.REQ_CODE);
     }
 }
