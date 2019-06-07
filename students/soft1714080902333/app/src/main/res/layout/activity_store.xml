@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/timg"
+    tools:context=".activity.StoreActivity"
+    >
+
+    <TextView
+        android:id="@+id/st_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:text="请输入要记录的内容："
+        />
+
+    <EditText
+        android:id="@+id/ip_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/st_title"
+        android:ems="10">
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/but_wr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ip_info"
+        android:layout_below="@+id/ip_info"
+        android:text="记录信息"
+        />
+
+    <Button
+        android:id="@+id/but_rd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ip_info"
+        android:layout_below="@+id/ip_info"
+        android:text="读取信息"
+        />
+</RelativeLayout>
