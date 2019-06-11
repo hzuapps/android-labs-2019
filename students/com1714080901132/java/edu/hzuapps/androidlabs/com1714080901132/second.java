@@ -1,26 +1,31 @@
 package edu.hzuapps.androidlabs.com1714080901132;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.icu.text.IDNA;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ButtonBarLayout;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import com.example.myapplication.R;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Main2Activity extends AppCompatActivity {
+public class second extends AppCompatActivity {
     protected static final int CHANGE_UI=1;
     protected static final int ERROR=2;
     private EditText et_path;
@@ -31,16 +36,68 @@ public class Main2Activity extends AppCompatActivity {
                 Bitmap bitmap = (Bitmap) msg.obj;
                 iv.setImageBitmap(bitmap);
             } else if (msg.what == ERROR) {
-                Toast.makeText(Main2Activity.this,"显示图片错误",Toast.LENGTH_SHORT).show();
+                Toast.makeText(second.this,"显示图片错误",Toast.LENGTH_SHORT).show();
             }
         };
     };
+    private EditText et_info;
+    private Button btn_save;
+    private Button btn_read;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_second);
+        Button button=(Button) findViewById(R.id.openCamera);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setAction("android.media.action.IMAGE_CAPTURE");
+                intent.addCategory("android.intent.category.DEFAULT");
+                startActivity(intent);
+            }
+        });
         et_path=(EditText) findViewById(R.id.et_path);
         iv=(ImageView) findViewById(R.id.iv);
+        et_info=(EditText)findViewById(R.id.et_info);
+        btn_save=(Button)findViewById(R.id.btn_save);
+        btn_read=(Button)findViewById(R.id.btn_read);
+        btn_save.setOnClickListener(new ButtonListener( ));
+        btn_read.setOnClickListener(new ButtonListener( ));
+    }
+
+    private class ButtonListener implements View.OnClickListener {
+        public void onClick(View v){
+            switch (v.getId()){
+                case R.id.btn_save:
+                    String saveinfo=et_info.getText().toString().trim();
+                    FileOutputStream fos;
+                    try{
+                        fos=openFileOutput("data.txt", Context.MODE_PRIVATE);
+                        fos.write(saveinfo.getBytes());
+                        fos.close();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(second.this, "数据保存成功", Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.btn_read:
+                    String content="";
+                    try{
+                        FileInputStream fis=openFileInput("data.txt");
+                        byte[] buffer=new byte[fis.available()];
+                        fis.read(buffer);
+                        content=new String(buffer);
+                        fis.close();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(second.this, "上次搜索记录是" + content, Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
     public void click(View view){
         final  String path=et_path.getText().toString().trim();
