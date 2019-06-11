@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="edu.hzuapps.androidlabs.soft1714080902211.net">
+    tools:context="com.example.soft1714080902211.Net">
     >
 
     <EditText
@@ -27,13 +27,5 @@
         android:id="@+id/iv"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
-
-    <TextView
-        android:id="@+id/textview_01"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_alignParentBottom="true"
-        android:drawableTop="@drawable/picture4"
-        tools:text="@tools:sample/us_phones" />
     _
 </LinearLayout>
