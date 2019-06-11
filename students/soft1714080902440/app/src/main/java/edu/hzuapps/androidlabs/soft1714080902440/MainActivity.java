@@ -1,10 +1,15 @@
 package edu.hzuapps.androidlabs.soft1714080902440;
 
+
 import java.io.File;
 import java.io.FileOutputStream;
+
 import java.io.InputStream;
+
 import java.net.HttpURLConnection;
+
 import java.net.URL;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -15,6 +20,7 @@ import android.graphics.BitmapFactory;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.Manifest;
 import android.content.DialogInterface;
@@ -35,7 +41,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import soft1714080902440.androidlabs.hzuapps.edu.soft1714080902440.R;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
@@ -47,7 +55,6 @@ public class MainActivity extends AppCompatActivity
     Button content;
     ImageView image;
     Bitmap bitmap;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +62,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         imageView8=findViewById(R.id.imageView8);
-        imageView8.setOnClickListener(new View.OnClickListener(){
+        imageView8.setOnClickListener( new View.OnClickListener(){
         @Override
         public void onClick(View v) {
             Intent intent=new Intent(MainActivity.this,Soft1714080902440Activity.class);
@@ -68,12 +75,10 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         content=(Button)findViewById(R.id.content);
         image=(ImageView)findViewById(R.id.image);
-
         content.setOnClickListener(this);
         image.setOnClickListener(this);
         // 版本判断。当手机系统大于 23 时，才有必要去判断权限是否获取
@@ -87,7 +92,24 @@ public class MainActivity extends AppCompatActivity
                 showDialogTipUserRequestPermission();
             }
         }
+        Weather weather = new Weather();
+        String a = weather.printTheRes("\"high\":\"",7,2);
+        TextView text3=(TextView) findViewById(R.id.text3);
+        text3.setText(a);
+        String  b= weather.printTheRes("\"text_night\":\"",14,2);
+        TextView text5=(TextView) findViewById(R.id.text5);
+        text5.setText(b);
+        String  c= weather.printTheRes("\"wind_direction\":\"",18,5);
+        TextView text6=(TextView) findViewById(R.id.text6);
+        text6.setText(c);
+        String  d= weather.printTheRes("\"wind_speed\":\"",13,2);
+        TextView text8=(TextView) findViewById(R.id.text8);
+        text8.setText(d);
     }
+    /*
+    ******************************
+     */
+
     // 提示用户该请求权限的弹出框
     private void showDialogTipUserRequestPermission() {
 
@@ -292,7 +314,7 @@ public class MainActivity extends AppCompatActivity
     };
 
     //异步线程下载图片
-    class Task extends AsyncTask<String, Integer, Void>{
+    class Task extends AsyncTask<String, Integer, Void> {
 
         protected Void doInBackground(String... params) {
             bitmap=GetImageInputStream((String)params[0]);
