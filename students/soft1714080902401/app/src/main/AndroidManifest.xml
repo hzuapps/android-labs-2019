@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.hzuapps.androidlabs.soft1714080902401">
+    <!-- 网络请求声明 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 相机请求声明 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- SD卡请求声明 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +16,8 @@
         android:roundIcon="@drawable/ic_launcher_appico"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Soft1714080902401_FileStoreActivity"></activity>
+        <activity android:name=".Soft1714080902401_meActivity"/>
+        <activity android:name=".Soft1714080902401_FileStoreActivity" />
         <activity android:name=".Soft1714080902401_01Activity" />
         <activity android:name=".Soft1714080902401Activity">
             <intent-filter>
@@ -18,8 +26,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        android:required="false" /> <!-- 注册照相机功能相关内容 -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="edu.hzuapps.androidlabs.soft1714080902401.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" />
+        </provider>
     </application>
-    <!--网络请求声明-->
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
