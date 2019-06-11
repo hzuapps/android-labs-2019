@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 保存数据到手机内存中 -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etContent"
+        android:layout_centerHorizontal="true"
+        android:text="保存"
+        android:onClick="save"/>
+
+    <!--  要保存的数据 -->
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnSave"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <!--  将信息写入到sd卡中 -->
+    <Button
+        android:id="@+id/btnSaveTosdcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvContent"
+        android:layout_below="@+id/btnLoad"
+        android:layout_marginTop="37dp"
+        android:onClick="saveTosdcard"
+        android:text="保存到SD卡" />
+
+    <!--  读取信息输入到tvContent中 -->
+    <Button
+        android:id="@+id/btnLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSave"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/tvContent"
+        android:text="载入"
+        android:onClick="load" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnLoad"
+        android:layout_alignBottom="@+id/btnLoad"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/btnSave"
+        android:text="" />
+
+    <!-- 从SD卡中读取数据显示到tvsdcard文本中 -->
+    <Button
+        android:id="@+id/btnloadFromSdcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnSaveTosdcard"
+        android:layout_below="@+id/btnSaveTosdcard"
+        android:layout_marginTop="35dp"
+        android:text="从sd卡中读取信息"
+        android:onClick="loadFromSdcard"/>
+
+    <TextView
+        android:id="@+id/tvsdcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnloadFromSdcard"
+        android:layout_alignBottom="@+id/btnloadFromSdcard"
+        android:layout_toRightOf="@+id/btnloadFromSdcard"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnloadFromSdcard"
+        android:layout_alignLeft="@+id/btnloadFromSdcard"
+        android:layout_marginTop="35dp"
+        android:background="@android:color/holo_orange_dark"
+        android:onClick="loadFromSdcard"
+        android:text="我要看图" />
+</RelativeLayout>
