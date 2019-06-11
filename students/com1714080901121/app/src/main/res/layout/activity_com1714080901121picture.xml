@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/name"
+    tools:context=".Com1714080901121picture" >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1000" />
+
+    <EditText
+        android:id="@+id/et_path"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要更改的图片地址"
+        android:text="http://b.hiphotos.baidu.com/image/w%3D310/sign=a439f5b24510b912bfc1f0fff3fdfcb5/83025aafa40f4bfb92c52c5d014f78f0f73618a5.jpg"
+        android:singleLine="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="确定" />
+ />
+
+</LinearLayout>
