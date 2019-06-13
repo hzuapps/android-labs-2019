@@ -140,5 +140,13 @@
             android:text="新浪" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下载中心"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="3dp" />
+
 
 </android.support.constraint.ConstraintLayout>

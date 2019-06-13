@@ -5,11 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.FileInputStream;
@@ -42,9 +40,23 @@ public class Soft1714080902406MainActivity extends AppCompatActivity {
         //创建储存显示视图
         initSaveOnputView();
 
+        //下载文件
+        Button button = findViewById(R.id.button);
+        View.OnClickListener onClickListener2 = new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(Soft1714080902406MainActivity.this, DownloadMainActivity.class);
+                startActivity(intent);
 
+            }
+        };
+        button.setOnClickListener(onClickListener2);
 
     }
+
+
 
     private void initSaveOnputView()
     {
@@ -126,4 +138,6 @@ public class Soft1714080902406MainActivity extends AppCompatActivity {
 
        editText7.setOnClickListener(onClickListenerOnput);
     }
+
+
 }
