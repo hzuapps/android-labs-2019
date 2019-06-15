@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="288dp"
+        android:text="添加：添加生日管理人"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <LinearLayout
+        android:id="@+id/tj_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tj_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text2"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:paddingRight="10dp"
+            android:text="名字:"
+            android:textSize="30dp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入名字"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tj_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tj_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tj_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tj_name"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:paddingRight="10dp"
+            android:text="日期:"
+            android:textSize="30dp"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/et_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入日期"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tj_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tj_day"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tj_day"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:paddingRight="10dp"
+            android:text="电话号码:"
+            android:textSize="30dp"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入电话号码"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="270dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/tj_phone"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:contentDescription="性别"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sent"
+        app:layout_constraintEnd_toEndOf="@+id/tj_phone"
+        app:layout_constraintTop_toBottomOf="@+id/text2"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="男"
+            android:textSize="30dp" />
+
+        <RadioButton
+            android:id="@+id/Femal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"
+            android:textSize="30dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="58dp"
+        android:text="提交信息"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginBottom="58dp"
+        android:text="读取信息"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:ignore="MissingConstraints" />
+
+
+</android.support.constraint.ConstraintLayout>
